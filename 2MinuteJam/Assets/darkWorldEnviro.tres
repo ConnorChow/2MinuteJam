@@ -1,0 +1,6 @@
+[gd_resource type="Environment" format=3 uid="uid://b2r2wlqm13vma"]
+
+[resource]
+ambient_light_color = Color(0.0235294, 0.0862745, 0.207843, 1)
+fog_enabled = true
+fog_light_color = Color(0.0862745, 0.180392, 0.329412, 1)

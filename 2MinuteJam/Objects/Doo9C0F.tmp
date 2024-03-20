@@ -1,0 +1,80 @@
+[gd_scene load_steps=8 format=3 uid="uid://qwtskg7hc43a"]
+
+[ext_resource type="Script" path="res://2MinuteJam/Objects/Door.gd" id="1_m8poo"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_x7fp0"]
+size = Vector3(2, 3, 0.2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n0yue"]
+size = Vector3(2, 3, 0.2)
+
+[sub_resource type="Animation" id="Animation_61ne3"]
+resource_name = "open"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 1.5708, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_nvbfm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_bosay"]
+resource_name = "close"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5708, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6mx3c"]
+_data = {
+"RESET": SubResource("Animation_nvbfm"),
+"close": SubResource("Animation_bosay"),
+"open": SubResource("Animation_61ne3")
+}
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Door" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.5, 0.1)
+mesh = SubResource("BoxMesh_x7fp0")
+skeleton = NodePath("../..")
+
+[node name="RigidBody3D" type="RigidBody3D" parent="Door"]
+gravity_scale = 0.0
+script = ExtResource("1_m8poo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Door/RigidBody3D"]
+shape = SubResource("BoxShape3D_n0yue")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Door"]
+libraries = {
+"": SubResource("AnimationLibrary_6mx3c")
+}
