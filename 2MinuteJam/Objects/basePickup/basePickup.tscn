@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxa2pqwx24jgc"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_to52n"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_atnw8"]
+
+[node name="BasePickup" type="RigidBody3D" groups=["pickable"]]
+mass = 0.1
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_to52n")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_atnw8")

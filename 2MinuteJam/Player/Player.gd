@@ -3,6 +3,8 @@ extends CharacterBody3D
 
 const SENSITIVITY : float = 0.003
 const SPEED : float = 4.5
+const runSpeed : float = 1.5
+var modSpeed : float
 const JUMP_VELOCITY : float = 4.0
 const HITSTAGGER : float = 8.0 
 
@@ -11,10 +13,12 @@ var gravity : float = 9.8
 var direction
 var headDir
 
+var heldObject : Object
+
 @onready var head = $Node3D
 @onready var camera = $Node3D/Camera3D
 @onready var interactBox = $Node3D/Camera3D/interactBox
-
+@onready var holdPoint = $Node3D/Camera3D/holdPoint
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 
@@ -39,12 +43,48 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("jump") and is_on_floor() && !GlobalController.inDialogue:
 		velocity.y = JUMP_VELOCITY
 	
-
-	
+	if heldObject:
+		heldObject.global_position = holdPoint.global_position
+		if Input.is_action_pressed("ctrl") && Input.is_action_just_pressed("mwu"):
+			heldObject.rotate_x(.3)
+			#heldObject.transform.basis.x += Vector3(.3, 0, 0)
+			#heldObject.rotation.x +=.3
+			#if heldObject.rotation_degrees.x >= deg_to_rad(359):
+			#	heldObject.rotation_degrees.x= deg_to_rad(0)
+		elif Input.is_action_just_pressed("mwu"):
+			heldObject.rotate_y(.3)
+			#heldObject.transform.basis.y +=Vector3(0, .3, 0)
+			#heldObject.rotation.y +=.3
+			
+		if Input.is_action_pressed("ctrl") && Input.is_action_just_pressed("mwd"):
+			heldObject.rotate_x(-.3)
+			#heldObject.transform.basis.x -=Vector3(.3, 0, 0)
+			#heldObject.rotation.x -=.3
+			#if heldObject.rotation_degrees.x >= deg_to_rad(1):
+			#	heldObject.rotation_degrees.x= deg_to_rad(360)
+		elif Input.is_action_just_pressed("mwd"):
+			heldObject.rotate_y(-.3)
+			#heldObject.transform.basis.y +=Vector3(0, .3, 0)
+			#heldObject.rotation.y -=.3
+	if Input.is_action_pressed("shift"):
+		modSpeed = SPEED + runSpeed
+	if Input.is_action_just_released("shift"):
+		modSpeed = SPEED
+			
 	if Input.is_action_just_pressed("interact"):
 		if interactBox.get_overlapping_bodies() != null:
 			for body in interactBox.get_overlapping_bodies():
 				print(body)
+				if !heldObject:
+					if body.is_in_group("pickable"):
+						heldObject = body
+						heldObject.collision_mask = 0
+						heldObject.set_sleeping(true)
+				elif heldObject:
+					heldObject.set_sleeping(false)
+					heldObject.collision_mask = 1
+					heldObject = null
+	#				heldObject.mode = RigidBody3D.FREEZE_MODE_KINEMATIC
 				if body.is_in_group("interact"):
 					body.interact()
 	if GlobalController.inDialogue:
@@ -52,19 +92,20 @@ func _physics_process(delta):
 	else:
 		if is_on_floor():
 			
+				
 			if direction:
-				velocity.x = direction.x * SPEED
-				velocity.z = direction.z * SPEED
+				velocity.x = direction.x * modSpeed
+				velocity.z = direction.z * modSpeed
 			else:
-				velocity.x = lerp(velocity.x, direction.x * SPEED, delta * 7)
-				velocity.z = lerp(velocity.z, direction.z * SPEED, delta * 7)
+				velocity.x = lerp(velocity.x, direction.x * modSpeed, delta * 7)
+				velocity.z = lerp(velocity.z, direction.z * modSpeed, delta * 7)
 		if !is_on_floor() :
 			velocity.y -= gravity * delta
-			velocity.x = lerp(velocity.x, direction.x * SPEED, delta * 3)
-			velocity.z = lerp(velocity.z, direction.z * SPEED, delta * 3)
+			velocity.x = lerp(velocity.x, direction.x * modSpeed, delta * 3)
+			velocity.z = lerp(velocity.z, direction.z * modSpeed, delta * 3)
 
 				
-	
+	velocity.normalized()
 	move_and_slide()
 
 
