@@ -6,7 +6,6 @@ const SPEED : float = 4.5
 const runSpeed : float = 1.5
 var modSpeed : float
 const JUMP_VELOCITY : float = 4.0
-const HITSTAGGER : float = 8.0 
 
 var gravity : float = 9.8
 
@@ -14,17 +13,19 @@ var direction
 var headDir
 
 var heldObject : Object
+var hitObject :Object
 
 @onready var head = $Node3D
 @onready var camera = $Node3D/Camera3D
 @onready var interactBox = $Node3D/Camera3D/interactBox
 @onready var holdPoint = $Node3D/Camera3D/holdPoint
+@onready var rayCast = $Node3D/Camera3D/colissionRay
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-
+	modSpeed = SPEED
 	
 	
 
@@ -70,23 +71,31 @@ func _physics_process(delta):
 		modSpeed = SPEED + runSpeed
 	if Input.is_action_just_released("shift"):
 		modSpeed = SPEED
-			
+	hitObject = rayCast.get_collider()
 	if Input.is_action_just_pressed("interact"):
-		if interactBox.get_overlapping_bodies() != null:
-			for body in interactBox.get_overlapping_bodies():
-				print(body)
+		if heldObject:
+			heldObject.set_sleeping(false)
+			heldObject.collision_mask = 1
+			heldObject.collision_layer = 1
+			heldObject = null
+		elif hitObject != null:
+				print(hitObject)
 				if !heldObject:
-					if body.is_in_group("pickable"):
-						heldObject = body
+					if hitObject is RigidBody3D: #.is_in_group("pickable"):
+						heldObject = hitObject
 						heldObject.collision_mask = 0
+						heldObject.collision_layer = 0
 						heldObject.set_sleeping(true)
+					else: pass
 				elif heldObject:
 					heldObject.set_sleeping(false)
 					heldObject.collision_mask = 1
+					heldObject.collision_layer = 1
 					heldObject = null
-	#				heldObject.mode = RigidBody3D.FREEZE_MODE_KINEMATIC
-				if body.is_in_group("interact"):
-					body.interact()
+		#			heldObject.mode = RigidBody3D.FREEZE_MODE_KINEMATIC
+				if hitObject.is_in_group("interact"):
+					hitObject.interact()
+				else:pass
 	if GlobalController.inDialogue:
 		velocity = Vector3(0, -gravity*delta, 0)
 	else:

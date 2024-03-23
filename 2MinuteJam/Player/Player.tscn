@@ -28,6 +28,7 @@ fov = 85.0
 
 [node name="interactBox" type="Area3D" parent="Node3D/Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.205884, -1.36189)
+visible = false
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/Camera3D/interactBox"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.354736, -0.373997)
@@ -35,3 +36,6 @@ shape = SubResource("BoxShape3D_7pg3o")
 
 [node name="holdPoint" type="Node3D" parent="Node3D/Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.79478)
+
+[node name="colissionRay" type="RayCast3D" parent="Node3D/Camera3D"]
+target_position = Vector3(0, 0, -3)
