@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=17 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="Material" uid="uid://digeiblk51qny" path="res://2MinuteJam/Assets/testmaterial.tres" id="1_c7p14"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/UiHandler.gd" id="5_fg8bl"]
 [ext_resource type="PackedScene" uid="uid://cesaq07oa64kf" path="res://2MinuteJam/npcs/baseNPC/baseNPC.tscn" id="6_j1s7m"]
 [ext_resource type="PackedScene" uid="uid://cxa2pqwx24jgc" path="res://2MinuteJam/Objects/basePickup/basePickup.tscn" id="8_x0oa3"]
+[ext_resource type="PackedScene" uid="uid://ba43ypuyd56kj" path="res://2MinuteJam/Scenes/Prebuilds/ChristmasHouse.tscn" id="10_b57lw"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ff47w"]
 albedo_color = Color(0.701961, 0.701961, 0, 1)
@@ -718,3 +719,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3911, 2.14309, 22.6921)
 light_color = Color(0, 0, 0.235294, 1)
 shadow_enabled = true
 sky_mode = 2
+
+[node name="ChristmasHouse" parent="." instance=ExtResource("10_b57lw")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 31.4955, 0.0499992, 22.5571)
