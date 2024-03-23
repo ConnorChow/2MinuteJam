@@ -72,11 +72,20 @@ func _physics_process(delta):
 	if Input.is_action_just_released("shift"):
 		modSpeed = SPEED
 	hitObject = rayCast.get_collider()
+	if Input.is_action_just_pressed("throw"):
+		if heldObject:
+			heldObject.set_sleeping(false)
+			heldObject.collision_mask = 1
+			heldObject.collision_layer = 1
+			heldObject.set_freeze_enabled(false)
+			heldObject.apply_impulse(1*(global_position.direction_to(heldObject.global_position)))
+			heldObject = null
 	if Input.is_action_just_pressed("interact"):
 		if heldObject:
 			heldObject.set_sleeping(false)
 			heldObject.collision_mask = 1
 			heldObject.collision_layer = 1
+			heldObject.set_freeze_enabled(false)
 			heldObject = null
 		elif hitObject != null:
 				print(hitObject)
@@ -85,12 +94,14 @@ func _physics_process(delta):
 						heldObject = hitObject
 						heldObject.collision_mask = 0
 						heldObject.collision_layer = 0
+						heldObject.set_freeze_enabled(true)
 						heldObject.set_sleeping(true)
 					else: pass
 				elif heldObject:
 					heldObject.set_sleeping(false)
 					heldObject.collision_mask = 1
 					heldObject.collision_layer = 1
+					heldObject.set_freeze_enabled(false)
 					heldObject = null
 		#			heldObject.mode = RigidBody3D.FREEZE_MODE_KINEMATIC
 				if hitObject.is_in_group("interact"):
