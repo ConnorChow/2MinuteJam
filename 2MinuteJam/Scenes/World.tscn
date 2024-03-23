@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=16 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="Material" uid="uid://digeiblk51qny" path="res://2MinuteJam/Assets/testmaterial.tres" id="1_c7p14"]
 [ext_resource type="PackedScene" uid="uid://q0x2l31pruqy" path="res://2MinuteJam/Player/Player.tscn" id="1_q0ld0"]
+[ext_resource type="PackedScene" uid="uid://b6h4xwwti8ste" path="res://2MinuteJam/Scenes/Prebuilds/Road.tscn" id="2_id2ye"]
 [ext_resource type="Environment" uid="uid://b2r2wlqm13vma" path="res://2MinuteJam/Assets/darkWorldEnviro.tres" id="2_q27q1"]
 [ext_resource type="PackedScene" uid="uid://bmhrqsukfdhao" path="res://2MinuteJam/Objects/Door.tscn" id="4_cmskc"]
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/UiHandler.gd" id="5_fg8bl"]
@@ -34,7 +35,10 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7vqo6"]
+
 [sub_resource type="PlaneMesh" id="PlaneMesh_rvy3p"]
+material = SubResource("StandardMaterial3D_7vqo6")
 size = Vector2(250, 250)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_a364q"]
@@ -42,6 +46,101 @@ size = Vector3(250, 0.1, 250)
 
 [node name="World" type="Node"]
 script = ExtResource("1_0o181")
+
+[node name="RoadContainer" type="Node" parent="."]
+
+[node name="Road" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -12.8725, 0.05, 40.5969)
+
+[node name="Road7" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.12754, 0.05, 40.5969)
+
+[node name="Road8" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 27.1275, 0.05, 40.5969)
+
+[node name="Road9" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 47.1275, 0.05, 40.5969)
+
+[node name="Road13" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.1275, 0.05, 55.5969)
+
+[node name="Road14" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.1275, 0.05, 75.5969)
+
+[node name="Road15" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.1275, 0.05, 95.5969)
+
+[node name="Road16" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.1275, 0.05, 115.597)
+
+[node name="Road17" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.753, 0.05, 25.6316)
+
+[node name="Road18" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.753, 0.05, 5.6316)
+
+[node name="Road19" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.753, 0.05, -14.3684)
+
+[node name="Road20" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.753, 0.05, -34.3684)
+
+[node name="Road21" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.753, 0.05, -54.3684)
+
+[node name="Road22" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.753, 0.05, -74.3684)
+
+[node name="Road23" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.753, 0.05, -94.3684)
+
+[node name="Road24" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.753, 0.05, -113.368)
+
+[node name="Road10" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 67.1275, 0.05, 40.5969)
+
+[node name="Road11" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 87.1275, 0.05, 40.5969)
+
+[node name="Road12" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 107.128, 0.05, 40.5969)
+
+[node name="Road2" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -32.8725, 0.05, 40.5969)
+
+[node name="Road25" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.12754, 0.05, -29.4031)
+
+[node name="Road26" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -14.8725, 0.05, -29.4031)
+
+[node name="Road27" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -34.8725, 0.05, -29.4031)
+
+[node name="Road28" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -53.8725, 0.05, -29.4031)
+
+[node name="Road29" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -73.8725, 0.05, -29.4031)
+
+[node name="Road30" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -93.8725, 0.05, -29.4031)
+
+[node name="Road31" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -112.872, 0.05, -29.4031)
+
+[node name="Road3" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -52.8725, 0.05, 40.5969)
+
+[node name="Road4" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -72.8725, 0.05, 40.5969)
+
+[node name="Road5" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -92.8725, 0.05, 40.5969)
+
+[node name="Road6" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -112.872, 0.05, 40.5969)
 
 [node name="CSGcontainer" type="Node" parent="."]
 
@@ -291,21 +390,21 @@ size = Vector3(1, 12, 40)
 material = ExtResource("1_c7p14")
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="CSGcontainer/Theater/walls"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2, 6, -11)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.5, 6, -11)
 use_collision = true
-size = Vector3(1, 12, 40)
+size = Vector3(1, 12, 27)
 material = ExtResource("1_c7p14")
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="CSGcontainer/Theater/walls"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.5, 6, 28)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 6, 28)
 use_collision = true
-size = Vector3(1, 12, 29)
+size = Vector3(1, 12, 22)
 material = ExtResource("1_c7p14")
 
 [node name="CSGBox3D8" type="CSGBox3D" parent="CSGcontainer/Theater/walls"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.5, 4, 15)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 4, 15)
 use_collision = true
-size = Vector3(1, 8, 29)
+size = Vector3(1, 8, 22)
 material = ExtResource("1_c7p14")
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="CSGcontainer/Theater/walls"]
@@ -325,6 +424,238 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 12, 9)
 use_collision = true
 size = Vector3(27, 1, 40)
 material = ExtResource("1_c7p14")
+
+[node name="PerimeterBuildings" type="Node" parent="CSGcontainer"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -123.069, 25.05, 0)
+use_collision = true
+size = Vector3(20, 50, 20)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -119.069, 15.05, 20)
+use_collision = true
+size = Vector3(20, 30, 20)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -123.069, 20.05, 40)
+use_collision = true
+size = Vector3(20, 40, 20)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -123.069, 25.05, -60)
+use_collision = true
+size = Vector3(20, 50, 20)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -119.069, 15.05, -40)
+use_collision = true
+size = Vector3(20, 30, 20)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -123.069, 20.05, -20)
+use_collision = true
+size = Vector3(20, 40, 20)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108.069, 25.05, -120)
+use_collision = true
+size = Vector3(20, 50, 20)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -119.069, 15.05, -100)
+use_collision = true
+size = Vector3(20, 30, 20)
+
+[node name="CSGBox3D27" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88.0686, 15.05, -120)
+use_collision = true
+size = Vector3(20, 30, 20)
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -123.069, 20.05, -80)
+use_collision = true
+size = Vector3(20, 40, 20)
+
+[node name="CSGBox3D28" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68.0686, 20.05, -120)
+use_collision = true
+size = Vector3(20, 40, 20)
+
+[node name="CSGBox3D29" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.0686, 25.05, -120)
+use_collision = true
+size = Vector3(20, 50, 20)
+
+[node name="CSGBox3D30" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.0686, 15.05, -120)
+use_collision = true
+size = Vector3(20, 30, 20)
+
+[node name="CSGBox3D31" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.06857, 20.05, -120)
+use_collision = true
+size = Vector3(20, 40, 20)
+
+[node name="CSGBox3D32" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.9314, 25.05, -120)
+use_collision = true
+size = Vector3(20, 50, 20)
+
+[node name="CSGBox3D33" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.9314, 15.05, -120)
+use_collision = true
+size = Vector3(20, 30, 20)
+
+[node name="CSGBox3D34" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.9314, 20.05, -120)
+use_collision = true
+size = Vector3(20, 40, 20)
+
+[node name="CSGBox3D35" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.5262, 25.05, -120)
+use_collision = true
+size = Vector3(20, 50, 20)
+
+[node name="CSGBox3D36" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 91.5262, 15.05, -120)
+use_collision = true
+size = Vector3(20, 30, 20)
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -123.069, 25.05, 60)
+use_collision = true
+size = Vector3(20, 50, 20)
+
+[node name="CSGBox3D13" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108.069, 25.05, 119)
+use_collision = true
+size = Vector3(20, 50, 20)
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -119.069, 15.05, 80)
+use_collision = true
+size = Vector3(20, 30, 20)
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -123.069, 20.05, 100)
+use_collision = true
+size = Vector3(20, 40, 20)
+
+[node name="CSGBox3D14" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117.931, 25.05, 0)
+use_collision = true
+size = Vector3(20, 50, 20)
+
+[node name="CSGBox3D15" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121.931, 15.05, 20)
+use_collision = true
+size = Vector3(20, 30, 20)
+
+[node name="CSGBox3D16" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117.931, 20.05, 40)
+use_collision = true
+size = Vector3(20, 40, 20)
+
+[node name="CSGBox3D17" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117.931, 25.05, -60)
+use_collision = true
+size = Vector3(20, 50, 20)
+
+[node name="CSGBox3D18" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121.931, 15.05, -40)
+use_collision = true
+size = Vector3(20, 30, 20)
+
+[node name="CSGBox3D19" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117.931, 20.05, -20)
+use_collision = true
+size = Vector3(20, 40, 20)
+
+[node name="CSGBox3D20" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111.579, 25.05, -120)
+use_collision = true
+size = Vector3(20, 50, 20)
+
+[node name="CSGBox3D38" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88.0686, 15.05, 121)
+use_collision = true
+size = Vector3(20, 30, 20)
+
+[node name="CSGBox3D39" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68.0686, 20.05, 121)
+use_collision = true
+size = Vector3(20, 40, 20)
+
+[node name="CSGBox3D40" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.0686, 25.05, 121)
+use_collision = true
+size = Vector3(20, 50, 20)
+
+[node name="CSGBox3D41" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.0686, 15.05, 121)
+use_collision = true
+size = Vector3(20, 30, 20)
+
+[node name="CSGBox3D42" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.06857, 20.05, 121)
+use_collision = true
+size = Vector3(20, 40, 20)
+
+[node name="CSGBox3D43" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.9314, 25.05, 121)
+use_collision = true
+size = Vector3(20, 50, 20)
+
+[node name="CSGBox3D44" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.9314, 15.05, 121)
+use_collision = true
+size = Vector3(20, 30, 20)
+
+[node name="CSGBox3D45" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.9314, 20.05, 121)
+use_collision = true
+size = Vector3(20, 40, 20)
+
+[node name="CSGBox3D46" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.5262, 25.05, 121)
+use_collision = true
+size = Vector3(20, 50, 20)
+
+[node name="CSGBox3D48" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111.526, 25.05, 119)
+use_collision = true
+size = Vector3(20, 50, 20)
+
+[node name="CSGBox3D47" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 91.5262, 15.05, 121)
+use_collision = true
+size = Vector3(20, 30, 20)
+
+[node name="CSGBox3D21" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121.931, 15.05, -100)
+use_collision = true
+size = Vector3(20, 30, 20)
+
+[node name="CSGBox3D22" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117.931, 20.05, -80)
+use_collision = true
+size = Vector3(20, 40, 20)
+
+[node name="CSGBox3D23" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117.931, 25.05, 60)
+use_collision = true
+size = Vector3(20, 50, 20)
+
+[node name="CSGBox3D24" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121.931, 15.05, 80)
+use_collision = true
+size = Vector3(20, 30, 20)
+
+[node name="CSGBox3D26" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117.931, 20.05, 100)
+use_collision = true
+size = Vector3(20, 40, 20)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("2_q27q1")
@@ -373,6 +704,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.305989, 2.51309, -6.25863)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("PlaneMesh_rvy3p")
+metadata/_edit_lock_ = true
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
 
@@ -381,3 +713,8 @@ shape = SubResource("BoxShape3D_a364q")
 
 [node name="BasePickup" parent="." instance=ExtResource("8_x0oa3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3911, 2.14309, 22.6921)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+light_color = Color(0, 0, 0.235294, 1)
+shadow_enabled = true
+sky_mode = 2

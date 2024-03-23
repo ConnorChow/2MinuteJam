@@ -94,6 +94,10 @@ shift={
 ]
 }
 
+[physics]
+
+2d/default_gravity=500.0
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"

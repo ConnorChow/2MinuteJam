@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://b6h4xwwti8ste"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_043td"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_2te37"]
+material = SubResource("StandardMaterial3D_043td")
+size = Vector2(10, 20)
+
+[node name="Road" type="MeshInstance3D"]
+mesh = SubResource("PlaneMesh_2te37")
