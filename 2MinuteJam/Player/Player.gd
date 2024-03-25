@@ -78,7 +78,7 @@ func _physics_process(delta):
 			heldObject.collision_mask = 1
 			heldObject.collision_layer = 1
 			heldObject.set_freeze_enabled(false)
-			heldObject.apply_impulse(1*(global_position.direction_to(heldObject.global_position)))
+			heldObject.apply_impulse(10*(global_position.direction_to(heldObject.global_position)))
 			heldObject = null
 	if Input.is_action_just_pressed("interact"):
 		if heldObject:

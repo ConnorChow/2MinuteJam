@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=18 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="Material" uid="uid://digeiblk51qny" path="res://2MinuteJam/Assets/testmaterial.tres" id="1_c7p14"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cesaq07oa64kf" path="res://2MinuteJam/npcs/baseNPC/baseNPC.tscn" id="6_j1s7m"]
 [ext_resource type="PackedScene" uid="uid://cxa2pqwx24jgc" path="res://2MinuteJam/Objects/basePickup/basePickup.tscn" id="8_x0oa3"]
 [ext_resource type="PackedScene" uid="uid://ba43ypuyd56kj" path="res://2MinuteJam/Scenes/Prebuilds/ChristmasHouse.tscn" id="10_b57lw"]
+[ext_resource type="PackedScene" uid="uid://oj8yd2ldinpc" path="res://2MinuteJam/Objects/ChristmasDeco/Plank.tscn" id="11_7ttf0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ff47w"]
 albedo_color = Color(0.701961, 0.701961, 0, 1)
@@ -37,13 +38,14 @@ corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7vqo6"]
+albedo_color = Color(0, 0.823529, 0, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_rvy3p"]
 material = SubResource("StandardMaterial3D_7vqo6")
 size = Vector2(250, 250)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_a364q"]
-size = Vector3(250, 0.1, 250)
+size = Vector3(250, 0.3, 250)
 
 [node name="World" type="Node"]
 script = ExtResource("1_0o181")
@@ -722,3 +724,24 @@ sky_mode = 2
 
 [node name="ChristmasHouse" parent="." instance=ExtResource("10_b57lw")]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 31.4955, 0.0499992, 22.5571)
+
+[node name="Plank" parent="." instance=ExtResource("11_7ttf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.0297, 0.0500002, 18.1316)
+
+[node name="Plank2" parent="." instance=ExtResource("11_7ttf0")]
+transform = Transform3D(0.961966, 0, -0.27317, 0, 1, 0, 0.27317, 0, 0.961966, 20.6398, 0.083371, 17.1619)
+
+[node name="Plank3" parent="." instance=ExtResource("11_7ttf0")]
+transform = Transform3D(0.339099, 0, -0.940751, 0.445232, 0.880916, 0.160487, 0.828722, -0.473274, 0.298718, 19.3721, 0.534279, 16.3712)
+
+[node name="Plank4" parent="." instance=ExtResource("11_7ttf0")]
+transform = Transform3D(0.94464, 0, 0.328108, 0, 1, 0, -0.328108, 0, 0.94464, 18.2962, 0.05, 17.069)
+
+[node name="Plank5" parent="." instance=ExtResource("11_7ttf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.4211, 0.52432, 18.0467)
+
+[node name="Plank6" parent="." instance=ExtResource("11_7ttf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.262, 0.05, 16.5941)
+
+[node name="Plank7" parent="." instance=ExtResource("11_7ttf0")]
+transform = Transform3D(0.967998, -0.0642711, 0.242588, 0.0623432, 0.997932, 0.0156237, -0.24309, 0, 0.970004, 19.9685, 0.208537, 16.8083)
