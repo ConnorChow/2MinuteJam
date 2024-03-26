@@ -13,6 +13,7 @@ func _ready():
 
 func restart():
 	await get_tree().create_timer(120).timeout
+	inDialogue = false
 	#make this fancy then change to main menu
 	get_tree().change_scene_to_file("res://2MinuteJam/Scenes/World.tscn")
 

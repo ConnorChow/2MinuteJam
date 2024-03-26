@@ -33,20 +33,8 @@ func _physics_process(delta):
 	move_and_slide()
 
 func interact():
-	GlobalController.inDialogue = true
+
 	get_tree().call_group("dialogue", "talking", dialogue)
 	
 
 
-func placeHolderText():
-	match textPlace:
-		0:
-			textPlace +=1
-			return "hello"
-		1:
-			textPlace +=1
-			return "good bye"
-		2:
-			textPlace = 0
-			GlobalController.inDialogue = false
-			get_tree().call_group("dialogue", "doneTalking")

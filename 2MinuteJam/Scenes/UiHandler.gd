@@ -10,7 +10,8 @@ var curText : int = 0
 
 func talking(diag : Array ):
 	set_visible(true)
-	print(diag)
+	GlobalController.inDialogue = true
+	#print(diag)
 	curText = 0
 	diagToHandle = diag
 	dialog.set_text(diagToHandle[curText])
@@ -20,18 +21,18 @@ func talking(diag : Array ):
 func _process(_delta):
 	if visible == true:
 		if Input.is_action_just_pressed("interact"):
-			if curText <= diagToHandle.size():
+			if curText <= diagToHandle.size()-1:
 				dialog.set_text(diagToHandle[curText])
 				curText +=1
 				
-				if curText == diagToHandle.size() :
-					print("this one")
-					doneTalking()
+				#if curText == diagToHandle.size() :
+					#print("this one")
+					#doneTalking()
 			else:
 				doneTalking()
-				print("that one")
+				#print("that one")
 
 func doneTalking():
 	set_visible(false)
 	GlobalController.inDialogue = false
-	print("done talking")
+	#print("done talking")
