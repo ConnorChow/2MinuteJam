@@ -14,8 +14,8 @@ var textPlace : int = 0
 @onready var dialogueDetect = $playerDialogueDetector
 @onready var mesh = $MeshInstance3D
 func _ready():
-	mesh.set_instance_shader_parameter("albedo_color", colour)
-
+	var meshToColor = mesh.get_active_material(0)
+	meshToColor.set_albedo(colour)
 	add_to_group("interact")
 
 
