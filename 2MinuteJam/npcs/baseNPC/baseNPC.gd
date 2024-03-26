@@ -4,6 +4,8 @@ extends CharacterBody3D
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+var dialogue = ["Hello", "Good Bye", "beep", "boop"]
+
 
 @export_enum("walks", "rolls", "falls") var moveType
 
@@ -32,7 +34,7 @@ func _physics_process(delta):
 
 func interact():
 	GlobalController.inDialogue = true
-	get_tree().call_group("dialogue", "talking", placeHolderText())
+	get_tree().call_group("dialogue", "talking", dialogue)
 	
 
 

@@ -81,10 +81,7 @@ func _physics_process(delta):
 			heldObject.apply_impulse(10*(global_position.direction_to(heldObject.global_position)))
 			heldObject = null
 	if Input.is_action_just_pressed("interact"):
-		if GlobalController.inDialogue:
-			GlobalController.inDialogue = false
-			get_tree().call_group("dialogue", "doneTalking")
-		else:
+		if !GlobalController.inDialogue:
 			if heldObject:
 				heldObject.set_sleeping(false)
 				heldObject.collision_mask = 1

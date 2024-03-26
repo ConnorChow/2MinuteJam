@@ -665,7 +665,7 @@ size = Vector3(20, 40, 20)
 environment = ExtResource("2_q27q1")
 
 [node name="Player" parent="." instance=ExtResource("1_q0ld0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.803, 3.47646, 1.51534)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.56011, 3.47646, 2.23929)
 
 [node name="Door" parent="." instance=ExtResource("4_cmskc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.452, 0.489067, 28.5907)
