@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://rkpf1l4fb7so"]
+
+[ext_resource type="Texture2D" uid="uid://bh3g61xihtrb3" path="res://2MinuteJam/Assets/WellStuff/Textures/Brick/red_worn_bricks_020_diffuse_xtm_2k.jpg" id="1_xrgkn"]
+
+[resource]
+albedo_texture = ExtResource("1_xrgkn")

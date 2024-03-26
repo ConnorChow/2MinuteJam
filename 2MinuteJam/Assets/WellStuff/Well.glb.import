@@ -1,0 +1,69 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://bi4v32w7fhxa3"
+path="res://.godot/imported/Well.glb-de4e9c137a1dd21c7fe36899a7afb81a.scn"
+
+[deps]
+
+source_file="res://2MinuteJam/Assets/WellStuff/Well.glb"
+dest_files=["res://.godot/imported/Well.glb-de4e9c137a1dd21c7fe36899a7afb81a.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+import_script/path=""
+_subresources={
+"materials": {
+"Brick": {
+"use_external/enabled": true,
+"use_external/path": "res://2MinuteJam/Assets/WellStuff/Materials/BrickMat.tres"
+},
+"BrickGuts": {
+"use_external/enabled": true,
+"use_external/path": "res://2MinuteJam/Assets/WellStuff/Materials/BrickGutsMat.tres"
+},
+"Built-up Grass": {
+"use_external/enabled": true,
+"use_external/path": "res://2MinuteJam/Assets/WellStuff/Materials/BuiltUpGrassMat.tres"
+}
+},
+"meshes": {
+"Well_Circle": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://2MinuteJam/Assets/WellStuff/Meshes/WellMesh.res"
+}
+},
+"nodes": {
+"PATH:metarig": {
+"import/skip_import": true
+},
+"PATH:metarig/Skeleton3D": {
+"import/skip_import": true
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1
