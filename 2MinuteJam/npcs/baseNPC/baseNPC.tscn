@@ -1,8 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://cesaq07oa64kf"]
+[gd_scene load_steps=6 format=3 uid="uid://cesaq07oa64kf"]
 
 [ext_resource type="Script" path="res://2MinuteJam/npcs/baseNPC/baseNPC.gd" id="1_1mhks"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3eyrr"]
+
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_g1j7f"]
+material = SubResource("StandardMaterial3D_3eyrr")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2iyhf"]
 
@@ -11,6 +14,7 @@ radius = 2.0
 
 [node name="BaseNpc" type="CharacterBody3D"]
 script = ExtResource("1_1mhks")
+colour = Color(1, 1, 1, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("CapsuleMesh_g1j7f")

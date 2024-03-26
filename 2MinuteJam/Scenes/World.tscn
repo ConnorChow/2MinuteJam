@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=20 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="Material" uid="uid://digeiblk51qny" path="res://2MinuteJam/Assets/testmaterial.tres" id="1_c7p14"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://ba43ypuyd56kj" path="res://2MinuteJam/Scenes/Prebuilds/ChristmasHouse.tscn" id="10_b57lw"]
 [ext_resource type="PackedScene" uid="uid://oj8yd2ldinpc" path="res://2MinuteJam/Objects/ChristmasDeco/Plank.tscn" id="11_7ttf0"]
 [ext_resource type="PackedScene" uid="uid://c6ocli0eloboc" path="res://2MinuteJam/Objects/Well.tscn" id="12_nf6n7"]
+[ext_resource type="PackedScene" uid="uid://cao36a7xwhym8" path="res://2MinuteJam/npcs/TheaterNPC.tscn" id="13_rqgvj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ff47w"]
 albedo_color = Color(0.701961, 0.701961, 0, 1)
@@ -749,3 +750,7 @@ transform = Transform3D(0.967998, -0.0642711, 0.242588, 0.0623432, 0.997932, 0.0
 
 [node name="Well" parent="." instance=ExtResource("12_nf6n7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -93.981, 0, 96.812)
+
+[node name="BaseNpc2" parent="." instance=ExtResource("13_rqgvj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.19962, 5.96578, 11.5271)
+colour = Color(0, 0, 0, 1)

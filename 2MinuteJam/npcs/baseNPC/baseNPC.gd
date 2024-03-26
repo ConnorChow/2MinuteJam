@@ -4,16 +4,18 @@ extends CharacterBody3D
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
-var dialogue = ["Hello", "Good Bye", "beep", "boop"]
 
-
+@export var dialogue = ["Hello", "Good Bye", "beep", "boop"]
+@export var colour : Color
 @export_enum("walks", "rolls", "falls") var moveType
 
 
 var textPlace : int = 0
 @onready var dialogueDetect = $playerDialogueDetector
-
+@onready var mesh = $MeshInstance3D
 func _ready():
+	mesh.set_instance_shader_parameter("albedo_color", colour)
+
 	add_to_group("interact")
 
 
