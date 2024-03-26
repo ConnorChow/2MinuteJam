@@ -5,10 +5,10 @@ albedo_color = Color(0.309804, 0.160784, 0.0509804, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_pvesu"]
 material = SubResource("StandardMaterial3D_bujw6")
-size = Vector3(2, 0.05, 0.2)
+size = Vector3(3, 0.05, 0.4)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_00x8d"]
-size = Vector3(2, 0.05, 0.2)
+size = Vector3(3, 0.05, 0.4)
 
 [node name="Plank" type="RigidBody3D"]
 
