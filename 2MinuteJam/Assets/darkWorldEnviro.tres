@@ -1,6 +1,16 @@
-[gd_resource type="Environment" format=3 uid="uid://b2r2wlqm13vma"]
+[gd_resource type="Environment" load_steps=4 format=3 uid="uid://b2r2wlqm13vma"]
+
+[ext_resource type="Texture2D" uid="uid://bdo37wprd0pk5" path="res://2MinuteJam/Assets/art/testsky.png" id="1_1xx6y"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_kgnc4"]
+panorama = ExtResource("1_1xx6y")
+
+[sub_resource type="Sky" id="Sky_g1jya"]
+sky_material = SubResource("PanoramaSkyMaterial_kgnc4")
 
 [resource]
+background_mode = 2
+sky = SubResource("Sky_g1jya")
 ambient_light_color = Color(0.0235294, 0.0862745, 0.207843, 1)
 fog_enabled = true
 fog_light_color = Color(0.0862745, 0.180392, 0.329412, 1)
