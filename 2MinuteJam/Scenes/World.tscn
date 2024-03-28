@@ -980,6 +980,7 @@ colour = Color(0, 0, 0, 1)
 
 [node name="Outside" type="AudioStreamPlayer" parent="MusicContainer"]
 stream = ExtResource("14_514x3")
+volume_db = -5.0
 autoplay = true
 
 [node name="PrebuildContainers" type="Node" parent="."]

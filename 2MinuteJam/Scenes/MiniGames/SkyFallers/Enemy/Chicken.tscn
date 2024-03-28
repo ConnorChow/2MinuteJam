@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsguxoqo0i7oi"]
+
+[ext_resource type="Script" path="res://2MinuteJam/Scenes/MiniGames/SkyFallers/Enemy/Chicken.gd" id="1_albx8"]
+[ext_resource type="Texture2D" uid="uid://762rp3fn58pf" path="res://2MinuteJam/Scenes/MiniGames/SkyFallers/Player/Chicken.png" id="1_iu8s4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rxd6y"]
+radius = 13.0
+
+[node name="Chicken" type="Area2D" groups=["enemies"]]
+collision_layer = 7
+collision_mask = 7
+script = ExtResource("1_albx8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_rxd6y")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_iu8s4")

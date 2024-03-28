@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://dp3h70ds6bbcy"]
+
+[ext_resource type="Script" path="res://2MinuteJam/Scenes/MiniGames/SkyFallers/Player/Player.gd" id="1_oxvux"]
+[ext_resource type="Texture2D" uid="uid://cxvullig7gdwq" path="res://2MinuteJam/Scenes/MiniGames/SkyFallers/Player/egg.png" id="2_6qt4y"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0dntb"]
+radius = 79.5669
+height = 238.701
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_oxvux")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_6qt4y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 2)
+scale = Vector2(0.12568, 0.12568)
+shape = SubResource("CapsuleShape2D_0dntb")
+
+[node name="BulletPoint" type="Node2D" parent="."]
+position = Vector2(2, -16)
+
+[node name="shootTimer" type="Timer" parent="." groups=["Player"]]
+wait_time = 0.5
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="shootTimer" to="." method="_on_shoot_timer_timeout"]
