@@ -17,7 +17,6 @@ var hitObject :Object
 
 @onready var head = $Node3D
 @onready var camera = $Node3D/Camera3D
-@onready var interactBox = $Node3D/Camera3D/interactBox
 @onready var holdPoint = $Node3D/Camera3D/holdPoint
 @onready var rayCast = $Node3D/Camera3D/colissionRay
 
