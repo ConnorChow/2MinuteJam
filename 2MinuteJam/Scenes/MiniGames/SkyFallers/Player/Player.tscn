@@ -22,7 +22,6 @@ shape = SubResource("CapsuleShape2D_0dntb")
 position = Vector2(2, -16)
 
 [node name="shootTimer" type="Timer" parent="." groups=["Player"]]
-wait_time = 0.5
 one_shot = true
 autostart = true
 
