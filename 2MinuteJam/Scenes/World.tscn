@@ -854,13 +854,69 @@ use_collision = true
 size = Vector3(1, 1.25, 2)
 material = SubResource("StandardMaterial3D_3xffk")
 
+[node name="OmniLight3D" type="OmniLight3D" parent="CSGcontainer/ArcadeContainer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 5.61579, 75.6324)
+light_bake_mode = 1
+distance_fade_enabled = true
+omni_range = 10.0
+omni_shadow_mode = 0
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="CSGcontainer/ArcadeContainer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 5.61579, 55.9237)
+light_energy = 16.0
+light_indirect_energy = 16.0
+light_bake_mode = 1
+distance_fade_enabled = true
+omni_range = 10.0
+omni_attenuation = 1.62451
+
+[node name="SpotLight3D" type="SpotLight3D" parent="CSGcontainer/ArcadeContainer"]
+transform = Transform3D(-1, 0, -5.96046e-08, -2.98023e-08, 0.866025, 0.5, 5.16191e-08, 0.5, -0.866025, -5.10025, 3.07846, 48.7715)
+light_color = Color(1, 0, 0.27451, 1)
+light_bake_mode = 1
+spot_range = 14.7488
+spot_attenuation = 0.00104665
+spot_angle = 19.1705
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="CSGcontainer/ArcadeContainer"]
+transform = Transform3D(-7.90775e-09, -0.5, 0.866025, -2.98023e-08, 0.866025, 0.5, -1, -2.18557e-08, -2.17495e-08, 6.89975, 3.07846, 51.7715)
+light_color = Color(1, 0, 0.27451, 1)
+light_bake_mode = 1
+spot_range = 14.7488
+spot_attenuation = 0.00104665
+spot_angle = 19.1705
+
+[node name="SpotLight3D3" type="SpotLight3D" parent="CSGcontainer/ArcadeContainer"]
+transform = Transform3D(-7.90775e-09, -0.5, 0.866025, -2.98023e-08, 0.866025, 0.5, -1, -2.18557e-08, -2.17495e-08, 6.89975, 3.07846, 63.7715)
+light_color = Color(1, 0, 0.27451, 1)
+light_bake_mode = 1
+spot_range = 14.7488
+spot_attenuation = 0.00104665
+spot_angle = 19.1705
+
+[node name="SpotLight3D4" type="SpotLight3D" parent="CSGcontainer/ArcadeContainer"]
+transform = Transform3D(-1.19209e-07, 0.5, -0.866025, -2.26056e-08, 0.866025, 0.5, 1, 7.91817e-08, -9.19355e-08, -12.1002, 3.07846, 62.7715)
+light_color = Color(1, 0, 0.27451, 1)
+light_bake_mode = 1
+spot_range = 14.7488
+spot_attenuation = 0.00104665
+spot_angle = 19.1705
+
+[node name="SpotLight3D5" type="SpotLight3D" parent="CSGcontainer/ArcadeContainer"]
+transform = Transform3D(-1.19209e-07, 0.5, -0.866025, -2.26056e-08, 0.866025, 0.5, 1, 7.91817e-08, -9.19355e-08, -12.1002, 3.07846, 72.7715)
+light_color = Color(1, 0, 0.27451, 1)
+light_bake_mode = 1
+spot_range = 14.7488
+spot_attenuation = 0.00104665
+spot_angle = 19.1705
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("2_q27q1")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-light_color = Color(0, 0, 0.235294, 1)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 16.9813, 0)
+light_color = Color(0, 0.054902, 0.411765, 1)
 shadow_enabled = true
-sky_mode = 2
 
 [node name="Player" parent="." instance=ExtResource("1_q0ld0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.61046, 4.47646, 5.5047)
@@ -902,7 +958,7 @@ vertical_alignment = 1
 autowrap_mode = 3
 
 [node name="BaseNpc" parent="." instance=ExtResource("6_j1s7m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.305989, 2.51309, -6.25863)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.305989, 2.5, -1.25863)
 
 [node name="GroundMesh" type="MeshInstance3D" parent="."]
 mesh = SubResource("PlaneMesh_rvy3p")
@@ -917,7 +973,7 @@ shape = SubResource("BoxShape3D_a364q")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3911, 2.14309, 22.6921)
 
 [node name="BaseNpc2" parent="." instance=ExtResource("13_rqgvj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.19962, 5.96578, -7.81875)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.19962, 5.5, 8.18125)
 colour = Color(0, 0, 0, 1)
 
 [node name="MusicContainer" type="Node" parent="."]
