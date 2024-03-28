@@ -101,6 +101,7 @@ throw={
 
 [physics]
 
+3d/default_gravity=9.0
 2d/default_gravity=200.0
 
 [rendering]

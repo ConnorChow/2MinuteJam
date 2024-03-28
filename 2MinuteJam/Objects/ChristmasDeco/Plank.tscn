@@ -11,6 +11,7 @@ size = Vector3(3, 0.05, 0.4)
 size = Vector3(3, 0.05, 0.4)
 
 [node name="Plank" type="RigidBody3D"]
+mass = 2.07
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_pvesu")
