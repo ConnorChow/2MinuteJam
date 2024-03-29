@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dusr3i62vm8gd"]
+
+[ext_resource type="Script" path="res://2MinuteJam/Scenes/MiniGames/EggHockey/Objects/Paddle.gd" id="1_aodp6"]
+[ext_resource type="Texture2D" uid="uid://cxvullig7gdwq" path="res://2MinuteJam/Scenes/MiniGames/SkyFallers/Player/egg.png" id="1_bjye8"]
+
+[node name="Paddle" type="RigidBody2D"]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_aodp6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("1_bjye8")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(3, -32, -11, -21, -20, -6, -20, 16, -13, 28, -4, 32, 14, 32, 22, 25, 27, 12, 26, -5, 17, -22)

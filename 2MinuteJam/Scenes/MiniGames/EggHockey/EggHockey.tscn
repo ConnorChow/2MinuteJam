@@ -1,0 +1,188 @@
+[gd_scene load_steps=11 format=3 uid="uid://cir0q47armsde"]
+
+[ext_resource type="PackedScene" uid="uid://dusr3i62vm8gd" path="res://2MinuteJam/Scenes/MiniGames/EggHockey/Objects/Paddle.tscn" id="1_jf1cg"]
+[ext_resource type="Script" path="res://2MinuteJam/Scenes/MiniGames/EggHockey/PlayerPaddle.gd" id="2_462uj"]
+[ext_resource type="PackedScene" uid="uid://br5kjlf77baf8" path="res://2MinuteJam/Scenes/MiniGames/EggHockey/Objects/EggBall.tscn" id="3_jef06"]
+[ext_resource type="Script" path="res://2MinuteJam/Scenes/MiniGames/EggHockey/enemyController.gd" id="4_e26bm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r8gw6"]
+size = Vector2(1288, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vsy4q"]
+size = Vector2(20, 294.5)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6eism"]
+radius = 491.2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mw33r"]
+size = Vector2(20, 138)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r3eot"]
+radius = 1024.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_taeqg"]
+size = Vector2(77, 160)
+
+[node name="EggHockey" type="Node"]
+
+[node name="Rink" type="StaticBody2D" parent="."]
+collision_layer = 7
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rink"]
+position = Vector2(575, -11)
+shape = SubResource("RectangleShape2D_r8gw6")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Rink"]
+position = Vector2(581, 658)
+shape = SubResource("RectangleShape2D_r8gw6")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Rink"]
+position = Vector2(-1, 108.75)
+shape = SubResource("RectangleShape2D_vsy4q")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Rink"]
+position = Vector2(0, 541)
+shape = SubResource("RectangleShape2D_vsy4q")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Rink"]
+position = Vector2(1151, 116)
+shape = SubResource("RectangleShape2D_vsy4q")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Rink"]
+position = Vector2(1151, 548)
+shape = SubResource("RectangleShape2D_vsy4q")
+
+[node name="Paddle" parent="." instance=ExtResource("1_jf1cg")]
+position = Vector2(193, 439)
+mass = 5.0
+gravity_scale = 2.0
+
+[node name="PlayerController" type="Area2D" parent="."]
+position = Vector2(188, 439)
+collision_layer = 2
+collision_mask = 2
+gravity_space_override = 3
+gravity_point = true
+gravity_point_center = Vector2(0, 0)
+gravity_direction = Vector2(0, 0)
+gravity = 4096.0
+linear_damp_space_override = 1
+linear_damp = 4.0
+angular_damp_space_override = 1
+angular_damp = 0.5
+script = ExtResource("2_462uj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerController"]
+shape = SubResource("CircleShape2D_6eism")
+
+[node name="goalBlock" type="StaticBody2D" parent="."]
+collision_layer = 6
+collision_mask = 6
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="goalBlock"]
+position = Vector2(575, 310)
+rotation = -1.5708
+scale = Vector2(1.00847, 0.292329)
+shape = SubResource("RectangleShape2D_r8gw6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="goalBlock"]
+position = Vector2(-10, 325)
+shape = SubResource("RectangleShape2D_mw33r")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="goalBlock"]
+position = Vector2(1162, 332)
+shape = SubResource("RectangleShape2D_mw33r")
+
+[node name="EggBall" parent="." instance=ExtResource("3_jef06")]
+position = Vector2(502, 472)
+collision_layer = 9
+collision_mask = 9
+mass = 0.01
+can_sleep = false
+linear_damp_mode = 1
+linear_damp = -0.3
+angular_damp_mode = 1
+angular_damp = -0.3
+
+[node name="Paddle2" parent="." instance=ExtResource("1_jf1cg")]
+position = Vector2(1010, 350)
+collision_layer = 5
+collision_mask = 5
+
+[node name="enemyController" type="Area2D" parent="."]
+position = Vector2(595, 108)
+collision_layer = 4
+collision_mask = 4
+gravity_space_override = 1
+gravity_point = true
+gravity_point_center = Vector2(0, 0)
+gravity_direction = Vector2(0, 0)
+gravity = 4096.0
+linear_damp_space_override = 1
+linear_damp = 4.0
+script = ExtResource("4_e26bm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemyController"]
+shape = SubResource("CircleShape2D_r3eot")
+
+[node name="Timer" type="Timer" parent="enemyController"]
+wait_time = 0.5
+autostart = true
+
+[node name="leftGoal" type="Area2D" parent="."]
+position = Vector2(-78, 256)
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="leftGoal"]
+position = Vector2(28.5, 70)
+shape = SubResource("RectangleShape2D_taeqg")
+
+[node name="RightGoal" type="Area2D" parent="."]
+position = Vector2(1172, 263)
+collision_layer = 8
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RightGoal"]
+position = Vector2(28.5, 70)
+shape = SubResource("RectangleShape2D_taeqg")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="PlayerGoal" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+offset_right = 40.0
+grow_vertical = 0
+text = "0"
+
+[node name="EnemyGoal" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "0"
+
+[node name="EggPoint" type="Node2D" parent="."]
+position = Vector2(575, 311)
+
+[connection signal="timeout" from="enemyController/Timer" to="enemyController" method="_on_timer_timeout"]
+[connection signal="body_entered" from="leftGoal" to="Paddle" method="_on_left_goal_body_entered"]
+[connection signal="body_entered" from="RightGoal" to="Paddle" method="_on_right_goal_body_entered"]

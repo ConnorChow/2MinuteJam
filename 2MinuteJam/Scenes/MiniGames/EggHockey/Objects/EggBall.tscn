@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://br5kjlf77baf8"]
+
+[ext_resource type="Texture2D" uid="uid://cxvullig7gdwq" path="res://2MinuteJam/Scenes/MiniGames/SkyFallers/Player/egg.png" id="1_5fwi2"]
+
+[node name="EggBall" type="RigidBody2D"]
+gravity_scale = 0.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_5fwi2")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(2, -15, -2, -13, -5, -10, -8, -7, -10, -2, -10, 8, -8, 12, -5, 15, -2, 16, 7, 16, 11, 13, 12, 10, 13, 6, 13, -2, 9, -10, 6, -13)
