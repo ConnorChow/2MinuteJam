@@ -28,3 +28,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.79478)
 
 [node name="colissionRay" type="RayCast3D" parent="Node3D/Camera3D"]
 target_position = Vector3(0, 0, -3)
+
+[node name="unsitTimer" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
+
+[connection signal="timeout" from="unsitTimer" to="." method="_on_unsit_timer_timeout"]
