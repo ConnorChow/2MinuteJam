@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=33 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="Material" uid="uid://digeiblk51qny" path="res://2MinuteJam/Assets/theaterColour.tres" id="1_c7p14"]
@@ -8,7 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://bmhrqsukfdhao" path="res://2MinuteJam/Objects/Door.tscn" id="4_cmskc"]
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/UiHandler.gd" id="5_fg8bl"]
 [ext_resource type="VideoStream" path="res://2MinuteJam/Movies/escalators_-_286-_360p_.ogv" id="5_gixjt"]
+[ext_resource type="Texture2D" uid="uid://762rp3fn58pf" path="res://2MinuteJam/Scenes/MiniGames/SkyFallers/Player/Chicken.png" id="6_2krvf"]
 [ext_resource type="PackedScene" uid="uid://cesaq07oa64kf" path="res://2MinuteJam/Assets/npcs/baseNPC/baseNPC.tscn" id="6_j1s7m"]
+[ext_resource type="Script" path="res://2MinuteJam/Scenes/SkyFallers.gd" id="6_nkmrj"]
 [ext_resource type="PackedScene" uid="uid://cxa2pqwx24jgc" path="res://2MinuteJam/Objects/basePickup/basePickup.tscn" id="8_x0oa3"]
 [ext_resource type="PackedScene" uid="uid://ba43ypuyd56kj" path="res://2MinuteJam/Scenes/Prebuilds/ChristmasHouse.tscn" id="10_b57lw"]
 [ext_resource type="PackedScene" uid="uid://oj8yd2ldinpc" path="res://2MinuteJam/Objects/ChristmasDeco/Plank.tscn" id="11_7ttf0"]
@@ -55,6 +57,9 @@ metallic = 0.55
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nm7pg"]
 albedo_color = Color(0.545098, 0.541176, 0.545098, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gx8vr"]
+size = Vector3(2, 2, 0.1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rvt8f"]
 bg_color = Color(0.184314, 0.184314, 0.313726, 0.376471)
@@ -909,6 +914,17 @@ light_bake_mode = 1
 spot_range = 14.7488
 spot_attenuation = 0.00104665
 spot_angle = 19.1705
+
+[node name="StaticBody3D" type="StaticBody3D" parent="CSGcontainer/ArcadeContainer" groups=["interact"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4, 2.492, 49.053)
+script = ExtResource("6_nkmrj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CSGcontainer/ArcadeContainer/StaticBody3D"]
+shape = SubResource("BoxShape3D_gx8vr")
+
+[node name="Sprite3D" type="Sprite3D" parent="CSGcontainer/ArcadeContainer/StaticBody3D"]
+pixel_size = 0.03
+texture = ExtResource("6_2krvf")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("2_q27q1")
