@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dah5syrsjnqlh"]
+
+[ext_resource type="Script" path="res://2MinuteJam/Scenes/MiniGames/RailShooter/Player/Player.gd" id="1_7uqbw"]
+
+[node name="Player" type="Camera3D"]
+script = ExtResource("1_7uqbw")

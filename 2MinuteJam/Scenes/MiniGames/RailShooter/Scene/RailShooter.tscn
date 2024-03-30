@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://cpessgdf7ut22"]
+
+[ext_resource type="Script" path="res://2MinuteJam/Scenes/MiniGames/RailShooter/Scene/path.gd" id="1_cv4gj"]
+[ext_resource type="PackedScene" uid="uid://dah5syrsjnqlh" path="res://2MinuteJam/Scenes/MiniGames/RailShooter/Player/Player.tscn" id="1_u6twx"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_2vp0e"]
+size = Vector3(40, 1, 40)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3yun6"]
+size = Vector3(40, 1, 40)
+
+[sub_resource type="Environment" id="Environment_gb2c8"]
+
+[sub_resource type="Curve3D" id="Curve3D_8qra6"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -22.6792, -14.303, 26.26, 0, 0, 0, 0, 0, 0, -13.3472, 9.63017, 43.7884, 0, 0, 0, 0, 0, 0, 19.571, 16.8456, 40.6633, 0, 0, 0, 0, 0, 0, 46.0077, -0.283672, -5.87935, 0, 0, 0, 0, 0, 0, 20.9256, 13.3545, -56.1566, 0, 0, 0, 0, 0, 0, -24.2554, 14.0604, -49.5236, 0, 0, 0, 0, 0, 0, -48.5981, -10.83, 12.6885, 0, 0, 0, 0, 0, 0, -25.2317, 36.3158, 14.2516, 0, 0, 0, 0, 0, 0, -22.6792, -14.303, 26.26),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 9
+
+[node name="RailShooter" type="Node"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_2vp0e")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_3yun6")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_gb2c8")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.576176, 0.817326, 0, -0.817326, 0.576176, 0.931248, 2.32603, 0.37117)
+
+[node name="Path3D" type="Path3D" parent="."]
+curve = SubResource("Curve3D_8qra6")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
+transform = Transform3D(-0.882696, -0.361664, -0.30008, 1.49012e-08, 0.638542, -0.769587, 0.469945, -0.679311, -0.563638, -22.6792, -14.303, 26.26)
+script = ExtResource("1_cv4gj")
+
+[node name="Player" parent="Path3D/PathFollow3D" instance=ExtResource("1_u6twx")]
+transform = Transform3D(-0.882696, -0.138724, 0.449004, -0.361664, 0.810614, -0.460548, -0.30008, -0.568912, -0.765697, -19.7644, 7.35007, -26.2981)
