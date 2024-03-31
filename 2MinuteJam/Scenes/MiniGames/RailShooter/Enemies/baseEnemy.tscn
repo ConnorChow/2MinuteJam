@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://bx4qc71mxltuk"]
+
+[ext_resource type="Script" path="res://2MinuteJam/Scenes/MiniGames/RailShooter/Enemies/baseEnemy.gd" id="1_ijpnq"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_yc880"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_qg5lb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_em0wa"]
+size = Vector3(30, 30, 30)
+
+[node name="BaseEnemy" type="CharacterBody3D"]
+script = ExtResource("1_ijpnq")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_yc880")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_qg5lb")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[node name="playerDetector" type="Area3D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="playerDetector"]
+shape = SubResource("BoxShape3D_em0wa")
+
+[connection signal="area_entered" from="playerDetector" to="." method="_on_player_detector_area_entered"]

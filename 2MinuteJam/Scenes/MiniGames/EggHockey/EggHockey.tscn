@@ -1,9 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://cir0q47armsde"]
+[gd_scene load_steps=12 format=3 uid="uid://cir0q47armsde"]
 
 [ext_resource type="PackedScene" uid="uid://dusr3i62vm8gd" path="res://2MinuteJam/Scenes/MiniGames/EggHockey/Objects/Paddle.tscn" id="1_jf1cg"]
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/MiniGames/EggHockey/PlayerPaddle.gd" id="2_462uj"]
 [ext_resource type="PackedScene" uid="uid://br5kjlf77baf8" path="res://2MinuteJam/Scenes/MiniGames/EggHockey/Objects/EggBall.tscn" id="3_jef06"]
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/MiniGames/EggHockey/enemyController.gd" id="4_e26bm"]
+[ext_resource type="AudioStream" uid="uid://devrcqr6j874u" path="res://2MinuteJam/Assets/Music/eggHockey.mp3" id="5_wkkr1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r8gw6"]
 size = Vector2(1288, 20)
@@ -182,6 +183,11 @@ text = "0"
 
 [node name="EggPoint" type="Node2D" parent="."]
 position = Vector2(575, 311)
+
+[node name="musicTrack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_wkkr1")
+volume_db = -5.0
+autoplay = true
 
 [connection signal="timeout" from="enemyController/Timer" to="enemyController" method="_on_timer_timeout"]
 [connection signal="body_entered" from="leftGoal" to="Paddle" method="_on_left_goal_body_entered"]

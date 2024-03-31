@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=38 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="Material" uid="uid://digeiblk51qny" path="res://2MinuteJam/Assets/theaterColour.tres" id="1_c7p14"]
@@ -46,6 +46,9 @@ viewport_path = NodePath("CSGcontainer/Theater/SubViewport")
 resource_local_to_scene = true
 albedo_texture = SubResource("ViewportTexture_gwujo")
 albedo_texture_force_srgb = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_acywf"]
+size = Vector3(26.7458, 17.9312, 39.3422)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_68jg0"]
 albedo_color = Color(0.466667, 0.00392157, 0.827451, 1)
@@ -525,6 +528,12 @@ stream = ExtResource("5_gixjt")
 autoplay = true
 expand = true
 loop = true
+
+[node name="OutsideMusicStart" type="Area3D" parent="CSGcontainer/Theater"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CSGcontainer/Theater/OutsideMusicStart"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.29516, 8.46558, 8.57221)
+shape = SubResource("BoxShape3D_acywf")
 
 [node name="PerimeterBuildings" type="Node" parent="CSGcontainer"]
 
@@ -1016,7 +1025,6 @@ colour = Color(0, 0, 0, 1)
 [node name="Outside" type="AudioStreamPlayer" parent="MusicContainer"]
 stream = ExtResource("14_514x3")
 volume_db = -5.0
-autoplay = true
 
 [node name="PrebuildContainers" type="Node" parent="."]
 
@@ -1028,3 +1036,6 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -93.98
 
 [node name="BaseChair" parent="." instance=ExtResource("20_sm38u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.9006, 0.15, 38.1333)
+
+[connection signal="body_entered" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_entered"]
+[connection signal="body_exited" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_exited"]

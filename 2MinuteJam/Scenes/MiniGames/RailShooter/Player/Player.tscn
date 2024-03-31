@@ -1,6 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://dah5syrsjnqlh"]
+[gd_scene load_steps=3 format=3 uid="uid://dah5syrsjnqlh"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/MiniGames/RailShooter/Player/Player.gd" id="1_7uqbw"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_g4mf1"]
+
 [node name="Player" type="Camera3D"]
 script = ExtResource("1_7uqbw")
+
+[node name="location" type="Area3D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="location"]
+shape = SubResource("BoxShape3D_g4mf1")

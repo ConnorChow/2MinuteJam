@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://cj2ujs4u73la0"]
+
+[ext_resource type="Script" path="res://2MinuteJam/Objects/clocks/clockTimer.gd" id="1_hpwxu"]
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_bwudk"]
+radial_steps = 12
+sections = 2
+section_length = 0.1
+section_rings = 1
+
+[node name="Clockmesh" type="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("TubeTrailMesh_bwudk")
+script = ExtResource("1_hpwxu")
+useSystemTime = true
+
+[node name="Label3D" type="Label3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.103, 0)
+modulate = Color(1, 0, 0, 1)
+outline_modulate = Color(0.443137, 0, 0, 1)
+text = "01:01:01"
+
+[node name="Timer" type="Timer" parent="Label3D"]
+
+[connection signal="timeout" from="Label3D/Timer" to="." method="_on_timer_timeout"]

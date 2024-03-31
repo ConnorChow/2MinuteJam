@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://clc44v0hqw7ci"]
+[gd_scene load_steps=10 format=3 uid="uid://clc44v0hqw7ci"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/MiniGames/SkyFallers/SkyFallers.gd" id="1_lx7mn"]
 [ext_resource type="Texture2D" uid="uid://bdo37wprd0pk5" path="res://2MinuteJam/Assets/art/testsky.png" id="1_wg5e6"]
 [ext_resource type="PackedScene" uid="uid://dp3h70ds6bbcy" path="res://2MinuteJam/Scenes/MiniGames/SkyFallers/Player/Player.tscn" id="2_chsnp"]
 [ext_resource type="PackedScene" uid="uid://dsguxoqo0i7oi" path="res://2MinuteJam/Scenes/MiniGames/SkyFallers/Enemy/Chicken.tscn" id="4_xdfcd"]
 [ext_resource type="AudioStream" uid="uid://dy2trwv55qjx4" path="res://2MinuteJam/Scenes/MiniGames/SkyFallers/Player/chicken-single-alarm-call-6056.mp3" id="5_3cnnw"]
+[ext_resource type="AudioStream" uid="uid://de78b5c4tp4ts" path="res://2MinuteJam/Assets/Music/skyFallers.mp3" id="6_11tsw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ajggc"]
 size = Vector2(26, 665)
@@ -129,6 +130,11 @@ shape = SubResource("RectangleShape2D_l4d1v")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D3"]
 position = Vector2(1164, 320)
 shape = SubResource("RectangleShape2D_1i7aj")
+
+[node name="musicTrack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_11tsw")
+volume_db = -5.0
+autoplay = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

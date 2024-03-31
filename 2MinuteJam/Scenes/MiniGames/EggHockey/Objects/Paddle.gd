@@ -6,7 +6,7 @@ var enemyGoals : int
 @onready var eggBall = preload("res://2MinuteJam/Scenes/MiniGames/EggHockey/Objects/EggBall.tscn")
 
 func _ready():
-	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	pass
 
 
@@ -18,7 +18,9 @@ func updateScore():
 	get_parent().call_deferred("add_child",b)
 	b.global_position = $"../EggPoint".global_position
 	
-
+func _input(event):
+	if event.is_action_pressed("throw"):
+		$"../PlayerController".global_position = get_global_mouse_position ( )
 
 func _on_left_goal_body_entered(body):
 	body.queue_free()
