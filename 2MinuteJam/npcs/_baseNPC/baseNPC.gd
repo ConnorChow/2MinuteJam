@@ -7,7 +7,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 @export var dialogue = ["Hello", "Good Bye", "beep", "boop"]
 @export var colour : Color
-@export_enum("walks", "rolls", "falls") var moveType
+@export_enum("walks", "rolls", "falls") var moveType  : String
 
 
 var textPlace : int = 0
@@ -37,6 +37,11 @@ func _physics_process(delta):
 func interact():
 
 	get_tree().call_group("dialogue", "talking", dialogue)
+	talkedTo()
 	
+
+func talkedTo():
+	
+	pass
 
 

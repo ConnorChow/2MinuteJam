@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://dso57uf1ulcqu"]
+
+[ext_resource type="PackedScene" uid="uid://cesaq07oa64kf" path="res://2MinuteJam/npcs/_baseNPC/baseNPC.tscn" id="1_iso41"]
+[ext_resource type="Script" path="res://2MinuteJam/npcs/Bridge/bridgeWoman.gd" id="2_i0pgj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q50r6"]
+resource_local_to_scene = true
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_s4nwt"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_q50r6")
+
+[node name="bridgeWoman" instance=ExtResource("1_iso41")]
+script = ExtResource("2_i0pgj")
+dialogue = ["...", "..", "hah..", ".."]
+colour = Color(0, 0, 0, 1)
+
+[node name="MeshInstance3D" parent="." index="0"]
+mesh = SubResource("CapsuleMesh_s4nwt")
+
+[node name="Timer" type="Timer" parent="." index="3"]
+process_mode = 3
+wait_time = 80.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

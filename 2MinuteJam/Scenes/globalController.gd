@@ -6,9 +6,6 @@ var ending : bool = false
 
 var inDialogue : bool = false
 
-func _ready():
-	
-	pass
 
 
 func restart():
