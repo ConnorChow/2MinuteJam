@@ -13,9 +13,11 @@ func _ready():
 
 
 func _on_outside_music_start_body_entered(_body):
-	OutsideMusic.stop()
+	if !GlobalController.ending:
+		OutsideMusic.stop()
 
 
 func _on_outside_music_start_body_exited(_body):
-	OutsideMusic.play()
+	if !GlobalController.ending:
+		OutsideMusic.play()
 

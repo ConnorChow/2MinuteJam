@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=42 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="Material" uid="uid://digeiblk51qny" path="res://2MinuteJam/Assets/theaterColour.tres" id="1_c7p14"]
@@ -20,6 +20,9 @@
 [ext_resource type="PackedScene" uid="uid://cao36a7xwhym8" path="res://2MinuteJam/Assets/npcs/TheaterNPC.tscn" id="13_rqgvj"]
 [ext_resource type="AudioStream" uid="uid://cfyndj60oygke" path="res://2MinuteJam/Assets/Music/outside.mp3" id="14_514x3"]
 [ext_resource type="PackedScene" uid="uid://2uwugc2a80tn" path="res://2MinuteJam/Objects/baseSit/baseChair.tscn" id="20_sm38u"]
+[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="21_rfngd"]
+[ext_resource type="Resource" path="res://test/data.hterrain" id="22_35dfe"]
+[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="23_c6pbi"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ff47w"]
 albedo_color = Color(0.701961, 0.701961, 0, 1)
@@ -93,6 +96,11 @@ size = Vector2(250, 250)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_a364q"]
 size = Vector3(250, 0.3, 250)
+
+[sub_resource type="Resource" id="Resource_fhd08"]
+script = ExtResource("23_c6pbi")
+mode = 0
+textures = [[], []]
 
 [node name="World" type="Node"]
 script = ExtResource("1_0o181")
@@ -1005,8 +1013,9 @@ autowrap_mode = 3
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.305989, 2.5, -1.25863)
 
 [node name="GroundMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -58.172, 0)
+visible = false
 mesh = SubResource("PlaneMesh_rvy3p")
-metadata/_edit_lock_ = true
 
 [node name="StaticBody3D" type="StaticBody3D" parent="GroundMesh"]
 
@@ -1032,10 +1041,29 @@ volume_db = -5.0
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 31.4955, 0.0499992, 22.5571)
 
 [node name="Well" parent="PrebuildContainers" instance=ExtResource("12_nf6n7")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -93.981, 0, 96.812)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -94.7513, 0, 90.2546)
 
 [node name="BaseChair" parent="." instance=ExtResource("20_sm38u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.9006, 0.15, 38.1333)
+
+[node name="HTerrain" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -247, 0, -210)
+script = ExtResource("21_rfngd")
+_terrain_data = ExtResource("22_35dfe")
+chunk_size = 32
+collision_enabled = true
+collision_layer = 1
+collision_mask = 1
+shader_type = "Classic4Lite"
+custom_shader = null
+custom_globalmap_shader = null
+texture_set = SubResource("Resource_fhd08")
+render_layers = 1
+cast_shadow = 1
+shader_params/u_ground_uv_scale = 20
+shader_params/u_depth_blending = true
+shader_params/u_triplanar = null
+shader_params/u_tile_reduction = null
 
 [connection signal="body_entered" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_entered"]
 [connection signal="body_exited" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_exited"]
