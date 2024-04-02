@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://b68t6c412dk10"]
+
+[ext_resource type="PackedScene" uid="uid://cesaq07oa64kf" path="res://2MinuteJam/npcs/_baseNPC/baseNPC.tscn" id="1_0hbr8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nyesj"]
+resource_local_to_scene = true
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_se2bm"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_nyesj")
+
+[node name="Clerk" instance=ExtResource("1_0hbr8")]
+dialogue = ["Welcome to the Arcegg!", "Feel free to try out any of the machines!", "...godi'msotired...", "Sorry, go have some fun!"]
+
+[node name="MeshInstance3D" parent="." index="0"]
+mesh = SubResource("CapsuleMesh_se2bm")

@@ -1,0 +1,66 @@
+[gd_scene load_steps=11 format=3 uid="uid://d3rvqywps6q6h"]
+
+[ext_resource type="Script" path="res://2MinuteJam/Scenes/MiniGames/RailShooter/Scene/path.gd" id="1_7bgs4"]
+[ext_resource type="PackedScene" uid="uid://dah5syrsjnqlh" path="res://2MinuteJam/Scenes/MiniGames/RailShooter/Player/Player.tscn" id="2_a5wwm"]
+[ext_resource type="PackedScene" uid="uid://bx4qc71mxltuk" path="res://2MinuteJam/Scenes/MiniGames/RailShooter/Enemies/baseEnemy.tscn" id="3_dudg6"]
+[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="4_x66mc"]
+[ext_resource type="Resource" path="res://2MinuteJam/Scenes/MiniGames/Poultrygeist/Terrain/data.hterrain" id="5_i04sh"]
+[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="6_3ch5j"]
+
+[sub_resource type="Environment" id="Environment_gb2c8"]
+
+[sub_resource type="Curve3D" id="Curve3D_8qra6"]
+_data = {
+"points": PackedVector3Array(0, 0, 0, 0, 0, 0, -22.6792, -14.303, 26.26, 0, 0, 0, 0, 0, 0, -13.3472, 9.63017, 43.7884, 0, 0, 0, 0, 0, 0, 19.571, 16.8456, 40.6633, 0, 0, 0, 0, 0, 0, 46.0077, -0.283672, -5.87935, 0, 0, 0, 0, 0, 0, 20.9256, 13.3545, -56.1566, 0, 0, 0, 0, 0, 0, -24.2554, 14.0604, -49.5236, 0, 0, 0, 0, 0, 0, -48.5981, -10.83, 12.6885, 0, 0, 0, 0, 0, 0, -25.2317, 36.3158, 14.2516, 0, 0, 0, 0, 0, 0, -22.6792, -14.303, 26.26),
+"tilts": PackedFloat32Array(0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+point_count = 9
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_6wjy5"]
+
+[sub_resource type="Resource" id="Resource_r5jaq"]
+script = ExtResource("6_3ch5j")
+mode = 0
+textures = [[], []]
+
+[node name="PoultryGeist" type="Node"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_gb2c8")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.576176, 0.817326, 0, -0.817326, 0.576176, 0.931248, 2.32603, 0.37117)
+
+[node name="Path3D" type="Path3D" parent="."]
+curve = SubResource("Curve3D_8qra6")
+
+[node name="PathFollow3D" type="PathFollow3D" parent="Path3D"]
+transform = Transform3D(-0.882698, -0.361662, -0.300077, 1.49012e-08, 0.638541, -0.769588, 0.469942, -0.679313, -0.563638, -22.6792, -14.303, 26.26)
+script = ExtResource("1_7bgs4")
+
+[node name="Player" parent="Path3D/PathFollow3D" instance=ExtResource("2_a5wwm")]
+transform = Transform3D(-0.882696, -0.138724, 0.449004, -0.361664, 0.810614, -0.460548, -0.30008, -0.568912, -0.765697, -19.7644, 7.35007, -26.2981)
+
+[node name="BaseEnemy" parent="." instance=ExtResource("3_dudg6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2399, 0.5, 12.9768)
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_6wjy5")
+
+[node name="HTerrain" type="Node3D" parent="NavigationRegion3D"]
+script = ExtResource("4_x66mc")
+_terrain_data = ExtResource("5_i04sh")
+chunk_size = 32
+collision_enabled = true
+collision_layer = 1
+collision_mask = 1
+shader_type = "Classic4Lite"
+custom_shader = null
+custom_globalmap_shader = null
+texture_set = SubResource("Resource_r5jaq")
+render_layers = 1
+cast_shadow = 1
+shader_params/u_ground_uv_scale = 20
+shader_params/u_depth_blending = true
+shader_params/u_triplanar = null
+shader_params/u_tile_reduction = null

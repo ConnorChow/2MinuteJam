@@ -13,6 +13,8 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var textPlace : int = 0
 @onready var dialogueDetect = $playerDialogueDetector
 @onready var mesh = $MeshInstance3D
+
+
 func _ready():
 	var meshToColor = mesh.get_active_material(0)
 	meshToColor.set_albedo(colour)
