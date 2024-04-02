@@ -43,3 +43,20 @@ func _on_the_pit_music_on_body_entered(_body):
 
 
 
+
+
+func _on_arcade_off_body_entered(_body):
+	if !OutsideMusic.playing:
+		OutsideMusic.play()
+	for musicChild in $MusicContainer/arcadeMusic.get_children():
+		musicChild.stop()
+	
+
+
+
+func _on_arcade_on_body_entered(_body):
+	OutsideMusic.stop()
+	for musicChild in $MusicContainer/arcadeMusic.get_children():
+		if !musicChild.playing:
+			musicChild.play()
+
