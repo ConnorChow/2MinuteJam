@@ -23,11 +23,15 @@ var hitObject :Object
 @onready var holdPoint = $Node3D/Camera3D/holdPoint
 @onready var rayCast = $Node3D/Camera3D/colissionRay
 @onready var unsitTimer = $unsitTimer
+@onready var ui = $ui
+@onready var options_panel = $ui/CenterContainer/HBoxContainer/OptionsPanel
 
 
-# Get the gravity from the project settings to be synced with RigidBody nodes.
+
 
 func _ready():
+	ui.visible = false
+
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	modSpeed = SPEED
 	
@@ -55,25 +59,12 @@ func _physics_process(delta):
 		heldObject.global_position = holdPoint.global_position
 		if Input.is_action_pressed("ctrl") && Input.is_action_just_pressed("mwu"):
 			heldObject.rotate_x(.3)
-			#heldObject.transform.basis.x += Vector3(.3, 0, 0)
-			#heldObject.rotation.x +=.3
-			#if heldObject.rotation_degrees.x >= deg_to_rad(359):
-			#	heldObject.rotation_degrees.x= deg_to_rad(0)
 		elif Input.is_action_just_pressed("mwu"):
 			heldObject.rotate_y(.3)
-			#heldObject.transform.basis.y +=Vector3(0, .3, 0)
-			#heldObject.rotation.y +=.3
-			
 		if Input.is_action_pressed("ctrl") && Input.is_action_just_pressed("mwd"):
 			heldObject.rotate_x(-.3)
-			#heldObject.transform.basis.x -=Vector3(.3, 0, 0)
-			#heldObject.rotation.x -=.3
-			#if heldObject.rotation_degrees.x >= deg_to_rad(1):
-			#	heldObject.rotation_degrees.x= deg_to_rad(360)
 		elif Input.is_action_just_pressed("mwd"):
 			heldObject.rotate_y(-.3)
-			#heldObject.transform.basis.y +=Vector3(0, .3, 0)
-			#heldObject.rotation.y -=.3
 	if Input.is_action_pressed("shift"):
 		modSpeed = SPEED + runSpeed
 	if Input.is_action_just_released("shift"):
@@ -111,7 +102,6 @@ func _physics_process(delta):
 						heldObject.collision_layer = 1
 						heldObject.set_freeze_enabled(false)
 						heldObject = null
-			#			heldObject.mode = RigidBody3D.FREEZE_MODE_KINEMATIC
 					if hitObject.is_in_group("interact"):
 						hitObject.interact()
 					if hitObject.is_in_group("sit"):
@@ -123,12 +113,15 @@ func _physics_process(delta):
 			if canleave:
 				canleave = false
 				sitting = false
+	if Input.is_action_just_pressed("esc"):
+		if !GlobalController.inDialogue:
+			ui.visible=true
+			get_tree().paused = true
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	if GlobalController.inDialogue:
 		velocity = Vector3(0, -gravity*delta, 0)
 	else:
 		if is_on_floor():
-			
-				
 			if direction:
 				velocity.x = direction.x * modSpeed * (delta * 60)
 				velocity.z = direction.z * modSpeed * (delta * 60)
@@ -150,3 +143,21 @@ func _physics_process(delta):
 
 func _on_unsit_timer_timeout():
 	canleave = true
+
+
+
+
+
+
+func _on_resume_button_pressed():
+	ui.visible = false
+	get_tree().paused = false
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+
+func _on_options_button_pressed():
+	options_panel.visible = !options_panel.visible
+
+
+func _on_jump_button_pressed():
+	velocity.y = 1000
