@@ -130,8 +130,8 @@ func _physics_process(delta):
 			
 				
 			if direction:
-				velocity.x = direction.x * modSpeed
-				velocity.z = direction.z * modSpeed
+				velocity.x = direction.x * modSpeed * (delta * 60)
+				velocity.z = direction.z * modSpeed * (delta * 60)
 			else:
 				velocity.x = lerp(velocity.x, direction.x * modSpeed, delta * 7)
 				velocity.z = lerp(velocity.z, direction.z * modSpeed, delta * 7)
