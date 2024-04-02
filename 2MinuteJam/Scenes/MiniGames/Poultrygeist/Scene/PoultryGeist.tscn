@@ -1,11 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://d3rvqywps6q6h"]
+[gd_scene load_steps=7 format=3 uid="uid://d3rvqywps6q6h"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/MiniGames/RailShooter/Scene/path.gd" id="1_7bgs4"]
 [ext_resource type="PackedScene" uid="uid://dah5syrsjnqlh" path="res://2MinuteJam/Scenes/MiniGames/RailShooter/Player/Player.tscn" id="2_a5wwm"]
 [ext_resource type="PackedScene" uid="uid://bx4qc71mxltuk" path="res://2MinuteJam/Scenes/MiniGames/RailShooter/Enemies/baseEnemy.tscn" id="3_dudg6"]
-[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="4_x66mc"]
-[ext_resource type="Resource" path="res://2MinuteJam/Scenes/MiniGames/Poultrygeist/Terrain/data.hterrain" id="5_i04sh"]
-[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="6_3ch5j"]
 
 [sub_resource type="Environment" id="Environment_gb2c8"]
 
@@ -17,11 +14,6 @@ _data = {
 point_count = 9
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_6wjy5"]
-
-[sub_resource type="Resource" id="Resource_r5jaq"]
-script = ExtResource("6_3ch5j")
-mode = 0
-textures = [[], []]
 
 [node name="PoultryGeist" type="Node"]
 
@@ -46,21 +38,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.2399, 0.5, 12.9768)
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 navigation_mesh = SubResource("NavigationMesh_6wjy5")
-
-[node name="HTerrain" type="Node3D" parent="NavigationRegion3D"]
-script = ExtResource("4_x66mc")
-_terrain_data = ExtResource("5_i04sh")
-chunk_size = 32
-collision_enabled = true
-collision_layer = 1
-collision_mask = 1
-shader_type = "Classic4Lite"
-custom_shader = null
-custom_globalmap_shader = null
-texture_set = SubResource("Resource_r5jaq")
-render_layers = 1
-cast_shadow = 1
-shader_params/u_ground_uv_scale = 20
-shader_params/u_depth_blending = true
-shader_params/u_triplanar = null
-shader_params/u_tile_reduction = null

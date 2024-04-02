@@ -23,12 +23,12 @@
 [ext_resource type="AudioStream" uid="uid://de78b5c4tp4ts" path="res://2MinuteJam/Assets/Music/skyFallers.mp3" id="16_7n5b4"]
 [ext_resource type="PackedScene" uid="uid://cfmt82e13c3so" path="res://2MinuteJam/Scenes/Prebuilds/thePit.tscn" id="17_vscgp"]
 [ext_resource type="PackedScene" uid="uid://2uwugc2a80tn" path="res://2MinuteJam/Objects/baseSit/baseChair.tscn" id="20_sm38u"]
-[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="21_rfngd"]
-[ext_resource type="Resource" path="res://test/data.hterrain" id="22_35dfe"]
-[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="23_c6pbi"]
 [ext_resource type="PackedScene" uid="uid://dso57uf1ulcqu" path="res://2MinuteJam/npcs/Bridge/bridgeWoman.tscn" id="24_n0frp"]
 [ext_resource type="PackedScene" uid="uid://blf8e1040dqs5" path="res://2MinuteJam/Objects/Dings/Ding1.tscn" id="25_pem1r"]
 [ext_resource type="PackedScene" uid="uid://b68t6c412dk10" path="res://2MinuteJam/npcs/Arcade/Clerk.tscn" id="26_vwgwm"]
+[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="27_ons6m"]
+[ext_resource type="Resource" path="res://test/data.hterrain" id="28_23m2k"]
+[ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="29_yjp2r"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ff47w"]
 albedo_color = Color(0.701961, 0.701961, 0, 1)
@@ -105,8 +105,8 @@ size = Vector3(1.46826, 4, 4)
 [sub_resource type="BoxShape3D" id="BoxShape3D_nfp5j"]
 size = Vector3(2, 4, 4)
 
-[sub_resource type="Resource" id="Resource_fhd08"]
-script = ExtResource("23_c6pbi")
+[sub_resource type="Resource" id="Resource_4w5vi"]
+script = ExtResource("29_yjp2r")
 mode = 0
 textures = [[], []]
 
@@ -1096,25 +1096,6 @@ collision_mask = 4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.0226, 4.38211, 0)
 shape = SubResource("BoxShape3D_nfp5j")
 
-[node name="HTerrain" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -247, 0, -210)
-script = ExtResource("21_rfngd")
-_terrain_data = ExtResource("22_35dfe")
-chunk_size = 32
-collision_enabled = true
-collision_layer = 1
-collision_mask = 1
-shader_type = "Classic4Lite"
-custom_shader = null
-custom_globalmap_shader = null
-texture_set = SubResource("Resource_fhd08")
-render_layers = 1
-cast_shadow = 1
-shader_params/u_ground_uv_scale = 20
-shader_params/u_depth_blending = true
-shader_params/u_triplanar = null
-shader_params/u_tile_reduction = null
-
 [node name="npcContainer" type="Node" parent="."]
 
 [node name="Bridge" type="Node" parent="npcContainer"]
@@ -1146,6 +1127,25 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.9006, 0.15, 38.1333)
 
 [node name="BasePickup" parent="random shit" instance=ExtResource("8_x0oa3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3911, 2.14309, 22.6921)
+
+[node name="HTerrain" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -246.7, 0, -211)
+script = ExtResource("27_ons6m")
+_terrain_data = ExtResource("28_23m2k")
+chunk_size = 32
+collision_enabled = true
+collision_layer = 1
+collision_mask = 1
+shader_type = "Classic4Lite"
+custom_shader = null
+custom_globalmap_shader = null
+texture_set = SubResource("Resource_4w5vi")
+render_layers = 1
+cast_shadow = 1
+shader_params/u_ground_uv_scale = 20
+shader_params/u_depth_blending = true
+shader_params/u_triplanar = null
+shader_params/u_tile_reduction = null
 
 [connection signal="body_entered" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_entered"]
 [connection signal="body_exited" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_exited"]
