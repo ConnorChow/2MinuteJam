@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=45 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="Material" uid="uid://digeiblk51qny" path="res://2MinuteJam/Assets/theaterColour.tres" id="1_c7p14"]
@@ -90,6 +90,12 @@ corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1jetq"]
+size = Vector3(1.46826, 4, 4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_nfp5j"]
+size = Vector3(2, 4, 4)
 
 [sub_resource type="Resource" id="Resource_fhd08"]
 script = ExtResource("23_c6pbi")
@@ -1029,6 +1035,22 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -94.75
 
 [node name="ThePit" parent="PrebuildContainers" instance=ExtResource("17_vscgp")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -69.1919, -4.20831, -68.3296)
+
+[node name="thePitMusicOff" type="Area3D" parent="PrebuildContainers/ThePit"]
+collision_layer = 4
+collision_mask = 4
+
+[node name="thePitMusicOff" type="CollisionShape3D" parent="PrebuildContainers/ThePit/thePitMusicOff"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5083, 5.6291, 0)
+shape = SubResource("BoxShape3D_1jetq")
+
+[node name="thePitMusicOn" type="Area3D" parent="PrebuildContainers/ThePit"]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PrebuildContainers/ThePit/thePitMusicOn"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.0226, 4.38211, 0)
+shape = SubResource("BoxShape3D_nfp5j")
 
 [node name="HTerrain" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -247, 0, -210)
