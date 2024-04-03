@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=49 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="Material" uid="uid://digeiblk51qny" path="res://2MinuteJam/Assets/theaterColour.tres" id="1_c7p14"]
@@ -9,7 +9,6 @@
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/UiHandler.gd" id="5_fg8bl"]
 [ext_resource type="VideoStream" path="res://2MinuteJam/Movies/escalators_-_286-_360p_.ogv" id="5_gixjt"]
 [ext_resource type="Texture2D" uid="uid://762rp3fn58pf" path="res://2MinuteJam/Scenes/MiniGames/SkyFallers/Player/Chicken.png" id="6_2krvf"]
-[ext_resource type="PackedScene" uid="uid://cesaq07oa64kf" path="res://2MinuteJam/npcs/_baseNPC/baseNPC.tscn" id="6_j1s7m"]
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/SkyFallers.gd" id="6_nkmrj"]
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/EggHockey.gd" id="8_bytbj"]
 [ext_resource type="PackedScene" uid="uid://cxa2pqwx24jgc" path="res://2MinuteJam/Objects/basePickup/basePickup.tscn" id="8_x0oa3"]
@@ -1085,12 +1084,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 79.1773, 1.97959, -79.8828)
 
 [node name="Theater" type="Node" parent="npcContainer"]
 
-[node name="BaseNpc2" parent="npcContainer/Theater" instance=ExtResource("13_rqgvj")]
+[node name="theaterShuush" parent="npcContainer/Theater" instance=ExtResource("13_rqgvj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.19962, 5.5, 8.18125)
 colour = Color(0, 0, 0, 1)
 
-[node name="BaseNpc" parent="npcContainer/Theater" instance=ExtResource("6_j1s7m")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.305989, 2.5, -1.25863)
+[node name="theaterGossip" parent="npcContainer/Theater" instance=ExtResource("30_jf0wo")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.2147, 3.5, 3.41712)
 
 [node name="Arcegg" type="Node" parent="npcContainer"]
 
@@ -1141,9 +1140,6 @@ shader_params/u_ground_uv_scale = 20
 shader_params/u_depth_blending = true
 shader_params/u_triplanar = null
 shader_params/u_tile_reduction = null
-
-[node name="theaterGossip" parent="." instance=ExtResource("30_jf0wo")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.2147, 3.5, 3.41712)
 
 [connection signal="body_entered" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_entered"]
 [connection signal="body_exited" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_exited"]
