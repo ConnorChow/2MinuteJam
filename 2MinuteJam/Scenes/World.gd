@@ -51,7 +51,7 @@ func _on_arcade_off_body_entered(_body):
 		OutsideMusic.play()
 	for musicChild in $MusicContainer/arcadeMusic.get_children():
 		(musicChild as AudioStreamPlayer3D).stop()
-	
+
 
 
 
@@ -64,4 +64,4 @@ func _on_arcade_on_body_entered(_body):
 
 
 func _on_death_plane_body_entered(body):
-	body.queue_free
+	body.queue_free()

@@ -1,8 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://ba43ypuyd56kj"]
+[gd_scene load_steps=11 format=3 uid="uid://ba43ypuyd56kj"]
 
 [ext_resource type="PackedScene" uid="uid://bmhrqsukfdhao" path="res://2MinuteJam/Objects/Door.tscn" id="1_xkw1w"]
 [ext_resource type="PackedScene" uid="uid://cqeoh8ll46jwk" path="res://2MinuteJam/Objects/ChristmasDeco/ChristmasBaubleGreen.tscn" id="2_3ep2q"]
 [ext_resource type="PackedScene" uid="uid://cu78xlpkffx2n" path="res://2MinuteJam/Objects/ChristmasDeco/ChristmasBaubbleRed.tscn" id="3_g84c2"]
+[ext_resource type="PackedScene" uid="uid://buo0e7us7lmt0" path="res://2MinuteJam/Objects/ChristmasDeco/glowItem.tscn" id="4_0per4"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yjyhn"]
 size = Vector3(6, 10, 0.2)
@@ -149,3 +150,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.52409, 7.5, 1.79677)
 
 [node name="ChristmasBaubbleRed11" parent="." instance=ExtResource("3_g84c2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.04138, 3.24915, 1.56997)
+
+[node name="GlowItem" parent="." instance=ExtResource("4_0per4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.16558, 1.57054, 0.823302)
