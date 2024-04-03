@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=51 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="Material" uid="uid://digeiblk51qny" path="res://2MinuteJam/Assets/theaterColour.tres" id="1_c7p14"]
@@ -109,6 +109,18 @@ size = Vector3(2, 4, 4)
 script = ExtResource("29_yjp2r")
 mode = 0
 textures = [[], []]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bhk50"]
+transparency = 1
+albedo_color = Color(0, 0, 0.792157, 0.498039)
+metallic = 0.56
+roughness = 0.65
+clearcoat_roughness = 1.0
+refraction_enabled = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_qtuh2"]
+material = SubResource("StandardMaterial3D_bhk50")
+size = Vector3(37.15, 8.035, 156.29)
 
 [node name="World" type="Node"]
 script = ExtResource("1_0o181")
@@ -972,9 +984,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.7217, 5.8844, 44.3834)
 shape = SubResource("BoxShape3D_tsild")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CSGcontainer"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 79.9321, 0.479592, -77.946)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 79.9321, 0.276763, -77.946)
 use_collision = true
-size = Vector3(36.009, 1, 4)
+size = Vector3(36.009, 0.5, 4)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("2_q27q1")
@@ -1045,7 +1057,7 @@ stream = ExtResource("16_7n5b4")
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 31.4955, 0.0499992, 22.5571)
 
 [node name="Well" parent="PrebuildContainers" instance=ExtResource("12_nf6n7")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -94.7513, 0, 90.2546)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -94.7513, 0, 89.378)
 
 [node name="ThePit" parent="PrebuildContainers" instance=ExtResource("17_vscgp")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -69.1919, -4.20831, -68.3296)
@@ -1080,7 +1092,7 @@ shape = SubResource("BoxShape3D_nfp5j")
 [node name="Bridge" type="Node" parent="npcContainer"]
 
 [node name="bridgeWoman" parent="npcContainer/Bridge" instance=ExtResource("24_n0frp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 79.1773, 1.97959, -79.8828)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 79.1773, 1.52676, -79.8828)
 
 [node name="Theater" type="Node" parent="npcContainer"]
 
@@ -1140,6 +1152,12 @@ shader_params/u_ground_uv_scale = 20
 shader_params/u_depth_blending = true
 shader_params/u_triplanar = null
 shader_params/u_tile_reduction = null
+
+[node name="miscterrain" type="Node" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="miscterrain"]
+transform = Transform3D(0.974633, 0, 0.223812, 0, 1, 0, -0.223812, 0, 0.974633, 86.0374, -5.66553, -61.3132)
+mesh = SubResource("BoxMesh_qtuh2")
 
 [connection signal="body_entered" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_entered"]
 [connection signal="body_exited" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_exited"]
