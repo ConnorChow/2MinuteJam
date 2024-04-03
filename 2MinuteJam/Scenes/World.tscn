@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=50 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="Material" uid="uid://digeiblk51qny" path="res://2MinuteJam/Assets/theaterColour.tres" id="1_c7p14"]
@@ -29,6 +29,7 @@
 [ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="27_ons6m"]
 [ext_resource type="Resource" path="res://test/data.hterrain" id="28_23m2k"]
 [ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="29_yjp2r"]
+[ext_resource type="PackedScene" uid="uid://c5xpe30ickej" path="res://2MinuteJam/npcs/Theater/theater_gossip.tscn" id="30_jf0wo"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ff47w"]
 albedo_color = Color(0.701961, 0.701961, 0, 1)
@@ -209,27 +210,6 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -92.87
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -112.872, 0.05, 40.5969)
 
 [node name="WoodPile" type="Node3D" parent="."]
-
-[node name="Plank" parent="WoodPile" instance=ExtResource("11_7ttf0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.0297, 0.0500002, 18.1316)
-
-[node name="Plank2" parent="WoodPile" instance=ExtResource("11_7ttf0")]
-transform = Transform3D(0.961966, 0, -0.27317, 0, 1, 0, 0.27317, 0, 0.961966, 20.6398, 0.083371, 17.1619)
-
-[node name="Plank3" parent="WoodPile" instance=ExtResource("11_7ttf0")]
-transform = Transform3D(0.339099, 0, -0.940751, 0.445232, 0.880916, 0.160487, 0.828722, -0.473274, 0.298718, 19.3721, 0.534279, 16.3712)
-
-[node name="Plank4" parent="WoodPile" instance=ExtResource("11_7ttf0")]
-transform = Transform3D(0.94464, 0, 0.328108, 0, 1, 0, -0.328108, 0, 0.94464, 18.2962, 0.05, 17.069)
-
-[node name="Plank5" parent="WoodPile" instance=ExtResource("11_7ttf0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.4211, 0.52432, 18.0467)
-
-[node name="Plank6" parent="WoodPile" instance=ExtResource("11_7ttf0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21.262, 0.05, 16.5941)
-
-[node name="Plank7" parent="WoodPile" instance=ExtResource("11_7ttf0")]
-transform = Transform3D(0.967998, -0.0642711, 0.242588, 0.0623432, 0.997932, 0.0156237, -0.24309, 0, 0.970004, 19.9685, 0.208537, 16.8083)
 
 [node name="CSGcontainer" type="Node" parent="."]
 
@@ -1128,6 +1108,21 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.9006, 0.15, 38.1333)
 [node name="BasePickup" parent="random shit" instance=ExtResource("8_x0oa3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3911, 2.14309, 22.6921)
 
+[node name="Plank" parent="random shit" instance=ExtResource("11_7ttf0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.649, 0.856645, 14.3811)
+
+[node name="Plank2" parent="random shit" instance=ExtResource("11_7ttf0")]
+transform = Transform3D(0.72473, 0.0241879, 0.688609, -0.0175348, 0.999707, -0.0166609, -0.68881, 0, 0.724942, 25.1606, 1.54369, 14.6008)
+
+[node name="Plank4" parent="random shit" instance=ExtResource("11_7ttf0")]
+transform = Transform3D(0.942067, 0.17684, 0.285023, -0.166066, 0.98418, -0.061739, -0.291432, 0.0108296, 0.956531, 25.3691, 1.63792, 14.9638)
+
+[node name="Plank5" parent="random shit" instance=ExtResource("11_7ttf0")]
+transform = Transform3D(0.873034, -0.405702, 0.270586, 0.390997, 0.913941, 0.10878, -0.291432, 0.0108296, 0.95653, 23.9365, 1.63792, 14.9638)
+
+[node name="Plank3" parent="random shit" instance=ExtResource("11_7ttf0")]
+transform = Transform3D(0.884108, 0, 0.467282, 0, 1, 0, -0.467282, 0, 0.884108, 25.1606, 1.72835, 13.5578)
+
 [node name="HTerrain" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -246.7, 0, -211)
 script = ExtResource("27_ons6m")
@@ -1146,6 +1141,9 @@ shader_params/u_ground_uv_scale = 20
 shader_params/u_depth_blending = true
 shader_params/u_triplanar = null
 shader_params/u_tile_reduction = null
+
+[node name="theaterGossip" parent="." instance=ExtResource("30_jf0wo")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.2147, 3.5, 3.41712)
 
 [connection signal="body_entered" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_entered"]
 [connection signal="body_exited" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_exited"]
