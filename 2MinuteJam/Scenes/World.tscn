@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=55 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="Material" uid="uid://digeiblk51qny" path="res://2MinuteJam/Assets/theaterColour.tres" id="1_c7p14"]
@@ -19,6 +19,7 @@
 [ext_resource type="AudioStream" uid="uid://cfyndj60oygke" path="res://2MinuteJam/Assets/Music/outside.mp3" id="14_514x3"]
 [ext_resource type="AudioStream" uid="uid://devrcqr6j874u" path="res://2MinuteJam/Assets/Music/eggHockey.mp3" id="15_fkikn"]
 [ext_resource type="AudioStream" uid="uid://de78b5c4tp4ts" path="res://2MinuteJam/Assets/Music/skyFallers.mp3" id="16_7n5b4"]
+[ext_resource type="AudioStream" uid="uid://coy4pa5awup3t" path="res://2MinuteJam/Assets/SoundEffects/bowling-strike-40456.mp3" id="16_i1g1s"]
 [ext_resource type="PackedScene" uid="uid://cfmt82e13c3so" path="res://2MinuteJam/Scenes/Prebuilds/thePit.tscn" id="17_vscgp"]
 [ext_resource type="PackedScene" uid="uid://2uwugc2a80tn" path="res://2MinuteJam/Objects/baseSit/baseChair.tscn" id="20_sm38u"]
 [ext_resource type="PackedScene" uid="uid://dso57uf1ulcqu" path="res://2MinuteJam/npcs/Bridge/bridgeWoman.tscn" id="24_n0frp"]
@@ -125,6 +126,9 @@ size = Vector3(37.15, 8.035, 156.29)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_f3al5"]
 size = Vector3(5000, 2, 5000)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iugem"]
+size = Vector3(4.48145, 4.10938, 4.33704)
 
 [node name="World" type="Node"]
 script = ExtResource("1_0o181")
@@ -1055,6 +1059,11 @@ stream = ExtResource("15_fkikn")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.33747, 2.37657, 49.0621)
 stream = ExtResource("16_7n5b4")
 
+[node name="Node" type="Node" parent="MusicContainer"]
+
+[node name="Strike" type="AudioStreamPlayer" parent="MusicContainer/Node"]
+stream = ExtResource("16_i1g1s")
+
 [node name="PrebuildContainers" type="Node" parent="."]
 
 [node name="ChristmasHouse" parent="PrebuildContainers" instance=ExtResource("10_b57lw")]
@@ -1173,6 +1182,15 @@ shape = SubResource("BoxShape3D_f3al5")
 transform = Transform3D(0.253389, 0.211093, 0.944052, -0.87167, 0.473031, 0.12819, -0.419506, -0.855384, 0.303864, -1.07547, 1.69283, 109.895)
 labelText = "Jump"
 
+[node name="Strike" type="Area3D" parent="RigidBody3D"]
+transform = Transform3D(1, -1.49012e-07, -2.98023e-08, 0, 1, -1.78814e-07, 1.49012e-08, 2.08616e-07, 1, 206.325, 318.122, -197.84)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D/Strike"]
+transform = Transform3D(0.750254, 0.631472, 0.195865, -0.648521, 0.760515, 0.0322255, -0.128609, -0.1512, 0.980101, 8.20026, 8.77606, -5.01939)
+shape = SubResource("BoxShape3D_iugem")
+
 [connection signal="body_entered" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_entered"]
 [connection signal="body_exited" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_exited"]
 [connection signal="body_entered" from="CSGcontainer/ArcadeContainer/arcadeOn" to="." method="_on_arcade_on_body_entered"]
@@ -1181,3 +1199,4 @@ labelText = "Jump"
 [connection signal="body_entered" from="PrebuildContainers/ThePit/thePitMusicOff" to="." method="_on_the_pit_music_off_body_entered"]
 [connection signal="body_entered" from="PrebuildContainers/ThePit/thePitMusicOn" to="." method="_on_the_pit_music_on_body_entered"]
 [connection signal="body_entered" from="deathPlane" to="." method="_on_death_plane_body_entered"]
+[connection signal="body_entered" from="RigidBody3D/Strike" to="." method="_on_strike_body_entered"]

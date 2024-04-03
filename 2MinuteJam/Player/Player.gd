@@ -77,8 +77,8 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("throw"):
 		if heldObject:
 			heldObject.set_sleeping(false)
-			heldObject.collision_mask = 1
-			heldObject.collision_layer = 1
+			heldObject.collision_mask = 3
+			heldObject.collision_layer = 3
 			heldObject.set_freeze_enabled(false)
 			heldObject.apply_impulse(10*(global_position.direction_to(heldObject.global_position)))
 			heldObject = null
@@ -86,8 +86,8 @@ func _physics_process(delta):
 		if !GlobalController.inDialogue:
 			if heldObject:
 				heldObject.set_sleeping(false)
-				heldObject.collision_mask = 1
-				heldObject.collision_layer = 1
+				heldObject.collision_mask = 3
+				heldObject.collision_layer = 3
 				heldObject.set_freeze_enabled(false)
 				heldObject = null
 			elif hitObject != null:
@@ -102,8 +102,8 @@ func _physics_process(delta):
 						else: pass
 					elif heldObject:
 						heldObject.set_sleeping(false)
-						heldObject.collision_mask = 1
-						heldObject.collision_layer = 1
+						heldObject.collision_mask = 3
+						heldObject.collision_layer = 3
 						heldObject.set_freeze_enabled(false)
 						heldObject = null
 					if hitObject.is_in_group("interact"):

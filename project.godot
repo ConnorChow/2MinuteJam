@@ -110,7 +110,9 @@ esc={
 
 [layer_names]
 
+3d_physics/layer_2="rigidBody Detector"
 3d_physics/layer_3="playerDetector"
+3d_physics/layer_4="4"
 
 [physics]
 
