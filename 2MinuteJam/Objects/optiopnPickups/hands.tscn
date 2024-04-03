@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dtcl11nhll7h5"]
+
+[ext_resource type="PackedScene" uid="uid://h1yugiah7abi" path="res://2MinuteJam/Objects/optiopnPickups/baseOptions.tscn" id="1_t5eg6"]
+
+[node name="Hands" instance=ExtResource("1_t5eg6")]
+labelText = "Hands"

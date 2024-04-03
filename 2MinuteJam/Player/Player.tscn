@@ -81,15 +81,18 @@ layout_mode = 2
 vertical = true
 
 [node name="Hands" type="Button" parent="ui/CenterContainer/HBoxContainer/OptionsPanel"]
+visible = false
 layout_mode = 2
 text = "Hands
 "
 
-[node name="Button2" type="Button" parent="ui/CenterContainer/HBoxContainer/OptionsPanel"]
+[node name="test2" type="Button" parent="ui/CenterContainer/HBoxContainer/OptionsPanel"]
+visible = false
 layout_mode = 2
-text = "testes"
+text = "test2"
 
-[node name="Button3" type="Button" parent="ui/CenterContainer/HBoxContainer/OptionsPanel"]
+[node name="test" type="Button" parent="ui/CenterContainer/HBoxContainer/OptionsPanel"]
+visible = false
 layout_mode = 2
 text = "test"
 

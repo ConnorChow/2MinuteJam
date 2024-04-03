@@ -25,6 +25,9 @@ var hitObject :Object
 @onready var unsitTimer = $unsitTimer
 @onready var ui = $ui
 @onready var options_panel = $ui/CenterContainer/HBoxContainer/OptionsPanel
+@onready var hands = $ui/CenterContainer/HBoxContainer/OptionsPanel/Hands
+@onready var test = $ui/CenterContainer/HBoxContainer/OptionsPanel/test
+@onready var test_2 = $ui/CenterContainer/HBoxContainer/OptionsPanel/test2
 
 
 
@@ -103,7 +106,7 @@ func _physics_process(delta):
 						heldObject.set_freeze_enabled(false)
 						heldObject = null
 					if hitObject.is_in_group("interact"):
-						hitObject.interact()
+						hitObject.interact(self)
 					if hitObject.is_in_group("sit"):
 						unsitTimer.start()
 						canleave = false
@@ -161,3 +164,6 @@ func _on_options_button_pressed():
 
 func _on_jump_button_pressed():
 	velocity.y = 1000
+	ui.visible = false
+	get_tree().paused = false
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

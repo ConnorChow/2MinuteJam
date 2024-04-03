@@ -36,7 +36,7 @@ func _physics_process(delta):
 	
 	move_and_slide()
 
-func interact():
+func interact(_node):
 
 	get_tree().call_group("dialogue", "talking", dialogue)
 	talkedTo()

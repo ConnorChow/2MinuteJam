@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=52 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="Material" uid="uid://digeiblk51qny" path="res://2MinuteJam/Assets/theaterColour.tres" id="1_c7p14"]
@@ -28,6 +28,7 @@
 [ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="27_ons6m"]
 [ext_resource type="Resource" path="res://test/data.hterrain" id="28_23m2k"]
 [ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="29_yjp2r"]
+[ext_resource type="PackedScene" uid="uid://dtcl11nhll7h5" path="res://2MinuteJam/Objects/optiopnPickups/hands.tscn" id="30_4ct5l"]
 [ext_resource type="PackedScene" uid="uid://c5xpe30ickej" path="res://2MinuteJam/npcs/Theater/theater_gossip.tscn" id="30_jf0wo"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ff47w"]
@@ -1158,6 +1159,9 @@ shader_params/u_tile_reduction = null
 [node name="MeshInstance3D" type="MeshInstance3D" parent="miscterrain"]
 transform = Transform3D(0.974633, 0, 0.223812, 0, 1, 0, -0.223812, 0, 0.974633, 86.0374, -5.66553, -61.3132)
 mesh = SubResource("BoxMesh_qtuh2")
+
+[node name="Hands" parent="." instance=ExtResource("30_4ct5l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.3026, 1.33867, 55.2919)
 
 [connection signal="body_entered" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_entered"]
 [connection signal="body_exited" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_exited"]
