@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=53 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="Material" uid="uid://digeiblk51qny" path="res://2MinuteJam/Assets/theaterColour.tres" id="1_c7p14"]
@@ -122,6 +122,9 @@ refraction_enabled = true
 [sub_resource type="BoxMesh" id="BoxMesh_qtuh2"]
 material = SubResource("StandardMaterial3D_bhk50")
 size = Vector3(37.15, 8.035, 156.29)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f3al5"]
+size = Vector3(5000, 2, 5000)
 
 [node name="World" type="Node"]
 script = ExtResource("1_0o181")
@@ -1111,6 +1114,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.35956, 1.5, 79.8874)
 
 [node name="random shit" type="Node" parent="."]
 
+[node name="Hands" parent="random shit" instance=ExtResource("30_4ct5l")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.3026, 1.33867, 55.2919)
+
 [node name="Ding1" parent="random shit" instance=ExtResource("25_pem1r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.0364, 0.326628, 34.5153)
 
@@ -1160,8 +1166,11 @@ shader_params/u_tile_reduction = null
 transform = Transform3D(0.974633, 0, 0.223812, 0, 1, 0, -0.223812, 0, 0.974633, 86.0374, -5.66553, -61.3132)
 mesh = SubResource("BoxMesh_qtuh2")
 
-[node name="Hands" parent="." instance=ExtResource("30_4ct5l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.3026, 1.33867, 55.2919)
+[node name="deathPlane" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -913.131, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="deathPlane"]
+shape = SubResource("BoxShape3D_f3al5")
 
 [connection signal="body_entered" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_entered"]
 [connection signal="body_exited" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_exited"]
@@ -1170,3 +1179,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.3026, 1.33867, 55.2919)
 [connection signal="body_entered" from="PrebuildContainers/ThePit/thePitOutsideMusic" to="." method="_on_the_pit_outside_music_body_entered"]
 [connection signal="body_entered" from="PrebuildContainers/ThePit/thePitMusicOff" to="." method="_on_the_pit_music_off_body_entered"]
 [connection signal="body_entered" from="PrebuildContainers/ThePit/thePitMusicOn" to="." method="_on_the_pit_music_on_body_entered"]
+[connection signal="body_entered" from="deathPlane" to="." method="_on_death_plane_body_entered"]

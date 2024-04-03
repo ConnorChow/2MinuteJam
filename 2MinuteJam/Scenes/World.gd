@@ -61,3 +61,7 @@ func _on_arcade_on_body_entered(_body):
 		if !musicChild.playing:
 			(musicChild as AudioStreamPlayer3D).play()
 #** Arcade **
+
+
+func _on_death_plane_body_entered(body):
+	body.queue_free

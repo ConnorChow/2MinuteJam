@@ -34,6 +34,7 @@ target_position = Vector3(0, 0, -3)
 
 [node name="handsPoint" type="Node3D" parent="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 0.559294, -0.828969, 0, 0.828969, 0.559294, 0, 0.358947, -0.33722)
+visible = false
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D/handsPoint"]
 transform = Transform3D(1, 0, 0, 0, 0.997104, -0.0760577, 0, 0.0760577, 0.997104, 0.349089, 0, 0)
@@ -83,11 +84,11 @@ text = "ResumeE"
 
 [node name="optionsButton" type="Button" parent="ui/CenterContainer/HBoxContainer/BoxContainer"]
 layout_mode = 2
-text = "OptionsE"
+text = "Optionse"
 
 [node name="jumpButton" type="Button" parent="ui/CenterContainer/HBoxContainer/BoxContainer"]
 layout_mode = 2
-text = "JumpE"
+text = "Jumpe"
 
 [node name="OptionsPanel" type="BoxContainer" parent="ui/CenterContainer/HBoxContainer"]
 visible = false
