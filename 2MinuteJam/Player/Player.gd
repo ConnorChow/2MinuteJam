@@ -28,6 +28,7 @@ var hitObject :Object
 @onready var hands = $ui/CenterContainer/HBoxContainer/OptionsPanel/Hands
 @onready var test = $ui/CenterContainer/HBoxContainer/OptionsPanel/test
 @onready var test_2 = $ui/CenterContainer/HBoxContainer/OptionsPanel/test2
+@onready var jump_button = $ui/CenterContainer/HBoxContainer/OptionsPanel/jumpButton
 
 
 

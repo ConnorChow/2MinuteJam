@@ -86,10 +86,6 @@ text = "ResumeE"
 layout_mode = 2
 text = "Optionse"
 
-[node name="jumpButton" type="Button" parent="ui/CenterContainer/HBoxContainer/BoxContainer"]
-layout_mode = 2
-text = "Jumpe"
-
 [node name="OptionsPanel" type="BoxContainer" parent="ui/CenterContainer/HBoxContainer"]
 visible = false
 layout_mode = 2
@@ -98,8 +94,13 @@ vertical = true
 [node name="Hands" type="Button" parent="ui/CenterContainer/HBoxContainer/OptionsPanel"]
 visible = false
 layout_mode = 2
-text = "Hands
+text = "Handse
 "
+
+[node name="jumpButton" type="Button" parent="ui/CenterContainer/HBoxContainer/OptionsPanel"]
+visible = false
+layout_mode = 2
+text = "Jumpe"
 
 [node name="test2" type="Button" parent="ui/CenterContainer/HBoxContainer/OptionsPanel"]
 visible = false
@@ -114,5 +115,5 @@ text = "test"
 [connection signal="timeout" from="unsitTimer" to="." method="_on_unsit_timer_timeout"]
 [connection signal="pressed" from="ui/CenterContainer/HBoxContainer/BoxContainer/resumeButton" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="ui/CenterContainer/HBoxContainer/BoxContainer/optionsButton" to="." method="_on_options_button_pressed"]
-[connection signal="pressed" from="ui/CenterContainer/HBoxContainer/BoxContainer/jumpButton" to="." method="_on_jump_button_pressed"]
 [connection signal="pressed" from="ui/CenterContainer/HBoxContainer/OptionsPanel/Hands" to="." method="_on_hands_pressed"]
+[connection signal="pressed" from="ui/CenterContainer/HBoxContainer/OptionsPanel/jumpButton" to="." method="_on_jump_button_pressed"]

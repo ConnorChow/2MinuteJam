@@ -14,6 +14,10 @@ func interact(player : Node):
 			player.hands.visible = true
 			player.heldObject = null
 			queue_free()
+		"Jump":
+			player.jump_button.visible = true
+			player.heldObject = null
+			queue_free()
 		"test":
 			player.test.visible = true
 			player.heldObject = null

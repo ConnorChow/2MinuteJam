@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=53 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="Material" uid="uid://digeiblk51qny" path="res://2MinuteJam/Assets/theaterColour.tres" id="1_c7p14"]
@@ -29,6 +29,7 @@
 [ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="29_yjp2r"]
 [ext_resource type="PackedScene" uid="uid://dtcl11nhll7h5" path="res://2MinuteJam/Objects/optiopnPickups/hands.tscn" id="30_4ct5l"]
 [ext_resource type="PackedScene" uid="uid://c5xpe30ickej" path="res://2MinuteJam/npcs/Theater/theater_gossip.tscn" id="30_jf0wo"]
+[ext_resource type="PackedScene" uid="uid://h1yugiah7abi" path="res://2MinuteJam/Objects/optiopnPickups/baseOptions.tscn" id="30_ydsx5"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ff47w"]
 albedo_color = Color(0.701961, 0.701961, 0, 1)
@@ -57,7 +58,7 @@ albedo_texture = SubResource("ViewportTexture_gwujo")
 albedo_texture_force_srgb = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_acywf"]
-size = Vector3(26.7458, 17.9312, 39.3422)
+size = Vector3(26.7458, 11.8867, 39.3422)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_68jg0"]
 albedo_color = Color(0.466667, 0.00392157, 0.827451, 1)
@@ -547,7 +548,7 @@ collision_layer = 4
 collision_mask = 4
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CSGcontainer/Theater/OutsideMusicStart"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.29516, 8.46558, 8.57221)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.29516, 5.44335, 8.57221)
 shape = SubResource("BoxShape3D_acywf")
 
 [node name="PerimeterBuildings" type="Node" parent="CSGcontainer"]
@@ -1167,6 +1168,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -913.131, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="deathPlane"]
 shape = SubResource("BoxShape3D_f3al5")
+
+[node name="RigidBody3D" parent="." instance=ExtResource("30_ydsx5")]
+transform = Transform3D(0.253389, 0.211093, 0.944052, -0.87167, 0.473031, 0.12819, -0.419506, -0.855384, 0.303864, -1.07547, 1.69283, 109.895)
+labelText = "Jump"
 
 [connection signal="body_entered" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_entered"]
 [connection signal="body_exited" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_exited"]
