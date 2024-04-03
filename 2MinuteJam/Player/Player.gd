@@ -163,7 +163,7 @@ func _on_options_button_pressed():
 
 
 func _on_jump_button_pressed():
-	velocity.y = 1000
+	velocity.y = 300
 	ui.visible = false
 	get_tree().paused = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
@@ -171,4 +171,4 @@ func _on_jump_button_pressed():
 
 func _on_hands_pressed():
 	$Node3D/handsPoint.visible = !$Node3D/handsPoint.visible
-	pass # Replace with function body.
+

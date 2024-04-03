@@ -1,4 +1,4 @@
-[gd_scene load_steps=53 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=52 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="Material" uid="uid://digeiblk51qny" path="res://2MinuteJam/Assets/theaterColour.tres" id="1_c7p14"]
@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://762rp3fn58pf" path="res://2MinuteJam/Scenes/MiniGames/SkyFallers/Player/Chicken.png" id="6_2krvf"]
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/SkyFallers.gd" id="6_nkmrj"]
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/EggHockey.gd" id="8_bytbj"]
-[ext_resource type="PackedScene" uid="uid://cxa2pqwx24jgc" path="res://2MinuteJam/Objects/basePickup/basePickup.tscn" id="8_x0oa3"]
 [ext_resource type="Texture2D" uid="uid://cxvullig7gdwq" path="res://2MinuteJam/Scenes/MiniGames/SkyFallers/Player/egg.png" id="9_23fd3"]
 [ext_resource type="PackedScene" uid="uid://ba43ypuyd56kj" path="res://2MinuteJam/Scenes/Prebuilds/ChristmasHouse.tscn" id="10_b57lw"]
 [ext_resource type="PackedScene" uid="uid://oj8yd2ldinpc" path="res://2MinuteJam/Objects/ChristmasDeco/Plank.tscn" id="11_7ttf0"]
@@ -79,7 +78,7 @@ resource_local_to_scene = true
 size = Vector3(2.02747, 2, 0.1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_yyo4h"]
-size = Vector3(4.08392, 6.17142, 1.79756)
+size = Vector3(4.084, 6.171, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tsild"]
 size = Vector3(5.76184, 11.4308, 0.638672)
@@ -856,9 +855,9 @@ size = Vector3(2, 3, 2)
 material = SubResource("StandardMaterial3D_3xffk")
 
 [node name="CSGBox3D15" type="CSGBox3D" parent="CSGcontainer/ArcadeContainer"]
-transform = Transform3D(-1, 0, -1.2917e-08, 0, 1, 0, 1.2917e-08, 0, -1, -3.18477, 1.5, 63.7634)
+transform = Transform3D(-1, 0, -1.2917e-08, 0, 1, 0, 1.2917e-08, 0, -1, -3.18477, 0.768066, 63.7634)
 use_collision = true
-size = Vector3(4, 2, 6)
+size = Vector3(4, 0.536133, 6)
 material = SubResource("StandardMaterial3D_3xffk")
 
 [node name="CSGBox3D16" type="CSGBox3D" parent="CSGcontainer/ArcadeContainer"]
@@ -959,11 +958,11 @@ pixel_size = 0.03
 texture = ExtResource("6_2krvf")
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="CSGcontainer/ArcadeContainer" groups=["interact"]]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -3.4, 2.51786, 63.053)
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -3.4, 1.04806, 63.053)
 script = ExtResource("8_bytbj")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="CSGcontainer/ArcadeContainer/StaticBody3D2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.190155, -0.688583, -0.848777)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.190155, -0.688583, -0.467975)
 shape = SubResource("BoxShape3D_yyo4h")
 
 [node name="Sprite3D" type="Sprite3D" parent="CSGcontainer/ArcadeContainer/StaticBody3D2"]
@@ -987,7 +986,7 @@ collision_mask = 4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.7217, 5.8844, 44.3834)
 shape = SubResource("BoxShape3D_tsild")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="CSGcontainer"]
+[node name="Bridge" type="CSGBox3D" parent="CSGcontainer"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 79.9321, 0.276763, -77.946)
 use_collision = true
 size = Vector3(36.009, 0.5, 4)
@@ -1123,9 +1122,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.0364, 0.326628, 34.5153)
 [node name="BaseChair" parent="random shit" instance=ExtResource("20_sm38u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.9006, 0.15, 38.1333)
 
-[node name="BasePickup" parent="random shit" instance=ExtResource("8_x0oa3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3911, 2.14309, 22.6921)
-
 [node name="Plank" parent="random shit" instance=ExtResource("11_7ttf0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25.649, 0.856645, 14.3811)
 
@@ -1160,9 +1156,9 @@ shader_params/u_depth_blending = true
 shader_params/u_triplanar = null
 shader_params/u_tile_reduction = null
 
-[node name="miscterrain" type="Node" parent="."]
+[node name="miscterrain" type="Node" parent="HTerrain"]
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="miscterrain"]
+[node name="waterMesh" type="MeshInstance3D" parent="HTerrain/miscterrain"]
 transform = Transform3D(0.974633, 0, 0.223812, 0, 1, 0, -0.223812, 0, 0.974633, 86.0374, -5.66553, -61.3132)
 mesh = SubResource("BoxMesh_qtuh2")
 
