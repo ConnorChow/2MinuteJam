@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://bb43wxoe3x1jh"]
+
+[ext_resource type="PackedScene" uid="uid://cesaq07oa64kf" path="res://2MinuteJam/npcs/_baseNPC/baseNPC.tscn" id="1_f3lqw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6fm7w"]
+resource_local_to_scene = true
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_3y3ig"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_6fm7w")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_01ipv"]
+albedo_color = Color(0.294118, 0.294118, 0.294118, 1)
+metallic = 1.0
+roughness = 0.0
+emission_enabled = true
+emission = Color(0, 1, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_iy4ae"]
+material = SubResource("StandardMaterial3D_01ipv")
+size = Vector3(0.2, 0.01, 0.1)
+
+[node name="ringtoneBoyfriend" instance=ExtResource("1_f3lqw")]
+dialogue = ["Why the heck isn't she answering??", "I've been calling for like ten minutes.", "It keeps going to voicemail.", "...", "Is she ignoring me?"]
+
+[node name="MeshInstance3D" parent="." index="0"]
+mesh = SubResource("CapsuleMesh_3y3ig")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." index="3"]
+transform = Transform3D(0.825783, -0.563987, 0, 0.563987, 0.825783, 0, 0, 0, 1, 0.651068, 0.166455, 0)
+mesh = SubResource("BoxMesh_iy4ae")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="MeshInstance3D2" index="0"]
+transform = Transform3D(-4.37114e-08, 0.901078, 0.433659, 0, 0.433659, -0.901078, -1, -3.93873e-08, -1.89558e-08, 0.0605118, -0.0887084, 0)
+light_color = Color(0, 1, 1, 1)
+light_bake_mode = 1
+spot_range = 0.791057
+spot_angle = 27.9436

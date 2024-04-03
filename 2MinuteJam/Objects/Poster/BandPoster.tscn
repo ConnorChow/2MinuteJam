@@ -1,0 +1,62 @@
+[gd_scene load_steps=5 format=3 uid="uid://dx1osgamq8tm0"]
+
+[ext_resource type="FontFile" uid="uid://bwrdifvm3yuea" path="res://2MinuteJam/Assets/Fonts/MetalShow.ttf" id="1_kp2nd"]
+[ext_resource type="Texture2D" uid="uid://be86b7xtluxaf" path="res://2MinuteJam/Assets/art/MetalPoster.png" id="2_capd8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_23fjr"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i54ts"]
+
+[node name="BandPoster" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_capd8")
+
+[node name="PanelContainer" type="PanelContainer" parent="Sprite2D"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -87.0
+offset_top = -123.5
+offset_right = -3.0
+offset_bottom = -90.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_23fjr")
+
+[node name="Label" type="Label" parent="Sprite2D/PanelContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.835294, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_kp2nd")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_i54ts")
+text = "Draconic Masters"
+horizontal_alignment = 1
+
+[node name="PanelContainer2" type="PanelContainer" parent="Sprite2D"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -87.0
+offset_top = -39.5
+offset_right = -3.0
+offset_bottom = -6.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_23fjr")
+
+[node name="Label" type="Label" parent="Sprite2D/PanelContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.835294, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.164706, 0.164706, 0.164706, 1)
+theme_override_fonts/font = ExtResource("1_kp2nd")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_i54ts")
+text = "01/13/46
+"
+horizontal_alignment = 1

@@ -42,6 +42,9 @@ func _on_the_pit_music_off_body_entered(_body):
 func _on_the_pit_music_on_body_entered(_body):
 	# start the pit music
 	pass # Replace with function body.
+	
+func _on_strike_body_entered(_body):
+	$MusicContainer/Node/Strike.play()
 #** THE PIT **
 
 
@@ -69,6 +72,5 @@ func _on_death_plane_body_entered(body):
 	body.queue_free()
 
 
-func _on_strike_body_entered(_body):
-	$MusicContainer/Node/Strike.play()
+
 
