@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://cy7gqn4r8ak4n"]
+
+[ext_resource type="Texture2D" uid="uid://bdo37wprd0pk5" path="res://2MinuteJam/Assets/art/testsky.png" id="1_qfna4"]
+[ext_resource type="Script" path="res://2MinuteJam/Scenes/SideScenes/makeUp.gd" id="2_7ah47"]
+[ext_resource type="Texture2D" uid="uid://ila4s7ilyfpo" path="res://2MinuteJam/Assets/art/capsule.png" id="2_yk5wp"]
+
+[node name="Mirror" type="Node2D"]
+
+[node name="bg" type="Sprite2D" parent="."]
+z_index = -6
+scale = Vector2(0.64, 0.36)
+texture = ExtResource("1_qfna4")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="clipContent" type="Control" parent="."]
+clip_contents = true
+layout_mode = 3
+anchor_left = 366.0
+anchor_top = 299.0
+anchor_right = 777.0
+anchor_bottom = 633.0
+offset_left = 367.0
+offset_top = 324.0
+offset_right = 667.0
+offset_bottom = 624.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="clipContent"]
+position = Vector2(19.3511, 23.7832)
+script = ExtResource("2_7ah47")
+
+[node name="capsule" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.188235)
+z_index = -1
+position = Vector2(770, 199)
+texture = ExtResource("2_yk5wp")
