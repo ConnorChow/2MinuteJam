@@ -1059,9 +1059,9 @@ stream = ExtResource("15_fkikn")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.33747, 2.37657, 49.0621)
 stream = ExtResource("16_7n5b4")
 
-[node name="Node" type="Node" parent="MusicContainer"]
+[node name="thePit" type="Node" parent="MusicContainer"]
 
-[node name="Strike" type="AudioStreamPlayer" parent="MusicContainer/Node"]
+[node name="Strike" type="AudioStreamPlayer" parent="MusicContainer/thePit"]
 stream = ExtResource("16_i1g1s")
 
 [node name="PrebuildContainers" type="Node" parent="."]

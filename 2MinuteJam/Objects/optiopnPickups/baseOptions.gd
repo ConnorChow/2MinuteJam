@@ -9,6 +9,7 @@ func _ready():
 	
 	
 func interact(player : Node):
+	player.grind.play()
 	match labelText:
 		"Hands":
 			player.hands.visible = true
@@ -28,5 +29,6 @@ func interact(player : Node):
 			queue_free()
 		_:
 			pass
+		
 
 

@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://q0x2l31pruqy"]
+[gd_scene load_steps=6 format=3 uid="uid://q0x2l31pruqy"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Player/Player.gd" id="1_s0iwp"]
+[ext_resource type="AudioStream" uid="uid://cbpm1w801868s" path="res://2MinuteJam/Assets/SoundEffects/system_grind_02-90488.mp3" id="2_2bhyk"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_4pbb1"]
 
@@ -111,6 +112,11 @@ text = "test2"
 visible = false
 layout_mode = 2
 text = "test"
+
+[node name="grind" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_2bhyk")
+volume_db = 5.0
+pitch_scale = 0.8
 
 [connection signal="timeout" from="unsitTimer" to="." method="_on_unsit_timer_timeout"]
 [connection signal="pressed" from="ui/CenterContainer/HBoxContainer/BoxContainer/resumeButton" to="." method="_on_resume_button_pressed"]
