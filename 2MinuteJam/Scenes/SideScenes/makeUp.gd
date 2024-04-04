@@ -8,15 +8,17 @@ var clickPosPeach : Array = []
 var clickPosChocolate : Array = []
 var clickPosSalmon : Array = []
 var clickPosWheat : Array = []
+var clickPosBrown : Array = []
 
+
+var cursorSize : float = 4
 
 var paintIndex : int = 0
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	
-	pass # Replace with function body.
+
 func _process(_delta):
+
+		
 	if Input.is_action_pressed("throw"):
 		match paintIndex:
 			0:
@@ -35,6 +37,8 @@ func _process(_delta):
 				clickPosSalmon.append(get_local_mouse_position ( ))
 			7:
 				clickPosWheat.append(get_local_mouse_position ( ))
+			8:
+				clickPosBrown.append(get_local_mouse_position ( ))
 
 				
 				
@@ -44,21 +48,23 @@ func _process(_delta):
 func _draw():
 
 	for point in clickPosRed:
-		draw_circle(point, 10, Color.RED)
+		draw_circle(point, cursorSize, Color.RED)
 	for point in clickPosGreen:
-		draw_circle(point, 10, Color.GREEN)
+		draw_circle(point, cursorSize, Color.GREEN)
 	for point in clickPosBlack:
-		draw_circle(point, 10, Color.BLACK)
+		draw_circle(point, cursorSize, Color.BLACK)
 	for point in clickPosHotPink:
-		draw_circle(point, 10, Color.HOT_PINK)
+		draw_circle(point, cursorSize, Color.HOT_PINK)
 	for point in clickPosPeach:
-		draw_circle(point, 10, Color.PERU)
+		draw_circle(point, cursorSize, Color.PERU)
 	for point in clickPosChocolate:
-		draw_circle(point, 10, Color.CHOCOLATE)
+		draw_circle(point, cursorSize, Color.CHOCOLATE)
 	for point in clickPosSalmon:
-		draw_circle(point, 10, Color.SALMON)
+		draw_circle(point, cursorSize, Color.SALMON)
 	for point in clickPosWheat:
-		draw_circle(point, 10, Color.WHEAT)
+		draw_circle(point, cursorSize, Color.WHEAT)
+	for point in clickPosBrown:
+		draw_circle(point, cursorSize, Color.SIENNA)
 		
 		
 
@@ -95,6 +101,7 @@ func _on_salmon_button_pressed():
 
 func _on_wheat_button_pressed():
 	paintIndex =7
+	
 
-
-
+func _on_brown_button_pressed():
+		paintIndex =8

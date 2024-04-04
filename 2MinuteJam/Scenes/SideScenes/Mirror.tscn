@@ -32,7 +32,6 @@ position = Vector2(19.3511, 23.7832)
 script = ExtResource("2_7ah47")
 
 [node name="capsule" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.188235)
 z_index = -1
 position = Vector2(770, 199)
 texture = ExtResource("2_yk5wp")
@@ -95,6 +94,13 @@ offset_right = 951.0
 offset_bottom = 470.0
 text = "Wheat"
 
+[node name="brownButton" type="Button" parent="."]
+offset_left = 844.0
+offset_top = 213.0
+offset_right = 903.0
+offset_bottom = 244.0
+text = "Brown"
+
 [connection signal="pressed" from="redButton" to="clipContent/Sprite2D" method="_on_red_button_pressed"]
 [connection signal="pressed" from="greenButton" to="clipContent/Sprite2D" method="_on_green_button_pressed"]
 [connection signal="pressed" from="blackButton" to="clipContent/Sprite2D" method="_on_black_button_pressed"]
@@ -103,3 +109,4 @@ text = "Wheat"
 [connection signal="pressed" from="ChocolateButton" to="clipContent/Sprite2D" method="_on_chocolate_button_pressed"]
 [connection signal="pressed" from="salmonButton" to="clipContent/Sprite2D" method="_on_salmon_button_pressed"]
 [connection signal="pressed" from="wheatButton" to="clipContent/Sprite2D" method="_on_wheat_button_pressed"]
+[connection signal="pressed" from="brownButton" to="clipContent/Sprite2D" method="_on_brown_button_pressed"]
