@@ -21,9 +21,9 @@ anchor_top = 299.0
 anchor_right = 777.0
 anchor_bottom = 633.0
 offset_left = 367.0
-offset_top = 324.0
-offset_right = 667.0
-offset_bottom = 624.0
+offset_top = 283.025
+offset_right = 777.9
+offset_bottom = 583.025
 size_flags_horizontal = 3
 size_flags_vertical = 3
 
@@ -36,3 +36,70 @@ modulate = Color(1, 1, 1, 0.188235)
 z_index = -1
 position = Vector2(770, 199)
 texture = ExtResource("2_yk5wp")
+
+[node name="redButton" type="Button" parent="."]
+offset_left = 134.0
+offset_top = 375.0
+offset_right = 172.0
+offset_bottom = 406.0
+text = "Red"
+
+[node name="greenButton" type="Button" parent="."]
+offset_left = 117.0
+offset_top = 442.0
+offset_right = 173.0
+offset_bottom = 473.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "Green"
+
+[node name="blackButton" type="Button" parent="."]
+offset_left = 922.0
+offset_top = 529.0
+offset_right = 972.0
+offset_bottom = 560.0
+text = "Black
+"
+
+[node name="hotPinkButton" type="Button" parent="."]
+offset_left = 189.0
+offset_top = 321.0
+offset_right = 197.0
+offset_bottom = 329.0
+text = "Hot Pink"
+
+[node name="peruButton" type="Button" parent="."]
+offset_left = 283.0
+offset_top = 195.0
+offset_right = 291.0
+offset_bottom = 203.0
+text = "Peru"
+
+[node name="ChocolateButton" type="Button" parent="."]
+offset_left = 43.0
+offset_top = 276.0
+offset_right = 51.0
+offset_bottom = 284.0
+text = "Chocolate"
+
+[node name="salmonButton" type="Button" parent="."]
+offset_left = 986.0
+offset_top = 232.0
+offset_right = 994.0
+offset_bottom = 240.0
+text = "Salmon"
+
+[node name="wheatButton" type="Button" parent="."]
+offset_left = 943.0
+offset_top = 462.0
+offset_right = 951.0
+offset_bottom = 470.0
+text = "Wheat"
+
+[connection signal="pressed" from="redButton" to="clipContent/Sprite2D" method="_on_red_button_pressed"]
+[connection signal="pressed" from="greenButton" to="clipContent/Sprite2D" method="_on_green_button_pressed"]
+[connection signal="pressed" from="blackButton" to="clipContent/Sprite2D" method="_on_black_button_pressed"]
+[connection signal="pressed" from="hotPinkButton" to="clipContent/Sprite2D" method="_on_hot_pink_button_pressed"]
+[connection signal="pressed" from="peruButton" to="clipContent/Sprite2D" method="_on_peru_button_pressed"]
+[connection signal="pressed" from="ChocolateButton" to="clipContent/Sprite2D" method="_on_chocolate_button_pressed"]
+[connection signal="pressed" from="salmonButton" to="clipContent/Sprite2D" method="_on_salmon_button_pressed"]
+[connection signal="pressed" from="wheatButton" to="clipContent/Sprite2D" method="_on_wheat_button_pressed"]
