@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=57 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="Material" uid="uid://digeiblk51qny" path="res://2MinuteJam/Assets/theaterColour.tres" id="1_c7p14"]
@@ -129,6 +129,13 @@ size = Vector3(5000, 2, 5000)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_iugem"]
 size = Vector3(4.48145, 4.10938, 4.33704)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hd1yf"]
+albedo_color = Color(1, 0, 0, 1)
+
+[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_k2lea"]
+material = SubResource("StandardMaterial3D_hd1yf")
+sections = 16
 
 [node name="World" type="Node"]
 script = ExtResource("1_0o181")
@@ -558,102 +565,102 @@ shape = SubResource("BoxShape3D_acywf")
 [node name="PerimeterBuildings" type="Node" parent="CSGcontainer"]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -123.069, 25.05, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -184.339, 25.05, 0)
 use_collision = true
 size = Vector3(20, 50, 20)
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -119.069, 15.05, 20)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -176.945, 15.05, 20)
 use_collision = true
 size = Vector3(20, 30, 20)
 
 [node name="CSGBox3D3" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -123.069, 20.05, 40)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -180.945, 20.05, 40)
 use_collision = true
 size = Vector3(20, 40, 20)
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -123.069, 25.05, -60)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -180.945, 25.05, -60)
 use_collision = true
 size = Vector3(20, 50, 20)
 
 [node name="CSGBox3D5" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -119.069, 15.05, -40)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -176.945, 15.05, -40)
 use_collision = true
 size = Vector3(20, 30, 20)
 
 [node name="CSGBox3D6" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -123.069, 20.05, -20)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -180.945, 20.05, -20)
 use_collision = true
 size = Vector3(20, 40, 20)
 
 [node name="CSGBox3D7" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108.069, 25.05, -120)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108.069, 25.05, -160.143)
 use_collision = true
 size = Vector3(20, 50, 20)
 
 [node name="CSGBox3D8" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -119.069, 15.05, -100)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -179.552, 15.05, -100)
 use_collision = true
 size = Vector3(20, 30, 20)
 
 [node name="CSGBox3D27" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88.0686, 15.05, -120)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88.0686, 15.05, -160.143)
 use_collision = true
 size = Vector3(20, 30, 20)
 
 [node name="CSGBox3D9" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -123.069, 20.05, -80)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -180.945, 20.05, -80)
 use_collision = true
 size = Vector3(20, 40, 20)
 
 [node name="CSGBox3D28" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68.0686, 20.05, -120)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68.0686, 20.05, -160.143)
 use_collision = true
 size = Vector3(20, 40, 20)
 
 [node name="CSGBox3D29" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.0686, 25.05, -120)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -48.0686, 25.05, -160.143)
 use_collision = true
 size = Vector3(20, 50, 20)
 
 [node name="CSGBox3D30" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.0686, 15.05, -120)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.0686, 15.05, -160.143)
 use_collision = true
 size = Vector3(20, 30, 20)
 
 [node name="CSGBox3D31" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.06857, 20.05, -120)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.06857, 20.05, -160.143)
 use_collision = true
 size = Vector3(20, 40, 20)
 
 [node name="CSGBox3D32" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.9314, 25.05, -120)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.9314, 25.05, -160.143)
 use_collision = true
 size = Vector3(20, 50, 20)
 
 [node name="CSGBox3D33" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.9314, 15.05, -120)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 31.9314, 15.05, -160.143)
 use_collision = true
 size = Vector3(20, 30, 20)
 
 [node name="CSGBox3D34" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.9314, 20.05, -120)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 51.9314, 20.05, -160.143)
 use_collision = true
 size = Vector3(20, 40, 20)
 
 [node name="CSGBox3D35" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.5262, 25.05, -120)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 71.5262, 25.05, -160.143)
 use_collision = true
 size = Vector3(20, 50, 20)
 
 [node name="CSGBox3D36" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 91.5262, 15.05, -120)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 91.5262, 15.05, -160.143)
 use_collision = true
 size = Vector3(20, 30, 20)
 
 [node name="CSGBox3D10" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -123.069, 25.05, 60)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -182.021, 25.05, 60)
 use_collision = true
 size = Vector3(20, 50, 20)
 
@@ -663,12 +670,12 @@ use_collision = true
 size = Vector3(20, 50, 20)
 
 [node name="CSGBox3D11" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -119.069, 15.05, 80)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -178.28, 15.05, 80)
 use_collision = true
 size = Vector3(20, 30, 20)
 
 [node name="CSGBox3D12" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -123.069, 20.05, 100)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -181.093, 20.05, 100)
 use_collision = true
 size = Vector3(20, 40, 20)
 
@@ -703,7 +710,7 @@ use_collision = true
 size = Vector3(20, 40, 20)
 
 [node name="CSGBox3D20" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111.579, 25.05, -120)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 111.579, 25.05, -160.143)
 use_collision = true
 size = Vector3(20, 50, 20)
 
@@ -996,6 +1003,69 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 79.9321, 0.276763, -77.946)
 use_collision = true
 size = Vector3(36.009, 0.5, 4)
 
+[node name="Mall" type="Node" parent="CSGcontainer"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGcontainer/Mall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -31.781, 0.25, -104.104)
+use_collision = true
+size = Vector3(137, 0.5, 85)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGcontainer/Mall/CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 67.989, 5, 0)
+size = Vector3(1, 10, 85)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="CSGcontainer/Mall/CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -108.011, 5, 82.4)
+size = Vector3(1, 10, 197.8)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGcontainer/Mall/CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -68.011, 5, -29.5)
+size = Vector3(1, 10, 26)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="CSGcontainer/Mall/CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.0127, 5, 164.249)
+size = Vector3(1, 10, 34)
+
+[node name="CSGBox3D14" type="CSGBox3D" parent="CSGcontainer/Mall/CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.0127, 5, 127.749)
+size = Vector3(1, 10, 27)
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="CSGcontainer/Mall/CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -69.0127, 5, 78.4646)
+size = Vector3(1, 10, 71.8)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="CSGcontainer/Mall/CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -88.501, 0, 48.755)
+size = Vector3(40, 0.5, 131.2)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="CSGcontainer/Mall/CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -63.0005, -0.0336086, 147.855)
+size = Vector3(91, 0.5, 67)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="CSGcontainer/Mall/CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, 5, -42)
+size = Vector3(136, 10, 1)
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="CSGcontainer/Mall/CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -87.5, 5, -16)
+size = Vector3(40, 10, 1)
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="CSGcontainer/Mall/CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -62.5, 5, 180.851)
+size = Vector3(90, 10, 1)
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="CSGcontainer/Mall/CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -43.5, 5, 114.851)
+size = Vector3(52, 10, 1)
+
+[node name="CSGBox3D13" type="CSGBox3D" parent="CSGcontainer/Mall/CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5, 5, 41.851)
+size = Vector3(116, 10, 1)
+
+[node name="CSGBox3D15" type="CSGBox3D" parent="CSGcontainer/Mall/CSGBox3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.5, 5, 41.851)
+size = Vector3(14, 10, 1)
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("2_q27q1")
 
@@ -1190,6 +1260,16 @@ collision_mask = 2
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D/Strike"]
 transform = Transform3D(0.750254, 0.631472, 0.195865, -0.648521, 0.760515, 0.0322255, -0.128609, -0.1512, 0.980101, 8.20026, 8.77606, -5.01939)
 shape = SubResource("BoxShape3D_iugem")
+
+[node name="Node" type="Node" parent="."]
+
+[node name="SoftBody3D" type="SoftBody3D" parent="Node"]
+transform = Transform3D(1, 7.45058e-09, 2.98023e-08, 1.49012e-08, 1, 1.11759e-08, 0, 3.72529e-09, 1, -21, 3.1043, -103)
+mesh = SubResource("TubeTrailMesh_k2lea")
+simulation_precision = 6
+total_mass = 1.01
+linear_stiffness = 0.05
+damping_coefficient = 0.0
 
 [connection signal="body_entered" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_entered"]
 [connection signal="body_exited" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_exited"]

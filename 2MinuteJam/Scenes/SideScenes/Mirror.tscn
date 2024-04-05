@@ -41,6 +41,7 @@ offset_left = 134.0
 offset_top = 375.0
 offset_right = 172.0
 offset_bottom = 406.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
 text = "Red"
 
 [node name="greenButton" type="Button" parent="."]
@@ -52,10 +53,11 @@ theme_override_colors/font_color = Color(0, 1, 0, 1)
 text = "Green"
 
 [node name="blackButton" type="Button" parent="."]
-offset_left = 922.0
-offset_top = 529.0
-offset_right = 972.0
-offset_bottom = 560.0
+offset_left = 202.0
+offset_top = 370.0
+offset_right = 252.0
+offset_bottom = 401.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Black
 "
 
@@ -64,6 +66,7 @@ offset_left = 189.0
 offset_top = 321.0
 offset_right = 197.0
 offset_bottom = 329.0
+theme_override_colors/font_color = Color(1, 0.0235294, 1, 1)
 text = "Hot Pink"
 
 [node name="peruButton" type="Button" parent="."]
@@ -71,6 +74,7 @@ offset_left = 283.0
 offset_top = 195.0
 offset_right = 291.0
 offset_bottom = 203.0
+theme_override_colors/font_color = Color(0.741176, 0.219608, 0, 1)
 text = "Peru"
 
 [node name="ChocolateButton" type="Button" parent="."]
@@ -78,6 +82,7 @@ offset_left = 43.0
 offset_top = 276.0
 offset_right = 51.0
 offset_bottom = 284.0
+theme_override_colors/font_color = Color(0.866667, 0.247059, 0, 1)
 text = "Chocolate"
 
 [node name="salmonButton" type="Button" parent="."]
@@ -85,6 +90,7 @@ offset_left = 986.0
 offset_top = 232.0
 offset_right = 994.0
 offset_bottom = 240.0
+theme_override_colors/font_color = Color(1, 0.219608, 0.243137, 1)
 text = "Salmon"
 
 [node name="wheatButton" type="Button" parent="."]
@@ -92,6 +98,7 @@ offset_left = 943.0
 offset_top = 462.0
 offset_right = 951.0
 offset_bottom = 470.0
+theme_override_colors/font_color = Color(1, 0.721569, 0.360784, 1)
 text = "Wheat"
 
 [node name="brownButton" type="Button" parent="."]
@@ -99,6 +106,7 @@ offset_left = 844.0
 offset_top = 213.0
 offset_right = 903.0
 offset_bottom = 244.0
+theme_override_colors/font_color = Color(0.509804, 0.203922, 0, 1)
 text = "Brown"
 
 [connection signal="pressed" from="redButton" to="clipContent/Sprite2D" method="_on_red_button_pressed"]
