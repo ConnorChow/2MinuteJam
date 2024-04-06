@@ -1124,10 +1124,12 @@ volume_db = -5.0
 [node name="eggHockey" type="AudioStreamPlayer3D" parent="MusicContainer/arcadeMusic"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.29072, 2.53081, 63.1788)
 stream = ExtResource("15_fkikn")
+volume_db = -5.0
 
 [node name="skyFallers" type="AudioStreamPlayer3D" parent="MusicContainer/arcadeMusic"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.33747, 2.37657, 49.0621)
 stream = ExtResource("16_7n5b4")
+volume_db = -5.0
 
 [node name="thePit" type="Node" parent="MusicContainer"]
 
@@ -1270,6 +1272,13 @@ simulation_precision = 6
 total_mass = 1.01
 linear_stiffness = 0.05
 damping_coefficient = 0.0
+pinned_points = [4, 441]
+attachments/0/point_index = 4
+attachments/0/spatial_attachment_path = NodePath("")
+attachments/0/offset = Vector3(0, 0, 0)
+attachments/1/point_index = 441
+attachments/1/spatial_attachment_path = NodePath("")
+attachments/1/offset = Vector3(0, 0, 0)
 
 [connection signal="body_entered" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_entered"]
 [connection signal="body_exited" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_exited"]
