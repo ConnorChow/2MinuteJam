@@ -74,3 +74,18 @@ func _on_death_plane_body_entered(body):
 
 
 
+
+#** mall **
+func _on_mall_on_body_entered(_body):
+	if !$MusicContainer/mallMusic/mallMusic.playing:
+		$MusicContainer/mallMusic/mallMusic.play()
+	OutsideMusic.stop()
+	pass # Replace with function body.
+
+
+func _on_mall_off_body_entered(_body):
+	$MusicContainer/mallMusic/mallMusic.stop()
+	if !OutsideMusic.playing:
+		OutsideMusic.play()
+	
+#** mall **

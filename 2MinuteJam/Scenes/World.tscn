@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=72 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="Material" uid="uid://digeiblk51qny" path="res://2MinuteJam/Assets/theaterColour.tres" id="1_c7p14"]
@@ -20,7 +20,9 @@
 [ext_resource type="AudioStream" uid="uid://devrcqr6j874u" path="res://2MinuteJam/Assets/Music/eggHockey.mp3" id="15_fkikn"]
 [ext_resource type="AudioStream" uid="uid://de78b5c4tp4ts" path="res://2MinuteJam/Assets/Music/skyFallers.mp3" id="16_7n5b4"]
 [ext_resource type="AudioStream" uid="uid://coy4pa5awup3t" path="res://2MinuteJam/Assets/SoundEffects/bowling-strike-40456.mp3" id="16_i1g1s"]
+[ext_resource type="AudioStream" uid="uid://d3ewbqu731f0s" path="res://2MinuteJam/Assets/Music/strangeMall.mp3" id="17_af2mx"]
 [ext_resource type="PackedScene" uid="uid://cfmt82e13c3so" path="res://2MinuteJam/Scenes/Prebuilds/thePit.tscn" id="17_vscgp"]
+[ext_resource type="AudioStream" uid="uid://b7h7a7lq41xha" path="res://2MinuteJam/Assets/SoundEffects/projector-sound.mp3" id="18_loo1w"]
 [ext_resource type="PackedScene" uid="uid://2uwugc2a80tn" path="res://2MinuteJam/Objects/baseSit/baseChair.tscn" id="20_sm38u"]
 [ext_resource type="PackedScene" uid="uid://dso57uf1ulcqu" path="res://2MinuteJam/npcs/Bridge/bridgeWoman.tscn" id="24_n0frp"]
 [ext_resource type="PackedScene" uid="uid://blf8e1040dqs5" path="res://2MinuteJam/Objects/Dings/Ding1.tscn" id="25_pem1r"]
@@ -93,6 +95,9 @@ size = Vector3(4.084, 6.171, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tsild"]
 size = Vector3(5.76184, 11.4308, 0.638672)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wkdf5"]
+size = Vector3(8, 9, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rvt8f"]
 bg_color = Color(0.184314, 0.184314, 0.313726, 0.376471)
@@ -253,8 +258,6 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -92.87
 
 [node name="Road6" parent="RoadContainer" instance=ExtResource("2_id2ye")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -112.872, 0.05, 40.5969)
-
-[node name="WoodPile" type="Node3D" parent="."]
 
 [node name="CSGcontainer" type="Node" parent="."]
 
@@ -1085,6 +1088,31 @@ size = Vector3(116, 10, 1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.5, 5, 41.851)
 size = Vector3(14, 10, 1)
 
+[node name="mallOn" type="Area3D" parent="CSGcontainer/Mall"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60, 0, -80)
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CSGcontainer/Mall/mallOn"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78.5, 5, 16.6)
+shape = SubResource("BoxShape3D_wkdf5")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="CSGcontainer/Mall/mallOn"]
+transform = Transform3D(-2.98023e-08, 0, 1, 0, 1, 0, -1, 0, -2.98023e-08, 9.5, 5, 120.6)
+shape = SubResource("BoxShape3D_wkdf5")
+
+[node name="mallOff" type="Area3D" parent="CSGcontainer/Mall"]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="CSGcontainer/Mall/mallOff"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.5, 5, -61)
+shape = SubResource("BoxShape3D_wkdf5")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="CSGcontainer/Mall/mallOff"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -48.5, 5, 40.4)
+shape = SubResource("BoxShape3D_wkdf5")
+
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = ExtResource("2_q27q1")
 
@@ -1154,6 +1182,20 @@ volume_db = -5.0
 
 [node name="Strike" type="AudioStreamPlayer" parent="MusicContainer/thePit"]
 stream = ExtResource("16_i1g1s")
+
+[node name="mallMusic" type="Node" parent="MusicContainer"]
+
+[node name="mallMusic" type="AudioStreamPlayer" parent="MusicContainer/mallMusic"]
+stream = ExtResource("17_af2mx")
+volume_db = -5.0
+
+[node name="Theater" type="Node" parent="MusicContainer"]
+
+[node name="filmReel" type="AudioStreamPlayer3D" parent="MusicContainer/Theater"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 15)
+stream = ExtResource("18_loo1w")
+volume_db = -12.0
+autoplay = true
 
 [node name="PrebuildContainers" type="Node" parent="."]
 
@@ -1351,6 +1393,8 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 141, 1
 [connection signal="body_exited" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_exited"]
 [connection signal="body_entered" from="CSGcontainer/ArcadeContainer/arcadeOn" to="." method="_on_arcade_on_body_entered"]
 [connection signal="body_entered" from="CSGcontainer/ArcadeContainer/arcadeOff" to="." method="_on_arcade_off_body_entered"]
+[connection signal="body_entered" from="CSGcontainer/Mall/mallOn" to="." method="_on_mall_on_body_entered"]
+[connection signal="body_entered" from="CSGcontainer/Mall/mallOff" to="." method="_on_mall_off_body_entered"]
 [connection signal="body_entered" from="PrebuildContainers/ThePit/thePitOutsideMusic" to="." method="_on_the_pit_outside_music_body_entered"]
 [connection signal="body_entered" from="PrebuildContainers/ThePit/thePitMusicOff" to="." method="_on_the_pit_music_off_body_entered"]
 [connection signal="body_entered" from="PrebuildContainers/ThePit/thePitMusicOn" to="." method="_on_the_pit_music_on_body_entered"]
