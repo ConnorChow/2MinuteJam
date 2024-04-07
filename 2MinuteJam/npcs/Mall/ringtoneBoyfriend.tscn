@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://bb43wxoe3x1jh"]
+[gd_scene load_steps=7 format=3 uid="uid://bb43wxoe3x1jh"]
 
 [ext_resource type="PackedScene" uid="uid://cesaq07oa64kf" path="res://2MinuteJam/npcs/_baseNPC/baseNPC.tscn" id="1_f3lqw"]
+[ext_resource type="AudioStream" uid="uid://ec71xpu85bkt" path="res://2MinuteJam/Assets/SoundEffects/phone-outgoing-call-72202.mp3" id="2_lpnbs"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6fm7w"]
 resource_local_to_scene = true
@@ -36,3 +37,9 @@ light_color = Color(0, 1, 1, 1)
 light_bake_mode = 1
 spot_range = 0.791057
 spot_angle = 27.9436
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.683918, 0.200148, 0)
+stream = ExtResource("2_lpnbs")
+unit_size = 4.0
+autoplay = true
