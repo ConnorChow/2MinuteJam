@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://4umu5ithtjdi"]
+
+[ext_resource type="PackedScene" uid="uid://bwaa20bn4o2h3" path="res://2MinuteJam/Objects/Graves/baseGrave.tscn" id="1_6mjg2"]
+
+[node name="DevilSwearNoHear" instance=ExtResource("1_6mjg2")]
+
+[node name="Label3D" parent="." index="2"]
+text = "😈 🤬 🙉"

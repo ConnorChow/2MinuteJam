@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=65 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="Material" uid="uid://digeiblk51qny" path="res://2MinuteJam/Assets/theaterColour.tres" id="1_c7p14"]
@@ -31,6 +31,14 @@
 [ext_resource type="PackedScene" uid="uid://dtcl11nhll7h5" path="res://2MinuteJam/Objects/optiopnPickups/hands.tscn" id="30_4ct5l"]
 [ext_resource type="PackedScene" uid="uid://c5xpe30ickej" path="res://2MinuteJam/npcs/Theater/theater_gossip.tscn" id="30_jf0wo"]
 [ext_resource type="PackedScene" uid="uid://h1yugiah7abi" path="res://2MinuteJam/Objects/optiopnPickups/baseOptions.tscn" id="30_ydsx5"]
+[ext_resource type="PackedScene" uid="uid://4umu5ithtjdi" path="res://2MinuteJam/Objects/Graves/DevilSwearNoHear.tscn" id="32_u0hld"]
+[ext_resource type="PackedScene" uid="uid://dvwte30kgwqfg" path="res://2MinuteJam/Objects/Graves/EggTransWoman.tscn" id="33_2pep7"]
+[ext_resource type="PackedScene" uid="uid://co1tydk7371hm" path="res://2MinuteJam/Objects/Graves/FlameFlame100.tscn" id="34_sqxvx"]
+[ext_resource type="PackedScene" uid="uid://j5dw88v623fp" path="res://2MinuteJam/Objects/Graves/KissCatMiddle.tscn" id="35_o08b2"]
+[ext_resource type="PackedScene" uid="uid://cqixj1xarbaah" path="res://2MinuteJam/Objects/Graves/PumpkinRingSag.tscn" id="36_cgb85"]
+[ext_resource type="PackedScene" uid="uid://bw32xrsinspiu" path="res://2MinuteJam/Objects/Graves/ShushSkullPensive.tscn" id="37_upwuf"]
+[ext_resource type="PackedScene" uid="uid://b8tkmr8dax6s4" path="res://2MinuteJam/Objects/Graves/VulcanAlienDolphin.tscn" id="38_pro8r"]
+[ext_resource type="PackedScene" uid="uid://bwaa20bn4o2h3" path="res://2MinuteJam/Objects/Graves/baseGrave.tscn" id="39_wdh1o"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ff47w"]
 albedo_color = Color(0.701961, 0.701961, 0, 1)
@@ -680,32 +688,32 @@ use_collision = true
 size = Vector3(20, 40, 20)
 
 [node name="CSGBox3D14" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117.931, 25.05, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 219.931, 25.05, 0)
 use_collision = true
 size = Vector3(20, 50, 20)
 
 [node name="CSGBox3D15" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121.931, 15.05, 20)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 221.931, 15.05, 20)
 use_collision = true
 size = Vector3(20, 30, 20)
 
 [node name="CSGBox3D16" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117.931, 20.05, 40)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 215.331, 20.05, 40)
 use_collision = true
 size = Vector3(20, 40, 20)
 
 [node name="CSGBox3D17" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117.931, 25.05, -60)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 215.931, 25.05, -60)
 use_collision = true
 size = Vector3(20, 50, 20)
 
 [node name="CSGBox3D18" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121.931, 15.05, -40)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 219.931, 15.05, -40)
 use_collision = true
 size = Vector3(20, 30, 20)
 
 [node name="CSGBox3D19" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117.931, 20.05, -20)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 215.931, 20.05, -20)
 use_collision = true
 size = Vector3(20, 40, 20)
 
@@ -770,27 +778,27 @@ use_collision = true
 size = Vector3(20, 30, 20)
 
 [node name="CSGBox3D21" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121.931, 15.05, -100)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 213.931, 15.05, -100)
 use_collision = true
 size = Vector3(20, 30, 20)
 
 [node name="CSGBox3D22" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117.931, 20.05, -80)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 215.931, 20.05, -80)
 use_collision = true
 size = Vector3(20, 40, 20)
 
 [node name="CSGBox3D23" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117.931, 25.05, 60)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 215.331, 25.05, 60)
 use_collision = true
 size = Vector3(20, 50, 20)
 
 [node name="CSGBox3D24" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 121.931, 15.05, 80)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 219.331, 15.05, 80)
 use_collision = true
 size = Vector3(20, 30, 20)
 
 [node name="CSGBox3D26" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 117.931, 20.05, 100)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 215.331, 20.05, 100)
 use_collision = true
 size = Vector3(20, 40, 20)
 
@@ -1279,6 +1287,32 @@ attachments/0/offset = Vector3(0, 0, 0)
 attachments/1/point_index = 441
 attachments/1/spatial_attachment_path = NodePath("")
 attachments/1/offset = Vector3(0, 0, 0)
+
+[node name="Graveyard" type="Node" parent="."]
+
+[node name="DevilSwearNoHear" parent="Graveyard" instance=ExtResource("32_u0hld")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 139, 1.3, -67)
+
+[node name="EggTransWoman" parent="Graveyard" instance=ExtResource("33_2pep7")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 139.6, 1.3, -63)
+
+[node name="FlameFlame100" parent="Graveyard" instance=ExtResource("34_sqxvx")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 141.2, 1.3, -60.5)
+
+[node name="KissCatMiddle" parent="Graveyard" instance=ExtResource("35_o08b2")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 137, 1.4, -55)
+
+[node name="PumpkinRingSag" parent="Graveyard" instance=ExtResource("36_cgb85")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 141, 1.4, -55.7)
+
+[node name="ShushSkullPensive" parent="Graveyard" instance=ExtResource("37_upwuf")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 135, 1.3, -65.5)
+
+[node name="VulcanAlienDolphin" parent="Graveyard" instance=ExtResource("38_pro8r")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 135, 1.3, -61)
+
+[node name="BaseGrave" parent="Graveyard" instance=ExtResource("39_wdh1o")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 136, 1.3, -72)
 
 [connection signal="body_entered" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_entered"]
 [connection signal="body_exited" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_exited"]

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bw32xrsinspiu"]
+
+[ext_resource type="PackedScene" uid="uid://bwaa20bn4o2h3" path="res://2MinuteJam/Objects/Graves/baseGrave.tscn" id="1_cwqev"]
+
+[node name="ShushSkullPensive" instance=ExtResource("1_cwqev")]
+
+[node name="Label3D" parent="." index="2"]
+text = "🤐 💀 😔"
