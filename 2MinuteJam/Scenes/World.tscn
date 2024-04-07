@@ -1,4 +1,4 @@
-[gd_scene load_steps=72 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=73 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="Material" uid="uid://digeiblk51qny" path="res://2MinuteJam/Assets/theaterColour.tres" id="1_c7p14"]
@@ -42,6 +42,7 @@
 [ext_resource type="PackedScene" uid="uid://b8tkmr8dax6s4" path="res://2MinuteJam/Objects/Graves/VulcanAlienDolphin.tscn" id="38_pro8r"]
 [ext_resource type="PackedScene" uid="uid://bwaa20bn4o2h3" path="res://2MinuteJam/Objects/Graves/ThreeLaughs.tscn" id="39_wdh1o"]
 [ext_resource type="PackedScene" uid="uid://g76hev2b1un1" path="res://2MinuteJam/Objects/Graves/BoyCopPuke.tscn" id="40_pal7j"]
+[ext_resource type="PackedScene" uid="uid://deoobbx2cse2b" path="res://2MinuteJam/npcs/Building/dream_npc.tscn" id="43_iatgn"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ff47w"]
 albedo_color = Color(0.701961, 0.701961, 0, 1)
@@ -1273,6 +1274,11 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.214
 
 [node name="Clerk" parent="npcContainer/Arcegg" instance=ExtResource("26_vwgwm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.35956, 1.5, 79.8874)
+
+[node name="Building" type="Node" parent="npcContainer"]
+
+[node name="dreamNPC" parent="npcContainer/Building" instance=ExtResource("43_iatgn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 41.05, 129)
 
 [node name="random shit" type="Node" parent="."]
 
