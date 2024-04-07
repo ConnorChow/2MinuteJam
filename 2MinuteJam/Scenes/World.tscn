@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=69 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="Material" uid="uid://digeiblk51qny" path="res://2MinuteJam/Assets/theaterColour.tres" id="1_c7p14"]
@@ -38,7 +38,8 @@
 [ext_resource type="PackedScene" uid="uid://cqixj1xarbaah" path="res://2MinuteJam/Objects/Graves/PumpkinRingSag.tscn" id="36_cgb85"]
 [ext_resource type="PackedScene" uid="uid://bw32xrsinspiu" path="res://2MinuteJam/Objects/Graves/ShushSkullPensive.tscn" id="37_upwuf"]
 [ext_resource type="PackedScene" uid="uid://b8tkmr8dax6s4" path="res://2MinuteJam/Objects/Graves/VulcanAlienDolphin.tscn" id="38_pro8r"]
-[ext_resource type="PackedScene" uid="uid://bwaa20bn4o2h3" path="res://2MinuteJam/Objects/Graves/baseGrave.tscn" id="39_wdh1o"]
+[ext_resource type="PackedScene" uid="uid://bwaa20bn4o2h3" path="res://2MinuteJam/Objects/Graves/ThreeLaughs.tscn" id="39_wdh1o"]
+[ext_resource type="PackedScene" uid="uid://g76hev2b1un1" path="res://2MinuteJam/Objects/Graves/BoyCopPuke.tscn" id="40_pal7j"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ff47w"]
 albedo_color = Color(0.701961, 0.701961, 0, 1)
@@ -114,6 +115,16 @@ size = Vector3(1.46826, 4, 4)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_nfp5j"]
 size = Vector3(2, 4, 4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n3f6x"]
+size = Vector3(13.75, 1, 2.68)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4gyj8"]
+albedo_color = Color(0, 0.737255, 0.290196, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_1q3m2"]
+material = SubResource("StandardMaterial3D_4gyj8")
+size = Vector3(13.75, 1, 2.68)
 
 [sub_resource type="Resource" id="Resource_4w5vi"]
 script = ExtResource("29_yjp2r")
@@ -1180,6 +1191,25 @@ collision_mask = 4
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.0226, 4.38211, 0)
 shape = SubResource("BoxShape3D_nfp5j")
 
+[node name="StaticBody3D2" type="StaticBody3D" parent="PrebuildContainers/ThePit"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.00002, 5.3, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="PrebuildContainers/ThePit/StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -2, -3)
+shape = SubResource("BoxShape3D_n3f6x")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="PrebuildContainers/ThePit/StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -2, -3)
+mesh = SubResource("BoxMesh_1q3m2")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="PrebuildContainers/ThePit/StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -2, 3.01248)
+shape = SubResource("BoxShape3D_n3f6x")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="PrebuildContainers/ThePit/StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -2, 3.01248)
+mesh = SubResource("BoxMesh_1q3m2")
+
 [node name="npcContainer" type="Node" parent="."]
 
 [node name="Bridge" type="Node" parent="npcContainer"]
@@ -1311,8 +1341,11 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 135, 1
 [node name="VulcanAlienDolphin" parent="Graveyard" instance=ExtResource("38_pro8r")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 135, 1.3, -61)
 
-[node name="BaseGrave" parent="Graveyard" instance=ExtResource("39_wdh1o")]
+[node name="ThreeLaughs" parent="Graveyard" instance=ExtResource("39_wdh1o")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 136, 1.3, -72)
+
+[node name="BoyCopPuke" parent="Graveyard" instance=ExtResource("40_pal7j")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 141, 1.3, -72)
 
 [connection signal="body_entered" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_entered"]
 [connection signal="body_exited" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_exited"]

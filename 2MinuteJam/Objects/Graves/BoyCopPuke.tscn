@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://bwaa20bn4o2h3"]
+[gd_scene load_steps=4 format=3 uid="uid://g76hev2b1un1"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aswmd"]
 
@@ -12,7 +12,7 @@ height = 0.2
 height = 0.2
 radius = 0.8
 
-[node name="BaseGrave" type="StaticBody3D"]
+[node name="BoyCopPuke" type="StaticBody3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
@@ -25,4 +25,4 @@ shape = SubResource("CylinderShape3D_jdf6g")
 [node name="Label3D" type="Label3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.334139, 0.108606)
 outline_modulate = Color(1, 1, 1, 0)
-text = "🤣 🤣 🤣"
+text = "🧒 👮 🤢"
