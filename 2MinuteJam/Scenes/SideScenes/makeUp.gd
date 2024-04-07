@@ -15,6 +15,8 @@ var cursorSize : float = 4
 
 var paintIndex : int = 0
 
+func _ready():
+	Input.set_mouse_mode((Input.MOUSE_MODE_VISIBLE))
 
 func _process(_delta):
 
