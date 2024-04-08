@@ -22,6 +22,7 @@ surface_material_override/0 = SubResource("StandardMaterial3D_5y6io")
 
 [node name="SubViewport" type="SubViewport" parent="."]
 size = Vector2i(87, 143)
+render_target_update_mode = 1
 
 [node name="BandPoster" parent="SubViewport" instance=ExtResource("1_4m36r")]
 position = Vector2(-20.1254, 3.2423)
