@@ -1,4 +1,4 @@
-[gd_scene load_steps=77 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=78 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="Material" uid="uid://digeiblk51qny" path="res://2MinuteJam/Assets/theaterColour.tres" id="1_c7p14"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://cxvullig7gdwq" path="res://2MinuteJam/Scenes/MiniGames/SkyFallers/Player/egg.png" id="9_23fd3"]
 [ext_resource type="PackedScene" uid="uid://ba43ypuyd56kj" path="res://2MinuteJam/Scenes/Prebuilds/ChristmasHouse.tscn" id="10_b57lw"]
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/Mirror.gd" id="10_wk1yf"]
+[ext_resource type="Texture2D" uid="uid://bnsj6i8ugdhrt" path="res://2MinuteJam/Assets/art/graphitti.png" id="10_wnl7q"]
 [ext_resource type="PackedScene" uid="uid://oj8yd2ldinpc" path="res://2MinuteJam/Objects/ChristmasDeco/Plank.tscn" id="11_7ttf0"]
 [ext_resource type="PackedScene" uid="uid://c6ocli0eloboc" path="res://2MinuteJam/Objects/Well.tscn" id="12_nf6n7"]
 [ext_resource type="PackedScene" uid="uid://cao36a7xwhym8" path="res://2MinuteJam/npcs/Theater/TheaterNPC.tscn" id="13_rqgvj"]
@@ -1107,6 +1108,10 @@ size = Vector3(116, 10, 1)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.5, 5, 41.851)
 size = Vector3(14, 10, 1)
 
+[node name="Sprite3D" type="Sprite3D" parent="CSGcontainer/Mall/CSGBox3D"]
+transform = Transform3D(-1.74846e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.74846e-08, -108.6, 4.6, 47)
+texture = ExtResource("10_wnl7q")
+
 [node name="mallOn" type="Area3D" parent="CSGcontainer/Mall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -60, 0, -80)
 collision_layer = 4
@@ -1295,7 +1300,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 79.1773, 1.52676, -79.8828)
 [node name="Theater" type="Node" parent="npcContainer"]
 
 [node name="theaterShuush" parent="npcContainer/Theater" instance=ExtResource("13_rqgvj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.19962, 5.5, 8.18125)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.04196, 3.5, 2.18125)
 colour = Color(0, 0, 0, 1)
 
 [node name="theaterGossip" parent="npcContainer/Theater" instance=ExtResource("30_jf0wo")]

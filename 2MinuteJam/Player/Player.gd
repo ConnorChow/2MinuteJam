@@ -172,5 +172,5 @@ func _on_jump_button_pressed():
 
 
 func _on_hands_pressed():
-	$Node3D/handsPoint.visible = !$Node3D/handsPoint.visible
+	$Node3D/handsPoint.visible = true
 
