@@ -1,4 +1,4 @@
-[gd_scene load_steps=80 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=83 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="Material" uid="uid://digeiblk51qny" path="res://2MinuteJam/Assets/theaterColour.tres" id="1_c7p14"]
@@ -47,6 +47,7 @@
 [ext_resource type="PackedScene" uid="uid://deoobbx2cse2b" path="res://2MinuteJam/npcs/Building/dream_npc.tscn" id="43_iatgn"]
 [ext_resource type="PackedScene" uid="uid://dot1g4mus5vi5" path="res://2MinuteJam/Objects/flashlight/flashlight.tscn" id="46_rqq1x"]
 [ext_resource type="PackedScene" uid="uid://di5gyetrnkv72" path="res://2MinuteJam/Objects/Graves/EmptyGrave.tscn" id="47_4ur8w"]
+[ext_resource type="PackedScene" uid="uid://cihmapoecx3mk" path="res://2MinuteJam/Objects/Poster/Poster3D.tscn" id="48_py013"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ff47w"]
 albedo_color = Color(0.701961, 0.701961, 0, 1)
@@ -182,6 +183,13 @@ albedo_color = Color(1, 0, 0, 1)
 [sub_resource type="TubeTrailMesh" id="TubeTrailMesh_k2lea"]
 material = SubResource("StandardMaterial3D_hd1yf")
 sections = 16
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_l48ae"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lqaaf"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_l48ae")
 
 [node name="World" type="Node"]
 script = ExtResource("1_0o181")
@@ -1435,7 +1443,7 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 153, 1
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 129, 1.3, -63.5)
 
 [node name="VulcanAlienDolphin" parent="Graveyard" instance=ExtResource("38_pro8r")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 132, 1.3, -52)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 132, 2.1, -52)
 
 [node name="ThreeLaughs" parent="Graveyard" instance=ExtResource("39_wdh1o")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 132, 1.3, -76)
@@ -1443,8 +1451,25 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 132, 1
 [node name="BoyCopPuke" parent="Graveyard" instance=ExtResource("40_pal7j")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 146, 1.3, -83)
 
-[node name="KissCatMiddle" parent="." instance=ExtResource("47_4ur8w")]
+[node name="EmptyGrave" parent="Graveyard" instance=ExtResource("47_4ur8w")]
 transform = Transform3D(-7.5904e-09, 0.984808, -0.173648, 0.173648, 0.17101, 0.969846, 0.984808, -0.0301537, -0.17101, 176, 1.84266, -49)
+
+[node name="PosterContainer" type="Node" parent="."]
+
+[node name="Poster3d" parent="PosterContainer" instance=ExtResource("48_py013")]
+transform = Transform3D(1.91069e-15, -1, 4.37114e-08, -4.37114e-08, -4.37114e-08, -1, 1, 0, -4.37114e-08, -16.5035, 1.6, 28)
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_lqaaf")
+
+[node name="Poster3d2" parent="PosterContainer" instance=ExtResource("48_py013")]
+transform = Transform3D(1.91069e-15, -1, 4.37114e-08, -4.37114e-08, -4.37114e-08, -1, 1, 0, -4.37114e-08, -16.5035, 1.6, 46.5893)
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_lqaaf")
+
+[node name="Poster3d3" parent="PosterContainer" instance=ExtResource("48_py013")]
+transform = Transform3D(8.74228e-08, 1, -4.37114e-08, -4.37114e-08, -4.37114e-08, -1, -1, 8.74228e-08, 4.37114e-08, -49.2929, 1.6, 46.5893)
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_lqaaf")
 
 [connection signal="body_entered" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_entered"]
 [connection signal="body_exited" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_exited"]

@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://cihmapoecx3mk"]
+
+[ext_resource type="PackedScene" uid="uid://dx1osgamq8tm0" path="res://2MinuteJam/Objects/Poster/BandPoster.tscn" id="1_4m36r"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fk8hn"]
+albedo_texture_force_srgb = true
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_gpcud"]
+material = SubResource("StandardMaterial3D_fk8hn")
+size = Vector2(1, 2)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_rkxfp"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5y6io"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_rkxfp")
+
+[node name="Poster3d" type="MeshInstance3D"]
+mesh = SubResource("PlaneMesh_gpcud")
+surface_material_override/0 = SubResource("StandardMaterial3D_5y6io")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+size = Vector2i(87, 143)
+
+[node name="BandPoster" parent="SubViewport" instance=ExtResource("1_4m36r")]
+position = Vector2(-20.1254, 3.2423)
