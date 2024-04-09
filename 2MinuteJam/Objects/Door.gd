@@ -1,14 +1,14 @@
 extends RigidBody3D
 
-var state : bool = true
+var state : bool = false
 @onready var animPlayer = $"../../AnimationPlayer"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	add_to_group("interact")
 
-func interact():
-	print("test")
+func interact(_node):
+	#print("test")
 	state = !state
 	if state == false:
 		animPlayer.play("close")
