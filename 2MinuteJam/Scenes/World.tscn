@@ -1228,7 +1228,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 61.5, 5, 41.851)
 size = Vector3(14, 10, 1)
 
 [node name="Sprite3D" type="Sprite3D" parent="CSGcontainer/Mall/CSGBox3D"]
-transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -68.5, 4.6, 78)
+transform = Transform3D(-1.74846e-08, 0, 0.4, 0, 0.4, 0, -0.4, 0, -1.74846e-08, -68.5, 5.1, 78)
 shaded = true
 texture = ExtResource("10_wnl7q")
 
@@ -1408,6 +1408,22 @@ shape = SubResource("BoxShape3D_n3f6x")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="PrebuildContainers/ThePit/StaticBody3D2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, -2, 3.01248)
+mesh = SubResource("BoxMesh_1q3m2")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="PrebuildContainers/ThePit/StaticBody3D2"]
+transform = Transform3D(1.39091e-08, 0, -1, 0, 1, 0, 1, 0, 1.39091e-08, -84, -1.6, 1.0126)
+shape = SubResource("BoxShape3D_n3f6x")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="PrebuildContainers/ThePit/StaticBody3D2"]
+transform = Transform3D(1.39091e-08, 0, -1, 0, 1, 0, 1, 0, 1.39091e-08, -84, -1.6, 1.0126)
+mesh = SubResource("BoxMesh_1q3m2")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="PrebuildContainers/ThePit/StaticBody3D2"]
+transform = Transform3D(1.39091e-08, 0, -1, 0, 1, 0, 1, 0, 1.39091e-08, -85.6376, -1.6, 1.01262)
+shape = SubResource("BoxShape3D_n3f6x")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="PrebuildContainers/ThePit/StaticBody3D2"]
+transform = Transform3D(1.39091e-08, 0, -1, 0, 1, 0, 1, 0, 1.39091e-08, -85.6376, -1.6, 1.01262)
 mesh = SubResource("BoxMesh_1q3m2")
 
 [node name="npcContainer" type="Node" parent="."]

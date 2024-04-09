@@ -1,13 +1,24 @@
 extends Node
 
 @onready var OutsideMusic :AudioStreamPlayer= $MusicContainer/Outside
-
+var boredDialogue = ["Hey.", "You know you can leave the theater right?", "Like, I know it's a good film, but there's a ton more to see.", "Go check out the town."]
+var moreBoredDialogue = ["Soo... You just want to sit here and watch this same two minute clip over and over?", "I really don't mind, but a lot of work went into building everything in this game.", "...", "Okay, well, let me know if you need anything."]
+var mostBoredDialogue = ["Look, I've got stuff to do, and you probably have better stuff too. Like, you've been in here for over twenty minutues already.", "What enjoyment are you even getting by just sitting here?", "I don't get it.", "There's no secrets that I'm going to reveal, no greater meaning I'm going to unlock.", "...", "Okay, maybe just one secret."]
+var secretBoredDialogue = ["This is a video game, I'm not actually talking to you right now.", "There, happy? Is that profound enough for you?", "Now, go explore the town."]
 
 func _ready():
 	GlobalController.restart()
+	GlobalController.inTheater = true
 	get_tree().paused = false
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-
+	if GlobalController.timesInTheater == 3:
+		get_tree().call_group("dialogue", "talking", boredDialogue)
+	if GlobalController.timesInTheater == 6:
+		get_tree().call_group("dialogue", "talking", moreBoredDialogue)
+	if GlobalController.timesInTheater == 9:
+		get_tree().call_group("dialogue", "talking", mostBoredDialogue)
+	if GlobalController.timesInTheater == 12:
+		get_tree().call_group("dialogue", "talking", secretBoredDialogue)
 
 
 
@@ -25,6 +36,7 @@ func _on_outside_music_start_body_entered(_body):
 func _on_outside_music_start_body_exited(_body):
 	if !GlobalController.ending:
 		OutsideMusic.play()
+		GlobalController.inTheater = false
 #** Theater**
 
 
