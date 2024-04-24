@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://lblcu8dsb5uy"]
+
+[ext_resource type="ArrayMesh" uid="uid://8dpkjx043iyv" path="res://2MinuteJam/Assets/art/Arcade/ArceggMachine.res" id="1_7skx2"]
+[ext_resource type="Script" path="res://ArceggMachine.gd" id="2_tdsr8"]
+[ext_resource type="PackedScene" uid="uid://clc44v0hqw7ci" path="res://2MinuteJam/Scenes/MiniGames/SkyFallers/SkyFallers.tscn" id="3_p51ej"]
+
+[sub_resource type="Environment" id="Environment_jajy8"]
+
+[node name="Node3D" type="Node"]
+
+[node name="ArceggMachine" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_7skx2")
+script = ExtResource("2_tdsr8")
+
+[node name="SubViewport" type="SubViewport" parent="ArceggMachine"]
+disable_3d = true
+size = Vector2i(1152, 648)
+
+[node name="SkyFallers" parent="ArceggMachine/SubViewport" instance=ExtResource("3_p51ej")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 1)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_jajy8")
+
+[editable path="ArceggMachine/SubViewport/SkyFallers"]

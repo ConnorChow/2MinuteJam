@@ -21,7 +21,6 @@ GlobalController="*res://2MinuteJam/Scenes/globalController.gd"
 
 [display]
 
-window/size/mode=3
 window/stretch/mode="viewport"
 
 [dotnet]
