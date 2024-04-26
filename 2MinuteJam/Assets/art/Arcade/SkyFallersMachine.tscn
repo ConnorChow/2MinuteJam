@@ -23,5 +23,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 1)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_jajy8")
-
-[editable path="ArceggMachine/SubViewport/SkyFallers"]

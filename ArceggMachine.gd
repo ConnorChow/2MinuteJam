@@ -9,6 +9,7 @@ func _ready():
 	
 	var material = StandardMaterial3D.new()
 	material.albedo_texture = viewport.get_texture()
+	material.uv1_scale = Vector3(0.5, 1, 0)
 	set_surface_override_material(1, material)
 
 

@@ -40,7 +40,7 @@ collision_layer = 5
 collision_mask = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
-position = Vector2(-37, 323)
+position = Vector2(-608, 322)
 shape = SubResource("RectangleShape2D_ajggc")
 
 [node name="Player" parent="." instance=ExtResource("2_chsnp")]
@@ -52,9 +52,6 @@ autostart = true
 
 [node name="Chicken" parent="." instance=ExtResource("4_xdfcd")]
 position = Vector2(141, 82)
-
-[node name="Chicken2" parent="." instance=ExtResource("4_xdfcd")]
-position = Vector2(71, 165)
 
 [node name="Chicken4" parent="." instance=ExtResource("4_xdfcd")]
 position = Vector2(211, 82)
@@ -68,41 +65,8 @@ position = Vector2(281, 82)
 [node name="Chicken8" parent="." instance=ExtResource("4_xdfcd")]
 position = Vector2(211, 165)
 
-[node name="Chicken10" parent="." instance=ExtResource("4_xdfcd")]
-position = Vector2(351, 82)
-
 [node name="Chicken11" parent="." instance=ExtResource("4_xdfcd")]
 position = Vector2(281, 165)
-
-[node name="Chicken13" parent="." instance=ExtResource("4_xdfcd")]
-position = Vector2(421, 82)
-
-[node name="Chicken14" parent="." instance=ExtResource("4_xdfcd")]
-position = Vector2(351, 165)
-
-[node name="Chicken16" parent="." instance=ExtResource("4_xdfcd")]
-position = Vector2(491, 82)
-
-[node name="Chicken17" parent="." instance=ExtResource("4_xdfcd")]
-position = Vector2(421, 165)
-
-[node name="Chicken19" parent="." instance=ExtResource("4_xdfcd")]
-position = Vector2(561, 82)
-
-[node name="Chicken20" parent="." instance=ExtResource("4_xdfcd")]
-position = Vector2(491, 165)
-
-[node name="Chicken22" parent="." instance=ExtResource("4_xdfcd")]
-position = Vector2(631, 82)
-
-[node name="Chicken23" parent="." instance=ExtResource("4_xdfcd")]
-position = Vector2(561, 165)
-
-[node name="Chicken25" parent="." instance=ExtResource("4_xdfcd")]
-position = Vector2(631, 165)
-
-[node name="Chicken35" parent="." instance=ExtResource("4_xdfcd")]
-position = Vector2(701, 165)
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_layer = 4
@@ -128,7 +92,7 @@ shape = SubResource("RectangleShape2D_l4d1v")
 [node name="Area2D3" type="Area2D" parent="."]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D3"]
-position = Vector2(1164, 320)
+position = Vector2(593, 319)
 shape = SubResource("RectangleShape2D_1i7aj")
 
 [node name="musicTrack" type="AudioStreamPlayer" parent="."]
