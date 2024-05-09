@@ -1,6 +1,5 @@
 extends "res://2MinuteJam/npcs/_baseNPC/baseNPC.gd"
 
-var curLines : int = 1
 
 @onready var timer = $Timer
 
@@ -25,7 +24,7 @@ func dostuff():
 	queue_free()
 
 func talkedTo():
-	match curLines:
+	match curline:
 		5:
 			timer.stop()
 
