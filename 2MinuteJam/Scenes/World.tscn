@@ -1,4 +1,4 @@
-[gd_scene load_steps=88 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=89 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="Material" uid="uid://digeiblk51qny" path="res://2MinuteJam/Assets/theaterColour.tres" id="1_c7p14"]
@@ -30,11 +30,11 @@
 [ext_resource type="PackedScene" uid="uid://dso57uf1ulcqu" path="res://2MinuteJam/npcs/Bridge/bridgeWoman.tscn" id="24_n0frp"]
 [ext_resource type="PackedScene" uid="uid://blf8e1040dqs5" path="res://2MinuteJam/Objects/Dings/Ding1.tscn" id="25_pem1r"]
 [ext_resource type="PackedScene" uid="uid://b68t6c412dk10" path="res://2MinuteJam/npcs/Arcade/Clerk.tscn" id="26_vwgwm"]
+[ext_resource type="PackedScene" uid="uid://bjeey2keqwgya" path="res://2MinuteJam/npcs/Theater/theater_gossipv2.tscn" id="27_be6du"]
 [ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="27_ons6m"]
 [ext_resource type="Resource" path="res://test/data.hterrain" id="28_23m2k"]
 [ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="29_yjp2r"]
 [ext_resource type="PackedScene" uid="uid://dtcl11nhll7h5" path="res://2MinuteJam/Objects/optiopnPickups/hands.tscn" id="30_4ct5l"]
-[ext_resource type="PackedScene" uid="uid://c5xpe30ickej" path="res://2MinuteJam/npcs/Theater/theater_gossip.tscn" id="30_jf0wo"]
 [ext_resource type="PackedScene" uid="uid://h1yugiah7abi" path="res://2MinuteJam/Objects/optiopnPickups/baseOptions.tscn" id="30_ydsx5"]
 [ext_resource type="PackedScene" uid="uid://4umu5ithtjdi" path="res://2MinuteJam/Objects/Graves/DevilSwearNoHear.tscn" id="32_u0hld"]
 [ext_resource type="PackedScene" uid="uid://dvwte30kgwqfg" path="res://2MinuteJam/Objects/Graves/EggTransWoman.tscn" id="33_2pep7"]
@@ -49,6 +49,7 @@
 [ext_resource type="PackedScene" uid="uid://dot1g4mus5vi5" path="res://2MinuteJam/Objects/flashlight/flashlight.tscn" id="46_rqq1x"]
 [ext_resource type="PackedScene" uid="uid://di5gyetrnkv72" path="res://2MinuteJam/Objects/Graves/EmptyGrave.tscn" id="47_4ur8w"]
 [ext_resource type="PackedScene" uid="uid://cihmapoecx3mk" path="res://2MinuteJam/Objects/Poster/Poster3D.tscn" id="48_py013"]
+[ext_resource type="PackedScene" uid="uid://cesaq07oa64kf" path="res://2MinuteJam/npcs/_baseNPC/baseNPC.tscn" id="50_nr4f2"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ff47w"]
 albedo_color = Color(0.701961, 0.701961, 0, 1)
@@ -1443,20 +1444,23 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 79.1773, 1.52676, -79.8828)
 
 [node name="theaterShuush" parent="npcContainer/Theater" instance=ExtResource("13_rqgvj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.04196, 3.5, 2.18125)
+dialogue = [["SHHH", "I'm trying to watch the movie!", "...", "Please."]]
 colour = Color(0, 0, 0, 1)
 
-[node name="theaterGossip" parent="npcContainer/Theater" instance=ExtResource("30_jf0wo")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -7.2147, 3.5, 3.41712)
+[node name="theaterGossip2" parent="npcContainer/Theater" instance=ExtResource("27_be6du")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6, 3, 2)
 
 [node name="Arcegg" type="Node" parent="npcContainer"]
 
 [node name="Clerk" parent="npcContainer/Arcegg" instance=ExtResource("26_vwgwm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.35956, 1.5, 79.8874)
+dialogue = [["Welcome to the Arcegg!", "Feel free to try out any of the machines!", "...godi'msotired...", "Sorry, go have some fun!"]]
 
 [node name="Building" type="Node" parent="npcContainer"]
 
 [node name="dreamNPC" parent="npcContainer/Building" instance=ExtResource("43_iatgn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 41.05, 129)
+dialogue = [["Is this my dream?", "Or yours?", "The way I see it, our fates appear to be intertwined."]]
 
 [node name="random shit" type="Node" parent="."]
 
@@ -1606,6 +1610,9 @@ size = Vector3(20, 30, 20)
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -147.481, 20.05, -165.464)
 use_collision = true
 size = Vector3(20, 40, 20)
+
+[node name="BaseNpc" parent="." instance=ExtResource("50_nr4f2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -9)
 
 [connection signal="body_entered" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_entered"]
 [connection signal="body_exited" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_exited"]

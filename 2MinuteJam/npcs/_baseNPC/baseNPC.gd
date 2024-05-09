@@ -4,8 +4,8 @@ extends CharacterBody3D
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
-
-@export var dialogue = ["Hello", "Good Bye", "beep", "boop"]
+var curline : int = 0
+@export var dialogue = [["Hello", "Good Bye", "beep", "boop"],["test", "test2"]]
 @export var colour : Color
 @export_enum("walks", "rolls", "falls") var moveType  : String
 
@@ -38,7 +38,9 @@ func _physics_process(delta):
 
 func interact(_node):
 
-	get_tree().call_group("dialogue", "talking", dialogue)
+	get_tree().call_group("dialogue", "talking", dialogue[curline])
+	if curline < dialogue.size()-1:
+		curline +=1
 	talkedTo()
 	
 
