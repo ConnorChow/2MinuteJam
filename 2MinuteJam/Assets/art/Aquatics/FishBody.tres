@@ -1,0 +1,22 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://dg4qf6208b4au"]
+
+[ext_resource type="Shader" path="res://Fish Simulation/FishShader.gdshader" id="1_edemg"]
+[ext_resource type="Texture2D" uid="uid://dywgpw6y7en48" path="res://Fish Simulation/FishTexture.png" id="2_op7k5"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_edemg")
+shader_parameter/colour = null
+shader_parameter/swimSpeed = 8.0
+shader_parameter/side_to_side = -0.025
+shader_parameter/pivot = 1.0
+shader_parameter/amplitude = 5.0
+shader_parameter/wave = 0.5
+shader_parameter/twist = 6.0
+shader_parameter/mask_black = 0.0
+shader_parameter/mask_white = 3.0
+shader_parameter/specular = 0.1
+shader_parameter/swim_strength_straight = 0.1
+shader_parameter/swim_strength_turning = 1.0
+shader_parameter/random_offset = 275.0
+shader_parameter/fish_texture = ExtResource("2_op7k5")

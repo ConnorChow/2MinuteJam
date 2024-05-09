@@ -1,11 +1,11 @@
-[gd_scene load_steps=13 format=3 uid="uid://cir0q47armsde"]
+[gd_scene load_steps=13 format=3 uid="uid://bbkq7v1b6oxl"]
 
-[ext_resource type="PackedScene" uid="uid://dusr3i62vm8gd" path="res://2MinuteJam/Scenes/MiniGames/EggHockey/Objects/Paddle.tscn" id="1_jf1cg"]
-[ext_resource type="Script" path="res://2MinuteJam/Scenes/MiniGames/EggHockey/PlayerPaddle.gd" id="2_462uj"]
-[ext_resource type="PackedScene" uid="uid://br5kjlf77baf8" path="res://2MinuteJam/Scenes/MiniGames/EggHockey/Objects/EggBall.tscn" id="3_jef06"]
-[ext_resource type="Script" path="res://2MinuteJam/Scenes/MiniGames/EggHockey/enemyController.gd" id="4_e26bm"]
-[ext_resource type="AudioStream" uid="uid://devrcqr6j874u" path="res://2MinuteJam/Assets/Music/eggHockey.mp3" id="5_wkkr1"]
-[ext_resource type="Texture2D" uid="uid://bdo37wprd0pk5" path="res://2MinuteJam/Assets/art/testsky.png" id="6_pu4ho"]
+[ext_resource type="Texture2D" uid="uid://bdo37wprd0pk5" path="res://2MinuteJam/Assets/art/testsky.png" id="1_km6ea"]
+[ext_resource type="PackedScene" uid="uid://dusr3i62vm8gd" path="res://2MinuteJam/Scenes/MiniGames/EggHockey/Objects/Paddle.tscn" id="2_wyk66"]
+[ext_resource type="Script" path="res://2MinuteJam/Scenes/MiniGames/EggHockey/PlayerPaddle.gd" id="3_lmem6"]
+[ext_resource type="PackedScene" uid="uid://br5kjlf77baf8" path="res://2MinuteJam/Scenes/MiniGames/EggHockey/Objects/EggBall.tscn" id="4_wq2wd"]
+[ext_resource type="Script" path="res://2MinuteJam/Scenes/MiniGames/EggHockey/enemyController.gd" id="5_m2b4g"]
+[ext_resource type="AudioStream" uid="uid://devrcqr6j874u" path="res://2MinuteJam/Assets/Music/eggHockey.mp3" id="6_lpvhm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r8gw6"]
 size = Vector2(1288, 20)
@@ -30,7 +30,7 @@ size = Vector2(77, 160)
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, 3.05176e-05)
 scale = Vector2(0.640556, 0.36)
-texture = ExtResource("6_pu4ho")
+texture = ExtResource("1_km6ea")
 centered = false
 
 [node name="Rink" type="StaticBody2D" parent="."]
@@ -61,7 +61,7 @@ shape = SubResource("RectangleShape2D_vsy4q")
 position = Vector2(1151, 548)
 shape = SubResource("RectangleShape2D_vsy4q")
 
-[node name="Paddle" parent="." instance=ExtResource("1_jf1cg")]
+[node name="Paddle" parent="." instance=ExtResource("2_wyk66")]
 position = Vector2(193, 439)
 mass = 5.0
 gravity_scale = 2.0
@@ -79,7 +79,7 @@ linear_damp_space_override = 1
 linear_damp = 4.0
 angular_damp_space_override = 1
 angular_damp = 0.5
-script = ExtResource("2_462uj")
+script = ExtResource("3_lmem6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerController"]
 shape = SubResource("CircleShape2D_6eism")
@@ -102,7 +102,7 @@ shape = SubResource("RectangleShape2D_mw33r")
 position = Vector2(1162, 332)
 shape = SubResource("RectangleShape2D_mw33r")
 
-[node name="EggBall" parent="." instance=ExtResource("3_jef06")]
+[node name="EggBall" parent="." instance=ExtResource("4_wq2wd")]
 position = Vector2(502, 472)
 collision_layer = 9
 collision_mask = 9
@@ -113,7 +113,7 @@ linear_damp = -0.3
 angular_damp_mode = 1
 angular_damp = -0.3
 
-[node name="Paddle2" parent="." instance=ExtResource("1_jf1cg")]
+[node name="Paddle2" parent="." instance=ExtResource("2_wyk66")]
 position = Vector2(1010, 350)
 collision_layer = 5
 collision_mask = 5
@@ -129,7 +129,7 @@ gravity_direction = Vector2(0, 0)
 gravity = 4096.0
 linear_damp_space_override = 1
 linear_damp = 4.0
-script = ExtResource("4_e26bm")
+script = ExtResource("5_m2b4g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enemyController"]
 shape = SubResource("CircleShape2D_r3eot")
@@ -192,7 +192,7 @@ text = "0"
 position = Vector2(575, 311)
 
 [node name="musicTrack" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("5_wkkr1")
+stream = ExtResource("6_lpvhm")
 volume_db = -5.0
 autoplay = true
 

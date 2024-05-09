@@ -1,0 +1,22 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://mo85laltyhv6"]
+
+[ext_resource type="Shader" path="res://Fish Simulation/FishShader.gdshader" id="1_2jp80"]
+[ext_resource type="Texture2D" uid="uid://dwgrvikh8yrvs" path="res://Fish Simulation/Shork_ShorkBody.png" id="2_am1m1"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_2jp80")
+shader_parameter/colour = Vector3(1, 1, 1)
+shader_parameter/swimSpeed = 4.0
+shader_parameter/side_to_side = -0.2
+shader_parameter/pivot = 0.5
+shader_parameter/amplitude = 2.5
+shader_parameter/wave = 0.33
+shader_parameter/twist = 1.0
+shader_parameter/mask_black = 0.0
+shader_parameter/mask_white = 2.0
+shader_parameter/specular = 0.1
+shader_parameter/swim_strength_straight = 0.1
+shader_parameter/swim_strength_turning = 1.0
+shader_parameter/random_offset = 137.5
+shader_parameter/fish_texture = ExtResource("2_am1m1")

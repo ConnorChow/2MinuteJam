@@ -1,0 +1,54 @@
+[gd_scene load_steps=10 format=3 uid="uid://c5fyhex0j1p6j"]
+
+[ext_resource type="Script" path="res://Fish Simulation/Scripting/FishSharkSimulator.gd" id="1_hnkpq"]
+[ext_resource type="ArrayMesh" uid="uid://bjf0dfawyd7m0" path="res://Fish Simulation/FishMesh.res" id="2_0fe7g"]
+[ext_resource type="ArrayMesh" uid="uid://cccvr5qwwfknr" path="res://Fish Simulation/ShorkMesh.res" id="2_h40ce"]
+[ext_resource type="Shader" path="res://Fish Simulation/FishTankPostProcess.gdshader" id="3_c1ld3"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_hnu50"]
+
+[sub_resource type="Sky" id="Sky_6hyms"]
+sky_material = SubResource("ProceduralSkyMaterial_hnu50")
+
+[sub_resource type="Environment" id="Environment_5oqrg"]
+background_mode = 2
+sky = SubResource("Sky_6hyms")
+ambient_light_source = 3
+reflected_light_source = 2
+fog_enabled = true
+fog_light_color = Color(0.333333, 0.596078, 0.647059, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_31wcg"]
+render_priority = 0
+shader = ExtResource("3_c1ld3")
+shader_parameter/water_colour = Vector3(0.25, 0.75, 0.25)
+shader_parameter/fog_depth = 1.001
+shader_parameter/fog_power = 16.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_dya4a"]
+material = SubResource("ShaderMaterial_31wcg")
+size = Vector2(1.5, 1)
+
+[node name="Root" type="Node"]
+script = ExtResource("1_hnkpq")
+fish_mesh = ExtResource("2_h40ce")
+num_fish = 2048
+fish_speed = 1.5
+fish_direction_speed = 0.5
+fish_streamline_direction = Vector3(0, 0, -1)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_5oqrg")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.361439, -0.771971, 0.522898, -0.212693, 0.614289, 0.759876, -0.907812, 0.163432, -0.386221, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8)
+
+[node name="AquariumFilter" type="MeshInstance3D" parent="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.051)
+mesh = SubResource("QuadMesh_dya4a")
+
+[node name="FishMesh" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_0fe7g")
