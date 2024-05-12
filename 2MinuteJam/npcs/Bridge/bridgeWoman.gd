@@ -8,13 +8,7 @@ extends "res://2MinuteJam/npcs/_baseNPC/baseNPC.gd"
 func _on_timer_timeout():
 	dostuff()
 
-func _physics_process(delta):
-	
-	if !is_on_floor():
-		velocity.y -= gravity * delta
-		velocity.z = lerpf(velocity.z, 0 , delta * 3)
-	
-	move_and_slide()
+
 
 func dostuff():
 	#script the npc to move 

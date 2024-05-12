@@ -1,0 +1,23 @@
+[gd_scene load_steps=6 format=3 uid="uid://dcbe36ic5jgp2"]
+
+[ext_resource type="PackedScene" uid="uid://cesaq07oa64kf" path="res://2MinuteJam/npcs/_baseNPC/baseNPC.tscn" id="1_eqx3m"]
+[ext_resource type="Script" path="res://2MinuteJam/npcs/Mall/worstPerson.gd" id="2_sjex2"]
+[ext_resource type="AudioStream" uid="uid://bn41nkv12vlk1" path="res://2MinuteJam/Assets/SoundEffects/glass-breaking-151256.mp3" id="3_60wee"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5c8sb"]
+resource_local_to_scene = true
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_dr83b"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_5c8sb")
+
+[node name="BaseNpc" instance=ExtResource("1_eqx3m")]
+script = ExtResource("2_sjex2")
+colour = Color(0, 0, 0, 1)
+
+[node name="MeshInstance3D" parent="." index="0"]
+mesh = SubResource("CapsuleMesh_dr83b")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." index="3"]
+stream = ExtResource("3_60wee")
+volume_db = -2.0

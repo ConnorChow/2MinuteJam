@@ -7,7 +7,7 @@ var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 var curline : int = 0
 @export var dialogue = [["Hello", "Good Bye", "beep", "boop"],["test", "test2"]]
 @export var colour : Color
-@export_enum("walks", "rolls", "falls") var moveType  : String
+@export_enum("walks", "rolls", "falls", "not") var moveType  : String = "not"
 
 
 var textPlace : int = 0
@@ -25,16 +25,20 @@ func _physics_process(delta):
 	
 	match moveType:
 		"walks":
-			#normal movement type
-			pass
+			velocity.y -= gravity * delta
+			velocity.z = lerpf(velocity.z, 0 , delta * 3)
+
 		"rolls":
 			#rolling forward movement type
 			pass
 		"falls":
 			# falls over and rolls on side movement type
 			pass
-	
-	move_and_slide()
+		_:
+			pass
+	if moveType != "not":
+		
+		move_and_slide()
 
 func interact(_node):
 

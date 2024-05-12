@@ -49,10 +49,11 @@ func _on_the_pit_outside_music_body_entered(_body):
 
 func _on_the_pit_music_off_body_entered(_body):
 	OutsideMusic.stop()
-	($MusicContainer/thePit/horrorSFX as AudioStreamPlayer).stop()
+	#($MusicContainer/thePit/horrorSFX as AudioStreamPlayer).stop()
 	$MusicContainer/thePit/horrorTimer.stop()
 	
 	
+
 
 func _on_the_pit_music_on_body_entered(_body):
 	# start the pit music
