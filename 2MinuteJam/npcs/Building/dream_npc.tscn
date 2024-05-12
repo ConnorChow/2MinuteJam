@@ -11,6 +11,7 @@ material = SubResource("StandardMaterial3D_hbh07")
 
 [node name="dreamNPC" instance=ExtResource("1_1tw1l")]
 dialogue = ["Is this my dream?", "Or yours?", "The way I see it, our fates appear to be intertwined."]
+myName = "Marcelene"
 
 [node name="MeshInstance3D" parent="." index="0"]
 mesh = SubResource("CapsuleMesh_wc8sq")

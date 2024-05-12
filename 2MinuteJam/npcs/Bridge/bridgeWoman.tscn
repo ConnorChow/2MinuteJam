@@ -15,6 +15,7 @@ script = ExtResource("2_i0pgj")
 dialogue = [["... ", "..", "hah..", ".."], ["..."], ["..."], ["..."], ["..."], ["...", "Yeah..", "Thanks..."], ["I'm going to go home.."]]
 colour = Color(0, 0, 0, 1)
 moveType = "walks"
+myName = "Mary"
 
 [node name="MeshInstance3D" parent="." index="0"]
 mesh = SubResource("CapsuleMesh_s4nwt")

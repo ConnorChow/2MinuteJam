@@ -8,7 +8,7 @@ var curline : int = 0
 @export var dialogue = [["Hello", "Good Bye", "beep", "boop"],["test", "test2"]]
 @export var colour : Color
 @export_enum("walks", "rolls", "falls", "not") var moveType  : String = "not"
-
+@export var myName : String = "BaseNPC"
 
 var textPlace : int = 0
 @onready var dialogueDetect = $playerDialogueDetector
@@ -42,7 +42,7 @@ func _physics_process(delta):
 
 func interact(_node):
 
-	get_tree().call_group("dialogue", "talking", dialogue[curline])
+	get_tree().call_group("dialogue", "talking", dialogue[curline], myName)
 	if curline < dialogue.size()-1:
 		curline +=1
 	talkedTo()

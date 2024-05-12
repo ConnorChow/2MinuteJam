@@ -3,18 +3,22 @@ extends Control
 var diagToHandle = []
 var curText : int = 0
 @onready var dialog = $PanelContainer/MarginContainer/Label
-# Called when the node enters the scene tree for the first time.
+
+@onready var name_plate = $PanelContainer/MarginContainer2/namePlate
+@onready var worst_person = %worstPerson
+
+var npcName
 
 
-
-
-func talking(diag : Array ):
+func talking(diag : Array , myName :String):
 	set_visible(true)
 	GlobalController.inDialogue = true
 	#print(diag)
 	curText = 0
+	npcName = myName
 	diagToHandle = diag
 	dialog.set_text(diagToHandle[curText])
+	name_plate.set_text(npcName)
 
 
 
@@ -24,6 +28,9 @@ func _process(_delta):
 			if curText <= diagToHandle.size()-1:
 				dialog.set_text(diagToHandle[curText])
 				curText +=1
+				if npcName == "Petersen":
+					if curText ==4:
+						worst_person.play()
 				
 				#if curText == diagToHandle.size() :
 					#print("this one")

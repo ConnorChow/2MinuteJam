@@ -92,7 +92,7 @@ func _physics_process(delta):
 				heldObject.set_freeze_enabled(false)
 				heldObject = null
 			elif hitObject != null:
-					print(hitObject)
+					#print(hitObject)
 					if !heldObject:
 						if hitObject is RigidBody3D: #.is_in_group("pickable"):
 							heldObject = hitObject

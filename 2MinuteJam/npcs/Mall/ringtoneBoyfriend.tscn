@@ -23,6 +23,7 @@ size = Vector3(0.2, 0.01, 0.1)
 
 [node name="ringtoneBoyfriend" instance=ExtResource("1_f3lqw")]
 dialogue = [["Why the heck isn't she answering??", "I've been calling for like ten minutes.", "It keeps going to voicemail.", "...", "Is she ignoring me?"]]
+myName = "Gabe"
 
 [node name="MeshInstance3D" parent="." index="0"]
 mesh = SubResource("CapsuleMesh_3y3ig")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=96 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=97 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="Material" uid="uid://digeiblk51qny" path="res://2MinuteJam/Assets/theaterColour.tres" id="1_c7p14"]
@@ -30,6 +30,7 @@
 [ext_resource type="AudioStream" uid="uid://bjjuaay4gd2j0" path="res://2MinuteJam/Assets/SoundEffects/trombone-stretching-14-41727.mp3" id="20_jbjd7"]
 [ext_resource type="PackedScene" uid="uid://2uwugc2a80tn" path="res://2MinuteJam/Objects/baseSit/baseChair.tscn" id="20_sm38u"]
 [ext_resource type="PackedScene" uid="uid://dso57uf1ulcqu" path="res://2MinuteJam/npcs/Bridge/bridgeWoman.tscn" id="24_n0frp"]
+[ext_resource type="AudioStream" uid="uid://bn41nkv12vlk1" path="res://2MinuteJam/Assets/SoundEffects/glass-breaking-151256.mp3" id="25_o6gwf"]
 [ext_resource type="PackedScene" uid="uid://blf8e1040dqs5" path="res://2MinuteJam/Objects/Dings/Ding1.tscn" id="25_pem1r"]
 [ext_resource type="PackedScene" uid="uid://b68t6c412dk10" path="res://2MinuteJam/npcs/Arcade/Clerk.tscn" id="26_vwgwm"]
 [ext_resource type="PackedScene" uid="uid://bjeey2keqwgya" path="res://2MinuteJam/npcs/Theater/theater_gossipv2.tscn" id="27_be6du"]
@@ -1341,7 +1342,6 @@ collision_layer = 5
 collision_mask = 5
 
 [node name="UiHandler" type="Control" parent="." groups=["dialogue"]]
-visible = false
 layout_mode = 3
 anchor_top = 0.626543
 anchor_right = 1.0
@@ -1372,6 +1372,14 @@ text = "Lorem Ipsum"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
+
+[node name="MarginContainer2" type="MarginContainer" parent="UiHandler/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+
+[node name="namePlate" type="Label" parent="UiHandler/PanelContainer/MarginContainer2"]
+layout_mode = 2
 
 [node name="MusicContainer" type="Node" parent="."]
 
@@ -1417,6 +1425,13 @@ stream = ExtResource("18_loo1w")
 volume_db = -12.0
 unit_size = 5.0
 autoplay = true
+
+[node name="npcSFX" type="Node" parent="MusicContainer"]
+
+[node name="worstPerson" type="AudioStreamPlayer" parent="MusicContainer/npcSFX"]
+unique_name_in_owner = true
+stream = ExtResource("25_o6gwf")
+volume_db = -2.0
 
 [node name="PrebuildContainers" type="Node" parent="."]
 

@@ -11,6 +11,7 @@ material = SubResource("StandardMaterial3D_nyesj")
 
 [node name="Clerk" instance=ExtResource("1_0hbr8")]
 dialogue = [["Welcome to the Arcegg!", "Feel free to try out any of the machines!", "...godi'msotired...", "Sorry, go have some fun!"]]
+myName = "Ron"
 
 [node name="MeshInstance3D" parent="." index="0"]
 mesh = SubResource("CapsuleMesh_se2bm")
