@@ -2,7 +2,7 @@
 
 [ext_resource type="ArrayMesh" uid="uid://7218dlk6480l" path="res://2MinuteJam/Assets/art/Arcade/EggHockey.res" id="1_ny46j"]
 [ext_resource type="Script" path="res://ArceggMachine.gd" id="2_6vfwq"]
-[ext_resource type="PackedScene" uid="uid://cir0q47armsde" path="res://2MinuteJam/Scenes/MiniGames/EggHockey/EggHockey.tscn" id="3_vpx0p"]
+[ext_resource type="PackedScene" uid="uid://bbkq7v1b6oxl" path="res://2MinuteJam/Scenes/MiniGames/EggHockey/EggPaddle.tscn" id="3_5qnax"]
 
 [sub_resource type="Environment" id="Environment_jajy8"]
 
@@ -19,7 +19,7 @@ disable_3d = true
 size = Vector2i(1152, 648)
 render_target_update_mode = 4
 
-[node name="Node2D" parent="ArceggMachine/SubViewport" instance=ExtResource("3_vpx0p")]
+[node name="EggPaddle" parent="ArceggMachine/SubViewport" instance=ExtResource("3_5qnax")]
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 0, 2.5, 0)

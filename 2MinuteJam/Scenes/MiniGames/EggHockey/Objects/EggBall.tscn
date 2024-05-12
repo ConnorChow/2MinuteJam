@@ -1,9 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://br5kjlf77baf8"]
+[gd_scene load_steps=4 format=3 uid="uid://br5kjlf77baf8"]
 
 [ext_resource type="Texture2D" uid="uid://cxvullig7gdwq" path="res://2MinuteJam/Scenes/MiniGames/SkyFallers/Player/egg.png" id="1_5fwi2"]
+[ext_resource type="Script" path="res://2MinuteJam/Scenes/MiniGames/EggHockey/Objects/EggBall.gd" id="1_kwykt"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_bvxuy"]
+friction = 0.0
+bounce = 2.0
 
 [node name="EggBall" type="RigidBody2D"]
+collision_layer = 9
+collision_mask = 9
+physics_material_override = SubResource("PhysicsMaterial_bvxuy")
 gravity_scale = 0.0
+script = ExtResource("1_kwykt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_5fwi2")
