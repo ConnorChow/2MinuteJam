@@ -52,9 +52,9 @@
 [ext_resource type="PackedScene" uid="uid://dot1g4mus5vi5" path="res://2MinuteJam/Objects/flashlight/flashlight.tscn" id="46_rqq1x"]
 [ext_resource type="PackedScene" uid="uid://di5gyetrnkv72" path="res://2MinuteJam/Objects/Graves/EmptyGrave.tscn" id="47_4ur8w"]
 [ext_resource type="PackedScene" uid="uid://cihmapoecx3mk" path="res://2MinuteJam/Objects/Poster/Poster3D.tscn" id="48_py013"]
-[ext_resource type="PackedScene" uid="uid://cesaq07oa64kf" path="res://2MinuteJam/npcs/_baseNPC/baseNPC.tscn" id="50_nr4f2"]
 [ext_resource type="PackedScene" uid="uid://dcbe36ic5jgp2" path="res://2MinuteJam/npcs/Mall/worstPerson.tscn" id="52_2v01r"]
 [ext_resource type="PackedScene" uid="uid://bswx8i1owenig" path="res://2MinuteJam/Assets/art/Arcade/EggHockeyMachine.tscn" id="53_yfmmj"]
+[ext_resource type="PackedScene" uid="uid://djc5cecpsfvkj" path="res://2MinuteJam/Objects/lamp/lamp.tscn" id="55_wkrmp"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ff47w"]
 albedo_color = Color(0.701961, 0.701961, 0, 1)
@@ -161,6 +161,9 @@ albedo_color = Color(0, 0.737255, 0.290196, 1)
 material = SubResource("StandardMaterial3D_4gyj8")
 size = Vector3(13.75, 1, 2.68)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_iugem"]
+size = Vector3(4.48145, 4.10938, 4.33704)
+
 [sub_resource type="Resource" id="Resource_4w5vi"]
 script = ExtResource("29_yjp2r")
 mode = 0
@@ -180,9 +183,6 @@ size = Vector3(37.15, 8.035, 156.29)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_f3al5"]
 size = Vector3(5000, 2, 5000)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_iugem"]
-size = Vector3(4.48145, 4.10938, 4.33704)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hd1yf"]
 albedo_color = Color(1, 0, 0, 1)
@@ -1342,6 +1342,7 @@ collision_layer = 5
 collision_mask = 5
 
 [node name="UiHandler" type="Control" parent="." groups=["dialogue"]]
+visible = false
 layout_mode = 3
 anchor_top = 0.626543
 anchor_right = 1.0
@@ -1561,6 +1562,22 @@ transform = Transform3D(0.873034, -0.405702, 0.270586, 0.390997, 0.913941, 0.108
 [node name="Plank3" parent="random shit" instance=ExtResource("11_7ttf0")]
 transform = Transform3D(0.884108, 0, 0.467282, 0, 1, 0, -0.467282, 0, 0.884108, 25.1606, 1.72835, 13.5578)
 
+[node name="worstPerson" parent="random shit" instance=ExtResource("52_2v01r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 2, 39)
+
+[node name="RigidBody3D" parent="random shit" instance=ExtResource("30_ydsx5")]
+transform = Transform3D(0.253389, 0.211093, 0.944052, -0.87167, 0.473031, 0.12819, -0.419506, -0.855384, 0.303864, -1.07547, 1.69283, 109.895)
+labelText = "Jump"
+
+[node name="Strike" type="Area3D" parent="random shit/RigidBody3D"]
+transform = Transform3D(1, -1.49012e-07, -2.98023e-08, 0, 1, -1.78814e-07, 1.49012e-08, 2.08616e-07, 1, 206.325, 318.122, -197.84)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="random shit/RigidBody3D/Strike"]
+transform = Transform3D(0.750254, 0.631472, 0.195865, -0.648521, 0.760515, 0.0322255, -0.128609, -0.1512, 0.980101, 8.20026, 8.77606, -5.01939)
+shape = SubResource("BoxShape3D_iugem")
+
 [node name="HTerrain" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -246.7, 0, -211)
 script = ExtResource("27_ons6m")
@@ -1591,19 +1608,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -913.131, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="deathPlane"]
 shape = SubResource("BoxShape3D_f3al5")
-
-[node name="RigidBody3D" parent="." instance=ExtResource("30_ydsx5")]
-transform = Transform3D(0.253389, 0.211093, 0.944052, -0.87167, 0.473031, 0.12819, -0.419506, -0.855384, 0.303864, -1.07547, 1.69283, 109.895)
-labelText = "Jump"
-
-[node name="Strike" type="Area3D" parent="RigidBody3D"]
-transform = Transform3D(1, -1.49012e-07, -2.98023e-08, 0, 1, -1.78814e-07, 1.49012e-08, 2.08616e-07, 1, 206.325, 318.122, -197.84)
-collision_layer = 2
-collision_mask = 2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D/Strike"]
-transform = Transform3D(0.750254, 0.631472, 0.195865, -0.648521, 0.760515, 0.0322255, -0.128609, -0.1512, 0.980101, 8.20026, 8.77606, -5.01939)
-shape = SubResource("BoxShape3D_iugem")
 
 [node name="Node" type="Node" parent="."]
 
@@ -1681,9 +1685,6 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -147.4
 use_collision = true
 size = Vector3(20, 40, 20)
 
-[node name="BaseNpc" parent="." instance=ExtResource("50_nr4f2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -9)
-
 [node name="fadeOutControl" type="Control" parent="."]
 layout_mode = 3
 anchors_preset = 15
@@ -1713,8 +1714,10 @@ wait_time = 109.0
 one_shot = true
 autostart = true
 
-[node name="BaseNpc2" parent="." instance=ExtResource("52_2v01r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 2, 39)
+[node name="LampContainer" type="Node" parent="."]
+
+[node name="Lamp" parent="LampContainer" instance=ExtResource("55_wkrmp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 0, 0)
 
 [connection signal="body_entered" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_entered"]
 [connection signal="body_exited" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_exited"]
@@ -1726,6 +1729,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 2, 39)
 [connection signal="body_entered" from="PrebuildContainers/ThePit/thePitOutsideMusic" to="." method="_on_the_pit_outside_music_body_entered"]
 [connection signal="body_entered" from="PrebuildContainers/ThePit/thePitMusicOff" to="." method="_on_the_pit_music_off_body_entered"]
 [connection signal="body_entered" from="PrebuildContainers/ThePit/thePitMusicOn" to="." method="_on_the_pit_music_on_body_entered"]
+[connection signal="body_entered" from="random shit/RigidBody3D/Strike" to="." method="_on_strike_body_entered"]
 [connection signal="body_entered" from="deathPlane" to="." method="_on_death_plane_body_entered"]
-[connection signal="body_entered" from="RigidBody3D/Strike" to="." method="_on_strike_body_entered"]
 [connection signal="timeout" from="fadeOutControl/Timer" to="." method="_on_timer_timeout"]

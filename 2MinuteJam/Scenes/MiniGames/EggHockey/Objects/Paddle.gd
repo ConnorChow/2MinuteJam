@@ -28,7 +28,7 @@ func updateScore():
 	
 
 func _on_left_goal_body_entered(body):
-	print("hit")
+	#print("hit")
 	body.queue_free()
 	enemyGoals +=1
 	updateScore()
