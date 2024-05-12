@@ -8,9 +8,15 @@ var inDialogue : bool = false
 var inTheater : bool = true
 var timesInTheater : int = 0
 
+@onready var restart_timer = $restartTimer
 
 func restart():
-	await get_tree().create_timer(120).timeout
+	restart_timer.start()
+	
+
+
+
+func _on_timer_timeout():
 	ending = true
 	inDialogue = false
 	#make this fancy then change to main menu
@@ -18,3 +24,4 @@ func restart():
 		timesInTheater +=1
 	get_tree().change_scene_to_file("res://2MinuteJam/Scenes/World.tscn")
 	ending = false
+

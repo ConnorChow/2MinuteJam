@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://mj5w6jgpn1y4"]
+
+[ext_resource type="Script" path="res://2MinuteJam/Scenes/globalController.gd" id="1_m78h7"]
+
+[node name="GlobalController" type="Node"]
+script = ExtResource("1_m78h7")
+
+[node name="restartTimer" type="Timer" parent="."]
+wait_time = 120.0
+one_shot = true
+
+[connection signal="timeout" from="restartTimer" to="." method="_on_timer_timeout"]

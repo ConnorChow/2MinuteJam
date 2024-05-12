@@ -101,3 +101,9 @@ func _on_mall_off_body_entered(_body):
 		OutsideMusic.play()
 	
 #** mall **
+
+
+# **fade out timer**
+func _on_timer_timeout():
+	$fadeOutControl/ColorRect/fadeOutAnim.play("fadeOut")
+	pass # Replace with function body.

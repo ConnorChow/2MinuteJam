@@ -1,4 +1,4 @@
-[gd_scene load_steps=89 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=92 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="Material" uid="uid://digeiblk51qny" path="res://2MinuteJam/Assets/theaterColour.tres" id="1_c7p14"]
@@ -206,6 +206,43 @@ viewport_path = NodePath("SubViewport")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hr54h"]
 resource_local_to_scene = true
 albedo_texture = SubResource("ViewportTexture_bqs0w")
+
+[sub_resource type="Animation" id="Animation_sk4y4"]
+resource_name = "fadeOut"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_ugfg2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_41ibn"]
+_data = {
+"RESET": SubResource("Animation_ugfg2"),
+"fadeOut": SubResource("Animation_sk4y4")
+}
 
 [node name="World" type="Node"]
 script = ExtResource("1_0o181")
@@ -1454,7 +1491,6 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6, 3,
 
 [node name="Clerk" parent="npcContainer/Arcegg" instance=ExtResource("26_vwgwm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.35956, 1.5, 79.8874)
-dialogue = [["Welcome to the Arcegg!", "Feel free to try out any of the machines!", "...godi'msotired...", "Sorry, go have some fun!"]]
 
 [node name="Building" type="Node" parent="npcContainer"]
 
@@ -1614,6 +1650,35 @@ size = Vector3(20, 40, 20)
 [node name="BaseNpc" parent="." instance=ExtResource("50_nr4f2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -9)
 
+[node name="fadeOutControl" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="fadeOutControl"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="fadeOutAnim" type="AnimationPlayer" parent="fadeOutControl/ColorRect"]
+libraries = {
+"": SubResource("AnimationLibrary_41ibn")
+}
+
+[node name="Timer" type="Timer" parent="fadeOutControl"]
+wait_time = 109.0
+one_shot = true
+autostart = true
+
 [connection signal="body_entered" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_entered"]
 [connection signal="body_exited" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_exited"]
 [connection signal="body_entered" from="CSGcontainer/ArcadeContainer/arcadeOn" to="." method="_on_arcade_on_body_entered"]
@@ -1625,3 +1690,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, -9)
 [connection signal="body_entered" from="PrebuildContainers/ThePit/thePitMusicOn" to="." method="_on_the_pit_music_on_body_entered"]
 [connection signal="body_entered" from="deathPlane" to="." method="_on_death_plane_body_entered"]
 [connection signal="body_entered" from="RigidBody3D/Strike" to="." method="_on_strike_body_entered"]
+[connection signal="timeout" from="fadeOutControl/Timer" to="." method="_on_timer_timeout"]
