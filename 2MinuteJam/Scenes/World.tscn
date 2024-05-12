@@ -1,4 +1,4 @@
-[gd_scene load_steps=94 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=96 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="Material" uid="uid://digeiblk51qny" path="res://2MinuteJam/Assets/theaterColour.tres" id="1_c7p14"]
@@ -13,6 +13,7 @@
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/EggHockey.gd" id="8_bytbj"]
 [ext_resource type="Texture2D" uid="uid://cxvullig7gdwq" path="res://2MinuteJam/Scenes/MiniGames/SkyFallers/Player/egg.png" id="9_23fd3"]
 [ext_resource type="PackedScene" uid="uid://ba43ypuyd56kj" path="res://2MinuteJam/Scenes/Prebuilds/ChristmasHouse.tscn" id="10_b57lw"]
+[ext_resource type="PackedScene" uid="uid://lblcu8dsb5uy" path="res://2MinuteJam/Assets/art/Arcade/SkyFallersMachine.tscn" id="10_d8yut"]
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/Mirror.gd" id="10_wk1yf"]
 [ext_resource type="Texture2D" uid="uid://bnsj6i8ugdhrt" path="res://2MinuteJam/Assets/art/graphitti.png" id="10_wnl7q"]
 [ext_resource type="PackedScene" uid="uid://oj8yd2ldinpc" path="res://2MinuteJam/Objects/ChristmasDeco/Plank.tscn" id="11_7ttf0"]
@@ -52,6 +53,7 @@
 [ext_resource type="PackedScene" uid="uid://cihmapoecx3mk" path="res://2MinuteJam/Objects/Poster/Poster3D.tscn" id="48_py013"]
 [ext_resource type="PackedScene" uid="uid://cesaq07oa64kf" path="res://2MinuteJam/npcs/_baseNPC/baseNPC.tscn" id="50_nr4f2"]
 [ext_resource type="PackedScene" uid="uid://dcbe36ic5jgp2" path="res://2MinuteJam/npcs/Mall/worstPerson.tscn" id="52_2v01r"]
+[ext_resource type="PackedScene" uid="uid://bswx8i1owenig" path="res://2MinuteJam/Assets/art/Arcade/EggHockeyMachine.tscn" id="53_yfmmj"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ff47w"]
 albedo_color = Color(0.701961, 0.701961, 0, 1)
@@ -1199,6 +1201,14 @@ shape = SubResource("BoxShape3D_tsild")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 3, 83.8389)
 use_collision = true
 size = Vector3(26, 0.2, 1)
+
+[node name="ArcadeMachines" type="Node" parent="CSGcontainer/ArcadeContainer"]
+
+[node name="SkyfallersMachine" parent="CSGcontainer/ArcadeContainer/ArcadeMachines" instance=ExtResource("10_d8yut")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.5, 52.1762)
+
+[node name="EggHockeyMachine" parent="CSGcontainer/ArcadeContainer/ArcadeMachines" instance=ExtResource("53_yfmmj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.10031, 0.5, 56.7206)
 
 [node name="Bridge" type="CSGBox3D" parent="CSGcontainer"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 79.9321, 0.276763, -77.946)

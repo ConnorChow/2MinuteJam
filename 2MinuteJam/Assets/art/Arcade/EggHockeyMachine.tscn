@@ -1,15 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://bswx8i1owenig"]
+[gd_scene load_steps=4 format=3 uid="uid://bswx8i1owenig"]
 
 [ext_resource type="ArrayMesh" uid="uid://7218dlk6480l" path="res://2MinuteJam/Assets/art/Arcade/EggHockey.res" id="1_ny46j"]
 [ext_resource type="Script" path="res://ArceggMachine.gd" id="2_6vfwq"]
 [ext_resource type="PackedScene" uid="uid://bbkq7v1b6oxl" path="res://2MinuteJam/Scenes/MiniGames/EggHockey/EggPaddle.tscn" id="3_5qnax"]
 
-[sub_resource type="Environment" id="Environment_jajy8"]
-
-[node name="Node3D" type="Node"]
+[node name="EggHockeyMachine" type="Node3D"]
 
 [node name="ArceggMachine" type="MeshInstance3D" parent="."]
 mesh = ExtResource("1_ny46j")
+skeleton = NodePath("../..")
 script = ExtResource("2_6vfwq")
 material_instance = 2
 uv_coordinates = Vector3(1, 1, 0)
@@ -21,8 +20,5 @@ render_target_update_mode = 4
 
 [node name="EggPaddle" parent="ArceggMachine/SubViewport" instance=ExtResource("3_5qnax")]
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="ArceggMachine"]
 transform = Transform3D(-4.37114e-08, -1, -4.37114e-08, 0, -4.37114e-08, 1, -1, 4.37114e-08, 1.91069e-15, 0, 2.5, 0)
-
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource("Environment_jajy8")
