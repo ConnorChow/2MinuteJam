@@ -10,7 +10,9 @@ size = Vector3(1, 2.2, 0.8)
 [sub_resource type="GDScript" id="GDScript_oth2e"]
 resource_name = "interact"
 script/source = "extends StaticBody3D
-"
+
+func interact(_node):
+	pass"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dp6ey"]
 size = Vector3(0.686462, 0.686646, 1)
