@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cy7gqn4r8ak4n"]
+[gd_scene load_steps=5 format=3 uid="uid://cy7gqn4r8ak4n"]
 
 [ext_resource type="Texture2D" uid="uid://bdo37wprd0pk5" path="res://2MinuteJam/Assets/art/testsky.png" id="1_qfna4"]
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/SideScenes/makeUp.gd" id="2_7ah47"]
 [ext_resource type="Texture2D" uid="uid://ila4s7ilyfpo" path="res://2MinuteJam/Assets/art/capsule.png" id="2_yk5wp"]
+[ext_resource type="AudioStream" uid="uid://c7g4eht6648gq" path="res://2MinuteJam/Assets/Music/whisperHorn.mp3" id="4_n16bq"]
 
 [node name="Mirror" type="Node2D"]
 
@@ -108,6 +109,9 @@ offset_right = 903.0
 offset_bottom = 244.0
 theme_override_colors/font_color = Color(0.509804, 0.203922, 0, 1)
 text = "Brown"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_n16bq")
 
 [connection signal="pressed" from="redButton" to="clipContent/Sprite2D" method="_on_red_button_pressed"]
 [connection signal="pressed" from="greenButton" to="clipContent/Sprite2D" method="_on_green_button_pressed"]

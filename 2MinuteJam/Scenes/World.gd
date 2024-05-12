@@ -49,14 +49,26 @@ func _on_the_pit_outside_music_body_entered(_body):
 
 func _on_the_pit_music_off_body_entered(_body):
 	OutsideMusic.stop()
+	($MusicContainer/thePit/horrorSFX as AudioStreamPlayer).stop()
+	$MusicContainer/thePit/horrorTimer.stop()
+	
 	
 
 func _on_the_pit_music_on_body_entered(_body):
 	# start the pit music
+	$MusicContainer/thePit/horrorTimer.start()
 	pass # Replace with function body.
 	
 func _on_strike_body_entered(_body):
 	$MusicContainer/Node/Strike.play()
+	
+
+
+func _on_horror_timer_timeout():
+	($MusicContainer/thePit/horrorSFX as AudioStreamPlayer).play()
+	$MusicContainer/thePit/horrorTimer.start(randi_range(2,5))
+
+
 #** THE PIT **
 
 
@@ -107,3 +119,4 @@ func _on_mall_off_body_entered(_body):
 func _on_timer_timeout():
 	$fadeOutControl/ColorRect/fadeOutAnim.play("fadeOut")
 	pass # Replace with function body.
+

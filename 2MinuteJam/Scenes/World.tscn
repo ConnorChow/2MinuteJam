@@ -1,4 +1,4 @@
-[gd_scene load_steps=92 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=93 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="Material" uid="uid://digeiblk51qny" path="res://2MinuteJam/Assets/theaterColour.tres" id="1_c7p14"]
@@ -26,6 +26,7 @@
 [ext_resource type="AudioStream" uid="uid://d3ewbqu731f0s" path="res://2MinuteJam/Assets/Music/strangeMall.mp3" id="17_af2mx"]
 [ext_resource type="PackedScene" uid="uid://cfmt82e13c3so" path="res://2MinuteJam/Scenes/Prebuilds/thePit.tscn" id="17_vscgp"]
 [ext_resource type="AudioStream" uid="uid://b7h7a7lq41xha" path="res://2MinuteJam/Assets/SoundEffects/projector-sound.mp3" id="18_loo1w"]
+[ext_resource type="AudioStream" uid="uid://bjjuaay4gd2j0" path="res://2MinuteJam/Assets/SoundEffects/trombone-stretching-14-41727.mp3" id="20_jbjd7"]
 [ext_resource type="PackedScene" uid="uid://2uwugc2a80tn" path="res://2MinuteJam/Objects/baseSit/baseChair.tscn" id="20_sm38u"]
 [ext_resource type="PackedScene" uid="uid://dso57uf1ulcqu" path="res://2MinuteJam/npcs/Bridge/bridgeWoman.tscn" id="24_n0frp"]
 [ext_resource type="PackedScene" uid="uid://blf8e1040dqs5" path="res://2MinuteJam/Objects/Dings/Ding1.tscn" id="25_pem1r"]
@@ -207,6 +208,21 @@ viewport_path = NodePath("SubViewport")
 resource_local_to_scene = true
 albedo_texture = SubResource("ViewportTexture_bqs0w")
 
+[sub_resource type="Animation" id="Animation_ugfg2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_sk4y4"]
 resource_name = "fadeOut"
 length = 10.0
@@ -221,21 +237,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_ugfg2"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:color")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(0, 0, 0, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_41ibn"]
@@ -1384,6 +1385,13 @@ volume_db = -5.0
 [node name="Strike" type="AudioStreamPlayer" parent="MusicContainer/thePit"]
 stream = ExtResource("16_i1g1s")
 
+[node name="horrorSFX" type="AudioStreamPlayer" parent="MusicContainer/thePit"]
+stream = ExtResource("20_jbjd7")
+max_polyphony = 2
+
+[node name="horrorTimer" type="Timer" parent="MusicContainer/thePit"]
+one_shot = true
+
 [node name="mallMusic" type="Node" parent="MusicContainer"]
 
 [node name="mallMusic" type="AudioStreamPlayer" parent="MusicContainer/mallMusic"]
@@ -1685,6 +1693,7 @@ autostart = true
 [connection signal="body_entered" from="CSGcontainer/ArcadeContainer/arcadeOff" to="." method="_on_arcade_off_body_entered"]
 [connection signal="body_entered" from="CSGcontainer/Mall/mallOn" to="." method="_on_mall_on_body_entered"]
 [connection signal="body_entered" from="CSGcontainer/Mall/mallOff" to="." method="_on_mall_off_body_entered"]
+[connection signal="timeout" from="MusicContainer/thePit/horrorTimer" to="." method="_on_horror_timer_timeout"]
 [connection signal="body_entered" from="PrebuildContainers/ThePit/thePitOutsideMusic" to="." method="_on_the_pit_outside_music_body_entered"]
 [connection signal="body_entered" from="PrebuildContainers/ThePit/thePitMusicOff" to="." method="_on_the_pit_music_off_body_entered"]
 [connection signal="body_entered" from="PrebuildContainers/ThePit/thePitMusicOn" to="." method="_on_the_pit_music_on_body_entered"]
