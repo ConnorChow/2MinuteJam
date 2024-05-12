@@ -31,7 +31,23 @@ fov = 85.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.79478)
 
 [node name="colissionRay" type="RayCast3D" parent="Node3D/Camera3D"]
-target_position = Vector3(0, 0, -3)
+target_position = Vector3(0, 0, -4)
+
+[node name="ColorRect" type="ColorRect" parent="Node3D/Camera3D"]
+modulate = Color(1, 1, 1, 0.219608)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -3.0
+offset_top = -3.0
+offset_right = 3.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.756863, 0.756863, 0.756863, 1)
 
 [node name="handsPoint" type="Node3D" parent="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 0.559294, -0.828969, 0, 0.828969, 0.559294, 0, 0.358947, -0.33722)
