@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b3csj8fnlb0rs"]
+
+[ext_resource type="Texture2D" uid="uid://4pys6282ntqe" path="res://2MinuteJam/Assets/art/Buildings/Theater/green_plaster_003_diffuse_xtm_2k.jpg" id="1_3lcdi"]
+
+[resource]
+albedo_texture = ExtResource("1_3lcdi")

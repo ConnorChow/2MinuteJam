@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cjgr2kktec457"]
+
+[ext_resource type="Texture2D" uid="uid://k6eqr60l0pv6" path="res://2MinuteJam/Assets/art/Buildings/Theater/concrete_blocks_002_diffuse_xtm_2k.jpg" id="1_lw11g"]
+
+[resource]
+albedo_texture = ExtResource("1_lw11g")
