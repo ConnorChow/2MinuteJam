@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bla2q4ao8o7gx"]
+
+[ext_resource type="Texture2D" uid="uid://r6ao1ltso803" path="res://2MinuteJam/Assets/art/RandomProps/Import/burnished_metal_003_diffuse_xtm_2k.jpg" id="1_dd7pn"]
+
+[resource]
+albedo_texture = ExtResource("1_dd7pn")
