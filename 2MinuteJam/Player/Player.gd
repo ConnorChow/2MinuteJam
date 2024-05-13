@@ -11,6 +11,7 @@ var gravity : float = 9.8
 
 var canleave: bool = true
 var sitting : bool = false
+var inMinigame : bool = false
 
 var direction
 var headDir
@@ -119,10 +120,15 @@ func _physics_process(delta):
 				canleave = false
 				sitting = false
 	if Input.is_action_just_pressed("esc"):
+		if inMinigame:
+			inMinigame = false
+			camera.make_current()
+			
 		if !GlobalController.inDialogue:
 			ui.visible=true
 			get_tree().paused = true
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		
 	if GlobalController.inDialogue:
 		velocity = Vector3(0, -gravity*delta, 0)
 	else:
@@ -140,7 +146,7 @@ func _physics_process(delta):
 
 				
 	velocity.normalized()
-	if !sitting:
+	if !sitting || !inMinigame:
 		move_and_slide()
 
 

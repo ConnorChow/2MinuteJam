@@ -25,6 +25,7 @@ shape = SubResource("ConvexPolygonShape3D_li2k3")
 [node name="Camera3D" type="Camera3D" parent="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.752, 0)
 keep_aspect = 0
+current = true
 fov = 85.0
 
 [node name="holdPoint" type="Node3D" parent="Node3D/Camera3D"]
