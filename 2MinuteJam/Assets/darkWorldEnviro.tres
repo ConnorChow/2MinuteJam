@@ -12,7 +12,6 @@ sky_material = SubResource("PanoramaSkyMaterial_kgnc4")
 background_mode = 2
 sky = SubResource("Sky_g1jya")
 ambient_light_source = 3
-ambient_light_color = Color(0.0235294, 0.0862745, 0.207843, 1)
 reflected_light_source = 2
 fog_light_color = Color(0.0862745, 0.180392, 0.329412, 1)
 fog_sky_affect = 0.274
