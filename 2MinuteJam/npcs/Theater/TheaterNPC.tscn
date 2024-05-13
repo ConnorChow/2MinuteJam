@@ -10,7 +10,7 @@ resource_local_to_scene = true
 material = SubResource("StandardMaterial3D_drixq")
 
 [node name="TheaterShuush" instance=ExtResource("1_7j3ws")]
-dialogue = ["SHHH", "I'm trying to watch the movie!", "...", "Please."]
+dialogue = ["SHHH", "I'm trying to watch the movie!", "...", "Please.", ""]
 colour = Color(0.0941176, 0.309804, 0.345098, 1)
 myName = "Alec"
 

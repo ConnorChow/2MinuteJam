@@ -1,10 +1,11 @@
-[gd_scene load_steps=99 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=100 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="Material" uid="uid://digeiblk51qny" path="res://2MinuteJam/Assets/theaterColour.tres" id="1_c7p14"]
 [ext_resource type="PackedScene" uid="uid://q0x2l31pruqy" path="res://2MinuteJam/Player/Player.tscn" id="1_q0ld0"]
 [ext_resource type="PackedScene" uid="uid://b6h4xwwti8ste" path="res://2MinuteJam/Scenes/Prebuilds/Road.tscn" id="2_id2ye"]
 [ext_resource type="Environment" uid="uid://b2r2wlqm13vma" path="res://2MinuteJam/Assets/darkWorldEnviro.tres" id="2_q27q1"]
+[ext_resource type="ArrayMesh" uid="uid://e1wk8hs3cndl" path="res://2MinuteJam/Assets/art/Road/RoadT.res" id="3_s10n2"]
 [ext_resource type="PackedScene" uid="uid://bmhrqsukfdhao" path="res://2MinuteJam/Objects/Door.tscn" id="4_cmskc"]
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/UiHandler.gd" id="5_fg8bl"]
 [ext_resource type="VideoStream" path="res://2MinuteJam/Movies/escalators_-_286-_360p_.ogv" id="5_gixjt"]
@@ -258,98 +259,274 @@ script = ExtResource("1_0o181")
 
 [node name="RoadContainer" type="Node" parent="."]
 
-[node name="Road" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+[node name="RoadStraight" type="MeshInstance3D" parent="RoadContainer"]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 20, 0, -54)
+mesh = ExtResource("56_2j3mh")
+skeleton = NodePath("../..")
+
+[node name="RoadStraight2" type="MeshInstance3D" parent="RoadContainer"]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 20, -0.001, -44)
+mesh = ExtResource("56_2j3mh")
+skeleton = NodePath("../..")
+
+[node name="RoadStraight20" type="MeshInstance3D" parent="RoadContainer"]
+transform = Transform3D(-8.74228e-08, 0, -2, 0, 1, 0, 2, 0, -8.74228e-08, 4, -0.001, -29)
+mesh = ExtResource("56_2j3mh")
+skeleton = NodePath("../..")
+
+[node name="RoadStraight21" type="MeshInstance3D" parent="RoadContainer"]
+transform = Transform3D(-8.74228e-08, 0, -2, 0, 1, 0, 2, 0, -8.74228e-08, -12, 0, -29)
+mesh = ExtResource("56_2j3mh")
+skeleton = NodePath("../..")
+
+[node name="RoadStraight22" type="MeshInstance3D" parent="RoadContainer"]
+transform = Transform3D(-8.74228e-08, 0, -2, 0, 1, 0, 2, 0, -8.74228e-08, -28, -0.001, -29)
+mesh = ExtResource("56_2j3mh")
+skeleton = NodePath("../..")
+
+[node name="RoadStraight23" type="MeshInstance3D" parent="RoadContainer"]
+transform = Transform3D(-8.74228e-08, 0, -2, 0, 1, 0, 2, 0, -8.74228e-08, -44, 0, -29)
+mesh = ExtResource("56_2j3mh")
+skeleton = NodePath("../..")
+
+[node name="RoadStraight24" type="MeshInstance3D" parent="RoadContainer"]
+transform = Transform3D(-8.74228e-08, 0, -2, 0, 1, 0, 2, 0, -8.74228e-08, -60, -0.001, -29)
+mesh = ExtResource("56_2j3mh")
+skeleton = NodePath("../..")
+
+[node name="RoadStraight25" type="MeshInstance3D" parent="RoadContainer"]
+transform = Transform3D(-8.74228e-08, 0, -2, 0, 1, 0, 2, 0, -8.74228e-08, -76, 0, -29)
+mesh = ExtResource("56_2j3mh")
+skeleton = NodePath("../..")
+
+[node name="RoadStraight26" type="MeshInstance3D" parent="RoadContainer"]
+transform = Transform3D(-8.74228e-08, 0, -2, 0, 1, 0, 2, 0, -8.74228e-08, -92, -0.001, -29)
+mesh = ExtResource("56_2j3mh")
+skeleton = NodePath("../..")
+
+[node name="RoadStraight27" type="MeshInstance3D" parent="RoadContainer"]
+transform = Transform3D(-8.74228e-08, 0, -2, 0, 1, 0, 2, 0, -8.74228e-08, -95, 0, -29)
+mesh = ExtResource("56_2j3mh")
+skeleton = NodePath("../..")
+
+[node name="RoadStraight3" type="MeshInstance3D" parent="RoadContainer"]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 20, -0.01, -13)
+mesh = ExtResource("56_2j3mh")
+skeleton = NodePath("../..")
+
+[node name="RoadStraight4" type="MeshInstance3D" parent="RoadContainer"]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 20, 0, -3)
+mesh = ExtResource("56_2j3mh")
+skeleton = NodePath("../..")
+
+[node name="RoadStraight5" type="MeshInstance3D" parent="RoadContainer"]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 20, -0.01, 13)
+mesh = ExtResource("56_2j3mh")
+skeleton = NodePath("../..")
+
+[node name="RoadStraight7" type="MeshInstance3D" parent="RoadContainer"]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 20, 0, 26)
+mesh = ExtResource("56_2j3mh")
+skeleton = NodePath("../..")
+
+[node name="RoadStraight8" type="MeshInstance3D" parent="RoadContainer"]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 1, 0, -2, 0, -8.74228e-08, -11.5, 0, 39.0041)
+mesh = ExtResource("56_2j3mh")
+skeleton = NodePath("../..")
+
+[node name="RoadStraight9" type="MeshInstance3D" parent="RoadContainer"]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 1, 0, -2, 0, -8.74228e-08, 4.5, -0.01, 39.0041)
+mesh = ExtResource("56_2j3mh")
+skeleton = NodePath("../..")
+
+[node name="RoadStraight12" type="MeshInstance3D" parent="RoadContainer"]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 1, 0, -2, 0, -8.74228e-08, 35.5, -0.01, 39.0041)
+mesh = ExtResource("56_2j3mh")
+skeleton = NodePath("../..")
+
+[node name="RoadStraight13" type="MeshInstance3D" parent="RoadContainer"]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 1, 0, -2, 0, -8.74228e-08, 62.5, -0.01, 39.0041)
+mesh = ExtResource("56_2j3mh")
+skeleton = NodePath("../..")
+
+[node name="RoadStraight14" type="MeshInstance3D" parent="RoadContainer"]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 1, 0, -2, 0, -8.74228e-08, 78.5, 0, 39.0041)
+mesh = ExtResource("56_2j3mh")
+skeleton = NodePath("../..")
+
+[node name="RoadStraight15" type="MeshInstance3D" parent="RoadContainer"]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 1, 0, -2, 0, -8.74228e-08, 94.5, -0.01, 39.0041)
+mesh = ExtResource("56_2j3mh")
+skeleton = NodePath("../..")
+
+[node name="RoadStraight16" type="MeshInstance3D" parent="RoadContainer"]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 1, 0, -2, 0, -8.74228e-08, 110.5, 0, 39.0041)
+mesh = ExtResource("56_2j3mh")
+skeleton = NodePath("../..")
+
+[node name="RoadStraight17" type="MeshInstance3D" parent="RoadContainer"]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 47, -0.01, 55.0041)
+mesh = ExtResource("56_2j3mh")
+skeleton = NodePath("../..")
+
+[node name="RoadStraight18" type="MeshInstance3D" parent="RoadContainer"]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 47, 0, 71.0041)
+mesh = ExtResource("56_2j3mh")
+skeleton = NodePath("../..")
+
+[node name="RoadStraight19" type="MeshInstance3D" parent="RoadContainer"]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 47, -0.01, 83.0041)
+mesh = ExtResource("56_2j3mh")
+skeleton = NodePath("../..")
+
+[node name="RoadStraight10" type="MeshInstance3D" parent="RoadContainer"]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 1, 0, -2, 0, -8.74228e-08, -43.5299, 0, 39.0041)
+mesh = ExtResource("56_2j3mh")
+skeleton = NodePath("../..")
+
+[node name="RoadStraight11" type="MeshInstance3D" parent="RoadContainer"]
+transform = Transform3D(-8.74228e-08, 0, 2, 0, 1, 0, -2, 0, -8.74228e-08, -27.5299, -0.01, 39.0041)
+mesh = ExtResource("56_2j3mh")
+skeleton = NodePath("../..")
+
+[node name="RoadT" type="MeshInstance3D" parent="RoadContainer"]
+transform = Transform3D(2, 0, 0, 0, 1, 0, 0, 0, 2, 47, 0, 39)
+mesh = ExtResource("3_s10n2")
+skeleton = NodePath("../..")
+
+[node name="RoadT2" type="MeshInstance3D" parent="RoadContainer"]
+transform = Transform3D(-2, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, -2, 20, 0, 39)
+mesh = ExtResource("3_s10n2")
+skeleton = NodePath("../..")
+
+[node name="RoadT3" type="MeshInstance3D" parent="RoadContainer"]
+transform = Transform3D(-8.74228e-08, 0, -2, 0, 1, 0, 2, 0, -8.74228e-08, 20, 0, -29)
+mesh = ExtResource("3_s10n2")
+skeleton = NodePath("../..")
+
+[node name="meshroad" parent="RoadContainer" instance=ExtResource("2_id2ye")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -12.8725, 0.05, 40.5969)
+visible = false
 
-[node name="Road7" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+[node name="meshroad7" parent="RoadContainer" instance=ExtResource("2_id2ye")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.12754, 0.05, 40.5969)
+visible = false
 
-[node name="Road8" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+[node name="meshroad8" parent="RoadContainer" instance=ExtResource("2_id2ye")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 27.1275, 0.05, 40.5969)
+visible = false
 
-[node name="Road9" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+[node name="meshroad9" parent="RoadContainer" instance=ExtResource("2_id2ye")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 47.1275, 0.05, 40.5969)
+visible = false
 
-[node name="Road13" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+[node name="meshroad13" parent="RoadContainer" instance=ExtResource("2_id2ye")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.1275, 0.05, 55.5969)
+visible = false
 
-[node name="Road14" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+[node name="meshroad14" parent="RoadContainer" instance=ExtResource("2_id2ye")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.1275, 0.05, 75.5969)
+visible = false
 
-[node name="Road15" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+[node name="meshroad15" parent="RoadContainer" instance=ExtResource("2_id2ye")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.1275, 0.05, 95.5969)
+visible = false
 
-[node name="Road16" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+[node name="meshroad16" parent="RoadContainer" instance=ExtResource("2_id2ye")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 47.1275, 0.05, 115.597)
+visible = false
 
-[node name="Road17" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+[node name="meshroad17" parent="RoadContainer" instance=ExtResource("2_id2ye")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.753, 0.05, 25.6316)
+visible = false
 
-[node name="Road18" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+[node name="meshroad18" parent="RoadContainer" instance=ExtResource("2_id2ye")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.753, 0.05, 5.6316)
+visible = false
 
-[node name="Road19" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+[node name="meshroad19" parent="RoadContainer" instance=ExtResource("2_id2ye")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.753, 0.05, -14.3684)
+visible = false
 
-[node name="Road20" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+[node name="meshroad20" parent="RoadContainer" instance=ExtResource("2_id2ye")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.753, 0.05, -34.3684)
+visible = false
 
-[node name="Road21" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+[node name="meshroad21" parent="RoadContainer" instance=ExtResource("2_id2ye")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.753, 0.05, -54.3684)
+visible = false
 
-[node name="Road22" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+[node name="meshroad22" parent="RoadContainer" instance=ExtResource("2_id2ye")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.753, 0.05, -74.3684)
+visible = false
 
-[node name="Road23" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+[node name="meshroad23" parent="RoadContainer" instance=ExtResource("2_id2ye")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.753, 0.05, -94.3684)
+visible = false
 
-[node name="Road24" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+[node name="meshroad24" parent="RoadContainer" instance=ExtResource("2_id2ye")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.753, 0.05, -113.368)
+visible = false
 
-[node name="Road10" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+[node name="meshroad10" parent="RoadContainer" instance=ExtResource("2_id2ye")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 67.1275, 0.05, 40.5969)
+visible = false
 
-[node name="Road11" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+[node name="meshroad11" parent="RoadContainer" instance=ExtResource("2_id2ye")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 87.1275, 0.05, 40.5969)
+visible = false
 
-[node name="Road12" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+[node name="meshroad12" parent="RoadContainer" instance=ExtResource("2_id2ye")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 107.128, 0.05, 40.5969)
+visible = false
 
-[node name="Road2" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+[node name="meshroad2" parent="RoadContainer" instance=ExtResource("2_id2ye")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -32.8725, 0.05, 40.5969)
+visible = false
 
-[node name="Road25" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+[node name="meshroad25" parent="RoadContainer" instance=ExtResource("2_id2ye")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.12754, 0.05, -29.4031)
+visible = false
 
-[node name="Road26" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+[node name="meshroad26" parent="RoadContainer" instance=ExtResource("2_id2ye")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -14.8725, 0.05, -29.4031)
+visible = false
 
-[node name="Road27" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+[node name="meshroad27" parent="RoadContainer" instance=ExtResource("2_id2ye")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -34.8725, 0.05, -29.4031)
+visible = false
 
-[node name="Road28" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+[node name="meshroad28" parent="RoadContainer" instance=ExtResource("2_id2ye")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -53.8725, 0.05, -29.4031)
+visible = false
 
-[node name="Road29" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+[node name="meshroad29" parent="RoadContainer" instance=ExtResource("2_id2ye")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -73.8725, 0.05, -29.4031)
+visible = false
 
-[node name="Road30" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+[node name="meshroad30" parent="RoadContainer" instance=ExtResource("2_id2ye")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -93.8725, 0.05, -29.4031)
+visible = false
 
-[node name="Road31" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+[node name="meshroad31" parent="RoadContainer" instance=ExtResource("2_id2ye")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -112.872, 0.05, -29.4031)
+visible = false
 
-[node name="Road3" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+[node name="meshroad3" parent="RoadContainer" instance=ExtResource("2_id2ye")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -52.8725, 0.05, 40.5969)
+visible = false
 
-[node name="Road4" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+[node name="meshroad4" parent="RoadContainer" instance=ExtResource("2_id2ye")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -72.8725, 0.05, 40.5969)
+visible = false
 
-[node name="Road5" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+[node name="meshroad5" parent="RoadContainer" instance=ExtResource("2_id2ye")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -92.8725, 0.05, 40.5969)
+visible = false
 
-[node name="Road6" parent="RoadContainer" instance=ExtResource("2_id2ye")]
+[node name="meshroad6" parent="RoadContainer" instance=ExtResource("2_id2ye")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -112.872, 0.05, 40.5969)
+visible = false
 
 [node name="CSGcontainer" type="Node" parent="."]
 
@@ -1527,7 +1704,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.35956, 1.5, 79.8874)
 [node name="Building" type="Node" parent="npcContainer"]
 
 [node name="dreamNPC" parent="npcContainer/Building" instance=ExtResource("43_iatgn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 41.05, 129)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 41.05, 109)
 dialogue = [["Is this my dream?", "Or yours?", "The way I see it, our fates appear to be intertwined."]]
 
 [node name="random shit" type="Node" parent="."]
@@ -1723,10 +1900,6 @@ autostart = true
 
 [node name="Lamp" parent="LampContainer" instance=ExtResource("55_wkrmp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 0, 0)
-
-[node name="RoadStraight" type="MeshInstance3D" parent="."]
-transform = Transform3D(30, 0, 0, 0, 1, 0, 0, 0, 30, 25, 0, -37)
-mesh = ExtResource("56_2j3mh")
 
 [connection signal="body_entered" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_entered"]
 [connection signal="body_exited" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_exited"]
