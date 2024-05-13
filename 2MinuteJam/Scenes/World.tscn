@@ -1,4 +1,4 @@
-[gd_scene load_steps=97 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=99 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="Material" uid="uid://digeiblk51qny" path="res://2MinuteJam/Assets/theaterColour.tres" id="1_c7p14"]
@@ -48,13 +48,14 @@
 [ext_resource type="PackedScene" uid="uid://b8tkmr8dax6s4" path="res://2MinuteJam/Objects/Graves/VulcanAlienDolphin.tscn" id="38_pro8r"]
 [ext_resource type="PackedScene" uid="uid://bwaa20bn4o2h3" path="res://2MinuteJam/Objects/Graves/ThreeLaughs.tscn" id="39_wdh1o"]
 [ext_resource type="PackedScene" uid="uid://g76hev2b1un1" path="res://2MinuteJam/Objects/Graves/BoyCopPuke.tscn" id="40_pal7j"]
+[ext_resource type="ArrayMesh" uid="uid://vxgmh02vgs1a" path="res://2MinuteJam/Assets/art/RandomProps/Bridge.res" id="43_102ul"]
 [ext_resource type="PackedScene" uid="uid://deoobbx2cse2b" path="res://2MinuteJam/npcs/Building/dream_npc.tscn" id="43_iatgn"]
 [ext_resource type="PackedScene" uid="uid://dot1g4mus5vi5" path="res://2MinuteJam/Objects/flashlight/flashlight.tscn" id="46_rqq1x"]
 [ext_resource type="PackedScene" uid="uid://di5gyetrnkv72" path="res://2MinuteJam/Objects/Graves/EmptyGrave.tscn" id="47_4ur8w"]
 [ext_resource type="PackedScene" uid="uid://cihmapoecx3mk" path="res://2MinuteJam/Objects/Poster/Poster3D.tscn" id="48_py013"]
-[ext_resource type="PackedScene" uid="uid://dcbe36ic5jgp2" path="res://2MinuteJam/npcs/Mall/worstPerson.tscn" id="52_2v01r"]
 [ext_resource type="PackedScene" uid="uid://bswx8i1owenig" path="res://2MinuteJam/Assets/art/Arcade/EggHockeyMachine.tscn" id="53_yfmmj"]
 [ext_resource type="PackedScene" uid="uid://djc5cecpsfvkj" path="res://2MinuteJam/Objects/lamp/lamp.tscn" id="55_wkrmp"]
+[ext_resource type="ArrayMesh" uid="uid://diqxw3eqx8wbe" path="res://2MinuteJam/Assets/art/Road/RoadStraight.res" id="56_2j3mh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ff47w"]
 albedo_color = Color(0.701961, 0.701961, 0, 1)
@@ -180,6 +181,9 @@ refraction_enabled = true
 [sub_resource type="BoxMesh" id="BoxMesh_qtuh2"]
 material = SubResource("StandardMaterial3D_bhk50")
 size = Vector3(37.15, 8.035, 156.29)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7isft"]
+size = Vector3(36, 0.3, 5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_f3al5"]
 size = Vector3(5000, 2, 5000)
@@ -696,6 +700,7 @@ size = Vector3(20, 50, 20)
 
 [node name="CSGBox3D4" type="CSGBox3D" parent="CSGcontainer/PerimeterBuildings/CSGBox3D4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.05499, 0.0499992, -60)
+visible = false
 use_collision = true
 size = Vector3(20, 50, 20)
 
@@ -1206,11 +1211,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.5, 52.1762)
 [node name="EggHockeyMachine" parent="CSGcontainer/ArcadeContainer/ArcadeMachines" instance=ExtResource("53_yfmmj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.10031, 0.5, 56.7206)
 
-[node name="Bridge" type="CSGBox3D" parent="CSGcontainer"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 79.9321, 0.276763, -77.946)
-use_collision = true
-size = Vector3(36.009, 0.5, 4)
-
 [node name="Mall" type="Node" parent="CSGcontainer"]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CSGcontainer/Mall"]
@@ -1507,7 +1507,7 @@ mesh = SubResource("BoxMesh_1q3m2")
 [node name="Bridge" type="Node" parent="npcContainer"]
 
 [node name="bridgeWoman" parent="npcContainer/Bridge" instance=ExtResource("24_n0frp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 79.1773, 1.52676, -79.8828)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 78.1773, 1.52676, -79.8828)
 
 [node name="Theater" type="Node" parent="npcContainer"]
 
@@ -1559,9 +1559,6 @@ transform = Transform3D(0.873034, -0.405702, 0.270586, 0.390997, 0.913941, 0.108
 [node name="Plank3" parent="random shit" instance=ExtResource("11_7ttf0")]
 transform = Transform3D(0.884108, 0, 0.467282, 0, 1, 0, -0.467282, 0, 0.884108, 25.1606, 1.72835, 13.5578)
 
-[node name="worstPerson" parent="random shit" instance=ExtResource("52_2v01r")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 60, 2, 39)
-
 [node name="RigidBody3D" parent="random shit" instance=ExtResource("30_ydsx5")]
 transform = Transform3D(0.253389, 0.211093, 0.944052, -0.87167, 0.473031, 0.12819, -0.419506, -0.855384, 0.303864, -1.07547, 1.69283, 109.895)
 labelText = "Jump"
@@ -1599,6 +1596,16 @@ shader_params/u_tile_reduction = null
 [node name="waterMesh" type="MeshInstance3D" parent="HTerrain/miscterrain"]
 transform = Transform3D(0.974633, 0, 0.223812, 0, 1, 0, -0.223812, 0, 0.974633, 86.0374, -5.66553, -61.3132)
 mesh = SubResource("BoxMesh_qtuh2")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="HTerrain/miscterrain"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 77, 0, -77.4)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="HTerrain/miscterrain/StaticBody3D"]
+mesh = ExtResource("43_102ul")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="HTerrain/miscterrain/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.1, 0)
+shape = SubResource("BoxShape3D_7isft")
 
 [node name="deathPlane" type="Area3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -913.131, 0)
@@ -1716,6 +1723,10 @@ autostart = true
 
 [node name="Lamp" parent="LampContainer" instance=ExtResource("55_wkrmp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 25, 0, 0)
+
+[node name="RoadStraight" type="MeshInstance3D" parent="."]
+transform = Transform3D(30, 0, 0, 0, 1, 0, 0, 0, 30, 25, 0, -37)
+mesh = ExtResource("56_2j3mh")
 
 [connection signal="body_entered" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_entered"]
 [connection signal="body_exited" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_exited"]

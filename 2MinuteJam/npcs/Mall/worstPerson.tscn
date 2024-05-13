@@ -10,9 +10,9 @@ resource_local_to_scene = true
 resource_local_to_scene = true
 material = SubResource("StandardMaterial3D_5c8sb")
 
-[node name="BaseNpc" instance=ExtResource("1_eqx3m")]
+[node name="worstPerson" instance=ExtResource("1_eqx3m")]
 script = ExtResource("2_sjex2")
-dialogue = [["Ah! A young person.", "Hello!", "What are you doing out so late tonight?", "You had better be careful, with all those &%*#$^s out there.", "You know what they are like."], ["Have a good night!"]]
+dialogue = [["Ah! A young person.", "Hello!", "What are you doing out so late tonight?", "You had better be careful, with all those &%*#$^s out there.", "I'm not a racist, but you know what they are like."], ["Have a good night!"]]
 colour = Color(0, 0, 0, 1)
 myName = "Max"
 
