@@ -28,8 +28,9 @@ func _process(_delta):
 			if curText <= diagToHandle.size()-1:
 				dialog.set_text(diagToHandle[curText])
 				curText +=1
-				if npcName == "Petersen":
+				if npcName == "Max":
 					if curText ==4:
+						await get_tree().create_timer(.4).timeout
 						worst_person.play()
 				
 				#if curText == diagToHandle.size() :
