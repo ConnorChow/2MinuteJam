@@ -1,4 +1,4 @@
-[gd_scene load_steps=108 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=114 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="PackedScene" uid="uid://q0x2l31pruqy" path="res://2MinuteJam/Player/Player.tscn" id="1_q0ld0"]
@@ -279,6 +279,24 @@ resource_local_to_scene = true
 shading_mode = 2
 albedo_texture = SubResource("ViewportTexture_gwujo")
 albedo_texture_force_srgb = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_l1q73"]
+size = Vector3(16.0408, 8.23962, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_myqo4"]
+size = Vector3(1.0722, 8.23962, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ior4o"]
+size = Vector3(2.91916, 5.40155, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ek2bk"]
+size = Vector3(19.9894, 8.23962, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b6xep"]
+size = Vector3(29.9393, 8.23962, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6tiyu"]
+size = Vector3(29.9393, 19.9178, 0.5)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_tsild"]
 size = Vector3(5.76184, 11.4308, 0.638672)
@@ -1846,6 +1864,34 @@ loop = true
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Arcade/StaticBody3D"]
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 62)
 mesh = ExtResource("54_4ssdd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Arcade/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.97229, 3.86981, 47.2474)
+shape = SubResource("BoxShape3D_l1q73")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="Arcade/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.4932, 3.86981, 47.2474)
+shape = SubResource("BoxShape3D_myqo4")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="Arcade/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5008, 5.28885, 47.2474)
+shape = SubResource("BoxShape3D_ior4o")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Arcade/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00204468, 3.86981, 76.7456)
+shape = SubResource("BoxShape3D_ek2bk")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Arcade/StaticBody3D"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -9.70379, 3.86981, 62.0036)
+shape = SubResource("BoxShape3D_b6xep")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Arcade/StaticBody3D"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9.73347, 3.86981, 62.0036)
+shape = SubResource("BoxShape3D_b6xep")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Arcade/StaticBody3D"]
+transform = Transform3D(1.91069e-15, -1, 4.37114e-08, -4.37114e-08, -4.37114e-08, -1, 1, 0, -4.37114e-08, -0.00763702, 7.72854, 62.0036)
+shape = SubResource("BoxShape3D_6tiyu")
 
 [node name="ArcadeMachines" type="Node3D" parent="Arcade"]
 
