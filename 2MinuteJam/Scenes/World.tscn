@@ -1,11 +1,9 @@
-[gd_scene load_steps=119 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=117 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
-[ext_resource type="Material" uid="uid://digeiblk51qny" path="res://2MinuteJam/Assets/theaterColour.tres" id="1_c7p14"]
 [ext_resource type="PackedScene" uid="uid://q0x2l31pruqy" path="res://2MinuteJam/Player/Player.tscn" id="1_q0ld0"]
 [ext_resource type="Environment" uid="uid://b2r2wlqm13vma" path="res://2MinuteJam/Assets/darkWorldEnviro.tres" id="2_q27q1"]
 [ext_resource type="ArrayMesh" uid="uid://e1wk8hs3cndl" path="res://2MinuteJam/Assets/art/Road/RoadT.res" id="3_s10n2"]
-[ext_resource type="PackedScene" uid="uid://bmhrqsukfdhao" path="res://2MinuteJam/Objects/Door.tscn" id="4_cmskc"]
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/UiHandler.gd" id="5_fg8bl"]
 [ext_resource type="VideoStream" path="res://2MinuteJam/Movies/escalators_-_286-_360p_.ogv" id="5_gixjt"]
 [ext_resource type="Texture2D" uid="uid://762rp3fn58pf" path="res://2MinuteJam/Scenes/MiniGames/SkyFallers/Player/Chicken.png" id="6_2krvf"]
@@ -61,19 +59,6 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ha6i"]
 albedo_color = Color(1, 0.427451, 0.356863, 1)
 roughness = 0.54
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_867by"]
-
-[sub_resource type="ViewportTexture" id="ViewportTexture_gwujo"]
-viewport_path = NodePath("CSGcontainer/Theater/SubViewport")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aq6j0"]
-resource_local_to_scene = true
-albedo_texture = SubResource("ViewportTexture_gwujo")
-albedo_texture_force_srgb = true
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_acywf"]
-size = Vector3(26.7458, 11.8867, 39.3422)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_68jg0"]
 albedo_color = Color(0.466667, 0.00392157, 0.827451, 1)
@@ -174,8 +159,7 @@ size = Vector3(37.15, 8.035, 156.29)
 [sub_resource type="BoxShape3D" id="BoxShape3D_7isft"]
 size = Vector3(36, 0.3, 5)
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_f3al5"]
-size = Vector3(5000, 2, 5000)
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_65k2f"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hd1yf"]
 albedo_color = Color(1, 0, 0, 1)
@@ -293,7 +277,7 @@ size = Vector3(19.756, 4, 3)
 size = Vector3(19.756, 5, 3)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_loclc"]
-size = Vector3(19, 6, 1)
+size = Vector3(19.6533, 6, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_x35dr"]
 size = Vector3(19.756, 6, 19)
@@ -312,6 +296,20 @@ material = SubResource("StandardMaterial3D_ff47w")
 top_radius = 0.05
 bottom_radius = 0.05
 height = 0.01
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_acywf"]
+size = Vector3(26.6209, 11.8867, 39.3422)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_867by"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_gwujo"]
+viewport_path = NodePath("Theater/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_aq6j0"]
+resource_local_to_scene = true
+shading_mode = 2
+albedo_texture = SubResource("ViewportTexture_gwujo")
+albedo_texture_force_srgb = true
 
 [node name="World" type="Node"]
 script = ExtResource("1_0o181")
@@ -493,133 +491,6 @@ mesh = ExtResource("3_s10n2")
 skeleton = NodePath("../..")
 
 [node name="CSGcontainer" type="Node" parent="."]
-
-[node name="Theater" type="Node3D" parent="CSGcontainer"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 44, 0)
-
-[node name="seating and floor" type="Node3D" parent="CSGcontainer/Theater"]
-
-[node name="CSGBox3D" type="CSGBox3D" parent="CSGcontainer/Theater/seating and floor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, 9)
-use_collision = true
-size = Vector3(27, 1, 40)
-material = ExtResource("1_c7p14")
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="CSGcontainer/Theater/seating and floor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 9)
-use_collision = true
-size = Vector3(22, 1, 22)
-material = ExtResource("1_c7p14")
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="CSGcontainer/Theater/seating and floor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 12)
-use_collision = true
-size = Vector3(22, 1, 22)
-material = ExtResource("1_c7p14")
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="CSGcontainer/Theater/seating and floor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 15)
-use_collision = true
-size = Vector3(22, 1, 22)
-material = ExtResource("1_c7p14")
-
-[node name="CSGBox3D5" type="CSGBox3D" parent="CSGcontainer/Theater/seating and floor"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4, 18)
-use_collision = true
-size = Vector3(22, 1, 22)
-material = ExtResource("1_c7p14")
-
-[node name="walls" type="Node3D" parent="CSGcontainer/Theater"]
-
-[node name="CSGBox3D" type="CSGBox3D" parent="CSGcontainer/Theater/walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 6, 9)
-use_collision = true
-size = Vector3(1, 12, 40)
-material = ExtResource("1_c7p14")
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="CSGcontainer/Theater/walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 6, 9)
-use_collision = true
-size = Vector3(1, 12, 40)
-material = ExtResource("1_c7p14")
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="CSGcontainer/Theater/walls"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.5, 6, -11)
-use_collision = true
-size = Vector3(1, 12, 27)
-material = ExtResource("1_c7p14")
-
-[node name="CSGBox3D5" type="CSGBox3D" parent="CSGcontainer/Theater/walls"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 6, 28)
-use_collision = true
-size = Vector3(1, 12, 22)
-material = ExtResource("1_c7p14")
-
-[node name="CSGBox3D9" type="CSGBox3D" parent="CSGcontainer/Theater/walls"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, -38.5685, 45.8362)
-use_collision = true
-size = Vector3(1, 12, 22)
-material = SubResource("StandardMaterial3D_4ha6i")
-
-[node name="CSGBox3D10" type="CSGBox3D" parent="CSGcontainer/Theater/walls"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.5, 6, 84.8362)
-use_collision = true
-size = Vector3(1, 12, 27)
-material = SubResource("StandardMaterial3D_4ha6i")
-
-[node name="CSGBox3D8" type="CSGBox3D" parent="CSGcontainer/Theater/walls"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 4, 15)
-use_collision = true
-size = Vector3(1, 8, 22)
-material = ExtResource("1_c7p14")
-
-[node name="CSGBox3D7" type="CSGBox3D" parent="CSGcontainer/Theater/walls"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -12.7004, 8.5, 28)
-use_collision = true
-size = Vector3(1, 7, 6)
-material = ExtResource("1_c7p14")
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="CSGcontainer/Theater/walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 3.5, 13.5)
-use_collision = true
-size = Vector3(1, 7, 31)
-material = ExtResource("1_c7p14")
-
-[node name="CSGBox3D6" type="CSGBox3D" parent="CSGcontainer/Theater/walls"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 12, 9)
-use_collision = true
-size = Vector3(27, 1, 40)
-material = ExtResource("1_c7p14")
-
-[node name="Door" parent="CSGcontainer/Theater" instance=ExtResource("4_cmskc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.452, 0.489067, 28.5907)
-
-[node name="TV" type="MeshInstance3D" parent="CSGcontainer/Theater"]
-transform = Transform3D(9.735, 0, 0, 0, -4.37114e-08, -5.5, 0, 1, -2.40413e-07, -2.60568, -37.9807, -10.4606)
-mesh = SubResource("PlaneMesh_867by")
-surface_material_override/0 = SubResource("StandardMaterial3D_aq6j0")
-
-[node name="SubViewport" type="SubViewport" parent="CSGcontainer/Theater"]
-size = Vector2i(1280, 720)
-
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="CSGcontainer/Theater/SubViewport"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-stream = ExtResource("5_gixjt")
-autoplay = true
-expand = true
-loop = true
-
-[node name="OutsideMusicStart" type="Area3D" parent="CSGcontainer/Theater"]
-collision_layer = 4
-collision_mask = 4
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CSGcontainer/Theater/OutsideMusicStart"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.29516, 5.44335, 8.57221)
-shape = SubResource("BoxShape3D_acywf")
 
 [node name="PerimeterBuildings" type="Node" parent="CSGcontainer"]
 
@@ -1272,6 +1143,8 @@ environment = ExtResource("2_q27q1")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 16.9813, 0)
 light_color = Color(0, 0.0941176, 0.580392, 1)
+shadow_enabled = true
+shadow_opacity = 0.69
 
 [node name="Player" parent="." instance=ExtResource("1_q0ld0")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.61046, 5.47646, 1.5047)
@@ -1517,7 +1390,7 @@ shape = SubResource("BoxShape3D_iugem")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -246.7, 0, -211)
 script = ExtResource("27_ons6m")
 _terrain_data = ExtResource("28_23m2k")
-chunk_size = 32
+chunk_size = 16
 collision_enabled = true
 collision_layer = 1
 collision_mask = 1
@@ -1526,7 +1399,7 @@ custom_shader = null
 custom_globalmap_shader = null
 texture_set = SubResource("Resource_4w5vi")
 render_layers = 1
-cast_shadow = 1
+cast_shadow = 0
 shader_params/u_ground_uv_scale = 20
 shader_params/u_depth_blending = true
 shader_params/u_triplanar = null
@@ -1552,7 +1425,7 @@ shape = SubResource("BoxShape3D_7isft")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -913.131, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="deathPlane"]
-shape = SubResource("BoxShape3D_f3al5")
+shape = SubResource("WorldBoundaryShape3D_65k2f")
 
 [node name="Node" type="Node" parent="."]
 
@@ -1607,7 +1480,7 @@ transform = Transform3D(-7.5904e-09, 0.984808, -0.173648, 0.173648, 0.17101, 0.9
 [node name="PosterContainer" type="Node" parent="."]
 
 [node name="Poster3d" parent="PosterContainer" instance=ExtResource("48_py013")]
-transform = Transform3D(1.91069e-15, -1, 4.37114e-08, -4.37114e-08, -4.37114e-08, -1, 1, 0, -4.37114e-08, -16.5035, 1.6, 28)
+transform = Transform3D(1.91069e-15, -1, 4.37114e-08, -4.37114e-08, -4.37114e-08, -1, 1, 0, -4.37114e-08, -14.1135, 1.6, 25.6866)
 skeleton = NodePath("../..")
 surface_material_override/0 = SubResource("StandardMaterial3D_lqaaf")
 
@@ -1680,12 +1553,12 @@ shape = SubResource("BoxShape3D_7cq2f")
 [node name="SpotLight3D" type="SpotLight3D" parent="LampContainer/StaticBody3D"]
 transform = Transform3D(-1.48943e-09, 1, 3.2398e-08, 0.258819, -3.09086e-08, 0.965926, 0.965926, 9.82391e-09, -0.258819, 0, 4.70028, 1.04963)
 light_color = Color(0.733333, 0.709804, 0, 1)
-light_energy = 8.136
+light_energy = 14.803
 light_specular = 0.0
-light_bake_mode = 1
-spot_range = 27.0
+spot_range = 15.0
+spot_attenuation = 0.784584
 spot_angle = 56.76
-spot_angle_attenuation = 0.840897
+spot_angle_attenuation = 2.54912
 
 [node name="StaticBody3D9" type="StaticBody3D" parent="LampContainer"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 24.4, 0, -48)
@@ -1705,11 +1578,11 @@ shape = SubResource("BoxShape3D_7cq2f")
 [node name="SpotLight3D" type="SpotLight3D" parent="LampContainer/StaticBody3D9"]
 transform = Transform3D(-1.48943e-09, 1, 3.2398e-08, 0.258819, -3.09086e-08, 0.965926, 0.965926, 9.82391e-09, -0.258819, 0, 4.70028, 1.04963)
 light_color = Color(0.733333, 0.709804, 0, 1)
-light_energy = 8.136
-light_bake_mode = 1
-spot_range = 27.0
+light_energy = 14.803
+spot_range = 15.0
+spot_attenuation = 0.784584
 spot_angle = 56.76
-spot_angle_attenuation = 0.840897
+spot_angle_attenuation = 2.54912
 
 [node name="StaticBody3D10" type="StaticBody3D" parent="LampContainer"]
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, -10.6, 0, -24)
@@ -1729,12 +1602,11 @@ shape = SubResource("BoxShape3D_7cq2f")
 [node name="SpotLight3D" type="SpotLight3D" parent="LampContainer/StaticBody3D10"]
 transform = Transform3D(-1.48943e-09, 1, 3.2398e-08, 0.258819, -3.09086e-08, 0.965926, 0.965926, 9.82391e-09, -0.258819, 0, 4.70028, 1.04963)
 light_color = Color(0.733333, 0.709804, 0, 1)
-light_energy = 8.136
-light_bake_mode = 1
-spot_range = 27.0
-spot_attenuation = 1.7411
+light_energy = 14.803
+spot_range = 15.0
+spot_attenuation = 0.784584
 spot_angle = 56.76
-spot_angle_attenuation = 0.840897
+spot_angle_attenuation = 2.54912
 
 [node name="StaticBody3D11" type="StaticBody3D" parent="LampContainer"]
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, -30.6, 0, -24)
@@ -1754,11 +1626,11 @@ shape = SubResource("BoxShape3D_7cq2f")
 [node name="SpotLight3D" type="SpotLight3D" parent="LampContainer/StaticBody3D11"]
 transform = Transform3D(-1.48943e-09, 1, 3.2398e-08, 0.258819, -3.09086e-08, 0.965926, 0.965926, 9.82391e-09, -0.258819, 0, 4.70028, 1.04963)
 light_color = Color(0.733333, 0.709804, 0, 1)
-light_energy = 8.136
-light_bake_mode = 1
-spot_range = 27.0
+light_energy = 14.803
+spot_range = 15.0
+spot_attenuation = 0.784584
 spot_angle = 56.76
-spot_angle_attenuation = 0.840897
+spot_angle_attenuation = 2.54912
 
 [node name="StaticBody3D12" type="StaticBody3D" parent="LampContainer"]
 transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, -58.6, 0, -24)
@@ -1778,11 +1650,11 @@ shape = SubResource("BoxShape3D_7cq2f")
 [node name="SpotLight3D" type="SpotLight3D" parent="LampContainer/StaticBody3D12"]
 transform = Transform3D(-1.48943e-09, 1, 3.2398e-08, 0.258819, -3.09086e-08, 0.965926, 0.965926, 9.82391e-09, -0.258819, 0, 4.70028, 1.04963)
 light_color = Color(0.733333, 0.709804, 0, 1)
-light_energy = 8.136
-light_bake_mode = 1
-spot_range = 27.0
+light_energy = 14.803
+spot_range = 15.0
+spot_attenuation = 0.784584
 spot_angle = 56.76
-spot_angle_attenuation = 0.840897
+spot_angle_attenuation = 2.54912
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="LampContainer"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 26.4, 0, 5)
@@ -1802,11 +1674,11 @@ shape = SubResource("BoxShape3D_7cq2f")
 [node name="SpotLight3D" type="SpotLight3D" parent="LampContainer/StaticBody3D2"]
 transform = Transform3D(-1.48943e-09, 1, 3.2398e-08, 0.258819, -3.09086e-08, 0.965926, 0.965926, 9.82391e-09, -0.258819, 0, 4.70028, 1.04963)
 light_color = Color(0.733333, 0.709804, 0, 1)
-light_energy = 8.136
-light_bake_mode = 1
-spot_range = 27.0
+light_energy = 14.803
+spot_range = 15.0
+spot_attenuation = 0.784584
 spot_angle = 56.76
-spot_angle_attenuation = 0.840897
+spot_angle_attenuation = 2.54912
 
 [node name="StaticBody3D3" type="StaticBody3D" parent="LampContainer"]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 24.4, 0, 34)
@@ -1826,11 +1698,11 @@ shape = SubResource("BoxShape3D_7cq2f")
 [node name="SpotLight3D" type="SpotLight3D" parent="LampContainer/StaticBody3D3"]
 transform = Transform3D(-1.48943e-09, 1, 3.2398e-08, 0.258819, -3.09086e-08, 0.965926, 0.965926, 9.82391e-09, -0.258819, 0, 4.70028, 1.04963)
 light_color = Color(0.733333, 0.709804, 0, 1)
-light_energy = 8.136
-light_bake_mode = 1
-spot_range = 27.0
+light_energy = 14.803
+spot_range = 15.0
+spot_attenuation = 0.784584
 spot_angle = 56.76
-spot_angle_attenuation = 0.840897
+spot_angle_attenuation = 2.54912
 
 [node name="StaticBody3D4" type="StaticBody3D" parent="LampContainer"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6, 0, 34)
@@ -1850,11 +1722,11 @@ shape = SubResource("BoxShape3D_7cq2f")
 [node name="SpotLight3D" type="SpotLight3D" parent="LampContainer/StaticBody3D4"]
 transform = Transform3D(-1.48943e-09, 1, 3.2398e-08, 0.258819, -3.09086e-08, 0.965926, 0.965926, 9.82391e-09, -0.258819, 0, 4.70028, 1.04963)
 light_color = Color(0.733333, 0.709804, 0, 1)
-light_energy = 8.136
-light_bake_mode = 1
-spot_range = 27.0
+light_energy = 14.803
+spot_range = 15.0
+spot_attenuation = 0.784584
 spot_angle = 56.76
-spot_angle_attenuation = 0.840897
+spot_angle_attenuation = 2.54912
 
 [node name="StaticBody3D5" type="StaticBody3D" parent="LampContainer"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.6, 0, 34)
@@ -1874,11 +1746,11 @@ shape = SubResource("BoxShape3D_7cq2f")
 [node name="SpotLight3D" type="SpotLight3D" parent="LampContainer/StaticBody3D5"]
 transform = Transform3D(-1.48943e-09, 1, 3.2398e-08, 0.258819, -3.09086e-08, 0.965926, 0.965926, 9.82391e-09, -0.258819, 0, 4.70028, 1.04963)
 light_color = Color(0.733333, 0.709804, 0, 1)
-light_energy = 8.136
-light_bake_mode = 1
-spot_range = 27.0
+light_energy = 14.803
+spot_range = 15.0
+spot_attenuation = 0.784584
 spot_angle = 56.76
-spot_angle_attenuation = 0.840897
+spot_angle_attenuation = 2.54912
 
 [node name="StaticBody3D6" type="StaticBody3D" parent="LampContainer"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -42.6, 0, 34)
@@ -1898,11 +1770,11 @@ shape = SubResource("BoxShape3D_7cq2f")
 [node name="SpotLight3D" type="SpotLight3D" parent="LampContainer/StaticBody3D6"]
 transform = Transform3D(-1.48943e-09, 1, 3.2398e-08, 0.258819, -3.09086e-08, 0.965926, 0.965926, 9.82391e-09, -0.258819, 0, 4.70028, 1.04963)
 light_color = Color(0.733333, 0.709804, 0, 1)
-light_energy = 8.136
-light_bake_mode = 1
-spot_range = 27.0
+light_energy = 14.803
+spot_range = 15.0
+spot_attenuation = 0.784584
 spot_angle = 56.76
-spot_angle_attenuation = 0.840897
+spot_angle_attenuation = 2.54912
 
 [node name="StaticBody3D7" type="StaticBody3D" parent="LampContainer"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 49.4, 0, 34)
@@ -1922,14 +1794,14 @@ shape = SubResource("BoxShape3D_7cq2f")
 [node name="SpotLight3D" type="SpotLight3D" parent="LampContainer/StaticBody3D7"]
 transform = Transform3D(-1.48943e-09, 1, 3.2398e-08, 0.258819, -3.09086e-08, 0.965926, 0.965926, 9.82391e-09, -0.258819, 0, 4.70028, 1.04963)
 light_color = Color(0.733333, 0.709804, 0, 1)
-light_energy = 8.136
-light_bake_mode = 1
-spot_range = 27.0
+light_energy = 14.803
+spot_range = 15.0
+spot_attenuation = 0.784584
 spot_angle = 56.76
-spot_angle_attenuation = 0.840897
+spot_angle_attenuation = 2.54912
 
 [node name="RigidBody3d" type="RigidBody3D" parent="LampContainer"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90.4, 0, 34)
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 81.4, 0, 45)
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, 3, 0)
 
@@ -1948,10 +1820,11 @@ shape = SubResource("BoxShape3D_7cq2f")
 [node name="SpotLight3D" type="SpotLight3D" parent="LampContainer/RigidBody3d"]
 transform = Transform3D(-1.48943e-09, 1, 3.2398e-08, 0.258819, -3.09086e-08, 0.965926, 0.965926, 9.82391e-09, -0.258819, 0, 4.70028, 1.04963)
 light_color = Color(0.733333, 0.709804, 0, 1)
-light_energy = 8.136
-spot_range = 27.0
+light_energy = 14.803
+spot_range = 15.0
+spot_attenuation = 0.784584
 spot_angle = 56.76
-spot_angle_attenuation = 0.840897
+spot_angle_attenuation = 2.54912
 
 [node name="Theater" type="Node3D" parent="."]
 
@@ -2022,7 +1895,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.577, 2.5, 1.599)
 shape = SubResource("BoxShape3D_24dh1")
 
 [node name="CollisionShape3D17" type="CollisionShape3D" parent="Theater/StaticBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.22291, 8.9391, -7.98586)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.54957, 8.9391, -7.98586)
 shape = SubResource("BoxShape3D_loclc")
 
 [node name="CollisionShape3D16" type="CollisionShape3D" parent="Theater/StaticBody3D"]
@@ -2034,7 +1907,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.39949, 4.72912, -7.97802)
 shape = SubResource("BoxShape3D_55pnk")
 
 [node name="Lights" type="Node3D" parent="Theater"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -0.458961, 1.23519)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.285, -0.475, 1.235)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Theater/Lights"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, 0)
@@ -2221,7 +2094,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, 28)
 mesh = SubResource("CylinderMesh_i3uih")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 0.980505, 0.196494, 0, -0.196494, 0.980505, -1.95659, -49.7652, 16.5953)
+transform = Transform3D(0.965926, 0.0508564, -0.253773, -0.00884756, 0.98642, 0.164003, 0.258668, -0.15617, 0.953259, -4.95659, 11.2348, 17.5953)
 light_energy = 8.0
 light_specular = 10.03
 shadow_bias = 9.43
@@ -2229,10 +2102,48 @@ shadow_reverse_cull_face = true
 distance_fade_enabled = true
 spot_range = 31.8772
 spot_attenuation = 0.104412
-spot_angle = 10.2177
+spot_angle = 11.8714
 
-[connection signal="body_entered" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_entered"]
-[connection signal="body_exited" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_exited"]
+[node name="SpotLight3D2" type="SpotLight3D" parent="Theater/Lights"]
+transform = Transform3D(0.965926, -0.0508564, 0.253773, 0.0129185, 0.988756, 0.148977, -0.258496, -0.140622, 0.955722, 1.04341, 11.2348, 17.5953)
+light_energy = 8.0
+light_specular = 10.03
+shadow_bias = 9.43
+shadow_reverse_cull_face = true
+distance_fade_enabled = true
+spot_range = 31.8772
+spot_attenuation = 0.104412
+spot_angle = 11.8972
+
+[node name="OutsideMusicStart" type="Area3D" parent="Theater"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 1, 2.16041)
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Theater/OutsideMusicStart"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.35761, 5.44335, 8.57221)
+shape = SubResource("BoxShape3D_acywf")
+
+[node name="TV" type="MeshInstance3D" parent="Theater"]
+transform = Transform3D(9.735, 0, 0, 0, -4.37114e-08, -5.5, 0, 1, -2.40413e-07, 0.252, 6.019, -8.4)
+mesh = SubResource("PlaneMesh_867by")
+skeleton = NodePath("")
+surface_material_override/0 = SubResource("StandardMaterial3D_aq6j0")
+
+[node name="SubViewport" type="SubViewport" parent="Theater"]
+size = Vector2i(1280, 720)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="Theater/SubViewport"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("5_gixjt")
+autoplay = true
+expand = true
+loop = true
+
 [connection signal="body_entered" from="CSGcontainer/ArcadeContainer/arcadeOn" to="." method="_on_arcade_on_body_entered"]
 [connection signal="body_entered" from="CSGcontainer/ArcadeContainer/arcadeOff" to="." method="_on_arcade_off_body_entered"]
 [connection signal="body_entered" from="CSGcontainer/Mall/mallOn" to="." method="_on_mall_on_body_entered"]
@@ -2244,3 +2155,5 @@ spot_angle = 10.2177
 [connection signal="body_entered" from="random shit/RigidBody3D/Strike" to="." method="_on_strike_body_entered"]
 [connection signal="body_entered" from="deathPlane" to="." method="_on_death_plane_body_entered"]
 [connection signal="timeout" from="fadeOutControl/Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_entered"]
+[connection signal="body_exited" from="Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_exited"]

@@ -5,7 +5,7 @@ const SENSITIVITY : float = 0.003
 const SPEED : float = 4.5
 const runSpeed : float = 1.5
 var modSpeed : float
-const JUMP_VELOCITY : float = 4.0
+const JUMP_VELOCITY : float = 4.2
 
 var gravity : float = 9.8
 
