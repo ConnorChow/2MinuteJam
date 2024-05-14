@@ -1,4 +1,4 @@
-[gd_scene load_steps=101 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=119 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="Material" uid="uid://digeiblk51qny" path="res://2MinuteJam/Assets/theaterColour.tres" id="1_c7p14"]
@@ -56,18 +56,7 @@
 [ext_resource type="PackedScene" uid="uid://bswx8i1owenig" path="res://2MinuteJam/Assets/art/Arcade/EggHockeyMachine.tscn" id="53_yfmmj"]
 [ext_resource type="ArrayMesh" uid="uid://diqxw3eqx8wbe" path="res://2MinuteJam/Assets/art/Road/RoadStraight.res" id="56_2j3mh"]
 [ext_resource type="ArrayMesh" uid="uid://dwvsxchx5ekjg" path="res://2MinuteJam/Assets/art/RandomProps/Lamp.res" id="57_einp7"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ff47w"]
-albedo_color = Color(0.701961, 0.701961, 0, 1)
-emission_enabled = true
-emission = Color(0.784314, 0.784314, 0, 1)
-emission_energy_multiplier = 10.0
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_i3uih"]
-material = SubResource("StandardMaterial3D_ff47w")
-top_radius = 0.05
-bottom_radius = 0.05
-height = 0.01
+[ext_resource type="ArrayMesh" uid="uid://b7fdyck8ue3ko" path="res://2MinuteJam/Assets/art/Buildings/Theater/TheaterMesh.res" id="57_mvma6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ha6i"]
 albedo_color = Color(1, 0.427451, 0.356863, 1)
@@ -260,6 +249,70 @@ radius = 0.05
 [sub_resource type="BoxShape3D" id="BoxShape3D_7cq2f"]
 size = Vector3(0.40686, 1.24417, 1.18851)
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_kn8o3"]
+height = 1.6
+radius = 4.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7vxoh"]
+size = Vector3(9, 1.6, 3.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_kx3fr"]
+size = Vector3(15.7832, 12.4842, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_icofh"]
+size = Vector3(11.2603, 9.47852, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jp8i3"]
+size = Vector3(6.94202, 2.56982, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lhgfn"]
+size = Vector3(3.11249, 2.56982, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xd4pg"]
+size = Vector3(5.60562, 2.56982, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2x7ab"]
+size = Vector3(27, 12.4842, 0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ytw4v"]
+size = Vector3(0.5, 12.4557, 39.9941)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_i5mpe"]
+size = Vector3(19.7559, 1, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_02kx3"]
+size = Vector3(19.756, 2, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j6im4"]
+size = Vector3(19.756, 3, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2tcyr"]
+size = Vector3(19.756, 4, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_24dh1"]
+size = Vector3(19.756, 5, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_loclc"]
+size = Vector3(19, 6, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x35dr"]
+size = Vector3(19.756, 6, 19)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_55pnk"]
+size = Vector3(6.22229, 0.592773, 21.8468)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ff47w"]
+albedo_color = Color(0.701961, 0.701961, 0, 1)
+emission_enabled = true
+emission = Color(0.784314, 0.784314, 0, 1)
+emission_energy_multiplier = 10.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_i3uih"]
+material = SubResource("StandardMaterial3D_ff47w")
+top_radius = 0.05
+bottom_radius = 0.05
+height = 0.01
+
 [node name="World" type="Node"]
 script = ExtResource("1_0o181")
 
@@ -441,9 +494,10 @@ skeleton = NodePath("../..")
 
 [node name="CSGcontainer" type="Node" parent="."]
 
-[node name="Theater" type="Node" parent="CSGcontainer"]
+[node name="Theater" type="Node3D" parent="CSGcontainer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 44, 0)
 
-[node name="seating and floor" type="Node" parent="CSGcontainer/Theater"]
+[node name="seating and floor" type="Node3D" parent="CSGcontainer/Theater"]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CSGcontainer/Theater/seating and floor"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, 9)
@@ -475,204 +529,7 @@ use_collision = true
 size = Vector3(22, 1, 22)
 material = ExtResource("1_c7p14")
 
-[node name="Lights" type="Node" parent="CSGcontainer/Theater"]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, 0)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, 0)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D27" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, -2)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D28" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, -2)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D29" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, -4)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D30" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, -4)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D31" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, -6)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D32" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, -6)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D33" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, -8)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D34" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, -8)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D35" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0.505, -6)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D36" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0.505, -8)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D37" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0.505, -6)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D38" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0.505, -8)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D39" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0.505, -6)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D40" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0.505, -8)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, 2)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, 2)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D5" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, 4)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D6" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, 4)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D7" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, 6)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D8" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, 6)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D9" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, 8)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D10" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, 8)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D11" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, 10)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D12" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, 10)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D13" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, 12)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D14" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, 12)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D15" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, 14)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D16" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, 14)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D17" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, 16)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D18" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, 16)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D19" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, 18)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D20" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, 18)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D21" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, 20)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D22" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, 20)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D23" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, 20)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D24" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, 20)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D25" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, 24)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D26" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, 24)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D41" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, 26)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D42" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, 26)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D43" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, 22)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D44" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, 22)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D45" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, 28)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="MeshInstance3D46" type="MeshInstance3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, 28)
-mesh = SubResource("CylinderMesh_i3uih")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="CSGcontainer/Theater/Lights"]
-transform = Transform3D(1, 0, 0, 0, 0.980505, 0.196494, 0, -0.196494, 0.980505, -1.95659, 11.2348, 16.5953)
-light_energy = 8.0
-light_specular = 10.03
-shadow_bias = 9.43
-shadow_reverse_cull_face = true
-distance_fade_enabled = true
-spot_range = 31.8772
-spot_attenuation = 0.104412
-spot_angle = 10.2177
-
-[node name="walls" type="Node" parent="CSGcontainer/Theater"]
+[node name="walls" type="Node3D" parent="CSGcontainer/Theater"]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CSGcontainer/Theater/walls"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 6, 9)
@@ -699,7 +556,7 @@ size = Vector3(1, 12, 22)
 material = ExtResource("1_c7p14")
 
 [node name="CSGBox3D9" type="CSGBox3D" parent="CSGcontainer/Theater/walls"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 6, 45.8362)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, -38.5685, 45.8362)
 use_collision = true
 size = Vector3(1, 12, 22)
 material = SubResource("StandardMaterial3D_4ha6i")
@@ -738,7 +595,7 @@ material = ExtResource("1_c7p14")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.452, 0.489067, 28.5907)
 
 [node name="TV" type="MeshInstance3D" parent="CSGcontainer/Theater"]
-transform = Transform3D(9.735, 0, 0, 0, -4.37114e-08, -5.5, 0, 1, -2.40413e-07, -2.60568, 6.01928, -10.4606)
+transform = Transform3D(9.735, 0, 0, 0, -4.37114e-08, -5.5, 0, 1, -2.40413e-07, -2.60568, -37.9807, -10.4606)
 mesh = SubResource("PlaneMesh_867by")
 surface_material_override/0 = SubResource("StandardMaterial3D_aq6j0")
 
@@ -1417,7 +1274,7 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 16.
 light_color = Color(0, 0.0941176, 0.580392, 1)
 
 [node name="Player" parent="." instance=ExtResource("1_q0ld0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.61046, 4.47646, 5.5047)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.61046, 5.47646, 1.5047)
 collision_layer = 5
 collision_mask = 5
 
@@ -2095,6 +1952,284 @@ light_energy = 8.136
 spot_range = 27.0
 spot_angle = 56.76
 spot_angle_attenuation = 0.840897
+
+[node name="Theater" type="Node3D" parent="."]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Theater"]
+transform = Transform3D(-1, 0, -4.37114e-08, 0, 1, 0, 4.37114e-08, 0, -1, -4, 0, 12)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Theater/StaticBody3D"]
+mesh = ExtResource("57_mvma6")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Theater/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.4, 4.09147, -18.7)
+shape = SubResource("CylinderShape3D_kn8o3")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Theater/StaticBody3D"]
+transform = Transform3D(0.996195, 0, 0.0871558, 0, 1, 0, -0.0871558, 0, 0.996195, 3.33582, 4.1, -20.553)
+shape = SubResource("BoxShape3D_7vxoh")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="Theater/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.08484, 5.7421, -18.7639)
+shape = SubResource("BoxShape3D_kx3fr")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="Theater/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.37664, 7.24493, -18.7639)
+shape = SubResource("BoxShape3D_icofh")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="Theater/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.29498, 1.31012, -19.7327)
+shape = SubResource("BoxShape3D_jp8i3")
+
+[node name="CollisionShape3D10" type="CollisionShape3D" parent="Theater/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.20975, 1.31012, -19.7327)
+shape = SubResource("BoxShape3D_lhgfn")
+
+[node name="CollisionShape3D9" type="CollisionShape3D" parent="Theater/StaticBody3D"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 10.295, 1.31012, -17.3387)
+shape = SubResource("BoxShape3D_xd4pg")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="Theater/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.47644, 5.7421, 20.7353)
+shape = SubResource("BoxShape3D_2x7ab")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Theater/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.7525, 5.72784, 1.00391)
+shape = SubResource("BoxShape3D_ytw4v")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="Theater/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.75067, 5.72784, 1.00391)
+shape = SubResource("BoxShape3D_ytw4v")
+
+[node name="CollisionShape3D11" type="CollisionShape3D" parent="Theater/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.577, 0.5, 13.599)
+shape = SubResource("BoxShape3D_i5mpe")
+
+[node name="CollisionShape3D12" type="CollisionShape3D" parent="Theater/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.577, 1, 10.599)
+shape = SubResource("BoxShape3D_02kx3")
+
+[node name="CollisionShape3D13" type="CollisionShape3D" parent="Theater/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.577, 1.5, 7.599)
+shape = SubResource("BoxShape3D_j6im4")
+
+[node name="CollisionShape3D14" type="CollisionShape3D" parent="Theater/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.577, 2, 4.599)
+shape = SubResource("BoxShape3D_2tcyr")
+
+[node name="CollisionShape3D15" type="CollisionShape3D" parent="Theater/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.577, 2.5, 1.599)
+shape = SubResource("BoxShape3D_24dh1")
+
+[node name="CollisionShape3D17" type="CollisionShape3D" parent="Theater/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.22291, 8.9391, -7.98586)
+shape = SubResource("BoxShape3D_loclc")
+
+[node name="CollisionShape3D16" type="CollisionShape3D" parent="Theater/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.577, 3, -9.401)
+shape = SubResource("BoxShape3D_x35dr")
+
+[node name="CollisionShape3D18" type="CollisionShape3D" parent="Theater/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.39949, 4.72912, -7.97802)
+shape = SubResource("BoxShape3D_55pnk")
+
+[node name="Lights" type="Node3D" parent="Theater"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -0.458961, 1.23519)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, 0)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, 0)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D27" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, -2)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D28" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, -2)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D29" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, -4)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D30" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, -4)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D31" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, -6)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D32" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, -6)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D33" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, -8)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D34" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, -8)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D35" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0.505, -6)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D36" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0.505, -8)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D37" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0.505, -6)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D38" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0.505, -8)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D39" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0.505, -6)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D40" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0.505, -8)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, 2)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, 2)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, 4)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, 4)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, 6)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, 6)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D9" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, 8)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D10" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, 8)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D11" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, 10)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D12" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, 10)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D13" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, 12)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D14" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, 12)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D15" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, 14)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D16" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, 14)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D17" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, 16)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D18" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, 16)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D19" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, 18)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D20" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, 18)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D21" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, 20)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D22" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, 20)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D23" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, 20)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D24" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, 20)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D25" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, 24)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D26" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, 24)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D41" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, 26)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D42" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, 26)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D43" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, 22)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D44" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, 22)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D45" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0.505, 28)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="MeshInstance3D46" type="MeshInstance3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0.505, 28)
+mesh = SubResource("CylinderMesh_i3uih")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Theater/Lights"]
+transform = Transform3D(1, 0, 0, 0, 0.980505, 0.196494, 0, -0.196494, 0.980505, -1.95659, -49.7652, 16.5953)
+light_energy = 8.0
+light_specular = 10.03
+shadow_bias = 9.43
+shadow_reverse_cull_face = true
+distance_fade_enabled = true
+spot_range = 31.8772
+spot_attenuation = 0.104412
+spot_angle = 10.2177
 
 [connection signal="body_entered" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_entered"]
 [connection signal="body_exited" from="CSGcontainer/Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_exited"]

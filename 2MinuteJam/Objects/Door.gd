@@ -1,7 +1,7 @@
-extends RigidBody3D
+extends AnimatableBody3D
 
 var state : bool = false
-@onready var animPlayer = $"../../AnimationPlayer"
+@onready var animPlayer = $AnimationPlayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

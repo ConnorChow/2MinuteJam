@@ -79,11 +79,86 @@ mesh = SubResource("BoxMesh_tm1ny")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D6"]
 shape = SubResource("BoxShape3D_aerhn")
 
-[node name="Node3D" parent="." instance=ExtResource("1_xkw1w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.85506, 0, -0.702312)
+[node name="door" parent="." instance=ExtResource("1_xkw1w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.73827, 0, 0.539993)
 
 [node name="ChristmasBaubleGreen" parent="." instance=ExtResource("2_3ep2q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.73381, 0.405895, -0.265932)
+
+[node name="ChristmasBaubleGreen13" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.73381, 4.754, 2.55937)
+
+[node name="ChristmasBaubleGreen14" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.73381, 4.754, 1.41019)
+
+[node name="ChristmasBaubleGreen15" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.73381, 4.754, -0.121115)
+
+[node name="ChristmasBaubleGreen16" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.73381, 4.754, -0.934272)
+
+[node name="ChristmasBaubleGreen17" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.72171, 4.754, -0.934272)
+
+[node name="ChristmasBaubleGreen18" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.72171, 4.754, 0.168097)
+
+[node name="ChristmasBaubleGreen19" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.84626, 4.754, 0.168097)
+
+[node name="ChristmasBaubleGreen20" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.84626, 4.754, 1.25354)
+
+[node name="ChristmasBaubleGreen21" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.84626, 4.754, 2.01532)
+
+[node name="ChristmasBaubleGreen22" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.34116, 4.754, 2.01532)
+
+[node name="ChristmasBaubleGreen23" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.34116, 4.754, 0.63177)
+
+[node name="ChristmasBaubleGreen24" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.54419, 4.754, 0.63177)
+
+[node name="ChristmasBaubleGreen25" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.54419, 4.754, -0.670231)
+
+[node name="ChristmasBaubleGreen26" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.32124, 4.89345, -0.861801)
+
+[node name="ChristmasBaubleGreen27" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.54943, 4.52392, -1.5018)
+
+[node name="ChristmasBaubleGreen28" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.30148, 4.52392, -1.5018)
+
+[node name="ChristmasBaubleGreen29" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5346, 5.69426, -1.91451)
+
+[node name="ChristmasBaubleGreen30" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.16664, 5.69426, -2.31877)
+
+[node name="ChristmasBaubleGreen31" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.12494, 5.69426, -0.284385)
+
+[node name="ChristmasBaubleGreen32" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.35491, 5.69426, 1.70604)
+
+[node name="ChristmasBaubleGreen33" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.34825, 5.69426, 2.4992)
+
+[node name="ChristmasBaubleGreen34" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.67395, 5.69426, 2.35749)
+
+[node name="ChristmasBaubleGreen35" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.79432, 5.69426, 1.34179)
+
+[node name="ChristmasBaubleGreen36" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.85525, 5.69426, 0.00377393)
+
+[node name="ChristmasBaubleGreen37" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.71027, 5.69426, -1.21861)
 
 [node name="ChristmasBaubbleRed" parent="." instance=ExtResource("3_g84c2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.31067, 0.837976, 1.26319)
@@ -133,6 +208,60 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.06045, 6.61136, -2.10205)
 [node name="ChristmasBaubbleRed8" parent="." instance=ExtResource("3_g84c2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.77522, 7.18034, -1.99286)
 
+[node name="ChristmasBaubbleRed12" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.19859, 7.18034, -1.36643)
+
+[node name="ChristmasBaubbleRed13" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.13514, 7.18034, -0.728012)
+
+[node name="ChristmasBaubbleRed14" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.72218, 7.18034, 0.265887)
+
+[node name="ChristmasBaubbleRed15" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.22845, 7.18034, 1.64461)
+
+[node name="ChristmasBaubbleRed16" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.42254, 7.18034, 0.447639)
+
+[node name="ChristmasBaubbleRed17" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7872, 7.18034, 1.02384)
+
+[node name="ChristmasBaubbleRed18" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3884, 7.18034, -0.382931)
+
+[node name="ChristmasBaubbleRed19" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.98771, 7.18034, -1.9064)
+
+[node name="ChristmasBaubbleRed20" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.01905, 7.18034, -0.654149)
+
+[node name="ChristmasBaubbleRed21" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.79417, 7.18034, -0.209005)
+
+[node name="ChristmasBaubbleRed22" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.22212, 7.18034, 0.720926)
+
+[node name="ChristmasBaubbleRed23" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.94682, 7.18034, 1.91237)
+
+[node name="ChristmasBaubbleRed24" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.61477, 7.18034, 2.27963)
+
+[node name="ChristmasBaubbleRed25" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4671, 7.18034, 2.18381)
+
+[node name="ChristmasBaubbleRed26" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1725, 7.18034, -1.41575)
+
+[node name="ChristmasBaubbleRed27" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.70495, 7.18034, -0.510283)
+
+[node name="ChristmasBaubbleRed28" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.00804, 7.18034, 0.301647)
+
+[node name="ChristmasBaubbleRed29" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.83954, 7.18034, -0.124559)
+
 [node name="ChristmasBaubleGreen10" parent="." instance=ExtResource("2_3ep2q")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.76432, 6.9403, 1.00056)
 
@@ -150,6 +279,600 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.52409, 7.5, 1.79677)
 
 [node name="ChristmasBaubbleRed11" parent="." instance=ExtResource("3_g84c2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.04138, 3.24915, 1.56997)
+
+[node name="ChristmasBaubleGreen38" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.73381, 2.28229, -0.265932)
+
+[node name="ChristmasBaubleGreen39" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.73381, 6.6304, 2.55937)
+
+[node name="ChristmasBaubleGreen40" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.73381, 6.6304, 1.41019)
+
+[node name="ChristmasBaubleGreen41" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.73381, 6.6304, -0.121115)
+
+[node name="ChristmasBaubleGreen42" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.73381, 6.6304, -0.934272)
+
+[node name="ChristmasBaubleGreen43" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.72171, 6.6304, -0.934272)
+
+[node name="ChristmasBaubleGreen44" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.72171, 6.6304, 0.168097)
+
+[node name="ChristmasBaubleGreen45" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.84626, 6.6304, 0.168097)
+
+[node name="ChristmasBaubleGreen46" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.84626, 6.6304, 1.25354)
+
+[node name="ChristmasBaubleGreen47" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.84626, 6.6304, 2.01532)
+
+[node name="ChristmasBaubleGreen48" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.34116, 6.6304, 2.01532)
+
+[node name="ChristmasBaubleGreen49" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.34116, 6.6304, 0.63177)
+
+[node name="ChristmasBaubleGreen50" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.54419, 6.6304, 0.63177)
+
+[node name="ChristmasBaubleGreen51" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.54419, 6.6304, -0.670231)
+
+[node name="ChristmasBaubleGreen52" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.32124, 6.76984, -0.861801)
+
+[node name="ChristmasBaubleGreen53" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.54943, 6.40031, -1.5018)
+
+[node name="ChristmasBaubleGreen54" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.30148, 6.40031, -1.5018)
+
+[node name="ChristmasBaubleGreen55" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5346, 7.57066, -1.91451)
+
+[node name="ChristmasBaubleGreen56" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.16664, 7.57066, -2.31877)
+
+[node name="ChristmasBaubleGreen57" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.12494, 7.57066, -0.284385)
+
+[node name="ChristmasBaubleGreen58" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.35491, 7.57066, 1.70604)
+
+[node name="ChristmasBaubleGreen59" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.34825, 7.57066, 2.4992)
+
+[node name="ChristmasBaubleGreen60" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.67395, 7.57066, 2.35749)
+
+[node name="ChristmasBaubleGreen61" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.79432, 7.57066, 1.34179)
+
+[node name="ChristmasBaubleGreen62" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.85525, 7.57066, 0.00377393)
+
+[node name="ChristmasBaubleGreen63" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.71027, 7.57066, -1.21861)
+
+[node name="ChristmasBaubbleRed30" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.31067, 2.71437, 1.26319)
+
+[node name="ChristmasBaubbleRed31" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.81806, 4.18558, -1.4694)
+
+[node name="ChristmasBaubleGreen64" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.01127, 2.96692, -1.19377)
+
+[node name="ChristmasBaubbleRed32" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.60138, 2.90359, 1.77562)
+
+[node name="ChristmasBaubleGreen65" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.16665, 2.75358, -2.10887)
+
+[node name="ChristmasBaubbleRed33" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.42325, 2.47012, -0.116539)
+
+[node name="ChristmasBaubleGreen66" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9834, 3.78284, -0.101666)
+
+[node name="ChristmasBaubbleRed34" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.64563, 2.44971, 0.727646)
+
+[node name="ChristmasBaubleGreen67" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3045, 2.41087, -1.49794)
+
+[node name="ChristmasBaubleGreen68" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.99174, 5.56542, 2.05761)
+
+[node name="ChristmasBaubbleRed35" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.62809, 5.27131, -2.35406)
+
+[node name="ChristmasBaubleGreen69" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.39343, 4.5071, -2.17971)
+
+[node name="ChristmasBaubbleRed36" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.11121, 7.4555, 1.92951)
+
+[node name="ChristmasBaubleGreen70" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.24265, 6.09812, 1.35847)
+
+[node name="ChristmasBaubleGreen71" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.06045, 8.48776, -2.10205)
+
+[node name="ChristmasBaubbleRed37" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.77522, 9.05674, -1.99286)
+
+[node name="ChristmasBaubbleRed38" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.19859, 9.05674, -1.36643)
+
+[node name="ChristmasBaubbleRed39" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.13514, 9.05674, -0.728012)
+
+[node name="ChristmasBaubbleRed40" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.72218, 9.05674, 0.265887)
+
+[node name="ChristmasBaubbleRed41" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.22845, 9.05674, 1.64461)
+
+[node name="ChristmasBaubbleRed42" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.42254, 9.05674, 0.447639)
+
+[node name="ChristmasBaubbleRed43" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7872, 9.05674, 1.02384)
+
+[node name="ChristmasBaubbleRed44" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3884, 9.05674, -0.382931)
+
+[node name="ChristmasBaubbleRed45" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.98771, 9.05674, -1.9064)
+
+[node name="ChristmasBaubbleRed46" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.01905, 9.05674, -0.654149)
+
+[node name="ChristmasBaubbleRed47" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.79417, 9.05674, -0.209005)
+
+[node name="ChristmasBaubbleRed48" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.22212, 9.05674, 0.720926)
+
+[node name="ChristmasBaubbleRed49" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.94682, 9.05674, 1.91237)
+
+[node name="ChristmasBaubbleRed50" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.61477, 9.05674, 2.27963)
+
+[node name="ChristmasBaubbleRed51" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4671, 9.05674, 2.18381)
+
+[node name="ChristmasBaubbleRed52" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1725, 9.05674, -1.41575)
+
+[node name="ChristmasBaubbleRed53" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.70495, 9.05674, -0.510283)
+
+[node name="ChristmasBaubbleRed54" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.00804, 9.05674, 0.301647)
+
+[node name="ChristmasBaubbleRed55" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.83954, 9.05674, -0.124559)
+
+[node name="ChristmasBaubleGreen72" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.76432, 8.8167, 1.00056)
+
+[node name="ChristmasBaubbleRed56" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.15288, 9.6696, 1.14443)
+
+[node name="ChristmasBaubleGreen73" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.01821, 8.6287, -1.04169)
+
+[node name="ChristmasBaubbleRed57" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.21704, 11.0319, 1.11484)
+
+[node name="ChristmasBaubleGreen74" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.52409, 9.3764, 1.79677)
+
+[node name="ChristmasBaubbleRed58" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.04138, 5.12555, 1.56997)
+
+[node name="ChristmasBaubleGreen75" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.73381, 3.76671, -0.265932)
+
+[node name="ChristmasBaubleGreen76" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.73381, 8.11482, 2.55937)
+
+[node name="ChristmasBaubleGreen77" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.73381, 8.11482, 1.41019)
+
+[node name="ChristmasBaubleGreen78" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.73381, 8.11482, -0.121115)
+
+[node name="ChristmasBaubleGreen79" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.73381, 8.11482, -0.934272)
+
+[node name="ChristmasBaubleGreen80" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.72171, 8.11482, -0.934272)
+
+[node name="ChristmasBaubleGreen81" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.72171, 8.11482, 0.168097)
+
+[node name="ChristmasBaubleGreen82" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.84626, 8.11482, 0.168097)
+
+[node name="ChristmasBaubleGreen83" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.84626, 8.11482, 1.25354)
+
+[node name="ChristmasBaubleGreen84" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.84626, 8.11482, 2.01532)
+
+[node name="ChristmasBaubleGreen85" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.34116, 8.11482, 2.01532)
+
+[node name="ChristmasBaubleGreen86" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.34116, 8.11482, 0.63177)
+
+[node name="ChristmasBaubleGreen87" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.54419, 8.11482, 0.63177)
+
+[node name="ChristmasBaubleGreen88" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.54419, 8.11482, -0.670231)
+
+[node name="ChristmasBaubleGreen89" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.32124, 8.25426, -0.861801)
+
+[node name="ChristmasBaubleGreen90" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.54943, 7.88473, -1.5018)
+
+[node name="ChristmasBaubleGreen91" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.30148, 7.88473, -1.5018)
+
+[node name="ChristmasBaubleGreen92" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5346, 9.05508, -1.91451)
+
+[node name="ChristmasBaubleGreen93" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.16664, 9.05508, -2.31877)
+
+[node name="ChristmasBaubleGreen94" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.12494, 9.05508, -0.284385)
+
+[node name="ChristmasBaubleGreen95" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.35491, 9.05508, 1.70604)
+
+[node name="ChristmasBaubleGreen96" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.34825, 9.05508, 2.4992)
+
+[node name="ChristmasBaubleGreen97" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.67395, 9.05508, 2.35749)
+
+[node name="ChristmasBaubleGreen98" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.79432, 9.05508, 1.34179)
+
+[node name="ChristmasBaubleGreen99" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.85525, 9.05508, 0.00377393)
+
+[node name="ChristmasBaubleGreen100" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.71027, 9.05508, -1.21861)
+
+[node name="ChristmasBaubbleRed59" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.31067, 4.19879, 1.26319)
+
+[node name="ChristmasBaubbleRed60" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.81806, 5.67, -1.4694)
+
+[node name="ChristmasBaubleGreen101" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.01127, 4.45134, -1.19377)
+
+[node name="ChristmasBaubbleRed61" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.60138, 4.38801, 1.77562)
+
+[node name="ChristmasBaubleGreen102" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.16665, 4.238, -2.10887)
+
+[node name="ChristmasBaubbleRed62" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.42325, 3.95454, -0.116539)
+
+[node name="ChristmasBaubleGreen103" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9834, 5.26726, -0.101666)
+
+[node name="ChristmasBaubbleRed63" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.64563, 3.93413, 0.727646)
+
+[node name="ChristmasBaubleGreen104" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3045, 3.89529, -1.49794)
+
+[node name="ChristmasBaubleGreen105" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.99174, 7.04984, 2.05761)
+
+[node name="ChristmasBaubbleRed64" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.62809, 6.75573, -2.35406)
+
+[node name="ChristmasBaubleGreen106" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.39343, 5.99152, -2.17971)
+
+[node name="ChristmasBaubbleRed65" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.11121, 8.93992, 1.92951)
+
+[node name="ChristmasBaubleGreen107" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.24265, 7.58254, 1.35847)
+
+[node name="ChristmasBaubleGreen108" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.06045, 9.97218, -2.10205)
+
+[node name="ChristmasBaubbleRed66" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.77522, 10.5412, -1.99286)
+
+[node name="ChristmasBaubbleRed67" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.19859, 10.5412, -1.36643)
+
+[node name="ChristmasBaubbleRed68" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.13514, 10.5412, -0.728012)
+
+[node name="ChristmasBaubbleRed69" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.72218, 10.5412, 0.265887)
+
+[node name="ChristmasBaubbleRed70" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.22845, 10.5412, 1.64461)
+
+[node name="ChristmasBaubbleRed71" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.42254, 10.5412, 0.447639)
+
+[node name="ChristmasBaubbleRed72" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7872, 10.5412, 1.02384)
+
+[node name="ChristmasBaubbleRed73" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3884, 10.5412, -0.382931)
+
+[node name="ChristmasBaubbleRed74" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.98771, 10.5412, -1.9064)
+
+[node name="ChristmasBaubbleRed75" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.01905, 10.5412, -0.654149)
+
+[node name="ChristmasBaubbleRed76" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.79417, 10.5412, -0.209005)
+
+[node name="ChristmasBaubbleRed77" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.22212, 10.5412, 0.720926)
+
+[node name="ChristmasBaubbleRed78" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.94682, 10.5412, 1.91237)
+
+[node name="ChristmasBaubbleRed79" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.61477, 10.5412, 2.27963)
+
+[node name="ChristmasBaubbleRed80" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4671, 10.5412, 2.18381)
+
+[node name="ChristmasBaubbleRed81" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1725, 10.5412, -1.41575)
+
+[node name="ChristmasBaubbleRed82" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.70495, 10.5412, -0.510283)
+
+[node name="ChristmasBaubbleRed83" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.00804, 10.5412, 0.301647)
+
+[node name="ChristmasBaubbleRed84" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.83954, 10.5412, -0.124559)
+
+[node name="ChristmasBaubleGreen109" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.76432, 10.3011, 1.00056)
+
+[node name="ChristmasBaubbleRed85" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.15288, 11.154, 1.14443)
+
+[node name="ChristmasBaubleGreen110" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.01821, 10.1131, -1.04169)
+
+[node name="ChristmasBaubbleRed86" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.21704, 12.5163, 1.11484)
+
+[node name="ChristmasBaubleGreen111" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.52409, 10.8608, 1.79677)
+
+[node name="ChristmasBaubbleRed87" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.04138, 6.60997, 1.56997)
+
+[node name="ChristmasBaubleGreen112" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.73381, 4.70964, -0.265932)
+
+[node name="ChristmasBaubleGreen113" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.73381, 9.05774, 2.55937)
+
+[node name="ChristmasBaubleGreen114" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.73381, 9.05774, 1.41019)
+
+[node name="ChristmasBaubleGreen115" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.73381, 9.05774, -0.121115)
+
+[node name="ChristmasBaubleGreen116" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.73381, 9.05774, -0.934272)
+
+[node name="ChristmasBaubleGreen117" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.72171, 9.05774, -0.934272)
+
+[node name="ChristmasBaubleGreen118" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.72171, 9.05774, 0.168097)
+
+[node name="ChristmasBaubleGreen119" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.84626, 9.05774, 0.168097)
+
+[node name="ChristmasBaubleGreen120" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.84626, 9.05774, 1.25354)
+
+[node name="ChristmasBaubleGreen121" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.84626, 9.05774, 2.01532)
+
+[node name="ChristmasBaubleGreen122" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.34116, 9.05774, 2.01532)
+
+[node name="ChristmasBaubleGreen123" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.34116, 9.05774, 0.63177)
+
+[node name="ChristmasBaubleGreen124" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.54419, 9.05774, 0.63177)
+
+[node name="ChristmasBaubleGreen125" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.54419, 9.05774, -0.670231)
+
+[node name="ChristmasBaubleGreen126" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.32124, 9.19719, -0.861801)
+
+[node name="ChristmasBaubleGreen127" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.54943, 8.82766, -1.5018)
+
+[node name="ChristmasBaubleGreen128" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.30148, 8.82766, -1.5018)
+
+[node name="ChristmasBaubleGreen129" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5346, 9.998, -1.91451)
+
+[node name="ChristmasBaubleGreen130" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.16664, 9.998, -2.31877)
+
+[node name="ChristmasBaubleGreen131" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.12494, 9.998, -0.284385)
+
+[node name="ChristmasBaubleGreen132" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.35491, 9.998, 1.70604)
+
+[node name="ChristmasBaubleGreen133" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.34825, 9.998, 2.4992)
+
+[node name="ChristmasBaubleGreen134" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.67395, 9.998, 2.35749)
+
+[node name="ChristmasBaubleGreen135" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.79432, 9.998, 1.34179)
+
+[node name="ChristmasBaubleGreen136" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.85525, 9.998, 0.00377393)
+
+[node name="ChristmasBaubleGreen137" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.71027, 9.998, -1.21861)
+
+[node name="ChristmasBaubbleRed88" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.31067, 5.14172, 1.26319)
+
+[node name="ChristmasBaubbleRed89" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.81806, 6.61292, -1.4694)
+
+[node name="ChristmasBaubleGreen138" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.01127, 5.39426, -1.19377)
+
+[node name="ChristmasBaubbleRed90" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.60138, 5.33093, 1.77562)
+
+[node name="ChristmasBaubleGreen139" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.16665, 5.18092, -2.10887)
+
+[node name="ChristmasBaubbleRed91" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.42325, 4.89746, -0.116539)
+
+[node name="ChristmasBaubleGreen140" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9834, 6.21018, -0.101666)
+
+[node name="ChristmasBaubbleRed92" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.64563, 4.87705, 0.727646)
+
+[node name="ChristmasBaubleGreen141" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.3045, 4.83822, -1.49794)
+
+[node name="ChristmasBaubleGreen142" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.99174, 7.99276, 2.05761)
+
+[node name="ChristmasBaubbleRed93" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.62809, 7.69865, -2.35406)
+
+[node name="ChristmasBaubleGreen143" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.39343, 6.93444, -2.17971)
+
+[node name="ChristmasBaubbleRed94" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.11121, 9.88284, 1.92951)
+
+[node name="ChristmasBaubleGreen144" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.24265, 8.52546, 1.35847)
+
+[node name="ChristmasBaubleGreen145" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.06045, 10.9151, -2.10205)
+
+[node name="ChristmasBaubbleRed95" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.77522, 11.4841, -1.99286)
+
+[node name="ChristmasBaubbleRed96" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.19859, 11.4841, -1.36643)
+
+[node name="ChristmasBaubbleRed97" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.13514, 11.4841, -0.728012)
+
+[node name="ChristmasBaubbleRed98" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.72218, 11.4841, 0.265887)
+
+[node name="ChristmasBaubbleRed99" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.22845, 11.4841, 1.64461)
+
+[node name="ChristmasBaubbleRed100" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.42254, 11.4841, 0.447639)
+
+[node name="ChristmasBaubbleRed101" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.7872, 11.4841, 1.02384)
+
+[node name="ChristmasBaubbleRed102" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3884, 11.4841, -0.382931)
+
+[node name="ChristmasBaubbleRed103" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.98771, 11.4841, -1.9064)
+
+[node name="ChristmasBaubbleRed104" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.01905, 11.4841, -0.654149)
+
+[node name="ChristmasBaubbleRed105" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.79417, 11.4841, -0.209005)
+
+[node name="ChristmasBaubbleRed106" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.22212, 11.4841, 0.720926)
+
+[node name="ChristmasBaubbleRed107" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.94682, 11.4841, 1.91237)
+
+[node name="ChristmasBaubbleRed108" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.61477, 11.4841, 2.27963)
+
+[node name="ChristmasBaubbleRed109" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4671, 11.4841, 2.18381)
+
+[node name="ChristmasBaubbleRed110" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.1725, 11.4841, -1.41575)
+
+[node name="ChristmasBaubbleRed111" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.70495, 11.4841, -0.510283)
+
+[node name="ChristmasBaubbleRed112" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.00804, 11.4841, 0.301647)
+
+[node name="ChristmasBaubbleRed113" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.83954, 11.4841, -0.124559)
+
+[node name="ChristmasBaubleGreen146" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.76432, 11.244, 1.00056)
+
+[node name="ChristmasBaubbleRed114" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.15288, 12.0969, 1.14443)
+
+[node name="ChristmasBaubleGreen147" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.01821, 11.056, -1.04169)
+
+[node name="ChristmasBaubbleRed115" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.21704, 13.4592, 1.11484)
+
+[node name="ChristmasBaubleGreen148" parent="." instance=ExtResource("2_3ep2q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.52409, 11.8037, 1.79677)
+
+[node name="ChristmasBaubbleRed116" parent="." instance=ExtResource("3_g84c2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.04138, 7.55289, 1.56997)
 
 [node name="GlowItem" parent="." instance=ExtResource("4_0per4")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.16558, 1.57054, 0.823302)

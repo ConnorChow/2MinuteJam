@@ -4,8 +4,11 @@
 
 [sub_resource type="SphereMesh" id="SphereMesh_xj81k"]
 material = ExtResource("1_sc3dw")
+radius = 0.25
+height = 0.5
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_wxnbx"]
+radius = 0.25
 
 [node name="ChristmasBaubbleRed" type="RigidBody3D"]
 

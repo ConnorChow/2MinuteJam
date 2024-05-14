@@ -2,13 +2,13 @@
 
 [ext_resource type="Script" path="res://2MinuteJam/Objects/Door.gd" id="1_tbags"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_dg0s7"]
-size = Vector3(1.5, 3, 0.2)
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_7vnvi"]
 size = Vector3(1.5, 3, 0.2)
 
-[sub_resource type="Animation" id="Animation_54uy3"]
+[sub_resource type="BoxMesh" id="BoxMesh_dg0s7"]
+size = Vector3(1.5, 3, 0.2)
+
+[sub_resource type="Animation" id="Animation_fl3ix"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -23,7 +23,7 @@ tracks/0/keys = {
 "values": [Vector3(0, 0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_1pcv1"]
+[sub_resource type="Animation" id="Animation_jq5ru"]
 resource_name = "close"
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -38,7 +38,7 @@ tracks/0/keys = {
 "values": [Vector3(0, -1.5708, 0), Vector3(0, 0, 0)]
 }
 
-[sub_resource type="Animation" id="Animation_upfou"]
+[sub_resource type="Animation" id="Animation_57mou"]
 resource_name = "open"
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -53,26 +53,26 @@ tracks/0/keys = {
 "values": [Vector3(0, 0, 0), Vector3(0, -1.5708, 0)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_5gc5q"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_v55l0"]
 _data = {
-"RESET": SubResource("Animation_54uy3"),
-"close": SubResource("Animation_1pcv1"),
-"open": SubResource("Animation_upfou")
+"RESET": SubResource("Animation_fl3ix"),
+"close": SubResource("Animation_jq5ru"),
+"open": SubResource("Animation_57mou")
 }
 
-[node name="Node3D" type="Node3D"]
+[node name="animatablebody3d" type="AnimatableBody3D"]
+script = ExtResource("1_tbags")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 1.5, 0)
+shape = SubResource("BoxShape3D_7vnvi")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 1.5, 0.1)
 mesh = SubResource("BoxMesh_dg0s7")
-
-[node name="RigidBody3D" type="RigidBody3D" parent="MeshInstance3D"]
-script = ExtResource("1_tbags")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/RigidBody3D"]
-shape = SubResource("BoxShape3D_7vnvi")
+skeleton = NodePath("")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_5gc5q")
+"": SubResource("AnimationLibrary_v55l0")
 }
