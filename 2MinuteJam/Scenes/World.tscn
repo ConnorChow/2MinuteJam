@@ -714,7 +714,7 @@ shadow_enabled = true
 shadow_opacity = 0.69
 
 [node name="Player" parent="." instance=ExtResource("1_q0ld0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.61046, 5.47646, 1.5047)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.61046, 2.97646, 1.5047)
 collision_layer = 5
 collision_mask = 5
 
@@ -816,7 +816,7 @@ volume_db = -5.0
 [node name="PrebuildContainers" type="Node" parent="."]
 
 [node name="ChristmasHouse" parent="PrebuildContainers" instance=ExtResource("10_b57lw")]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 31.4955, 0.0499992, 22.5571)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 26.4955, 0.0499992, 22.5571)
 
 [node name="Well" parent="PrebuildContainers" instance=ExtResource("12_nf6n7")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 114.486, -0.0100687, 61.3336)
