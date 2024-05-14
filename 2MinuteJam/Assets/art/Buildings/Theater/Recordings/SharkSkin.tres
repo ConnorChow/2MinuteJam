@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://5kti6pmadedr"]
+
+[ext_resource type="Texture2D" uid="uid://dwgrvikh8yrvs" path="res://2MinuteJam/Assets/art/Aquatics/Shork_ShorkBody.png" id="1_0f8dn"]
+
+[resource]
+albedo_texture = ExtResource("1_0f8dn")

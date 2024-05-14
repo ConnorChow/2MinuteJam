@@ -30,6 +30,12 @@ animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
 _subresources={
+"materials": {
+"Material": {
+"use_external/enabled": true,
+"use_external/path": "res://2MinuteJam/Assets/art/Buildings/Theater/Recordings/SharkSkin.tres"
+}
+},
 "meshes": {
 "Shork_Cube_001": {
 "generate/lightmap_uv": 0,
@@ -39,7 +45,7 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Fish Simulation/ShorkMesh.res"
+"save_to_file/path": "res://2MinuteJam/Assets/art/Buildings/Theater/Recordings/ShorkMeshStatic.res"
 }
 }
 }

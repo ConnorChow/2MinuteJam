@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://bd2ppdg3tkr85"]
+
+[ext_resource type="PackedScene" uid="uid://cmd87eusn3sh5" path="res://2MinuteJam/Assets/art/Buildings/Theater/Recordings/flopping_shark.tscn" id="1_ryu3m"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ousna"]
+size = Vector2(10, 10)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f6wvn"]
+size = Vector3(9, 0.5, 9)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_ousna")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1.91069e-15, 7.30144e-30, -1, -4.37114e-08, 1, -8.35187e-23, 1, 4.37114e-08, 1.91069e-15, -5, 1, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+shape = SubResource("BoxShape3D_f6wvn")
+
+[node name="FloppingShark" parent="." instance=ExtResource("1_ryu3m")]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 4, 0)
+light_energy = 2.479
+spot_range = 7.092
+spot_attenuation = 0.517632
+spot_angle = 54.08
+spot_angle_attenuation = 0.615572

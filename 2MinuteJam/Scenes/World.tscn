@@ -1,4 +1,4 @@
-[gd_scene load_steps=138 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=169 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="PackedScene" uid="uid://q0x2l31pruqy" path="res://2MinuteJam/Player/Player.tscn" id="1_q0ld0"]
@@ -50,12 +50,15 @@
 [ext_resource type="PackedScene" uid="uid://bswx8i1owenig" path="res://2MinuteJam/Assets/art/Arcade/EggHockeyMachine.tscn" id="53_yfmmj"]
 [ext_resource type="ArrayMesh" uid="uid://qkbpygfiaew8" path="res://2MinuteJam/Assets/art/Buildings/Arcegg/ArceggBuilding.res" id="54_4ssdd"]
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/Prebuilds/perBuildings.gd" id="54_m8xl8"]
-[ext_resource type="PackedScene" uid="uid://crbhtvx7dj7mq" path="res://2MinuteJam/Scenes/Prebuilds/per_large.tscn" id="54_w3wk8"]
-[ext_resource type="PackedScene" uid="uid://cwsxbkg0chwc1" path="res://2MinuteJam/Scenes/Prebuilds/per_medium.tscn" id="55_nm5tq"]
+[ext_resource type="PackedScene" path="res://2MinuteJam/Scenes/Prebuilds/per_large.tscn" id="54_w3wk8"]
+[ext_resource type="PackedScene" path="res://2MinuteJam/Scenes/Prebuilds/per_medium.tscn" id="55_nm5tq"]
 [ext_resource type="ArrayMesh" uid="uid://diqxw3eqx8wbe" path="res://2MinuteJam/Assets/art/Road/RoadStraight.res" id="56_2j3mh"]
-[ext_resource type="PackedScene" uid="uid://du5mogqov73wy" path="res://2MinuteJam/Scenes/Prebuilds/per_small.tscn" id="56_gj4om"]
+[ext_resource type="PackedScene" path="res://2MinuteJam/Scenes/Prebuilds/per_small.tscn" id="56_gj4om"]
 [ext_resource type="ArrayMesh" uid="uid://dwvsxchx5ekjg" path="res://2MinuteJam/Assets/art/RandomProps/Lamp.res" id="57_einp7"]
+[ext_resource type="PackedScene" uid="uid://c873jfn610f71" path="res://2MinuteJam/Assets/art/Buildings/Theater/FishButtonBox.tscn" id="57_i8man"]
 [ext_resource type="ArrayMesh" uid="uid://b7fdyck8ue3ko" path="res://2MinuteJam/Assets/art/Buildings/Theater/TheaterMesh.res" id="57_mvma6"]
+[ext_resource type="VideoStream" path="res://2MinuteJam/Assets/art/Buildings/Theater/Recordings/FishFilm.ogv" id="58_xvhkm"]
+[ext_resource type="PackedScene" uid="uid://ig1j5twbcmqw" path="res://2MinuteJam/Assets/art/Buildings/Theater/SharkButtonBox.tscn" id="59_7ywh6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rvt8f"]
 bg_color = Color(0.184314, 0.184314, 0.313726, 0.376471)
@@ -151,6 +154,104 @@ viewport_path = NodePath("SubViewport")
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hr54h"]
 resource_local_to_scene = true
 albedo_texture = SubResource("ViewportTexture_bqs0w")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_8wm0a"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7kr7j"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_8wm0a")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_kk58m"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a64ff"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_kk58m")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_vdnn5"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_acgxk"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_vdnn5")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_oe1c5"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0npmt"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_oe1c5")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_1i2ib"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vjmjh"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_1i2ib")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_dndjk"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ulcfl"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_dndjk")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_uscx3"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ctjut"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_uscx3")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_woubl"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cfuad"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_woubl")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_1mahp"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6p4dt"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_1mahp")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_17odl"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_guqmx"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_17odl")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_fqc64"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2oym2"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_fqc64")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_x4bdh"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3pfll"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_x4bdh")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_oyjcp"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s8ctc"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_oyjcp")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_de3vq"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1wum8"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_de3vq")
 
 [sub_resource type="Animation" id="Animation_ugfg2"]
 length = 0.001
@@ -930,72 +1031,72 @@ surface_material_override/0 = SubResource("StandardMaterial3D_hr54h")
 [node name="Poster3d4" parent="PosterContainer" instance=ExtResource("48_py013")]
 transform = Transform3D(8.74228e-08, 1, -4.37114e-08, -4.37114e-08, -4.37114e-08, -1, -1, 8.74228e-08, 4.37114e-08, -67.5003, 1.35804, 49.6873)
 skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_hr54h")
+surface_material_override/0 = SubResource("StandardMaterial3D_7kr7j")
 
 [node name="Poster3d5" parent="PosterContainer" instance=ExtResource("48_py013")]
 transform = Transform3D(8.74228e-08, 1, -4.37114e-08, -4.37114e-08, -4.37114e-08, -1, -1, 8.74228e-08, 4.37114e-08, -67.5003, 3.35804, 49.8523)
 skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_hr54h")
+surface_material_override/0 = SubResource("StandardMaterial3D_a64ff")
 
 [node name="Poster3d6" parent="PosterContainer" instance=ExtResource("48_py013")]
 transform = Transform3D(8.74228e-08, 1, -4.37114e-08, -4.37114e-08, -4.37114e-08, -1, -1, 8.74228e-08, 4.37114e-08, -67.5003, 2.33963, 53.0029)
 skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_hr54h")
+surface_material_override/0 = SubResource("StandardMaterial3D_acgxk")
 
 [node name="Poster3d7" parent="PosterContainer" instance=ExtResource("48_py013")]
 transform = Transform3D(8.74228e-08, 1, -4.37114e-08, -4.37114e-08, -4.37114e-08, -1, -1, 8.74228e-08, 4.37114e-08, -67.5003, 1.99061, 59.793)
 skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_hr54h")
+surface_material_override/0 = SubResource("StandardMaterial3D_0npmt")
 
 [node name="Poster3d8" parent="PosterContainer" instance=ExtResource("48_py013")]
 transform = Transform3D(8.74228e-08, 1, -4.37114e-08, -4.37114e-08, -4.37114e-08, -1, -1, 8.74228e-08, 4.37114e-08, -67.5003, 4.37638, 53.8375)
 skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_hr54h")
+surface_material_override/0 = SubResource("StandardMaterial3D_vjmjh")
 
 [node name="Poster3d9" parent="PosterContainer" instance=ExtResource("48_py013")]
 transform = Transform3D(8.74228e-08, 1, -4.37114e-08, -4.37114e-08, -4.37114e-08, -1, -1, 8.74228e-08, 4.37114e-08, -67.5003, 2.12336, 56.0094)
 skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_hr54h")
+surface_material_override/0 = SubResource("StandardMaterial3D_ulcfl")
 
 [node name="Poster3d10" parent="PosterContainer" instance=ExtResource("48_py013")]
 transform = Transform3D(8.74228e-08, 1, -4.37114e-08, -4.37114e-08, -4.37114e-08, -1, -1, 8.74228e-08, 4.37114e-08, -67.5003, 2.90042, 54.867)
 skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_hr54h")
+surface_material_override/0 = SubResource("StandardMaterial3D_ctjut")
 
 [node name="Poster3d11" parent="PosterContainer" instance=ExtResource("48_py013")]
 transform = Transform3D(8.74228e-08, 1, -4.37114e-08, -4.37114e-08, -4.37114e-08, -1, -1, 8.74228e-08, 4.37114e-08, -67.5003, 1.35804, 21.1873)
 skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_hr54h")
+surface_material_override/0 = SubResource("StandardMaterial3D_cfuad")
 
 [node name="Poster3d12" parent="PosterContainer" instance=ExtResource("48_py013")]
 transform = Transform3D(8.74228e-08, 1, -4.37114e-08, -4.37114e-08, -4.37114e-08, -1, -1, 8.74228e-08, 4.37114e-08, -67.5003, 3.85804, 20.8523)
 skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_hr54h")
+surface_material_override/0 = SubResource("StandardMaterial3D_6p4dt")
 
 [node name="Poster3d13" parent="PosterContainer" instance=ExtResource("48_py013")]
 transform = Transform3D(8.74228e-08, 1, -4.37114e-08, -4.37114e-08, -4.37114e-08, -1, -1, 8.74228e-08, 4.37114e-08, -67.5003, 2.33963, 24.3029)
 skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_hr54h")
+surface_material_override/0 = SubResource("StandardMaterial3D_guqmx")
 
 [node name="Poster3d14" parent="PosterContainer" instance=ExtResource("48_py013")]
 transform = Transform3D(8.74228e-08, 1, -4.37114e-08, -4.37114e-08, -4.37114e-08, -1, -1, 8.74228e-08, 4.37114e-08, -67.5003, 2.59061, 30.393)
 skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_hr54h")
+surface_material_override/0 = SubResource("StandardMaterial3D_2oym2")
 
 [node name="Poster3d15" parent="PosterContainer" instance=ExtResource("48_py013")]
 transform = Transform3D(8.74228e-08, 1, -4.37114e-08, -4.37114e-08, -4.37114e-08, -1, -1, 8.74228e-08, 4.37114e-08, -67.5003, 4.37638, 25.1375)
 skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_hr54h")
+surface_material_override/0 = SubResource("StandardMaterial3D_3pfll")
 
 [node name="Poster3d16" parent="PosterContainer" instance=ExtResource("48_py013")]
 transform = Transform3D(8.74228e-08, 1, -4.37114e-08, -4.37114e-08, -4.37114e-08, -1, -1, 8.74228e-08, 4.37114e-08, -67.5003, 1.52337, 27.3094)
 skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_hr54h")
+surface_material_override/0 = SubResource("StandardMaterial3D_s8ctc")
 
 [node name="Poster3d17" parent="PosterContainer" instance=ExtResource("48_py013")]
 transform = Transform3D(8.74228e-08, 1, -4.37114e-08, -4.37114e-08, -4.37114e-08, -1, -1, 8.74228e-08, 4.37114e-08, -67.5003, 3.20042, 26.267)
 skeleton = NodePath("../..")
-surface_material_override/0 = SubResource("StandardMaterial3D_hr54h")
+surface_material_override/0 = SubResource("StandardMaterial3D_1wum8")
 
 [node name="fadeOutControl" type="Control" parent="."]
 layout_mode = 3
@@ -1022,7 +1123,7 @@ libraries = {
 }
 
 [node name="Timer" type="Timer" parent="fadeOutControl"]
-wait_time = 109.0
+wait_time = 119.0
 one_shot = true
 autostart = true
 
@@ -1573,6 +1674,22 @@ stream = ExtResource("5_gixjt")
 autoplay = true
 expand = true
 loop = true
+
+[node name="FishButton" parent="Theater" instance=ExtResource("57_i8man")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5933, 5.02551, 10.6777)
+
+[node name="Interact" parent="Theater/FishButton" index="2" node_paths=PackedStringArray("video_streamer")]
+video_streamer = NodePath("../../SubViewport/VideoStreamPlayer")
+fish_video = ExtResource("58_xvhkm")
+
+[node name="SharkButton" parent="Theater" instance=ExtResource("59_7ywh6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.32664, 5.04067, 10.7)
+
+[node name="Interact" parent="Theater/SharkButton" index="2" node_paths=PackedStringArray("fish_button")]
+fish_button = NodePath("../../FishButton/Interact")
+
+[node name="SharkSpawnPoint" parent="Theater/SharkButton" index="4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.1967, 5.69029, -14.7238)
 
 [node name="Arcade" type="Node3D" parent="."]
 
@@ -2151,3 +2268,6 @@ shape = SubResource("BoxShape3D_wkdf5")
 [connection signal="body_entered" from="Arcade/arcadeOff" to="." method="_on_arcade_off_body_entered"]
 [connection signal="body_entered" from="Mall/mallOn" to="." method="_on_mall_on_body_entered"]
 [connection signal="body_entered" from="Mall/mallOff" to="." method="_on_mall_off_body_entered"]
+
+[editable path="Theater/FishButton"]
+[editable path="Theater/SharkButton"]

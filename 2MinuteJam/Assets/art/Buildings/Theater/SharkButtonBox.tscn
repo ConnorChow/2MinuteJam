@@ -1,0 +1,81 @@
+[gd_scene load_steps=8 format=3 uid="uid://ig1j5twbcmqw"]
+
+[ext_resource type="PackedScene" uid="uid://cmd87eusn3sh5" path="res://2MinuteJam/Assets/art/Buildings/Theater/Recordings/flopping_shark.tscn" id="1_scuya"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ucfja"]
+size = Vector3(0.5, 1, 0.5)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_u8kvo"]
+top_radius = 0.1
+bottom_radius = 0.1
+height = 0.1
+radial_segments = 16
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ok83h"]
+emission_enabled = true
+emission = Color(1, 0, 0, 1)
+
+[sub_resource type="GDScript" id="GDScript_k12ey"]
+resource_name = "Interact"
+script/source = "extends StaticBody3D
+
+var buffer : bool = false
+
+@export var shark_packed : PackedScene
+@onready var shark_spawn_point = $\"../SharkSpawnPoint\"
+
+@export var fish_button : StaticBody3D
+
+func interact(_node):
+	if fish_button == null || fish_button.swapped_scene:
+		if !buffer:
+			var shark = shark_packed.instantiate() as RigidBody3D
+			
+			add_child(shark)
+			shark.owner = get_tree().root
+			
+			shark.global_position = shark_spawn_point.global_position
+			
+			shark.set_as_top_level(true)
+			
+			buffer = true
+			call_deferred(\"_buffer_button\")
+
+func _buffer_button():
+	await get_tree().create_timer(1).timeout
+	buffer = false
+"
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_08kum"]
+height = 0.1
+radius = 0.1
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gsa7o"]
+size = Vector3(0.5, 1, 0.5)
+
+[node name="FishButton" type="Node3D"]
+
+[node name="Box" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+mesh = SubResource("BoxMesh_ucfja")
+
+[node name="Button" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+mesh = SubResource("CylinderMesh_u8kvo")
+surface_material_override/0 = SubResource("StandardMaterial3D_ok83h")
+
+[node name="Interact" type="StaticBody3D" parent="." groups=["interact"]]
+script = SubResource("GDScript_k12ey")
+shark_packed = ExtResource("1_scuya")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Interact"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CylinderShape3D_08kum")
+
+[node name="Static" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Static"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("BoxShape3D_gsa7o")
+
+[node name="SharkSpawnPoint" type="Node3D" parent="."]
