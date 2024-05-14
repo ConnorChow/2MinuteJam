@@ -12,6 +12,10 @@ func _process(delta):
 	pass
 
 func _physics_process(delta):
+	if get_parent().paused:
+		linear_velocity = Vector2.ZERO
+		return
+	
 	var direction = global_position.direction_to(global_position + linear_velocity)
 	linear_velocity = direction * initial_velocity
 	if linear_velocity.x > 0:

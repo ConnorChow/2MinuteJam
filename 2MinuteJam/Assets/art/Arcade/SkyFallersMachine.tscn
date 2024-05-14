@@ -1,19 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://lblcu8dsb5uy"]
+[gd_scene load_steps=8 format=3 uid="uid://lblcu8dsb5uy"]
 
 [ext_resource type="ArrayMesh" uid="uid://8dpkjx043iyv" path="res://2MinuteJam/Assets/art/Arcade/ArceggMachine.res" id="1_7skx2"]
 [ext_resource type="Script" path="res://ArceggMachine.gd" id="2_tdsr8"]
 [ext_resource type="PackedScene" uid="uid://clc44v0hqw7ci" path="res://2MinuteJam/Scenes/MiniGames/SkyFallers/SkyFallers.tscn" id="3_p51ej"]
+[ext_resource type="Script" path="res://2MinuteJam/Assets/art/Arcade/Interact.gd" id="4_cxg5q"]
+[ext_resource type="PackedScene" uid="uid://dsguxoqo0i7oi" path="res://2MinuteJam/Scenes/MiniGames/SkyFallers/Enemy/Chicken.tscn" id="5_kuio2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xyui2"]
 size = Vector3(1, 2.2, 0.8)
-
-[sub_resource type="GDScript" id="GDScript_oth2e"]
-resource_name = "interact"
-script/source = "extends StaticBody3D
-
-func interact(_node):
-	pass
-"
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dp6ey"]
 size = Vector3(0.686462, 0.686646, 1)
@@ -29,7 +23,9 @@ script = ExtResource("2_tdsr8")
 disable_3d = true
 size = Vector2i(1152, 648)
 
-[node name="SkyFallers" parent="ArceggMachine/SubViewport" instance=ExtResource("3_p51ej")]
+[node name="World" type="Node2D" parent="ArceggMachine/SubViewport"]
+
+[node name="SkyFallers" parent="ArceggMachine/SubViewport/World" instance=ExtResource("3_p51ej")]
 
 [node name="Camera3D" type="Camera3D" parent="ArceggMachine"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 1)
@@ -41,7 +37,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1, -0.1)
 shape = SubResource("BoxShape3D_xyui2")
 
 [node name="Interact" type="StaticBody3D" parent="." groups=["interact"]]
-script = SubResource("GDScript_oth2e")
+script = ExtResource("4_cxg5q")
+arcade_scene = ExtResource("5_kuio2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Interact"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00332642, 1.50543, 0)

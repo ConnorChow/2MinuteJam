@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://bbkq7v1b6oxl"]
+[gd_scene load_steps=10 format=3 uid="uid://bbkq7v1b6oxl"]
 
+[ext_resource type="Script" path="res://2MinuteJam/Scenes/MiniGames/EggHockey/ArcadeGame.gd" id="1_d2hd6"]
 [ext_resource type="Texture2D" uid="uid://bdo37wprd0pk5" path="res://2MinuteJam/Assets/art/testsky.png" id="1_km6ea"]
 [ext_resource type="PackedScene" uid="uid://dusr3i62vm8gd" path="res://2MinuteJam/Scenes/MiniGames/EggHockey/Objects/Paddle.tscn" id="2_wyk66"]
 [ext_resource type="PackedScene" uid="uid://br5kjlf77baf8" path="res://2MinuteJam/Scenes/MiniGames/EggHockey/Objects/EggBall.tscn" id="4_wq2wd"]
@@ -18,6 +19,7 @@ font_size = 32
 font_size = 32
 
 [node name="EggPaddle" type="Node2D"]
+script = ExtResource("1_d2hd6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, 3.05176e-05)

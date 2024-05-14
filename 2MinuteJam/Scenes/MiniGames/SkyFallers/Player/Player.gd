@@ -11,7 +11,9 @@ var canShoot : bool = true
 @onready var shootTimer = $shootTimer
 
 func _physics_process(delta):
-	
+	if get_parent().paused:
+		velocity = Vector2.ZERO
+		return
 	if Input.is_action_just_pressed("jump") || Input.is_action_just_pressed("interact"):
 		if canShoot:
 			var b = bullet.instantiate()

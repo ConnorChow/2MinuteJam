@@ -12,6 +12,10 @@ func _ready():
 	pass
 
 func _physics_process(delta):
+	if get_parent().paused:
+		linear_velocity = Vector2.ZERO
+		return
+	
 	var direction = Input.get_axis("forward", "back")
 	
 	if direction != 0:

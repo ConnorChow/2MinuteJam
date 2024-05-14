@@ -1,4 +1,4 @@
-[gd_scene load_steps=114 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=115 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="PackedScene" uid="uid://q0x2l31pruqy" path="res://2MinuteJam/Player/Player.tscn" id="1_q0ld0"]
@@ -47,6 +47,7 @@
 [ext_resource type="PackedScene" uid="uid://dot1g4mus5vi5" path="res://2MinuteJam/Objects/flashlight/flashlight.tscn" id="46_rqq1x"]
 [ext_resource type="PackedScene" uid="uid://di5gyetrnkv72" path="res://2MinuteJam/Objects/Graves/EmptyGrave.tscn" id="47_4ur8w"]
 [ext_resource type="PackedScene" uid="uid://cihmapoecx3mk" path="res://2MinuteJam/Objects/Poster/Poster3D.tscn" id="48_py013"]
+[ext_resource type="ArrayMesh" uid="uid://bu2jcv2t02qfp" path="res://2MinuteJam/Assets/art/Buildings/Mall/MallMesh.res" id="53_gn57v"]
 [ext_resource type="PackedScene" uid="uid://bswx8i1owenig" path="res://2MinuteJam/Assets/art/Arcade/EggHockeyMachine.tscn" id="53_yfmmj"]
 [ext_resource type="ArrayMesh" uid="uid://qkbpygfiaew8" path="res://2MinuteJam/Assets/art/Buildings/Arcegg/ArceggBuilding.res" id="54_4ssdd"]
 [ext_resource type="ArrayMesh" uid="uid://diqxw3eqx8wbe" path="res://2MinuteJam/Assets/art/Road/RoadStraight.res" id="56_2j3mh"]
@@ -1924,39 +1925,39 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 56)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Arcade/Lightcontainer"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 4.65147, 14.6324)
-light_color = Color(1, 0.839216, 0.568627, 1)
+light_color = Color(0.611765, 0.972549, 0.552941, 1)
 light_energy = 3.775
 light_bake_mode = 1
 distance_fade_enabled = true
-omni_range = 15.422
-omni_attenuation = 0.812253
+omni_range = 9.0
+omni_attenuation = 0.466517
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="Arcade/Lightcontainer"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 4.65147, -0.0763016)
-light_color = Color(1, 0.839216, 0.568627, 1)
+light_color = Color(0.87451, 0.898039, 0.513726, 1)
 light_energy = 3.775
 light_bake_mode = 1
 distance_fade_enabled = true
-omni_range = 15.422
-omni_attenuation = 0.812253
+omni_range = 9.0
+omni_attenuation = 0.466517
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="Arcade/Lightcontainer"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 4.65147, 14.6324)
-light_color = Color(1, 0.839216, 0.568627, 1)
+light_color = Color(0.980392, 0.831373, 0.764706, 1)
 light_energy = 3.775
 light_bake_mode = 1
 distance_fade_enabled = true
-omni_range = 15.422
-omni_attenuation = 0.812253
+omni_range = 9.0
+omni_attenuation = 0.466517
 
 [node name="OmniLight3D4" type="OmniLight3D" parent="Arcade/Lightcontainer"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 4.65147, -0.0763016)
-light_color = Color(1, 0.839216, 0.568627, 1)
+light_color = Color(0.611765, 0.972549, 0.552941, 1)
 light_energy = 3.775
 light_bake_mode = 1
 distance_fade_enabled = true
-omni_range = 15.422
-omni_attenuation = 0.812253
+omni_range = 9.0
+omni_attenuation = 0.466517
 
 [node name="csgs" type="Node3D" parent="Arcade"]
 
@@ -1976,6 +1977,10 @@ material = SubResource("StandardMaterial3D_nm7pg")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 76.0161)
 use_collision = true
 size = Vector3(19, 0.2, 1)
+
+[node name="MallMesh" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -80.8122, 1.3048, -10.5878)
+mesh = ExtResource("53_gn57v")
 
 [connection signal="body_entered" from="CSGcontainer/Mall/mallOn" to="." method="_on_mall_on_body_entered"]
 [connection signal="body_entered" from="CSGcontainer/Mall/mallOff" to="." method="_on_mall_off_body_entered"]
