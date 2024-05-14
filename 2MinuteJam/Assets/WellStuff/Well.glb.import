@@ -55,14 +55,6 @@ _subresources={
 "save_to_file/make_streamable": "",
 "save_to_file/path": "res://2MinuteJam/Assets/WellStuff/Meshes/WellMesh.res"
 }
-},
-"nodes": {
-"PATH:metarig": {
-"import/skip_import": true
-},
-"PATH:metarig/Skeleton3D": {
-"import/skip_import": true
-}
 }
 }
 gltf/naming_version=1
