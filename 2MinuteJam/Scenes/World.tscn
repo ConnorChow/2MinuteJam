@@ -1,4 +1,4 @@
-[gd_scene load_steps=117 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=128 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="PackedScene" uid="uid://q0x2l31pruqy" path="res://2MinuteJam/Player/Player.tscn" id="1_q0ld0"]
@@ -53,8 +53,14 @@
 [ext_resource type="PackedScene" uid="uid://cihmapoecx3mk" path="res://2MinuteJam/Objects/Poster/Poster3D.tscn" id="48_py013"]
 [ext_resource type="PackedScene" uid="uid://bswx8i1owenig" path="res://2MinuteJam/Assets/art/Arcade/EggHockeyMachine.tscn" id="53_yfmmj"]
 [ext_resource type="ArrayMesh" uid="uid://diqxw3eqx8wbe" path="res://2MinuteJam/Assets/art/Road/RoadStraight.res" id="56_2j3mh"]
+[ext_resource type="Texture2D" uid="uid://dst8ng44g4ebh" path="res://2MinuteJam/Assets/art/Characters/CthuluBean.png" id="56_vrofe"]
+[ext_resource type="ArrayMesh" uid="uid://bll10vq4e8uw0" path="res://2MinuteJam/Assets/art/Characters/BEAN.res" id="57_03dk5"]
 [ext_resource type="ArrayMesh" uid="uid://dwvsxchx5ekjg" path="res://2MinuteJam/Assets/art/RandomProps/Lamp.res" id="57_einp7"]
 [ext_resource type="ArrayMesh" uid="uid://b7fdyck8ue3ko" path="res://2MinuteJam/Assets/art/Buildings/Theater/TheaterMesh.res" id="57_mvma6"]
+[ext_resource type="Texture2D" uid="uid://b7rdamqrxpbir" path="res://2MinuteJam/Assets/art/Characters/Dogman.png" id="58_5no6u"]
+[ext_resource type="Texture2D" uid="uid://dhmegwdjn5jov" path="res://2MinuteJam/Assets/art/Characters/GoopPerson.png" id="59_d3oxn"]
+[ext_resource type="Texture2D" uid="uid://dgubrkcus7r2b" path="res://2MinuteJam/Assets/art/Characters/UhWhat.png" id="59_sqclc"]
+[ext_resource type="Texture2D" uid="uid://b2lyovy6cv41t" path="res://2MinuteJam/Assets/art/Characters/MaskedLady.png" id="60_wgfp0"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ha6i"]
 albedo_color = Color(1, 0.427451, 0.356863, 1)
@@ -310,6 +316,21 @@ resource_local_to_scene = true
 shading_mode = 2
 albedo_texture = SubResource("ViewportTexture_gwujo")
 albedo_texture_force_srgb = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0m2xb"]
+albedo_texture = ExtResource("56_vrofe")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_myiax"]
+albedo_texture = ExtResource("58_5no6u")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_c4vut"]
+albedo_texture = ExtResource("59_d3oxn")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mhu3o"]
+albedo_texture = ExtResource("60_wgfp0")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qhjj8"]
+albedo_texture = ExtResource("59_sqclc")
 
 [node name="World" type="Node"]
 script = ExtResource("1_0o181")
@@ -2143,6 +2164,31 @@ stream = ExtResource("5_gixjt")
 autoplay = true
 expand = true
 loop = true
+
+[node name="Bean" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.0167894, 0, -0.999859, 0, 1, 0, 0.999859, 0, -0.0167894, -0.421788, 0, 36.9745)
+material_override = SubResource("StandardMaterial3D_0m2xb")
+mesh = ExtResource("57_03dk5")
+
+[node name="Bean2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.672896, 0, -0.739737, 0, 1, 0, 0.739737, 0, 0.672896, -0.80815, 2.38419e-07, 35.563)
+material_override = SubResource("StandardMaterial3D_myiax")
+mesh = ExtResource("57_03dk5")
+
+[node name="Bean4" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.888689, 0, -0.45851, 0, 1, 0, 0.45851, 0, -0.888689, -1.57452, 2.38419e-07, 39.3104)
+material_override = SubResource("StandardMaterial3D_c4vut")
+mesh = ExtResource("57_03dk5")
+
+[node name="Bean5" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.4272, 0, -0.904157, 0, 1, 0, 0.904157, 0, 0.4272, 0.396709, -1.19209e-07, 35.8544)
+material_override = SubResource("StandardMaterial3D_mhu3o")
+mesh = ExtResource("57_03dk5")
+
+[node name="Bean3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.80599, 0, -0.591929, 0, 1, 0, 0.591929, 0, -0.80599, -0.967093, 2.38419e-07, 38.3045)
+material_override = SubResource("StandardMaterial3D_qhjj8")
+mesh = ExtResource("57_03dk5")
 
 [connection signal="body_entered" from="CSGcontainer/ArcadeContainer/arcadeOn" to="." method="_on_arcade_on_body_entered"]
 [connection signal="body_entered" from="CSGcontainer/ArcadeContainer/arcadeOff" to="." method="_on_arcade_off_body_entered"]
