@@ -40,5 +40,8 @@ spot_angle = 27.9436
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." index="4"]
 stream = ExtResource("2_aadlm")
-volume_db = 5.0
+volume_db = 10.0
+unit_size = 2.0
+pitch_scale = 2.0
 autoplay = true
+max_distance = 30.0

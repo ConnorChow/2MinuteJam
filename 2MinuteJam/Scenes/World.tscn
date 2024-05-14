@@ -1,4 +1,4 @@
-[gd_scene load_steps=174 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=176 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="PackedScene" uid="uid://q0x2l31pruqy" path="res://2MinuteJam/Player/Player.tscn" id="1_q0ld0"]
@@ -26,8 +26,10 @@
 [ext_resource type="PackedScene" uid="uid://dso57uf1ulcqu" path="res://2MinuteJam/npcs/Bridge/bridgeWoman.tscn" id="24_n0frp"]
 [ext_resource type="AudioStream" uid="uid://bn41nkv12vlk1" path="res://2MinuteJam/Assets/SoundEffects/glass-breaking-151256.mp3" id="25_o6gwf"]
 [ext_resource type="PackedScene" uid="uid://blf8e1040dqs5" path="res://2MinuteJam/Objects/Dings/Ding1.tscn" id="25_pem1r"]
+[ext_resource type="PackedScene" uid="uid://bc0ixsh4fseut" path="res://2MinuteJam/npcs/Mall/ringtoneGirl.tscn" id="26_gd0ws"]
 [ext_resource type="PackedScene" uid="uid://b68t6c412dk10" path="res://2MinuteJam/npcs/Arcade/Clerk.tscn" id="26_vwgwm"]
 [ext_resource type="PackedScene" uid="uid://bjeey2keqwgya" path="res://2MinuteJam/npcs/Theater/theater_gossipv2.tscn" id="27_be6du"]
+[ext_resource type="PackedScene" uid="uid://bb43wxoe3x1jh" path="res://2MinuteJam/npcs/Mall/ringtoneBoyfriend.tscn" id="27_cyw8y"]
 [ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain.gd" id="27_ons6m"]
 [ext_resource type="Resource" path="res://test/data.hterrain" id="28_23m2k"]
 [ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="29_yjp2r"]
@@ -891,11 +893,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80.5219, 1.05, -68.4985)
 [node name="Theater" type="Node" parent="npcContainer"]
 
 [node name="theaterShuush" parent="npcContainer/Theater" instance=ExtResource("13_rqgvj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.04196, 3.5, 2.18125)
-colour = Color(0, 0, 0, 1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.04196, 3.01547, 2.18125)
+colour = Color(0.407843, 0.407843, 0.407843, 1)
 
 [node name="theaterGossip2" parent="npcContainer/Theater" instance=ExtResource("27_be6du")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6, 3, 2)
+colour = Color(0.823529, 0.392157, 0.564706, 1)
 
 [node name="Arcegg" type="Node" parent="npcContainer"]
 
@@ -916,6 +919,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.526676, 68)
 [node name="dreamNPC" parent="npcContainer/Building" instance=ExtResource("43_iatgn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 35.05, 91)
 dialogue = [["Is this my dream?", "Or yours?", "The way I see it, our fates appear to be intertwined."]]
+
+[node name="Mall" type="Node" parent="npcContainer"]
+
+[node name="ringtoneGirl" parent="npcContainer/Mall" instance=ExtResource("26_gd0ws")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -30, 1, -86)
+
+[node name="ringtoneBoyfriend" parent="npcContainer/Mall" instance=ExtResource("27_cyw8y")]
+transform = Transform3D(2.98023e-08, 0, 1, 0, 1, 0, -1, 0, 2.98023e-08, -71, 1, 50)
 
 [node name="random shit" type="Node" parent="."]
 
@@ -2227,7 +2238,7 @@ transform = Transform3D(-1, 0, 2.62268e-07, 0, 1, 0, -2.62268e-07, 0, -1, -13.44
 shape = SubResource("BoxShape3D_p1bht")
 
 [node name="CollisionShape3D15" type="CollisionShape3D" parent="Mall/mallBody"]
-transform = Transform3D(4.37114e-08, -1, -1.14641e-14, -1, -4.37114e-08, 2.62268e-07, -2.62268e-07, 0, -1, -59.4485, 13.7825, -64.7932)
+transform = Transform3D(4.37114e-08, -1, 8.74228e-08, -1, -4.37114e-08, 2.62268e-07, -2.62268e-07, -8.74228e-08, -1, -59.4485, 13.7825, -64.7932)
 shape = SubResource("BoxShape3D_naq15")
 
 [node name="CollisionShape3D16" type="CollisionShape3D" parent="Mall/mallBody"]
@@ -2290,19 +2301,6 @@ shape = SubResource("BoxShape3D_7o786")
 transform = Transform3D(2.62268e-07, 4.37114e-08, 1, -1, -4.37114e-08, 2.62268e-07, 4.37114e-08, -1, 4.37114e-08, -100.027, -0.185, 39.344)
 shape = SubResource("BoxShape3D_e11f2")
 
-[node name="graffiitit" type="Node3D" parent="Mall/mallBody"]
-transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, -114, 0.01, -30)
-
-[node name="Sprite3D" type="Sprite3D" parent="Mall/mallBody/graffiitit"]
-transform = Transform3D(3.19311e-08, 0, -0.285714, 0, 0.285714, 0, 0.285714, 0, 3.19311e-08, -13.0513, 3.56894, -3.22585)
-shaded = true
-texture = ExtResource("10_wnl7q")
-
-[node name="Sprite3D2" type="Sprite3D" parent="Mall/mallBody/graffiitit"]
-transform = Transform3D(0.285714, 0, 0, 0, 0.285714, 0, 0, 0, 0.285714, 34.308, 3.53229, -4.94021)
-shaded = true
-texture = ExtResource("11_wy3v0")
-
 [node name="Mirror" type="StaticBody3D" parent="Mall"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -129.428, 1, 51.9221)
 script = ExtResource("10_wk1yf")
@@ -2341,6 +2339,19 @@ shape = SubResource("BoxShape3D_wkdf5")
 [node name="CollisionShape3D3" type="CollisionShape3D" parent="Mall/mallOff"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -66.3481, -21.3805, 39.2542)
 shape = SubResource("BoxShape3D_wkdf5")
+
+[node name="graffiitit" type="Node3D" parent="Mall"]
+transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, -114, 0.01, -30)
+
+[node name="Sprite3D" type="Sprite3D" parent="Mall/graffiitit"]
+transform = Transform3D(1.35519e-07, 0, -1.795, 0, 1.795, 0, 1.795, 0, 1.35519e-07, -13.0513, 3.68822, -3.22585)
+shaded = true
+texture = ExtResource("10_wnl7q")
+
+[node name="Sprite3D2" type="Sprite3D" parent="Mall/graffiitit"]
+transform = Transform3D(1.42, 0, 0, 0, 1.42, 0, 0, 0, 1.42, 34.308, 2.91099, -4.94021)
+shaded = true
+texture = ExtResource("11_wy3v0")
 
 [connection signal="timeout" from="MusicContainer/thePit/horrorTimer" to="." method="_on_horror_timer_timeout"]
 [connection signal="body_entered" from="PrebuildContainers/ThePit/thePitOutsideMusic" to="." method="_on_the_pit_outside_music_body_entered"]

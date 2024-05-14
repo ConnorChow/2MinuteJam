@@ -13,6 +13,7 @@ height = 1.0
 
 [node name="ArcadeKid1" instance=ExtResource("1_d1i7h")]
 dialogue = [["Who are you?", "Who are you?"], ["Are you gonna say anything, or are you just gonna stand there being weird?"], ["If you keep being weird my dad’s gonna beat you up!", "He’s a cop, so he could totally do it!"], ["Stop being so weird, weirdo!"]]
+colour = Color(1, 1, 1, 1)
 myName = "Billeigh"
 
 [node name="MeshInstance3D" parent="." index="0"]

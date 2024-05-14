@@ -127,7 +127,7 @@ func _physics_process(delta):
 			inMinigame = false
 			camera.make_current()
 			
-		if !GlobalController.inDialogue:
+		elif !GlobalController.inDialogue:
 			ui.visible=true
 			get_tree().paused = true
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)

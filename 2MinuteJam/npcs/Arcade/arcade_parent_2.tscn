@@ -11,6 +11,7 @@ material = SubResource("StandardMaterial3D_vt2bk")
 
 [node name="ArcadeParent2" instance=ExtResource("1_0rsk4")]
 dialogue = [["What do you want?"], ["Leave me and my kid alone.", "We don’t need freaks like you around here."], ["Leave or I’ll make you leave."]]
+colour = Color(0, 0.905882, 0.886275, 1)
 myName = "Joanne"
 
 [node name="MeshInstance3D" parent="." index="0"]
