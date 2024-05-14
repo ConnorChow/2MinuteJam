@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://wk803j06nugm"]
+
+[ext_resource type="Texture2D" uid="uid://bfnjvbuxe73a2" path="res://2MinuteJam/Assets/art/Buildings/XmasHouse/carpet_019_diffuse_xtm_2k.jpg" id="1_00bie"]
+
+[resource]
+albedo_texture = ExtResource("1_00bie")
