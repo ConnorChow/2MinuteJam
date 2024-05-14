@@ -1,11 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://bmhrqsukfdhao"]
+[gd_scene load_steps=9 format=3 uid="uid://bmhrqsukfdhao"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Objects/Door.gd" id="1_tbags"]
+[ext_resource type="Material" uid="uid://c82d3oohao4y5" path="res://2MinuteJam/Assets/art/Buildings/XmasHouse/RedPlanks.tres" id="2_cvxhe"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7vnvi"]
 size = Vector3(1.8, 2.4, 0.2)
 
 [sub_resource type="BoxMesh" id="BoxMesh_dg0s7"]
+material = ExtResource("2_cvxhe")
 size = Vector3(1.8, 2.4, 0.2)
 
 [sub_resource type="Animation" id="Animation_jdfm7"]
