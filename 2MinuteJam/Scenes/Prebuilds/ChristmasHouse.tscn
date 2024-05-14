@@ -22,7 +22,7 @@ size = Vector3(3.95651, 10.0854, 0.0684326)
 transform = Transform3D(1, 0, 7.10543e-15, 0, 1, 0, -7.10543e-15, 0, 1, 0, 0, 0)
 
 [node name="door" parent="." instance=ExtResource("1_xkw1w")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.802258, 0.0297256, 1.88638)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.759044, 0.0297256, 1.88638)
 
 [node name="help" type="Node3D" parent="."]
 
@@ -1539,7 +1539,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.843794, 8.93358, 0.34307)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3265, 6.92803, 0.11627)
 
 [node name="GlowItem" parent="help" instance=ExtResource("4_0per4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.16558, 8.77295, 0.823302)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3047, 10.1147, 0.823302)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=173 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=171 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="PackedScene" uid="uid://q0x2l31pruqy" path="res://2MinuteJam/Player/Player.tscn" id="1_q0ld0"]
@@ -127,13 +127,6 @@ size = Vector3(37.15, 8.035, 156.29)
 size = Vector3(36, 0.3, 5)
 
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_65k2f"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hd1yf"]
-albedo_color = Color(1, 0, 0, 1)
-
-[sub_resource type="TubeTrailMesh" id="TubeTrailMesh_k2lea"]
-material = SubResource("StandardMaterial3D_hd1yf")
-sections = 16
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_l48ae"]
 viewport_path = NodePath("SubViewport")
@@ -971,23 +964,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -913.131, 0)
 [node name="CollisionShape3D" type="CollisionShape3D" parent="deathPlane"]
 shape = SubResource("WorldBoundaryShape3D_65k2f")
 
-[node name="Node" type="Node" parent="."]
-
-[node name="SoftBody3D" type="SoftBody3D" parent="Node"]
-transform = Transform3D(1, 7.45058e-09, 2.98023e-08, 1.49012e-08, 1, 1.11759e-08, 0, 3.72529e-09, 1, -21, 3.1043, -103)
-mesh = SubResource("TubeTrailMesh_k2lea")
-simulation_precision = 6
-total_mass = 1.01
-linear_stiffness = 0.05
-damping_coefficient = 0.0
-pinned_points = [4, 441]
-attachments/0/point_index = 4
-attachments/0/spatial_attachment_path = NodePath("")
-attachments/0/offset = Vector3(0, 0, 0)
-attachments/1/point_index = 441
-attachments/1/spatial_attachment_path = NodePath("")
-attachments/1/offset = Vector3(0, 0, 0)
-
 [node name="Graveyard" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 6)
 
@@ -995,28 +971,28 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15, 0, 6)
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 145, 1.3, -69)
 
 [node name="EggTransWoman" parent="Graveyard" instance=ExtResource("33_2pep7")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 152.6, 1.3, -61)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 152.6, 1.62468, -61)
 
 [node name="FlameFlame100" parent="Graveyard" instance=ExtResource("34_sqxvx")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 145.2, 1.3, -53.5)
 
 [node name="KissCatMiddle" parent="Graveyard" instance=ExtResource("35_o08b2")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 140, 1.4, -37)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 140, 0.556003, -37)
 
 [node name="PumpkinRingSag" parent="Graveyard" instance=ExtResource("36_cgb85")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 153, 1.4, -39.7)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 153, 1.6529, -39.7)
 
 [node name="ShushSkullPensive" parent="Graveyard" instance=ExtResource("37_upwuf")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 129, 1.3, -63.5)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 131, 0.769697, -63.5)
 
 [node name="VulcanAlienDolphin" parent="Graveyard" instance=ExtResource("38_pro8r")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 132, 2.1, -52)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 132, 0.752804, -52)
 
 [node name="ThreeLaughs" parent="Graveyard" instance=ExtResource("39_wdh1o")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 132, 1.3, -76)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 132, 1.27552, -76)
 
 [node name="BoyCopPuke" parent="Graveyard" instance=ExtResource("40_pal7j")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 146, 1.3, -83)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 146, 1.3557, -82.1118)
 
 [node name="EmptyGrave" parent="Graveyard" instance=ExtResource("47_4ur8w")]
 transform = Transform3D(-0.0209524, 0.995028, 0.0973725, -0.201196, -0.0995979, 0.974474, 0.979327, 0.000826515, 0.202282, 155.519, 1.44193, -105)
@@ -2289,6 +2265,18 @@ shape = SubResource("CylinderShape3D_t0062")
 [node name="CollisionShape3D23" type="CollisionShape3D" parent="Mall/mallBody"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.4431, 0, -62.9057)
 shape = SubResource("CylinderShape3D_t0062")
+
+[node name="CollisionShape3D24" type="CollisionShape3D" parent="Mall/mallBody"]
+transform = Transform3D(4.37114e-08, -1, -1.14641e-14, -1, -4.37114e-08, 2.62268e-07, -2.62268e-07, 0, -1, -59.4485, -0.184538, -64.7932)
+shape = SubResource("BoxShape3D_naq15")
+
+[node name="CollisionShape3D25" type="CollisionShape3D" parent="Mall/mallBody"]
+transform = Transform3D(2.62268e-07, 4.37114e-08, 1, -1, -4.37114e-08, 2.62268e-07, 4.37114e-08, -1, 4.37114e-08, -118.889, -0.185, -29.973)
+shape = SubResource("BoxShape3D_7o786")
+
+[node name="CollisionShape3D26" type="CollisionShape3D" parent="Mall/mallBody"]
+transform = Transform3D(2.62268e-07, 4.37114e-08, 1, -1, -4.37114e-08, 2.62268e-07, 4.37114e-08, -1, 4.37114e-08, -100.027, -0.185, 39.344)
+shape = SubResource("BoxShape3D_e11f2")
 
 [node name="graffiitit" type="Node3D" parent="Mall/mallBody"]
 transform = Transform3D(1.4, 0, 0, 0, 1.4, 0, 0, 0, 1.4, -114, 0.01, -30)
