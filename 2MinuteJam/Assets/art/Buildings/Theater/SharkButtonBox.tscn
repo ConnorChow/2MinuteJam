@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://ig1j5twbcmqw"]
+[gd_scene load_steps=8 format=3 uid="uid://bedk0gn3reo4w"]
 
 [ext_resource type="PackedScene" uid="uid://cmd87eusn3sh5" path="res://2MinuteJam/Assets/art/Buildings/Theater/Recordings/flopping_shark.tscn" id="1_scuya"]
 
@@ -33,8 +33,8 @@ func interact(_node):
 			
 			add_child(shark)
 			shark.owner = get_tree().root
-			
-			shark.global_position = shark_spawn_point.global_position
+			#for i in shark_spawn_point.get_children().pick_random()
+			shark.global_position = shark_spawn_point.get_children().pick_random().global_position
 			
 			shark.set_as_top_level(true)
 			
@@ -42,7 +42,7 @@ func interact(_node):
 			call_deferred(\"_buffer_button\")
 
 func _buffer_button():
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(.1).timeout
 	buffer = false
 "
 

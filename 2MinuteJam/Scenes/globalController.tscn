@@ -6,7 +6,7 @@
 script = ExtResource("1_m78h7")
 
 [node name="restartTimer" type="Timer" parent="."]
-wait_time = 120.0
+wait_time = 130.0
 one_shot = true
 
 [connection signal="timeout" from="restartTimer" to="." method="_on_timer_timeout"]
