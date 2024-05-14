@@ -36,7 +36,7 @@ func _on_left_goal_body_entered(body):
 
 
 func _on_right_goal_body_entered(body):
-	print("hit")
+	#print("hit")
 	playerGoals +=1
 	updateScore()
 

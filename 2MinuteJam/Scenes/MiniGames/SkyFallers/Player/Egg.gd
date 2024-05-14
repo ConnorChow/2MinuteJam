@@ -8,6 +8,14 @@ func _process(delta):
 	$Sprite2D.rotation_degrees += 120* delta
 	$CollisionShape2D.rotation_degrees += 60 * delta
 
+func _ready():
+	randomize()
+	var i = randi_range(0,1)
+	match i:
+		0:$bloop1.play()
+		1:$bloop2.play()
+			
+	
 
 
 

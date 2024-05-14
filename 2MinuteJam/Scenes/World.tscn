@@ -1,4 +1,4 @@
-[gd_scene load_steps=117 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=108 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="PackedScene" uid="uid://q0x2l31pruqy" path="res://2MinuteJam/Player/Player.tscn" id="1_q0ld0"]
@@ -6,10 +6,6 @@
 [ext_resource type="ArrayMesh" uid="uid://e1wk8hs3cndl" path="res://2MinuteJam/Assets/art/Road/RoadT.res" id="3_s10n2"]
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/UiHandler.gd" id="5_fg8bl"]
 [ext_resource type="VideoStream" path="res://2MinuteJam/Movies/escalators_-_286-_360p_.ogv" id="5_gixjt"]
-[ext_resource type="Texture2D" uid="uid://762rp3fn58pf" path="res://2MinuteJam/Scenes/MiniGames/SkyFallers/Player/Chicken.png" id="6_2krvf"]
-[ext_resource type="Script" path="res://2MinuteJam/Scenes/SkyFallers.gd" id="6_nkmrj"]
-[ext_resource type="Script" path="res://2MinuteJam/Scenes/EggHockey.gd" id="8_bytbj"]
-[ext_resource type="Texture2D" uid="uid://cxvullig7gdwq" path="res://2MinuteJam/Scenes/MiniGames/SkyFallers/Player/egg.png" id="9_23fd3"]
 [ext_resource type="PackedScene" uid="uid://ba43ypuyd56kj" path="res://2MinuteJam/Scenes/Prebuilds/ChristmasHouse.tscn" id="10_b57lw"]
 [ext_resource type="PackedScene" uid="uid://lblcu8dsb5uy" path="res://2MinuteJam/Assets/art/Arcade/SkyFallersMachine.tscn" id="10_d8yut"]
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/Mirror.gd" id="10_wk1yf"]
@@ -52,37 +48,10 @@
 [ext_resource type="PackedScene" uid="uid://di5gyetrnkv72" path="res://2MinuteJam/Objects/Graves/EmptyGrave.tscn" id="47_4ur8w"]
 [ext_resource type="PackedScene" uid="uid://cihmapoecx3mk" path="res://2MinuteJam/Objects/Poster/Poster3D.tscn" id="48_py013"]
 [ext_resource type="PackedScene" uid="uid://bswx8i1owenig" path="res://2MinuteJam/Assets/art/Arcade/EggHockeyMachine.tscn" id="53_yfmmj"]
+[ext_resource type="ArrayMesh" uid="uid://qkbpygfiaew8" path="res://2MinuteJam/Assets/art/Buildings/Arcegg/ArceggBuilding.res" id="54_4ssdd"]
 [ext_resource type="ArrayMesh" uid="uid://diqxw3eqx8wbe" path="res://2MinuteJam/Assets/art/Road/RoadStraight.res" id="56_2j3mh"]
 [ext_resource type="ArrayMesh" uid="uid://dwvsxchx5ekjg" path="res://2MinuteJam/Assets/art/RandomProps/Lamp.res" id="57_einp7"]
 [ext_resource type="ArrayMesh" uid="uid://b7fdyck8ue3ko" path="res://2MinuteJam/Assets/art/Buildings/Theater/TheaterMesh.res" id="57_mvma6"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ha6i"]
-albedo_color = Color(1, 0.427451, 0.356863, 1)
-roughness = 0.54
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_68jg0"]
-albedo_color = Color(0.466667, 0.00392157, 0.827451, 1)
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_nycwo"]
-material = SubResource("StandardMaterial3D_68jg0")
-size = Vector2(27, 40)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3xffk"]
-albedo_color = Color(0, 1, 0, 1)
-metallic = 0.55
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nm7pg"]
-albedo_color = Color(0.545098, 0.541176, 0.545098, 1)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_gx8vr"]
-resource_local_to_scene = true
-size = Vector3(2.02747, 2, 0.1)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_yyo4h"]
-size = Vector3(4.084, 6.171, 1)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_tsild"]
-size = Vector3(5.76184, 11.4308, 0.638672)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_wkdf5"]
 size = Vector3(8, 9, 1)
@@ -310,6 +279,12 @@ resource_local_to_scene = true
 shading_mode = 2
 albedo_texture = SubResource("ViewportTexture_gwujo")
 albedo_texture_force_srgb = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tsild"]
+size = Vector3(5.76184, 11.4308, 0.638672)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nm7pg"]
+albedo_color = Color(0.545098, 0.541176, 0.545098, 1)
 
 [node name="World" type="Node"]
 script = ExtResource("1_0o181")
@@ -809,223 +784,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 171.331, 20.05, 100)
 use_collision = true
 size = Vector3(20, 40, 20)
 
-[node name="ArcadeContainer" type="Node" parent="CSGcontainer"]
-
-[node name="CSGBox3D6" type="CSGBox3D" parent="CSGcontainer/ArcadeContainer"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 0, 65.8154)
-use_collision = true
-size = Vector3(27, 1, 40)
-material = SubResource("StandardMaterial3D_4ha6i")
-
-[node name="CSGBox3D7" type="CSGBox3D" parent="CSGcontainer/ArcadeContainer"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 12, 65.8154)
-use_collision = true
-size = Vector3(27, 1, 40)
-material = SubResource("StandardMaterial3D_4ha6i")
-
-[node name="CSGBox3D9" type="CSGBox3D" parent="CSGcontainer/ArcadeContainer"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 6, 65.8067)
-use_collision = true
-size = Vector3(1, 12, 41)
-material = SubResource("StandardMaterial3D_4ha6i")
-
-[node name="CSGBox3D10" type="CSGBox3D" parent="CSGcontainer/ArcadeContainer"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 6, 65.8067)
-use_collision = true
-size = Vector3(1, 12, 41)
-material = SubResource("StandardMaterial3D_4ha6i")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="CSGcontainer/ArcadeContainer"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.95, 0.501, 66)
-mesh = SubResource("PlaneMesh_nycwo")
-
-[node name="CSGBox3D" type="CSGBox3D" parent="CSGcontainer/ArcadeContainer"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 2, 51.7634)
-use_collision = true
-size = Vector3(2, 3, 2)
-material = SubResource("StandardMaterial3D_3xffk")
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="CSGcontainer/ArcadeContainer"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1.12793, 51.7634)
-use_collision = true
-size = Vector3(1, 1.25, 2)
-material = SubResource("StandardMaterial3D_3xffk")
-
-[node name="CSGBox3D3" type="CSGBox3D" parent="CSGcontainer/ArcadeContainer"]
-transform = Transform3D(-1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, -1, -13.9182, 2, 72.7634)
-use_collision = true
-size = Vector3(2, 3, 2)
-material = SubResource("StandardMaterial3D_3xffk")
-
-[node name="CSGBox3D4" type="CSGBox3D" parent="CSGcontainer/ArcadeContainer"]
-transform = Transform3D(-1, 0, 8.9407e-08, 0, 1, 0, -8.9407e-08, 0, -1, -12.4182, 1.12793, 72.7634)
-use_collision = true
-size = Vector3(1, 1.25, 2)
-material = SubResource("StandardMaterial3D_3xffk")
-
-[node name="CSGBox3D5" type="CSGBox3D" parent="CSGcontainer/ArcadeContainer"]
-transform = Transform3D(1, 0, -7.45058e-08, 0, 1, 0, 7.45058e-08, 0, 1, 8.31523, 2, 63.7634)
-use_collision = true
-size = Vector3(2, 3, 2)
-material = SubResource("StandardMaterial3D_3xffk")
-
-[node name="CSGBox3D8" type="CSGBox3D" parent="CSGcontainer/ArcadeContainer"]
-transform = Transform3D(1, 0, -7.45058e-08, 0, 1, 0, 7.45058e-08, 0, 1, 6.81523, 1.12793, 63.7634)
-use_collision = true
-size = Vector3(1, 1.25, 2)
-material = SubResource("StandardMaterial3D_3xffk")
-
-[node name="CSGBox3D11" type="CSGBox3D" parent="CSGcontainer/ArcadeContainer"]
-transform = Transform3D(-1, 0, -1.2917e-08, 0, 1, 0, 1.2917e-08, 0, -1, -13.1848, 2, 62.7634)
-use_collision = true
-size = Vector3(2, 3, 2)
-material = SubResource("StandardMaterial3D_3xffk")
-
-[node name="CSGBox3D15" type="CSGBox3D" parent="CSGcontainer/ArcadeContainer"]
-transform = Transform3D(-1, 0, -1.2917e-08, 0, 1, 0, 1.2917e-08, 0, -1, -3.18477, 0.768066, 63.7634)
-use_collision = true
-size = Vector3(4, 0.536133, 6)
-material = SubResource("StandardMaterial3D_3xffk")
-
-[node name="CSGBox3D16" type="CSGBox3D" parent="CSGcontainer/ArcadeContainer"]
-transform = Transform3D(-1, 0, -1.2917e-08, 0, 0.5, 0, 1.2917e-08, 0, -1, 4.81523, 1, 76.2634)
-use_collision = true
-size = Vector3(12, 2, 3)
-material = SubResource("StandardMaterial3D_nm7pg")
-
-[node name="CSGBox3D17" type="CSGBox3D" parent="CSGcontainer/ArcadeContainer"]
-transform = Transform3D(-1, 0, -1.2917e-08, 0, 0.5, 0, 1.2917e-08, 0, -1, -2.68477, 1, 77.2634)
-use_collision = true
-size = Vector3(3, 2, 5)
-material = SubResource("StandardMaterial3D_nm7pg")
-
-[node name="CSGBox3D12" type="CSGBox3D" parent="CSGcontainer/ArcadeContainer"]
-transform = Transform3D(-1, 0, -1.2917e-08, 0, 1, 0, 1.2917e-08, 0, -1, -11.6848, 1.12793, 62.7634)
-use_collision = true
-size = Vector3(1, 1.25, 2)
-material = SubResource("StandardMaterial3D_3xffk")
-
-[node name="CSGBox3D13" type="CSGBox3D" parent="CSGcontainer/ArcadeContainer"]
-transform = Transform3D(3.07944e-08, 0, 1, 0, 1, 0, -1, 0, 3.07944e-08, -5.43477, 2, 48.0134)
-use_collision = true
-size = Vector3(2, 3, 2)
-material = SubResource("StandardMaterial3D_3xffk")
-
-[node name="CSGBox3D14" type="CSGBox3D" parent="CSGcontainer/ArcadeContainer"]
-transform = Transform3D(3.07944e-08, 0, 1, 0, 1, 0, -1, 0, 3.07944e-08, -5.43477, 1.12793, 49.5134)
-use_collision = true
-size = Vector3(1, 1.25, 2)
-material = SubResource("StandardMaterial3D_3xffk")
-
-[node name="OmniLight3D" type="OmniLight3D" parent="CSGcontainer/ArcadeContainer"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 5.61579, 75.6324)
-light_bake_mode = 1
-distance_fade_enabled = true
-omni_range = 10.0
-omni_shadow_mode = 0
-
-[node name="OmniLight3D2" type="OmniLight3D" parent="CSGcontainer/ArcadeContainer"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 5.61579, 55.9237)
-light_energy = 16.0
-light_indirect_energy = 16.0
-light_bake_mode = 1
-distance_fade_enabled = true
-omni_range = 10.0
-omni_attenuation = 1.62451
-
-[node name="SpotLight3D" type="SpotLight3D" parent="CSGcontainer/ArcadeContainer"]
-transform = Transform3D(-1, 0, -5.96046e-08, -2.98023e-08, 0.866025, 0.5, 5.16191e-08, 0.5, -0.866025, -5.10025, 3.07846, 48.7715)
-light_color = Color(1, 0, 0.27451, 1)
-light_bake_mode = 1
-spot_range = 14.7488
-spot_attenuation = 0.00104665
-spot_angle = 19.1705
-
-[node name="SpotLight3D2" type="SpotLight3D" parent="CSGcontainer/ArcadeContainer"]
-transform = Transform3D(-7.90775e-09, -0.5, 0.866025, -2.98023e-08, 0.866025, 0.5, -1, -2.18557e-08, -2.17495e-08, 6.89975, 3.07846, 51.7715)
-light_color = Color(1, 0, 0.27451, 1)
-light_bake_mode = 1
-spot_range = 14.7488
-spot_attenuation = 0.00104665
-spot_angle = 19.1705
-
-[node name="SpotLight3D3" type="SpotLight3D" parent="CSGcontainer/ArcadeContainer"]
-transform = Transform3D(-7.90775e-09, -0.5, 0.866025, -2.98023e-08, 0.866025, 0.5, -1, -2.18557e-08, -2.17495e-08, 6.89975, 3.07846, 63.7715)
-light_color = Color(1, 0, 0.27451, 1)
-light_bake_mode = 1
-spot_range = 14.7488
-spot_attenuation = 0.00104665
-spot_angle = 19.1705
-
-[node name="SpotLight3D4" type="SpotLight3D" parent="CSGcontainer/ArcadeContainer"]
-transform = Transform3D(-1.19209e-07, 0.5, -0.866025, -2.26056e-08, 0.866025, 0.5, 1, 7.91817e-08, -9.19355e-08, -12.1002, 3.07846, 62.7715)
-light_color = Color(1, 0, 0.27451, 1)
-light_bake_mode = 1
-spot_range = 14.7488
-spot_attenuation = 0.00104665
-spot_angle = 19.1705
-
-[node name="SpotLight3D5" type="SpotLight3D" parent="CSGcontainer/ArcadeContainer"]
-transform = Transform3D(-1.19209e-07, 0.5, -0.866025, -2.26056e-08, 0.866025, 0.5, 1, 7.91817e-08, -9.19355e-08, -12.1002, 3.07846, 72.7715)
-light_color = Color(1, 0, 0.27451, 1)
-light_bake_mode = 1
-spot_range = 14.7488
-spot_attenuation = 0.00104665
-spot_angle = 19.1705
-
-[node name="StaticBody3D" type="StaticBody3D" parent="CSGcontainer/ArcadeContainer" groups=["interact"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.4, 2.492, 49.053)
-script = ExtResource("6_nkmrj")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CSGcontainer/ArcadeContainer/StaticBody3D"]
-shape = SubResource("BoxShape3D_gx8vr")
-
-[node name="Sprite3D" type="Sprite3D" parent="CSGcontainer/ArcadeContainer/StaticBody3D"]
-pixel_size = 0.03
-texture = ExtResource("6_2krvf")
-
-[node name="StaticBody3D2" type="StaticBody3D" parent="CSGcontainer/ArcadeContainer" groups=["interact"]]
-transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, -3.4, 1.04806, 63.053)
-script = ExtResource("8_bytbj")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CSGcontainer/ArcadeContainer/StaticBody3D2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.190155, -0.688583, -0.467975)
-shape = SubResource("BoxShape3D_yyo4h")
-
-[node name="Sprite3D" type="Sprite3D" parent="CSGcontainer/ArcadeContainer/StaticBody3D2"]
-pixel_size = 0.03
-texture = ExtResource("9_23fd3")
-
-[node name="arcadeOn" type="Area3D" parent="CSGcontainer/ArcadeContainer"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 70.6148)
-collision_layer = 4
-collision_mask = 4
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="CSGcontainer/ArcadeContainer/arcadeOn"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.7217, 5.8844, -24.044)
-shape = SubResource("BoxShape3D_tsild")
-
-[node name="arcadeOff" type="Area3D" parent="CSGcontainer/ArcadeContainer"]
-collision_layer = 4
-collision_mask = 4
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="CSGcontainer/ArcadeContainer/arcadeOff"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.7217, 5.8844, 44.3834)
-shape = SubResource("BoxShape3D_tsild")
-
-[node name="CSGBox3D18" type="CSGBox3D" parent="CSGcontainer/ArcadeContainer"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5, 3, 83.8389)
-use_collision = true
-size = Vector3(26, 0.2, 1)
-
-[node name="ArcadeMachines" type="Node" parent="CSGcontainer/ArcadeContainer"]
-
-[node name="SkyfallersMachine" parent="CSGcontainer/ArcadeContainer/ArcadeMachines" instance=ExtResource("10_d8yut")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.5, 52.1762)
-
-[node name="EggHockeyMachine" parent="CSGcontainer/ArcadeContainer/ArcadeMachines" instance=ExtResource("53_yfmmj")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.10031, 0.5, 56.7206)
-
 [node name="Mall" type="Node" parent="CSGcontainer"]
 
 [node name="CSGBox3D" type="CSGBox3D" parent="CSGcontainer/Mall"]
@@ -1252,7 +1010,7 @@ volume_db = -5.0
 transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 31.4955, 0.0499992, 22.5571)
 
 [node name="Well" parent="PrebuildContainers" instance=ExtResource("12_nf6n7")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -94.7513, 0, 89.378)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 114.249, -0.0100687, 69.378)
 
 [node name="ThePit" parent="PrebuildContainers" instance=ExtResource("17_vscgp")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -69.1919, -4.20831, -68.3296)
@@ -1336,7 +1094,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6, 3,
 [node name="Arcegg" type="Node" parent="npcContainer"]
 
 [node name="Clerk" parent="npcContainer/Arcegg" instance=ExtResource("26_vwgwm")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.35956, 1.5, 79.8874)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.35956, 1, 72.8874)
 
 [node name="Building" type="Node" parent="npcContainer"]
 
@@ -1347,7 +1105,7 @@ dialogue = [["Is this my dream?", "Or yours?", "The way I see it, our fates appe
 [node name="random shit" type="Node" parent="."]
 
 [node name="Flashlight" parent="random shit" instance=ExtResource("46_rqq1x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3, 3.35, 83.6)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3, 2.35, 75.7)
 
 [node name="Hands" parent="random shit" instance=ExtResource("30_4ct5l")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.3026, 1.33867, 55.2919)
@@ -1555,6 +1313,7 @@ transform = Transform3D(-1.48943e-09, 1, 3.2398e-08, 0.258819, -3.09086e-08, 0.9
 light_color = Color(0.733333, 0.709804, 0, 1)
 light_energy = 14.803
 light_specular = 0.0
+light_bake_mode = 0
 spot_range = 15.0
 spot_attenuation = 0.784584
 spot_angle = 56.76
@@ -1579,6 +1338,7 @@ shape = SubResource("BoxShape3D_7cq2f")
 transform = Transform3D(-1.48943e-09, 1, 3.2398e-08, 0.258819, -3.09086e-08, 0.965926, 0.965926, 9.82391e-09, -0.258819, 0, 4.70028, 1.04963)
 light_color = Color(0.733333, 0.709804, 0, 1)
 light_energy = 14.803
+light_bake_mode = 0
 spot_range = 15.0
 spot_attenuation = 0.784584
 spot_angle = 56.76
@@ -1603,30 +1363,7 @@ shape = SubResource("BoxShape3D_7cq2f")
 transform = Transform3D(-1.48943e-09, 1, 3.2398e-08, 0.258819, -3.09086e-08, 0.965926, 0.965926, 9.82391e-09, -0.258819, 0, 4.70028, 1.04963)
 light_color = Color(0.733333, 0.709804, 0, 1)
 light_energy = 14.803
-spot_range = 15.0
-spot_attenuation = 0.784584
-spot_angle = 56.76
-spot_angle_attenuation = 2.54912
-
-[node name="StaticBody3D11" type="StaticBody3D" parent="LampContainer"]
-transform = Transform3D(-1, 0, 0, 0, 1, 0, 0, 0, -1, -30.6, 0, -24)
-
-[node name="Lamp" type="MeshInstance3D" parent="LampContainer/StaticBody3D11"]
-mesh = ExtResource("57_einp7")
-skeleton = NodePath("../../..")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LampContainer/StaticBody3D11"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
-shape = SubResource("CylinderShape3D_urfac")
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="LampContainer/StaticBody3D11"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00390816, 5.40335, 0.641703)
-shape = SubResource("BoxShape3D_7cq2f")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="LampContainer/StaticBody3D11"]
-transform = Transform3D(-1.48943e-09, 1, 3.2398e-08, 0.258819, -3.09086e-08, 0.965926, 0.965926, 9.82391e-09, -0.258819, 0, 4.70028, 1.04963)
-light_color = Color(0.733333, 0.709804, 0, 1)
-light_energy = 14.803
+light_bake_mode = 0
 spot_range = 15.0
 spot_attenuation = 0.784584
 spot_angle = 56.76
@@ -1651,37 +1388,14 @@ shape = SubResource("BoxShape3D_7cq2f")
 transform = Transform3D(-1.48943e-09, 1, 3.2398e-08, 0.258819, -3.09086e-08, 0.965926, 0.965926, 9.82391e-09, -0.258819, 0, 4.70028, 1.04963)
 light_color = Color(0.733333, 0.709804, 0, 1)
 light_energy = 14.803
-spot_range = 15.0
-spot_attenuation = 0.784584
-spot_angle = 56.76
-spot_angle_attenuation = 2.54912
-
-[node name="StaticBody3D2" type="StaticBody3D" parent="LampContainer"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 26.4, 0, 5)
-
-[node name="Lamp" type="MeshInstance3D" parent="LampContainer/StaticBody3D2"]
-mesh = ExtResource("57_einp7")
-skeleton = NodePath("../../..")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LampContainer/StaticBody3D2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
-shape = SubResource("CylinderShape3D_urfac")
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="LampContainer/StaticBody3D2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00390816, 5.40335, 0.641703)
-shape = SubResource("BoxShape3D_7cq2f")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="LampContainer/StaticBody3D2"]
-transform = Transform3D(-1.48943e-09, 1, 3.2398e-08, 0.258819, -3.09086e-08, 0.965926, 0.965926, 9.82391e-09, -0.258819, 0, 4.70028, 1.04963)
-light_color = Color(0.733333, 0.709804, 0, 1)
-light_energy = 14.803
+light_bake_mode = 0
 spot_range = 15.0
 spot_attenuation = 0.784584
 spot_angle = 56.76
 spot_angle_attenuation = 2.54912
 
 [node name="StaticBody3D3" type="StaticBody3D" parent="LampContainer"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 24.4, 0, 34)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 31.2403, 0, 34)
 
 [node name="Lamp" type="MeshInstance3D" parent="LampContainer/StaticBody3D3"]
 mesh = ExtResource("57_einp7")
@@ -1692,37 +1406,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 shape = SubResource("CylinderShape3D_urfac")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="LampContainer/StaticBody3D3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00390816, 5.40335, 0.641703)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00390625, 5.40335, 0.641703)
 shape = SubResource("BoxShape3D_7cq2f")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="LampContainer/StaticBody3D3"]
 transform = Transform3D(-1.48943e-09, 1, 3.2398e-08, 0.258819, -3.09086e-08, 0.965926, 0.965926, 9.82391e-09, -0.258819, 0, 4.70028, 1.04963)
 light_color = Color(0.733333, 0.709804, 0, 1)
 light_energy = 14.803
-spot_range = 15.0
-spot_attenuation = 0.784584
-spot_angle = 56.76
-spot_angle_attenuation = 2.54912
-
-[node name="StaticBody3D4" type="StaticBody3D" parent="LampContainer"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.6, 0, 34)
-
-[node name="Lamp" type="MeshInstance3D" parent="LampContainer/StaticBody3D4"]
-mesh = ExtResource("57_einp7")
-skeleton = NodePath("../../..")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="LampContainer/StaticBody3D4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
-shape = SubResource("CylinderShape3D_urfac")
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="LampContainer/StaticBody3D4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00390816, 5.40335, 0.641703)
-shape = SubResource("BoxShape3D_7cq2f")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="LampContainer/StaticBody3D4"]
-transform = Transform3D(-1.48943e-09, 1, 3.2398e-08, 0.258819, -3.09086e-08, 0.965926, 0.965926, 9.82391e-09, -0.258819, 0, 4.70028, 1.04963)
-light_color = Color(0.733333, 0.709804, 0, 1)
-light_energy = 14.803
+light_bake_mode = 0
 spot_range = 15.0
 spot_attenuation = 0.784584
 spot_angle = 56.76
@@ -1747,6 +1438,7 @@ shape = SubResource("BoxShape3D_7cq2f")
 transform = Transform3D(-1.48943e-09, 1, 3.2398e-08, 0.258819, -3.09086e-08, 0.965926, 0.965926, 9.82391e-09, -0.258819, 0, 4.70028, 1.04963)
 light_color = Color(0.733333, 0.709804, 0, 1)
 light_energy = 14.803
+light_bake_mode = 0
 spot_range = 15.0
 spot_attenuation = 0.784584
 spot_angle = 56.76
@@ -1771,6 +1463,7 @@ shape = SubResource("BoxShape3D_7cq2f")
 transform = Transform3D(-1.48943e-09, 1, 3.2398e-08, 0.258819, -3.09086e-08, 0.965926, 0.965926, 9.82391e-09, -0.258819, 0, 4.70028, 1.04963)
 light_color = Color(0.733333, 0.709804, 0, 1)
 light_energy = 14.803
+light_bake_mode = 0
 spot_range = 15.0
 spot_attenuation = 0.784584
 spot_angle = 56.76
@@ -1795,6 +1488,7 @@ shape = SubResource("BoxShape3D_7cq2f")
 transform = Transform3D(-1.48943e-09, 1, 3.2398e-08, 0.258819, -3.09086e-08, 0.965926, 0.965926, 9.82391e-09, -0.258819, 0, 4.70028, 1.04963)
 light_color = Color(0.733333, 0.709804, 0, 1)
 light_energy = 14.803
+light_bake_mode = 0
 spot_range = 15.0
 spot_attenuation = 0.784584
 spot_angle = 56.76
@@ -1821,6 +1515,7 @@ shape = SubResource("BoxShape3D_7cq2f")
 transform = Transform3D(-1.48943e-09, 1, 3.2398e-08, 0.258819, -3.09086e-08, 0.965926, 0.965926, 9.82391e-09, -0.258819, 0, 4.70028, 1.04963)
 light_color = Color(0.733333, 0.709804, 0, 1)
 light_energy = 14.803
+light_bake_mode = 0
 spot_range = 15.0
 spot_attenuation = 0.784584
 spot_angle = 56.76
@@ -2144,8 +1839,98 @@ autoplay = true
 expand = true
 loop = true
 
-[connection signal="body_entered" from="CSGcontainer/ArcadeContainer/arcadeOn" to="." method="_on_arcade_on_body_entered"]
-[connection signal="body_entered" from="CSGcontainer/ArcadeContainer/arcadeOff" to="." method="_on_arcade_off_body_entered"]
+[node name="Arcade" type="Node3D" parent="."]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Arcade"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Arcade/StaticBody3D"]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, 0, 62)
+mesh = ExtResource("54_4ssdd")
+
+[node name="ArcadeMachines" type="Node3D" parent="Arcade"]
+
+[node name="SkyfallersMachine" parent="Arcade/ArcadeMachines" instance=ExtResource("10_d8yut")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.0175632, 48.2168)
+
+[node name="EggHockeyMachine" parent="Arcade/ArcadeMachines" instance=ExtResource("53_yfmmj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.10031, 0.0475531, 56.7206)
+
+[node name="arcadeOn" type="Area3D" parent="Arcade"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -3, 72.3013)
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Arcade/arcadeOn"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.7217, 5.8844, -24.044)
+shape = SubResource("BoxShape3D_tsild")
+
+[node name="arcadeOff" type="Area3D" parent="Arcade"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, -3, 2)
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Arcade/arcadeOff"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.7217, 5.8844, 44.3834)
+shape = SubResource("BoxShape3D_tsild")
+
+[node name="Lightcontainer" type="Node3D" parent="Arcade"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 56)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Arcade/Lightcontainer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 4.65147, 14.6324)
+light_color = Color(1, 0.839216, 0.568627, 1)
+light_energy = 3.775
+light_bake_mode = 1
+distance_fade_enabled = true
+omni_range = 15.422
+omni_attenuation = 0.812253
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="Arcade/Lightcontainer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 4.65147, -0.0763016)
+light_color = Color(1, 0.839216, 0.568627, 1)
+light_energy = 3.775
+light_bake_mode = 1
+distance_fade_enabled = true
+omni_range = 15.422
+omni_attenuation = 0.812253
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="Arcade/Lightcontainer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 4.65147, 14.6324)
+light_color = Color(1, 0.839216, 0.568627, 1)
+light_energy = 3.775
+light_bake_mode = 1
+distance_fade_enabled = true
+omni_range = 15.422
+omni_attenuation = 0.812253
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="Arcade/Lightcontainer"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 4.65147, -0.0763016)
+light_color = Color(1, 0.839216, 0.568627, 1)
+light_energy = 3.775
+light_bake_mode = 1
+distance_fade_enabled = true
+omni_range = 15.422
+omni_attenuation = 0.812253
+
+[node name="csgs" type="Node3D" parent="Arcade"]
+
+[node name="CSGBox3D16" type="CSGBox3D" parent="Arcade/csgs"]
+transform = Transform3D(-1, 0, -1.2917e-08, 0, 0.5, 0, 1.2917e-08, 0, -1, 3.81523, 0.281651, 70.7634)
+use_collision = true
+size = Vector3(12, 2, 2)
+material = SubResource("StandardMaterial3D_nm7pg")
+
+[node name="CSGBox3D17" type="CSGBox3D" parent="Arcade/csgs"]
+transform = Transform3D(-1, 0, -1.2917e-08, 0, 0.5, 0, 1.2917e-08, 0, -1, -3.18477, 0.281651, 71.7634)
+use_collision = true
+size = Vector3(2, 2, 4)
+material = SubResource("StandardMaterial3D_nm7pg")
+
+[node name="CSGBox3D18" type="CSGBox3D" parent="Arcade/csgs"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 76.0161)
+use_collision = true
+size = Vector3(19, 0.2, 1)
+
 [connection signal="body_entered" from="CSGcontainer/Mall/mallOn" to="." method="_on_mall_on_body_entered"]
 [connection signal="body_entered" from="CSGcontainer/Mall/mallOff" to="." method="_on_mall_off_body_entered"]
 [connection signal="timeout" from="MusicContainer/thePit/horrorTimer" to="." method="_on_horror_timer_timeout"]
@@ -2157,3 +1942,5 @@ loop = true
 [connection signal="timeout" from="fadeOutControl/Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_entered"]
 [connection signal="body_exited" from="Theater/OutsideMusicStart" to="." method="_on_outside_music_start_body_exited"]
+[connection signal="body_entered" from="Arcade/arcadeOn" to="." method="_on_arcade_on_body_entered"]
+[connection signal="body_entered" from="Arcade/arcadeOff" to="." method="_on_arcade_off_body_entered"]

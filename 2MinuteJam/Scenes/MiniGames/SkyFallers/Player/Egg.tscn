@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://86yr8ckuvib0"]
+[gd_scene load_steps=6 format=3 uid="uid://86yr8ckuvib0"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/MiniGames/SkyFallers/Player/Egg.gd" id="1_bjssn"]
 [ext_resource type="Texture2D" uid="uid://cxvullig7gdwq" path="res://2MinuteJam/Scenes/MiniGames/SkyFallers/Player/egg.png" id="1_gfjg5"]
+[ext_resource type="AudioStream" uid="uid://nps8ffjk2q8" path="res://2MinuteJam/Assets/SoundEffects/bloop-1-184019.mp3" id="3_752k4"]
+[ext_resource type="AudioStream" uid="uid://1xv0fjddqft8" path="res://2MinuteJam/Assets/SoundEffects/bloop-2-186531.mp3" id="4_mktbg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_blrng"]
 radius = 6.0
@@ -19,5 +21,11 @@ texture = ExtResource("1_gfjg5")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, 0)
 shape = SubResource("CapsuleShape2D_blrng")
+
+[node name="bloop1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_752k4")
+
+[node name="bloop2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_mktbg")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

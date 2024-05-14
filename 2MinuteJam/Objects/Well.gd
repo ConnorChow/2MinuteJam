@@ -21,7 +21,7 @@ func _on_area_3d_body_exited(body):
 
 func _on_well_timer_timeout():
 	GlobalController.inDialogue = true
-	get_tree().call_group("dialogue", "talking", wellText[textPlace])
+	get_tree().call_group("dialogue", "talking", wellText[textPlace], " ")
 	textPlace +=1
 	wellTimer.start(randf_range(8.5, 25))
 
