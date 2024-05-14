@@ -3,10 +3,10 @@
 [ext_resource type="Script" path="res://2MinuteJam/Objects/Door.gd" id="1_tbags"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7vnvi"]
-size = Vector3(1.5, 3, 0.2)
+size = Vector3(1.8, 2.4, 0.2)
 
 [sub_resource type="BoxMesh" id="BoxMesh_dg0s7"]
-size = Vector3(1.5, 3, 0.2)
+size = Vector3(1.8, 2.4, 0.2)
 
 [sub_resource type="Animation" id="Animation_fl3ix"]
 length = 0.001
@@ -50,7 +50,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, -1.5708, 0)]
+"values": [Vector3(0, -1.5708, 0), Vector3(0, -1.5708, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_v55l0"]
@@ -64,11 +64,11 @@ _data = {
 script = ExtResource("1_tbags")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 1.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.746, 1.2, 0.1)
 shape = SubResource("BoxShape3D_7vnvi")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 1.5, 0.1)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.75, 1.2, 0.1)
 mesh = SubResource("BoxMesh_dg0s7")
 skeleton = NodePath("")
 
