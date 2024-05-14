@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://csmwcoqswsv4j"]
+
+[ext_resource type="Texture2D" uid="uid://dm2eltol341mg" path="res://2MinuteJam/Assets/art/Buildings/Mall/decorative_beige_tiles_004_diffuse_xtm_2k.jpg" id="1_mit8d"]
+
+[resource]
+albedo_texture = ExtResource("1_mit8d")
