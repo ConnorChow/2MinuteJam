@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://bt3hhaedxx0av"]
+
+[ext_resource type="Texture2D" uid="uid://oi13hil3cbki" path="res://2MinuteJam/Assets/art/Buildings/Arcegg/ArceggBuilding_arcade_carpet_512.png" id="1_digse"]
+
+[resource]
+albedo_texture = ExtResource("1_digse")
