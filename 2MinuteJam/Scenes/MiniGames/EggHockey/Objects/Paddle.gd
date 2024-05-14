@@ -11,7 +11,7 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	pass
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	if get_parent().paused:
 		linear_velocity = Vector2.ZERO
 		return
@@ -41,6 +41,7 @@ func _on_left_goal_body_entered(body):
 
 func _on_right_goal_body_entered(body):
 	#print("hit")
+	body.queue_free()
 	playerGoals +=1
 	updateScore()
 

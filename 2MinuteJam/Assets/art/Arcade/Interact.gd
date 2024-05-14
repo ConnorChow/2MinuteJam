@@ -8,7 +8,7 @@ extends StaticBody3D
 
 func _process(_delta):
 	if !camera.current and world.get_child_count() > 0:
-		print("destroy")
+		#print("destroy")
 		for game in world.get_children():
 			game.paused = true
 
