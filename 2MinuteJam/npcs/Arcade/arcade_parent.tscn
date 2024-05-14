@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cnnf65jvjc0ho"]
+
+[ext_resource type="PackedScene" uid="uid://cesaq07oa64kf" path="res://2MinuteJam/npcs/_baseNPC/baseNPC.tscn" id="1_jqyxq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rk76r"]
+resource_local_to_scene = true
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_k4il6"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_rk76r")
+
+[node name="ArcadeParent" instance=ExtResource("1_jqyxq")]
+dialogue = [["Hello there.", "Are you actually here to play the games?", "I’m surprised to see someone new here.", "There’s only a few people who still bother with this place.", "I wouldn’t be here if my kid didn’t like it."], ["It used to be better around here. At least they had a few more games to play.", "I swear they haven’t added anything new since I was a kid.", "And even then the games were pretty retro.", "They’re practically ancient by now."], ["Honestly I’m surprised that this place is still in business.", "Guess there’s not much else to do around here though.", "Unless you want to hang around a dead mall.", "Or spend all your time in nature.", "But I think watching the grass grow is better than this."], ["Hopefully the kid is done soon."]]
+myName = "Joel"
+
+[node name="MeshInstance3D" parent="." index="0"]
+mesh = SubResource("CapsuleMesh_k4il6")

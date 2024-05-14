@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://c1se7jr8bexae"]
+
+[ext_resource type="PackedScene" uid="uid://b1dir33pvkhv5" path="res://2MinuteJam/npcs/_baseNPC/baseChildNPC.tscn" id="1_d1i7h"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d6ikj"]
+resource_local_to_scene = true
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_kd2mj"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_d6ikj")
+radius = 0.25
+height = 1.0
+
+[node name="ArcadeKid1" instance=ExtResource("1_d1i7h")]
+dialogue = [["Who are you?", "Who are you?"], ["Are you gonna say anything, or are you just gonna stand there being weird?"], ["If you keep being weird my dad’s gonna beat you up!", "He’s a cop, so he could totally do it!"], ["Stop being so weird, weirdo!"]]
+myName = "Billeigh"
+
+[node name="MeshInstance3D" parent="." index="0"]
+mesh = SubResource("CapsuleMesh_kd2mj")

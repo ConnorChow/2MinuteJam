@@ -1,4 +1,4 @@
-[gd_scene load_steps=171 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=174 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="PackedScene" uid="uid://q0x2l31pruqy" path="res://2MinuteJam/Player/Player.tscn" id="1_q0ld0"]
@@ -22,6 +22,7 @@
 [ext_resource type="AudioStream" uid="uid://b7h7a7lq41xha" path="res://2MinuteJam/Assets/SoundEffects/projector-sound.mp3" id="18_loo1w"]
 [ext_resource type="AudioStream" uid="uid://bjjuaay4gd2j0" path="res://2MinuteJam/Assets/SoundEffects/trombone-stretching-14-41727.mp3" id="20_jbjd7"]
 [ext_resource type="PackedScene" uid="uid://2uwugc2a80tn" path="res://2MinuteJam/Objects/baseSit/baseChair.tscn" id="20_sm38u"]
+[ext_resource type="PackedScene" uid="uid://caotrcej6j7l5" path="res://2MinuteJam/npcs/Arcade/arcade_parent_2.tscn" id="23_pbt86"]
 [ext_resource type="PackedScene" uid="uid://dso57uf1ulcqu" path="res://2MinuteJam/npcs/Bridge/bridgeWoman.tscn" id="24_n0frp"]
 [ext_resource type="AudioStream" uid="uid://bn41nkv12vlk1" path="res://2MinuteJam/Assets/SoundEffects/glass-breaking-151256.mp3" id="25_o6gwf"]
 [ext_resource type="PackedScene" uid="uid://blf8e1040dqs5" path="res://2MinuteJam/Objects/Dings/Ding1.tscn" id="25_pem1r"]
@@ -60,6 +61,8 @@
 [ext_resource type="ArrayMesh" uid="uid://b7fdyck8ue3ko" path="res://2MinuteJam/Assets/art/Buildings/Theater/TheaterMesh.res" id="57_mvma6"]
 [ext_resource type="VideoStream" path="res://2MinuteJam/Assets/art/Buildings/Theater/Recordings/FishFilm.ogv" id="58_xvhkm"]
 [ext_resource type="PackedScene" uid="uid://bedk0gn3reo4w" path="res://2MinuteJam/Assets/art/Buildings/Theater/SharkButtonBox.tscn" id="59_7ywh6"]
+[ext_resource type="PackedScene" uid="uid://cnnf65jvjc0ho" path="res://2MinuteJam/npcs/Arcade/arcade_parent.tscn" id="61_p01wk"]
+[ext_resource type="PackedScene" uid="uid://c1se7jr8bexae" path="res://2MinuteJam/npcs/Arcade/ArcadeKid1.tscn" id="63_vmyw8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rvt8f"]
 bg_color = Color(0.184314, 0.184314, 0.313726, 0.376471)
@@ -899,6 +902,15 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6, 3,
 [node name="Clerk" parent="npcContainer/Arcegg" instance=ExtResource("26_vwgwm")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.35956, 1, 72.8874)
 
+[node name="ArcadeParent" parent="npcContainer/Arcegg" instance=ExtResource("61_p01wk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.55245, 1, 60.0176)
+
+[node name="ArcadeParent2" parent="npcContainer/Arcegg" instance=ExtResource("23_pbt86")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 1, 57)
+
+[node name="ArcadeKid1" parent="npcContainer/Arcegg" instance=ExtResource("63_vmyw8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0.526676, 68)
+
 [node name="Building" type="Node" parent="npcContainer"]
 
 [node name="dreamNPC" parent="npcContainer/Building" instance=ExtResource("43_iatgn")]
@@ -1343,7 +1355,7 @@ spot_angle = 56.76
 spot_angle_attenuation = 2.54912
 
 [node name="RigidBody3d" type="RigidBody3D" parent="LampContainer"]
-transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 81.4, 0, 45)
+transform = Transform3D(1, 0, -2.13163e-14, 0, 1, 0, 2.13163e-14, 0, 1, 81.4, 0, 45)
 center_of_mass_mode = 1
 center_of_mass = Vector3(0, 3, 0)
 
@@ -1356,7 +1368,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 shape = SubResource("CylinderShape3D_urfac")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="LampContainer/RigidBody3d"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00390816, 5.40335, 0.641703)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00390625, 5.40335, 0.641705)
 shape = SubResource("BoxShape3D_7cq2f")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="LampContainer/RigidBody3d"]

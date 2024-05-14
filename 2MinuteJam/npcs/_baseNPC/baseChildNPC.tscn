@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://b1dir33pvkhv5"]
+
+[ext_resource type="Script" path="res://2MinuteJam/npcs/_baseNPC/baseNPC.gd" id="1_pgls8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cpu1k"]
+resource_local_to_scene = true
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_hmh23"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_cpu1k")
+radius = 0.25
+height = 1.0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_6ln6m"]
+radius = 0.25
+height = 1.0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_5itqe"]
+radius = 2.0
+
+[node name="BaseChildNpc" type="CharacterBody3D"]
+script = ExtResource("1_pgls8")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_hmh23")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_6ln6m")
+
+[node name="playerDialogueDetector" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="playerDialogueDetector"]
+shape = SubResource("SphereShape3D_5itqe")
