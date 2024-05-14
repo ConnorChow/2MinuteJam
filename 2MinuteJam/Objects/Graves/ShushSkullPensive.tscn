@@ -6,3 +6,6 @@
 
 [node name="Label3D" parent="." index="2"]
 text = "🤐 💀 😔"
+
+[node name="Emojis" parent="." index="3"]
+region_rect = Rect2(331.18, 142.154, 229.949, 83.7949)

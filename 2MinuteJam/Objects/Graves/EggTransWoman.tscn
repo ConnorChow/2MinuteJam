@@ -1,4 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dvwte30kgwqfg"]
+[gd_scene load_steps=4 format=3 uid="uid://dvwte30kgwqfg"]
+
+[ext_resource type="Texture2D" uid="uid://c0dio6reea58i" path="res://2MinuteJam/Objects/Graves/emojiis.png" id="1_6clq5"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_42js7"]
 top_radius = 0.8
@@ -21,5 +23,12 @@ shape = SubResource("CylinderShape3D_jdf6g")
 
 [node name="Label3D" type="Label3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.334139, 0.108606)
+visible = false
 outline_modulate = Color(1, 1, 1, 0)
 text = "🥚 ⚧ 🙆‍♀️"
+
+[node name="Emojis" type="Sprite3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.32901, 0.100215)
+texture = ExtResource("1_6clq5")
+region_enabled = true
+region_rect = Rect2(19.3851, 243.487, 190.974, 77.9487)
