@@ -31,6 +31,12 @@ project/assembly_name="2 Minute Jam"
 
 enabled=PackedStringArray("res://addons/zylann.hterrain/plugin.cfg")
 
+[importer_defaults]
+
+texture={
+"mipmaps/generate": true
+}
+
 [input]
 
 forward={

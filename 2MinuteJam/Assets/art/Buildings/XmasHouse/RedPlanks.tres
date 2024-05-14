@@ -1,6 +1,6 @@
 [gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c82d3oohao4y5"]
 
-[ext_resource type="Texture2D" uid="uid://c5kwsd45cjfgg" path="res://2MinuteJam/Assets/art/Buildings/XmasHouse/wood_planks_red_001_diffuse_xtm_2k.jpg" id="1_eroro"]
+[ext_resource type="Texture2D" uid="uid://cpxnaxi085328" path="res://2MinuteJam/Assets/art/Buildings/XmasHouse/wood_planks_red_001_diffuse_xtm_2k.jpg" id="1_eroro"]
 
 [resource]
 albedo_texture = ExtResource("1_eroro")
