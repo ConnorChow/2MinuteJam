@@ -6,6 +6,7 @@ const SPEED : float = 4.5
 const runSpeed : float = 1.5
 var modSpeed : float
 const JUMP_VELOCITY : float = 4.2
+const pushForce : float = 2
 
 var gravity : float = 9.8
 
@@ -18,6 +19,8 @@ var headDir
 
 var heldObject : Object
 var hitObject :Object
+
+var jumpButton : bool = false
 
 @onready var head = $Node3D
 @onready var camera = $Node3D/Camera3D
@@ -143,11 +146,19 @@ func _physics_process(delta):
 			velocity.y -= gravity * delta
 			velocity.x = lerp(velocity.x, direction.x * modSpeed, delta * 3)
 			velocity.z = lerp(velocity.z, direction.z * modSpeed, delta * 3)
-
-				
+	if !jumpButton:
+		velocity.x = clampf(velocity.x, -6,6)
+		velocity.y = clampf(velocity.y, -6,6)
+		velocity.z = clampf(velocity.z, -6,6)
+		
 	velocity.normalized()
 	if !sitting || !inMinigame:
 		move_and_slide()
+		for i in get_slide_collision_count():
+			var c = get_slide_collision(i)
+			if c.get_collider() is RigidBody3D:
+				c.get_collider().apply_central_impulse(-c.get_normal()* pushForce * velocity.length())
+
 
 
 
@@ -171,6 +182,7 @@ func _on_options_button_pressed():
 
 
 func _on_jump_button_pressed():
+	jumpButton = true
 	velocity.y = 300
 	ui.visible = false
 	get_tree().paused = false

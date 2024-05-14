@@ -1150,7 +1150,7 @@ transform = Transform3D(0.873034, -0.405702, 0.270586, 0.390997, 0.913941, 0.108
 transform = Transform3D(0.884108, 0, 0.467282, 0, 1, 0, -0.467282, 0, 0.884108, 25.1606, 1.72835, 13.5578)
 
 [node name="RigidBody3D" parent="random shit" instance=ExtResource("30_ydsx5")]
-transform = Transform3D(0.253389, 0.211093, 0.944052, -0.87167, 0.473031, 0.12819, -0.419506, -0.855384, 0.303864, -1.07547, 1.69283, 109.895)
+transform = Transform3D(0.253389, 0.211093, 0.944052, -0.87167, 0.473031, 0.12819, -0.419506, -0.855384, 0.303864, -1.07547, 1.69283, 88.895)
 labelText = "Jump"
 
 [node name="Strike" type="Area3D" parent="random shit/RigidBody3D"]
