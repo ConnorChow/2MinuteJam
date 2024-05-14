@@ -1,0 +1,9 @@
+[gd_resource type="StandardMaterial3D" load_steps=3 format=3 uid="uid://dr7ol5ihpti25"]
+
+[ext_resource type="Texture2D" uid="uid://dsx71s4afjtt7" path="res://2MinuteJam/Assets/art/Buildings/Facades/windows_facade_014_diffuse_xtm_2k.jpg" id="1_wyu06"]
+[ext_resource type="Texture2D" uid="uid://byt5yexl5kwxp" path="res://2MinuteJam/Assets/art/Buildings/Facades/windows_facade_014_emission_xtm_2k.jpg" id="2_t7b3y"]
+
+[resource]
+albedo_texture = ExtResource("1_wyu06")
+emission_enabled = true
+emission_texture = ExtResource("2_t7b3y")
