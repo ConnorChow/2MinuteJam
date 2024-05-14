@@ -12,6 +12,9 @@ func _ready():
 	
 	var material = StandardMaterial3D.new()
 	material.albedo_texture = viewport.get_texture()
+	material.emission_enabled = true
+	material.emission_intensity = 1
+	material.emission_texture = viewport.get_texture()
 	material.uv1_scale = uv_coordinates
 	set_surface_override_material(material_instance, material)
 

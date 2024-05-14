@@ -152,7 +152,7 @@ func _physics_process(delta):
 		velocity.z = clampf(velocity.z, -6,6)
 		
 	velocity.normalized()
-	if !sitting || !inMinigame:
+	if !(sitting || inMinigame):
 		move_and_slide()
 		for i in get_slide_collision_count():
 			var c = get_slide_collision(i)
