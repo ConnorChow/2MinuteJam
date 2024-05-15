@@ -861,6 +861,10 @@ size_flags_vertical = 0
 [node name="namePlate" type="Label" parent="UiHandler/PanelContainer/MarginContainer2"]
 layout_mode = 2
 
+[node name="buffer" type="Timer" parent="UiHandler"]
+wait_time = 0.3
+one_shot = true
+
 [node name="MusicContainer" type="Node" parent="."]
 
 [node name="Outside" type="AudioStreamPlayer" parent="MusicContainer"]
@@ -2836,6 +2840,7 @@ transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.3
 [node name="SpotLight3D2" type="OmniLight3D" parent="Mall/MallStores/AynRandFanClub"]
 transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, -128.091, 3.6902, 32.9127)
 
+[connection signal="timeout" from="UiHandler/buffer" to="UiHandler" method="_on_buffer_timeout"]
 [connection signal="timeout" from="MusicContainer/thePit/horrorTimer" to="." method="_on_horror_timer_timeout"]
 [connection signal="body_entered" from="PrebuildContainers/ThePit/thePitOutsideMusic" to="." method="_on_the_pit_outside_music_body_entered"]
 [connection signal="body_entered" from="PrebuildContainers/ThePit/thePitMusicOff" to="." method="_on_the_pit_music_off_body_entered"]

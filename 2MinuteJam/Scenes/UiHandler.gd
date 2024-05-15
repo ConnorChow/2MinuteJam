@@ -6,19 +6,21 @@ var curText : int = 0
 
 @onready var name_plate = $PanelContainer/MarginContainer2/namePlate
 @onready var worst_person = %worstPerson
+@onready var buffer = $buffer
 
 var npcName
-
+var bufferTime : bool = false
 
 func talking(diag : Array , myName :String):
-	set_visible(true)
-	GlobalController.inDialogue = true
-	#print(diag)
-	curText = 0
-	npcName = myName
-	diagToHandle = diag
-	dialog.set_text(diagToHandle[curText])
-	name_plate.set_text(npcName)
+	if !bufferTime:
+		set_visible(true)
+		GlobalController.inDialogue = true
+		#print(diag)
+		curText = 0
+		npcName = myName
+		diagToHandle = diag
+		dialog.set_text(diagToHandle[curText])
+		name_plate.set_text(npcName)
 
 
 
@@ -41,6 +43,13 @@ func _process(_delta):
 				#print("that one")
 
 func doneTalking():
+	buffer.start()
+	bufferTime = true
 	set_visible(false)
 	GlobalController.inDialogue = false
 	#print("done talking")
+
+
+func _on_buffer_timeout():
+	bufferTime = false
+	pass # Replace with function body.
