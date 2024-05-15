@@ -31,4 +31,4 @@ text = "🎃 💍 ♐"
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.32901, 0.100215)
 texture = ExtResource("1_rac8s")
 region_enabled = true
-region_rect = Rect2(333.129, 27.1795, 222.154, 76)
+region_rect = Rect2(139.641, 10, 97, 36)

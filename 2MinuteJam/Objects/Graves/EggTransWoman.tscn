@@ -31,4 +31,4 @@ text = "🥚 ⚧ 🙆‍♀️"
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.32901, 0.100215)
 texture = ExtResource("1_6clq5")
 region_enabled = true
-region_rect = Rect2(19.3851, 243.487, 190.974, 77.9487)
+region_rect = Rect2(8, 104.718, 85, 35)

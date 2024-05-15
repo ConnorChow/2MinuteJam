@@ -8,4 +8,4 @@
 text = "😈 🤬 🙉"
 
 [node name="Emojis" parent="." index="3"]
-region_rect = Rect2(17.4364, 126.564, 239.692, 76)
+region_rect = Rect2(7.564, 54, 104, 33)

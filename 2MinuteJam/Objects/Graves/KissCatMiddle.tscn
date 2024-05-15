@@ -25,4 +25,4 @@ shape = SubResource("CylinderShape3D_jdf6g")
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.32901, 0.100215)
 texture = ExtResource("1_jaht0")
 region_enabled = true
-region_rect = Rect2(18.8459, 483.179, 226.051, 89.641)
+region_rect = Rect2(10, 205.41, 92, 36)

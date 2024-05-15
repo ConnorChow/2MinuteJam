@@ -34,4 +34,4 @@ text = "🔥 🔥 💯"
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.32901, 0.100215)
 texture = ExtResource("1_uhmqq")
 region_enabled = true
-region_rect = Rect2(13.539, 360.41, 220.205, 83.7949)
+region_rect = Rect2(9, 155.102, 88, 32)
