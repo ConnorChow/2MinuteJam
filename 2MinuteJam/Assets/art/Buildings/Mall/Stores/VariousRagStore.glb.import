@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b4a5oeu5mcep1"
-path="res://.godot/imported/RandFanClub.glb-8230645853b42f9a9c62de6712d9161f.scn"
+uid="uid://deynk3jixqhcp"
+path="res://.godot/imported/VariousRagStore.glb-f542d201ee360491ac408a20ef6a2267.scn"
 
 [deps]
 
-source_file="res://2MinuteJam/Assets/art/Buildings/Mall/Stores/RandFanClub.glb"
-dest_files=["res://.godot/imported/RandFanClub.glb-8230645853b42f9a9c62de6712d9161f.scn"]
+source_file="res://2MinuteJam/Assets/art/Buildings/Mall/Stores/VariousRagStore.glb"
+dest_files=["res://.godot/imported/VariousRagStore.glb-f542d201ee360491ac408a20ef6a2267.scn"]
 
 [params]
 
@@ -31,13 +31,17 @@ animation/remove_immutable_tracks=true
 import_script/path=""
 _subresources={
 "materials": {
+"Burnished Metal 003_2k": {
+"use_external/enabled": true,
+"use_external/path": "res://2MinuteJam/Assets/art/RandomProps/BurnishedMetal.tres"
+},
 "Wood Rustic 001_2k": {
 "use_external/enabled": true,
 "use_external/path": "res://2MinuteJam/Assets/art/RandomProps/WoodRaw.tres"
 }
 },
 "meshes": {
-"RandFanClub_Cube_001": {
+"VariousRagStore_Cube_004": {
 "generate/lightmap_uv": 0,
 "generate/lods": 0,
 "generate/shadow_meshes": 0,
@@ -45,9 +49,9 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://2MinuteJam/Assets/art/Buildings/Mall/Stores/Shelf1.res"
+"save_to_file/path": "res://2MinuteJam/Assets/art/Buildings/Mall/Stores/RagsRack.res"
 },
-"RandFanClub_Cube_003": {
+"VariousRagStore_Cylinder_001": {
 "generate/lightmap_uv": 0,
 "generate/lods": 0,
 "generate/shadow_meshes": 0,
@@ -55,7 +59,7 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://2MinuteJam/Assets/art/Buildings/Mall/Stores/Shelf2.res"
+"save_to_file/path": "res://2MinuteJam/Assets/art/Buildings/Mall/Stores/RagsSign.res"
 }
 }
 }
