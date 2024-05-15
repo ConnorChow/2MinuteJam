@@ -34,6 +34,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.79478)
 target_position = Vector3(0, 0, -4)
 
 [node name="ColorRect" type="ColorRect" parent="Node3D/Camera3D"]
+visible = false
 modulate = Color(1, 1, 1, 0.219608)
 anchors_preset = 8
 anchor_left = 0.5

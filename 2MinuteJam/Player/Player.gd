@@ -3,7 +3,7 @@ extends CharacterBody3D
 
 const SENSITIVITY : float = 0.003
 const SPEED : float = 4.5
-const runSpeed : float = 1.5
+const runSpeed : float = 1.8
 var modSpeed : float
 const JUMP_VELOCITY : float = 4.2
 const pushForce : float = 2
