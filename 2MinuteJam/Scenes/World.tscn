@@ -1,4 +1,4 @@
-[gd_scene load_steps=189 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=193 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="PackedScene" uid="uid://q0x2l31pruqy" path="res://2MinuteJam/Player/Player.tscn" id="1_q0ld0"]
@@ -22,7 +22,8 @@
 [ext_resource type="AudioStream" uid="uid://b7h7a7lq41xha" path="res://2MinuteJam/Assets/SoundEffects/projector-sound.mp3" id="18_loo1w"]
 [ext_resource type="AudioStream" uid="uid://bjjuaay4gd2j0" path="res://2MinuteJam/Assets/SoundEffects/trombone-stretching-14-41727.mp3" id="20_jbjd7"]
 [ext_resource type="PackedScene" uid="uid://2uwugc2a80tn" path="res://2MinuteJam/Objects/baseSit/baseChair.tscn" id="20_sm38u"]
-[ext_resource type="PackedScene" path="res://2MinuteJam/npcs/Arcade/arcade_parent_2.tscn" id="23_pbt86"]
+[ext_resource type="PackedScene" uid="uid://cullkg6ekrp67" path="res://2MinuteJam/npcs/Theater/theater_vandal.tscn" id="22_2q4y6"]
+[ext_resource type="PackedScene" uid="uid://caotrcej6j7l5" path="res://2MinuteJam/npcs/Arcade/arcade_parent_2.tscn" id="23_pbt86"]
 [ext_resource type="PackedScene" uid="uid://dso57uf1ulcqu" path="res://2MinuteJam/npcs/Bridge/bridgeWoman.tscn" id="24_n0frp"]
 [ext_resource type="AudioStream" uid="uid://bn41nkv12vlk1" path="res://2MinuteJam/Assets/SoundEffects/glass-breaking-151256.mp3" id="25_o6gwf"]
 [ext_resource type="PackedScene" uid="uid://blf8e1040dqs5" path="res://2MinuteJam/Objects/Dings/Ding1.tscn" id="25_pem1r"]
@@ -35,6 +36,7 @@
 [ext_resource type="Script" path="res://addons/zylann.hterrain/hterrain_texture_set.gd" id="29_yjp2r"]
 [ext_resource type="PackedScene" uid="uid://dtcl11nhll7h5" path="res://2MinuteJam/Objects/optiopnPickups/hands.tscn" id="30_4ct5l"]
 [ext_resource type="PackedScene" uid="uid://h1yugiah7abi" path="res://2MinuteJam/Objects/optiopnPickups/baseOptions.tscn" id="30_ydsx5"]
+[ext_resource type="PackedScene" uid="uid://xgueuvnc3244" path="res://2MinuteJam/npcs/Mall/mall_shop_1.tscn" id="31_m7xr3"]
 [ext_resource type="PackedScene" uid="uid://4umu5ithtjdi" path="res://2MinuteJam/Objects/Graves/DevilSwearNoHear.tscn" id="32_u0hld"]
 [ext_resource type="PackedScene" uid="uid://dvwte30kgwqfg" path="res://2MinuteJam/Objects/Graves/EggTransWoman.tscn" id="33_2pep7"]
 [ext_resource type="PackedScene" uid="uid://co1tydk7371hm" path="res://2MinuteJam/Objects/Graves/FlameFlame100.tscn" id="34_sqxvx"]
@@ -54,17 +56,17 @@
 [ext_resource type="PackedScene" uid="uid://bswx8i1owenig" path="res://2MinuteJam/Assets/art/Arcade/EggHockeyMachine.tscn" id="53_yfmmj"]
 [ext_resource type="ArrayMesh" uid="uid://qkbpygfiaew8" path="res://2MinuteJam/Assets/art/Buildings/Arcegg/ArceggBuilding.res" id="54_4ssdd"]
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/Prebuilds/perBuildings.gd" id="54_m8xl8"]
-[ext_resource type="PackedScene" path="res://2MinuteJam/Scenes/Prebuilds/per_large.tscn" id="54_w3wk8"]
-[ext_resource type="PackedScene" path="res://2MinuteJam/Scenes/Prebuilds/per_medium.tscn" id="55_nm5tq"]
+[ext_resource type="PackedScene" uid="uid://crbhtvx7dj7mq" path="res://2MinuteJam/Scenes/Prebuilds/per_large.tscn" id="54_w3wk8"]
+[ext_resource type="PackedScene" uid="uid://cwsxbkg0chwc1" path="res://2MinuteJam/Scenes/Prebuilds/per_medium.tscn" id="55_nm5tq"]
 [ext_resource type="ArrayMesh" uid="uid://diqxw3eqx8wbe" path="res://2MinuteJam/Assets/art/Road/RoadStraight.res" id="56_2j3mh"]
-[ext_resource type="PackedScene" path="res://2MinuteJam/Scenes/Prebuilds/per_small.tscn" id="56_gj4om"]
+[ext_resource type="PackedScene" uid="uid://du5mogqov73wy" path="res://2MinuteJam/Scenes/Prebuilds/per_small.tscn" id="56_gj4om"]
 [ext_resource type="ArrayMesh" uid="uid://dwvsxchx5ekjg" path="res://2MinuteJam/Assets/art/RandomProps/Lamp.res" id="57_einp7"]
 [ext_resource type="PackedScene" uid="uid://c873jfn610f71" path="res://2MinuteJam/Assets/art/Buildings/Theater/FishButtonBox.tscn" id="57_i8man"]
 [ext_resource type="ArrayMesh" uid="uid://b7fdyck8ue3ko" path="res://2MinuteJam/Assets/art/Buildings/Theater/TheaterMesh.res" id="57_mvma6"]
 [ext_resource type="VideoStream" path="res://2MinuteJam/Assets/art/Buildings/Theater/Recordings/FishFilm.ogv" id="58_xvhkm"]
 [ext_resource type="PackedScene" uid="uid://bedk0gn3reo4w" path="res://2MinuteJam/Assets/art/Buildings/Theater/SharkButtonBox.tscn" id="59_7ywh6"]
-[ext_resource type="PackedScene" path="res://2MinuteJam/npcs/Arcade/arcade_parent.tscn" id="61_p01wk"]
-[ext_resource type="PackedScene" path="res://2MinuteJam/npcs/Arcade/ArcadeKid1.tscn" id="63_vmyw8"]
+[ext_resource type="PackedScene" uid="uid://cnnf65jvjc0ho" path="res://2MinuteJam/npcs/Arcade/arcade_parent.tscn" id="61_p01wk"]
+[ext_resource type="PackedScene" uid="uid://c1se7jr8bexae" path="res://2MinuteJam/npcs/Arcade/ArcadeKid1.tscn" id="63_vmyw8"]
 [ext_resource type="ArrayMesh" uid="uid://cve4yi8f21k3u" path="res://2MinuteJam/Assets/art/Buildings/Mall/Stores/HatSign.res" id="66_cr5jr"]
 [ext_resource type="ArrayMesh" uid="uid://4qbwmi0t1ef8" path="res://2MinuteJam/Assets/art/Buildings/Mall/Stores/HatRack.res" id="67_ddtvd"]
 [ext_resource type="ArrayMesh" uid="uid://oi4nxmoh5253" path="res://2MinuteJam/Assets/art/Buildings/Mall/Stores/RagsSign.res" id="68_eg665"]
@@ -74,6 +76,8 @@
 [ext_resource type="Material" uid="uid://c8u71opbqjgqj" path="res://2MinuteJam/Assets/art/RandomProps/WoodRaw.tres" id="72_ee5aw"]
 [ext_resource type="ArrayMesh" uid="uid://b6ep8ute8ltb1" path="res://2MinuteJam/Assets/art/Buildings/Mall/Stores/Shelf2.res" id="72_p4ljq"]
 [ext_resource type="Texture2D" uid="uid://xvib8w0f8lt7" path="res://2MinuteJam/Assets/art/Buildings/Mall/Stores/RandFanClub_AynRandLibrary.png" id="73_lyo1x"]
+[ext_resource type="PackedScene" uid="uid://be8oandm3bimw" path="res://2MinuteJam/npcs/Outside/gravedigger_george.tscn" id="75_sk7am"]
+[ext_resource type="PackedScene" uid="uid://dcbe36ic5jgp2" path="res://2MinuteJam/npcs/Outside/worstPerson.tscn" id="77_q5nyq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rvt8f"]
 bg_color = Color(0.184314, 0.184314, 0.313726, 0.376471)
@@ -990,6 +994,9 @@ shape = SubResource("BoxShape3D_iugem")
 [node name="bridgeWoman" parent="npcContainer/Bridge" instance=ExtResource("24_n0frp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 80.5219, 1.05, -68.4985)
 
+[node name="Gravedigger George" parent="npcContainer/Bridge" instance=ExtResource("75_sk7am")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 141, 1, -11)
+
 [node name="Theater" type="Node" parent="npcContainer"]
 
 [node name="theaterShuush" parent="npcContainer/Theater" instance=ExtResource("13_rqgvj")]
@@ -999,6 +1006,9 @@ colour = Color(0.407843, 0.407843, 0.407843, 1)
 [node name="theaterGossip2" parent="npcContainer/Theater" instance=ExtResource("27_be6du")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6, 3, 2)
 colour = Color(0.823529, 0.392157, 0.564706, 1)
+
+[node name="TheaterVandal" parent="npcContainer/Theater" instance=ExtResource("22_2q4y6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 7, 13)
 
 [node name="Arcegg" type="Node" parent="npcContainer"]
 
@@ -1023,10 +1033,27 @@ dialogue = [["Is this my dream?", "Or yours?", "The way I see it, our fates appe
 [node name="Mall" type="Node" parent="npcContainer"]
 
 [node name="ringtoneGirl" parent="npcContainer/Mall" instance=ExtResource("26_gd0ws")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -30, 1, -86)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -21, 1, -78)
 
 [node name="ringtoneBoyfriend" parent="npcContainer/Mall" instance=ExtResource("27_cyw8y")]
-transform = Transform3D(2.98023e-08, 0, 1, 0, 1, 0, -1, 0, 2.98023e-08, -71, 1, 50)
+transform = Transform3D(-1.17225e-07, 0, -1, 0, 1, 0, 1, 0, -1.17225e-07, -70, 1, 30)
+
+[node name="worstPerson" parent="npcContainer/Mall" instance=ExtResource("77_q5nyq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -127, 1, 34)
+dialogue = [["Ah! A young person.", "Hello!", "What are you doing out so late tonight?", "You had better be careful, with all those &%*#$^s out there.", "I'm not a racist, but you know what they are like."], ["Are you going to buy anything?"]]
+
+[node name="MallShop2" parent="npcContainer/Mall" instance=ExtResource("31_m7xr3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -101, 1, 26)
+
+[node name="MallShop1" parent="npcContainer/Mall" instance=ExtResource("31_m7xr3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -123, 1, -69)
+dialogue = [["You look like you could use some hats!", "Want to buy 5?", "They are buy 5 get 1 20% off!", "What a deal!"], ["Wow!"]]
+myName = "Stephanie"
+
+[node name="MallShop3" parent="npcContainer/Mall" instance=ExtResource("31_m7xr3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -96.3041, 1, -82.4864)
+dialogue = [["Are you looking for something for someone special?", "You could get it here!", "We've got a special promotion going today only.", "If you give us your phone number, birthday, social security number, mothers maiden name, your place of birth and your first three pets...", "You could win a chance to get 15% off of your purchase next time you shop here!"], ["So? What do you say?"], ["Great!", "Okay...", "...", "Okay..", "..", "Mmhhhmm..", "..", "...", "..", "Great!", "We'll call you if you won!"], ["We'll call you if you won!"]]
+myName = "Chloe"
 
 [node name="random shit" type="Node" parent="."]
 

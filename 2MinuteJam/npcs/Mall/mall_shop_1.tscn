@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://xgueuvnc3244"]
+
+[ext_resource type="PackedScene" uid="uid://cesaq07oa64kf" path="res://2MinuteJam/npcs/_baseNPC/baseNPC.tscn" id="1_1cidd"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_krd86"]
+resource_local_to_scene = true
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_pdtma"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_krd86")
+
+[node name="MallShop1" instance=ExtResource("1_1cidd")]
+dialogue = [["Hello!", "Please buy something!", "I can't leave until I sell everything.", "Please."], ["Come on, you know you want to buy some of this stuff!", "I bet you could do all kinds of stuff with it!"]]
+colour = Color(0.890196, 0.384314, 0.698039, 1)
+myName = "Bee"
+
+[node name="MeshInstance3D" parent="." index="0"]
+mesh = SubResource("CapsuleMesh_pdtma")
