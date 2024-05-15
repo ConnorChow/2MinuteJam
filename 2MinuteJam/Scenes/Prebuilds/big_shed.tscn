@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://be4pxkvjjjxnp"]
+
+[ext_resource type="ArrayMesh" uid="uid://bshntrtbfgkm7" path="res://2MinuteJam/Assets/art/Buildings/Facades/Shed1.res" id="1_vbrwc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_lg0mp"]
+size = Vector3(7.13243, 3.7782, 14.3887)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f05d8"]
+size = Vector3(7.99078, 0.3, 16.008)
+
+[node name="bigShed" type="StaticBody3D"]
+transform = Transform3D(-2.98023e-08, 0, -1, 0, 1, 0, 1, 0, -2.98023e-08, 32, 0, -56)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_vbrwc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0248184, 1.89935, -0.005373)
+shape = SubResource("BoxShape3D_lg0mp")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00375366, 3.86261, 0.00595093)
+shape = SubResource("BoxShape3D_f05d8")

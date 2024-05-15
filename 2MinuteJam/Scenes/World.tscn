@@ -1,4 +1,4 @@
-[gd_scene load_steps=193 format=3 uid="uid://dcqfmblufykba"]
+[gd_scene load_steps=196 format=3 uid="uid://dcqfmblufykba"]
 
 [ext_resource type="Script" path="res://2MinuteJam/Scenes/World.gd" id="1_0o181"]
 [ext_resource type="PackedScene" uid="uid://q0x2l31pruqy" path="res://2MinuteJam/Player/Player.tscn" id="1_q0ld0"]
@@ -78,6 +78,8 @@
 [ext_resource type="Texture2D" uid="uid://xvib8w0f8lt7" path="res://2MinuteJam/Assets/art/Buildings/Mall/Stores/RandFanClub_AynRandLibrary.png" id="73_lyo1x"]
 [ext_resource type="PackedScene" path="res://2MinuteJam/npcs/Outside/gravedigger_george.tscn" id="75_sk7am"]
 [ext_resource type="PackedScene" uid="uid://dcbe36ic5jgp2" path="res://2MinuteJam/npcs/Outside/worstPerson.tscn" id="77_q5nyq"]
+[ext_resource type="PackedScene" uid="uid://be4pxkvjjjxnp" path="res://2MinuteJam/Scenes/Prebuilds/big_shed.tscn" id="79_sg431"]
+[ext_resource type="PackedScene" uid="uid://dew8e4ko1f58i" path="res://2MinuteJam/Scenes/Prebuilds/smallShed.tscn" id="80_cpb6k"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rvt8f"]
 bg_color = Color(0.184314, 0.184314, 0.313726, 0.376471)
@@ -351,6 +353,9 @@ size = Vector3(19.756, 4, 3)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_24dh1"]
 size = Vector3(19.756, 5, 3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_f6gfe"]
+size = Vector3(26.8571, 0.001, 40.0417)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_loclc"]
 size = Vector3(19.6533, 6, 1)
@@ -1590,6 +1595,10 @@ shape = SubResource("BoxShape3D_2tcyr")
 [node name="CollisionShape3D15" type="CollisionShape3D" parent="Theater/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.577, 2.5, 1.599)
 shape = SubResource("BoxShape3D_24dh1")
+
+[node name="CollisionShape3D19" type="CollisionShape3D" parent="Theater/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.61143, 11.9995, 1.0979)
+shape = SubResource("BoxShape3D_f6gfe")
 
 [node name="CollisionShape3D17" type="CollisionShape3D" parent="Theater/StaticBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.54957, 8.9391, -7.98586)
@@ -2839,6 +2848,43 @@ transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.3
 
 [node name="SpotLight3D2" type="OmniLight3D" parent="Mall/MallStores/AynRandFanClub"]
 transform = Transform3D(-4.37114e-08, 1, 4.37114e-08, 0, -4.37114e-08, 1, 1, 4.37114e-08, 1.91069e-15, -128.091, 3.6902, 32.9127)
+
+[node name="buildingContainer" type="Node" parent="."]
+
+[node name="bigShed" parent="buildingContainer" instance=ExtResource("79_sg431")]
+
+[node name="bigShed2" parent="buildingContainer" instance=ExtResource("79_sg431")]
+transform = Transform3D(-2.98023e-08, 0, -1, 0, 1, 0, 1, 0, -2.98023e-08, 32, 0, -12)
+
+[node name="bigShed6" parent="buildingContainer" instance=ExtResource("79_sg431")]
+transform = Transform3D(-2.98023e-08, 0, -1, 0, 1, 0, 1, 0, -2.98023e-08, 32, 0, 14)
+
+[node name="bigShed3" parent="buildingContainer" instance=ExtResource("79_sg431")]
+transform = Transform3D(-2.98023e-08, 0, -1, 0, 1, 0, 1, 0, -2.98023e-08, 32, 0, -27)
+
+[node name="bigShed4" parent="buildingContainer" instance=ExtResource("79_sg431")]
+transform = Transform3D(1, 0, 1.39091e-08, 0, 1, 0, -1.39091e-08, 0, 1, 32, 0, -78)
+
+[node name="bigShed5" parent="buildingContainer" instance=ExtResource("79_sg431")]
+transform = Transform3D(1, 0, 1.39091e-08, 0, 1, 0, -1.39091e-08, 0, 1, 46, 0, -78)
+
+[node name="bigShed7" parent="buildingContainer" instance=ExtResource("79_sg431")]
+transform = Transform3D(-1, 0, 7.35137e-08, 0, 1, 0, -7.35137e-08, 0, -1, 55, 0, 51)
+
+[node name="StaticBody3D" parent="buildingContainer" instance=ExtResource("80_cpb6k")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 26, 0, -46)
+
+[node name="StaticBody3D4" parent="buildingContainer" instance=ExtResource("80_cpb6k")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 26, 0, 44)
+
+[node name="StaticBody3D5" parent="buildingContainer" instance=ExtResource("80_cpb6k")]
+transform = Transform3D(-1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 31, 0, 44)
+
+[node name="StaticBody3D3" parent="buildingContainer" instance=ExtResource("80_cpb6k")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 26, 0, 28)
+
+[node name="StaticBody3D2" parent="buildingContainer" instance=ExtResource("80_cpb6k")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 39, 0, -71)
 
 [connection signal="timeout" from="UiHandler/buffer" to="UiHandler" method="_on_buffer_timeout"]
 [connection signal="timeout" from="MusicContainer/thePit/horrorTimer" to="." method="_on_horror_timer_timeout"]
