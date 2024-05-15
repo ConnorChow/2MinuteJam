@@ -1,30 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://2uwugc2a80tn"]
+[gd_scene load_steps=3 format=3 uid="uid://2uwugc2a80tn"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_e7l2r"]
-size = Vector3(2, 1, 1)
+[ext_resource type="ArrayMesh" uid="uid://d0ge1d5w827wv" path="res://2MinuteJam/Assets/art/RandomProps/EggChair.res" id="1_adc86"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_l3jt1"]
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_174em"]
-size = Vector3(2, 1, 1)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_4vp2h"]
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_v6qaw"]
+height = 0.4
+radius = 0.6
 
 [node name="BaseChair" type="StaticBody3D" groups=["sit"]]
 
 [node name="sitPos" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.508141, 1, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.245335, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("BoxMesh_e7l2r")
-
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, 0)
-mesh = SubResource("BoxMesh_l3jt1")
+mesh = ExtResource("1_adc86")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("BoxShape3D_174em")
-
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1, 0)
-shape = SubResource("BoxShape3D_4vp2h")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.223888, 0)
+shape = SubResource("CylinderShape3D_v6qaw")
